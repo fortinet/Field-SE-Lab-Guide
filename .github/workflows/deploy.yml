@@ -22,9 +22,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20 # Sets the timeout for the entire 'build' job
-    env:
-      HUGO_VERSION: 0.148.2
     steps:
       - name: Install Hugo CLI
         run: |
