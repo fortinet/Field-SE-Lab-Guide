@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'SE How-To Build Lab'
 theme = "hugo-theme-relearn"
 
+[params]
+  themeVariant = "red"
+  externalLinkTarget = '_blank'
+  
 [module]
   [module.hugoVersion]
     min = '0.141.0'
@@ -57,3 +61,4 @@ theme = "hugo-theme-relearn"
     name = 'Search'
   [params.relearn.dependencies.theme]
     name = 'Theme'
+

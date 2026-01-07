@@ -3,7 +3,7 @@
   <channel>
     <title>Introduction :: SE How-To Build Lab</title>
     <link>http://localhost:1313/introduction/index.html</link>
-    <description>This is a new chapter.</description>
+    <description>The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.&#xA;This Lab removes the need to:&#xA;plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/introduction/index.xml" rel="self" type="application/rss+xml" />

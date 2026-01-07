@@ -5,42 +5,50 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="This is a new chapter.">
+    <meta name="description" content="The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.
+This Lab removes the need to:
+plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Introduction :: SE How-To Build Lab">
-    <meta name="twitter:description" content="This is a new chapter.">
+    <meta name="twitter:description" content="The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.
+This Lab removes the need to:
+plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.">
     <meta property="og:url" content="http://localhost:1313/introduction/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Introduction :: SE How-To Build Lab">
-    <meta property="og:description" content="This is a new chapter.">
+    <meta property="og:description" content="The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.
+This Lab removes the need to:
+plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Introduction :: SE How-To Build Lab">
-    <meta itemprop="description" content="This is a new chapter.">
-    <meta itemprop="wordCount" content="5">
+    <meta itemprop="description" content="The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.
+This Lab removes the need to:
+plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.">
+    <meta itemprop="wordCount" content="163">
     <title>Introduction :: SE How-To Build Lab</title>
     <link href="/introduction/index.xml" rel="alternate" type="application/rss+xml" title="Introduction :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1765569144" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1765569144" defer></script>
-    <script src="/js/search-lunr.js?1765569144" defer></script>
-    <script src="/js/search.js?1765569144" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1767795750" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1767795750" defer></script>
+    <script src="/js/search-lunr.js?1767795750" defer></script>
+    <script src="/js/search.js?1767795750" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1765569144";
+      window.relearn.index_js_url="/searchindex.en.js?1767795750";
     </script>
-    <script src="/js/lunr/lunr.min.js?1765569144" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1765569144" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1765569144" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1765569144" defer></script>
+    <script src="/js/lunr/lunr.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1767795750" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1765569144" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1765569144" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1765569144" rel="stylesheet">
-    <link href="/css/theme.css?1765569144" rel="stylesheet">
-    <link href="/css/format-html.css?1765569144" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1767795750" rel="stylesheet">
+    <link href="/css/theme.css?1767795750" rel="stylesheet">
+    <link href="/css/format-html.css?1767795750" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -65,7 +73,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
       window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
       // variant stuff
-      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.themevariants = [ 'red' ];
       window.relearn.customvariantprefix = "my-custom-";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -93,6 +101,11 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
+<style>
+:root {
+    --MAIN-WIDTH-MAX: 1000rem;
+}
+</style>
   </head>
   <body class="mobile-support html" data-url="/introduction/index.html">
     <div id="R-body" class="default-animation">
@@ -107,7 +120,17 @@
             <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#se-lab-topology"><strong>SE Lab Topology</strong></a></li>
+        <li><a href="#fine-print"><strong>Fine Print</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -119,7 +142,7 @@
 <span class="btn cstyle button link noborder notitle interactive"><a href="/index.html" title="SE How-To Build Lab (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/requirements/index.html" title="Requirements (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/prerequisites/index.html" title="Prerequisites (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -134,16 +157,30 @@
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
-<article class="chapter narrow">
+<article class="default">
   <header class="headline">
   </header>
-<div class="article-subheading">Chapter 1</div>
 
 <h1 id="introduction">Introduction</h1>
 
-<p>This is a new chapter.</p>
+<p>The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the &ldquo;infrastructure&rdquo; around Fortinet technologies often needed in an SE Lab.</p>
+<p>This Lab removes the need to:</p>
+<ul>
+<li>plan and develop an IP Addressing scheme (this lab uses FNDN&rsquo;s)</li>
+<li>learn, understand and implement WAN Emulation (this lab uses TCGUI)</li>
+<li>plan and install multiple &ldquo;end user&rdquo; end points (this lab uses Ubuntu)</li>
+</ul>
+<p>Following this lab&rsquo;s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.</p>
+<h3 id="se-lab-topology"><strong>SE Lab Topology</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="#R-image-f952cc9d3cb34b15f7e34c12944b5b50" class="lightbox-link"><img alt="Lab_Topology" class="lazy lightbox figure-image" loading="lazy" src="/introduction/Lab_Topology.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f952cc9d3cb34b15f7e34c12944b5b50"><img alt="Lab_Topology" class="lazy lightbox lightbox-image" loading="lazy" src="/introduction/Lab_Topology.png"></a></p>
+<p>This lab&rsquo;s network topology and IP addressing scheme was plagerized from FNDN’s Demo/HOL lab topology.
+<a href="#R-image-8caefbb0f5e5e0e0b3c2c2c02377225a" class="lightbox-link"><img alt="FNDN_Topology" class="lazy lightbox figure-image" loading="lazy" src="/introduction/FNDN_Topology.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8caefbb0f5e5e0e0b3c2c2c02377225a"><img alt="FNDN_Topology" class="lazy lightbox lightbox-image" loading="lazy" src="/introduction/FNDN_Topology.png"></a></p>
+<h3 id="fine-print"><strong>Fine Print</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This steps to build this lab must be followed in order.  The reader cannot can pick and choose which section or installation script to start using.  It is expected the section <strong><a href="/steps/index.html">Steps To Build This Lab</a></strong> are followed in order.</p>
 
   <footer class="footline">
   </footer>
@@ -190,7 +227,10 @@
         <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
           <ul class="enlarge morespace collapsible-menu">
             <li class="active " data-nav-url="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
-            <li class="" data-nav-url="/requirements/index.html"><a class="padding" href="/requirements/index.html">Requirements</a></li>
+            <li class="" data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="" data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/tips_and_tricks/index.html"><a class="padding default-animation" href="/tips_and_tricks/index.html">Tips and Tricks</a><ul id="R-subsections-3804529d5c4e5de1c51e74d2a4e2c190" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/about/index.html"><a class="padding" href="/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
@@ -208,8 +248,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1765569144" defer></script>
-    <script src="/js/theme.js?1765569144" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1767795750" defer></script>
+    <script src="/js/theme.js?1767795750" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

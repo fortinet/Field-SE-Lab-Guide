@@ -12,14 +12,35 @@
       <link>http://localhost:1313/introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/introduction/index.html</guid>
-      <description>This is a new chapter.</description>
+      <description>The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.&#xA;This Lab removes the need to:&#xA;plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.</description>
     </item>
     <item>
-      <title>Requirements</title>
-      <link>http://localhost:1313/requirements/index.html</link>
+      <title>Prerequisites</title>
+      <link>http://localhost:1313/prerequisites/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/requirements/index.html</guid>
-      <description>These are requirements for the lab build.</description>
+      <guid>http://localhost:1313/prerequisites/index.html</guid>
+      <description>Proxmox Virtual Environment (PVE)&#xD;This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and Tools&#xD;Proxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:&#xD;7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention Assumptions&#xD;Internal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standard&#xD;User Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commands&#xD;source Edit text files in Ubuntu (one of the following)&#xD;vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files</description>
+    </item>
+    <item>
+      <title>Steps To Build This Lab</title>
+      <link>http://localhost:1313/steps/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/steps/index.html</guid>
+      <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;If creating a new PVE, use the following section Proxmox Install If using an existing PVE, verify version (i.e. scripts/steps tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-Build/refs/heads/main/Create_VNETs.sh &gt; Create_VNETs.sh chmod 777 Create_VNETs.sh ./Create_VNETs.sh</description>
+    </item>
+    <item>
+      <title>Tips and Tricks</title>
+      <link>http://localhost:1313/tips_and_tricks/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips_and_tricks/index.html</guid>
+      <description>Proxmox Install Guacamole</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/index.html</guid>
+      <description>About this Website</description>
     </item>
   </channel>
 </rss>
