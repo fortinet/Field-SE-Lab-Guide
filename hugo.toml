@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'SE How-To Build Lab'
 theme = "hugo-theme-relearn"
 
+ignoreLogs = [
+  'warning-goldmark-raw-html',       # To hide raw HTML warnings
+]
+
 [params]
   themeVariant = "red"
   externalLinkTarget = '_blank'

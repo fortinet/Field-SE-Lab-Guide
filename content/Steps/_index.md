@@ -7,7 +7,7 @@ weight = 30
 Execute and complete the following 11 steps in order
 
 **1) PVE server**
-- If creating a new PVE, use the following section **[Proxmox Install](Proxmox_Install)**
+- If creating a new PVE, use the following section **[Proxmox Install](/Tips_and_Tricks/Proxmox_Install)**
 - If using an existing PVE, verify version (i.e. scripts/steps tested against 9.x, but will likely work with 8.x too)
 ![Version](Version.png)
 
