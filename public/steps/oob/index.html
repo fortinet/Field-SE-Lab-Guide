@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
+    <meta name="description" content="Create Full Clone and Install PackagesCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template
+VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init Click on Console and Click on Start ​from Terminal in OOBgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads cd /home/fortinet/Downloads/ chmod 777 *.sh ./OOB_Install.sh">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create OOB Management VM :: SE How-To Build Lab">
+    <meta name="twitter:description" content="Create Full Clone and Install PackagesCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template
+VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init Click on Console and Click on Start ​from Terminal in OOBgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads cd /home/fortinet/Downloads/ chmod 777 *.sh ./OOB_Install.sh">
+    <meta property="og:url" content="http://localhost:1313/steps/oob/index.html">
+    <meta property="og:site_name" content="SE How-To Build Lab">
+    <meta property="og:title" content="Create OOB Management VM :: SE How-To Build Lab">
+    <meta property="og:description" content="Create Full Clone and Install PackagesCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template
+VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init Click on Console and Click on Start ​from Terminal in OOBgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads cd /home/fortinet/Downloads/ chmod 777 *.sh ./OOB_Install.sh">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Create OOB Management VM :: SE How-To Build Lab">
+    <meta itemprop="description" content="Create Full Clone and Install PackagesCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template
+VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init Click on Console and Click on Start ​from Terminal in OOBgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads cd /home/fortinet/Downloads/ chmod 777 *.sh ./OOB_Install.sh">
+    <meta itemprop="wordCount" content="418">
+    <title>Create OOB Management VM :: SE How-To Build Lab</title>
+    <link href="/steps/oob/index.xml" rel="alternate" type="application/rss+xml" title="Create OOB Management VM :: SE How-To Build Lab">
+    <link href="/css/auto-complete/auto-complete.min.css?1767795750" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1767795750" defer></script>
+    <script src="/js/search-lunr.js?1767795750" defer></script>
+    <script src="/js/search.js?1767795750" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1767795750";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1767795750" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1767795750" rel="stylesheet">
+    <link href="/css/theme.css?1767795750" rel="stylesheet">
+    <link href="/css/format-html.css?1767795750" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/steps\/oob\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+<style>
+:root {
+    --MAIN-WIDTH-MAX: 1000rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-url="/steps/oob/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create-full-clone-and-install-packages">Create Full Clone and Install Packages</a></li>
+        <li><a href="#configuraion">Configuraion</a></li>
+        <li><a href="#verification">Verification</a></li>
+        <li><a href="#complete">Complete</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Create OOB Management VM</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/ubuntu_template/index.html" title="Create Ubuntu VM Template (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/ansible/index.html" title="Ansible Prerequisites (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="create-oob-management-vm">Create OOB Management VM</h1>
+
+<h3 id="create-full-clone-and-install-packages">Create Full Clone and Install Packages<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p>Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template</p>
+<ul>
+<li>VM ID: 441</li>
+<li>Name: Ubuntu-OOB
+<a href="#R-image-a4d4fd7beadb126cad6d0aa974331f5b" class="lightbox-link"><img alt="Create_Clone" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Create_Clone.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4d4fd7beadb126cad6d0aa974331f5b"><img alt="Create_Clone" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Create_Clone.png"></a></li>
+</ul>
+</li>
+<li>
+<p>Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT
+<a href="#R-image-732d275cd12ee41e38c2583ef6f5d773" class="lightbox-link"><img alt="Verify_Hardware" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Verify_Hardware.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-732d275cd12ee41e38c2583ef6f5d773"><img alt="Verify_Hardware" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Verify_Hardware.png"></a></p>
+</li>
+<li>
+<p>Configure Cloud-Init
+<a href="#R-image-669c400f130276a83bd574136aeeaba4" class="lightbox-link"><img alt="Config_Cloud_Init" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Config_Cloud_Init.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-669c400f130276a83bd574136aeeaba4"><img alt="Config_Cloud_Init" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Config_Cloud_Init.png"></a></p>
+</li>
+<li>
+<p>Click on Console and Click on Start
+<div class="tab-panel" data-tab-group="R-tabs-69b57cc866f1c3e5b78f4a5976aea073">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-f8c1ecd18a2dbd4a763cb61a5caa9fb5" aria-expanded="true"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-69b57cc866f1c3e5b78f4a5976aea073','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+    >
+      <span class="tab-nav-text">from Terminal in OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-f8c1ecd18a2dbd4a763cb61a5caa9fb5"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd /home/fortinet/Downloads/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> *.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>./OOB_Install.sh</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+</li>
+<li>
+<p><strong>Note:</strong> VM will auto reboot after “OOB_Install.sh” script runs
+<div class="tab-panel" data-tab-group="R-tabs-40eb18982cf28ed2c98d6fe916bbbf78">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-661392b9ae9447f4c42728c31adc5fe4" aria-expanded="true"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-40eb18982cf28ed2c98d6fe916bbbf78','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+    >
+      <span class="tab-nav-text">from Terminal in OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-661392b9ae9447f4c42728c31adc5fe4"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/Downloads/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>./OOB_Containers.sh</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+</li>
+</ul>
+<h3 id="configuraion">Configuraion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p>RDP to OOB VM</p>
+<ul>
+<li><strong>Note:</strong> Using RDP will be “EASIER” as it allows “cut and paste”</li>
+</ul>
+</li>
+<li>
+<p><strong>DNS (CoreDNS)</strong></p>
+<ul>
+<li><em>NO CHANGES REQUIRED</em> Information below intended for how and where to make future DNS changes</li>
+<li>DNS is critical for Ansible automation</li>
+<li><a href="https://di-marco.net/blog/it/2024-05-09-Intall_and_configure_coredns/" rel="external" target="_blank">CoreDNS</a> has been preconfigured for this <a href="/introduction/index.html#se-lab-topology">topology</a></li>
+<li>Two <a href="https://www.rfc-editor.org/rfc/rfc1035" rel="external" target="_blank">RFC 1035-style</a> zone database files have been preconfigured here:
+<ul>
+<li><strong>/home/Fortinet/c_data/coredns/conf/zones</strong>
+<ul>
+<li><strong>db.fortinet.internal</strong>	&lt;= intended for endpoints “internal” to  proxmox</li>
+<li><strong>db.home.internal</strong>		&lt;= intended for endpoints “external” to proxmox</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If changes are made to zone database files, execute the following:
+<div class="tab-panel" data-tab-group="R-tabs-a4de2c5414bd71c585deed4f9ce3dbf1">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-6ee1bdf7109e9b85292cba400392d260" aria-expanded="true"
+      data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-a4de2c5414bd71c585deed4f9ce3dbf1','R-tab-8a27f5a50042a2637bbf068f68109a29')"
+    >
+      <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/coredns</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-6ee1bdf7109e9b85292cba400392d260"
+      data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose down
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker compose up -d  </span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>&ldquo;homepage&rdquo;</strong></p>
+<ul>
+<li><a href="https://gethomepage.dev/" rel="external" target="_blank">homepage</a> is a customizable application dashboard</li>
+<li>YAML files located here: <strong>/home/fortinet/c_data/homepage/config</strong>
+<ul>
+<li><strong>bookmarks.yaml</strong> &lt;= <a href="https://gethomepage.dev/configs/bookmarks/" rel="external" target="_blank">Lab URL’s</a></li>
+<li><strong>services.yaml</strong>  &lt;= <a href="https://gethomepage.dev/widgets/services/proxmox/" rel="external" target="_blank">ProxMox Server GUI URL/Status</a></li>
+<li><strong>settings.yaml</strong>  &lt;= <a href="https://gethomepage.dev/configs/settings/" rel="external" target="_blank">Column Headings/Layout</a></li>
+<li><strong>widgets.yaml</strong>	&lt;= <a href="https://gethomepage.dev/widgets/info/datetime/" rel="external" target="_blank">Date/Time</a> – <a href="https://gethomepage.dev/widgets/info/openweathermap/" rel="external" target="_blank">Weather/Location</a></li>
+</ul>
+</li>
+<li>Configure <a href="https://gethomepage.dev/widgets/services/proxmox/" rel="external" target="_blank">Proxmox Widget</a>
+<ul>
+<li>On the PVE Server =&gt; Create User and API Token
+<ul>
+<li>Click on: Datacenter/Permissions/Groups
+<ul>
+<li>Click on Create button</li>
+<li>Name:	Homepage-readonly-users
+<a href="#R-image-b6dd3220e02d421d7407a02b42d2e241" class="lightbox-link"><img alt="Homepage_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Homepage_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b6dd3220e02d421d7407a02b42d2e241"><img alt="Homepage_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Homepage_API_1.png"></a></li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions
+<ul>
+<li>Click: Add =&gt; Group Permission
+<ul>
+<li>Path: 	/</li>
+<li>Group:	Homepage-readonly-users</li>
+<li>Role: 	PVEAuditor</li>
+<li>Propagate: 	Checked
+<a href="#R-image-2fa3abbb7e4611de9b143c2d835e7a71" class="lightbox-link"><img alt="Homepage_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Homepage_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2fa3abbb7e4611de9b143c2d835e7a71"><img alt="Homepage_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Homepage_API_2.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions/Users
+<ul>
+<li>Click: Add
+<ul>
+<li>User name: 	Homepage</li>
+<li>Realm: 	Linux PAM standard authentication</li>
+<li>Group:	Homepage-readonly-users</li>
+<li>Expires:	never</li>
+<li>Enabled:	checked
+<a href="#R-image-31824c1c3cf9613c7ead0d1385018448" class="lightbox-link"><img alt="Homepage_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Homepage_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31824c1c3cf9613c7ead0d1385018448"><img alt="Homepage_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Homepage_API_3.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions/API Tokens
+<ul>
+<li>Click: Add
+<ul>
+<li>User: Homepage</li>
+<li>Token ID: api-readonly</li>
+<li>Privilege Separation: Unchecked
+<a href="#R-image-827e11b18c156c456160ca4585e6ffe9" class="lightbox-link"><img alt="Homepage_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Homepage_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-827e11b18c156c456160ca4585e6ffe9"><img alt="Homepage_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Homepage_API_4.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Copy the Token ID and Secret generated
+<ul>
+<li><strong>Note:</strong> Secret value is only displayed once when token generated
+<a href="#R-image-f186c3713bd71a804132384947e414b6" class="lightbox-link"><img alt="Homepage_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Homepage_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f186c3713bd71a804132384947e414b6"><img alt="Homepage_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Homepage_API_5.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On Ubuntu-OOB VM
+<ul>
+<li>Edit <strong>widgets.yaml</strong> located in <strong>/home/fortinet/c_data/homepage/config</strong>
+<a href="#R-image-dd31cc1971d6364e5a85671321bea926" class="lightbox-link"><img alt="Widgets_API" class="lazy lightbox figure-image" loading="lazy" src="/steps/oob/Widgets_API.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd31cc1971d6364e5a85671321bea926"><img alt="Widgets_API" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/oob/Widgets_API.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Guacamole</strong>
+<div class="tab-panel" data-tab-group="R-tabs-9c21ee10fc7d96d9a359ee2aa7703d9a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-19df1a928fa5a3092c76db237ec2d6bc" aria-expanded="true"
+      data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-9c21ee10fc7d96d9a359ee2aa7703d9a','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+    >
+      <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-19df1a928fa5a3092c76db237ec2d6bc"
+      data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose ps
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker compose cp ./dump.sql guacamole-sql:/dump.sql
+</span></span><span style="display:flex;"><span>	 
+</span></span><span style="display:flex;"><span>docker compose exec guacamole-sql /bin/sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sh-5.1# mysql -u root -p &lt;  ./dump.sql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter password: password
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sh-5.1# exit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker compose down
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker compose up –d</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<ul>
+<li><em>NO ADDITIONAL CHANGES REQUIRED</em> =&gt; <a href="https://https://guacamole.apache.org/" rel="external" target="_blank">Guacamole</a> has been preconfigured for this <a href="/introduction/index.html#se-lab-topology">topology</a></li>
+<li>See <strong><a href="/tips_and_tricks/index.html">Tips and Tricks</a></strong> section if additions and or changes required in the future</li>
+</ul>
+</li>
+</ul>
+<h3 id="verification">Verification<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>&ldquo;homepage&rdquo; is working
+<ul>
+<li>via Work Laptop browser: http://172.16.3.80</li>
+</ul>
+</li>
+<li>Guacamole is working
+<ul>
+<li>via Work Laptop browser: http://172.16.3.80:8080/guacamole
+<ul>
+<li>User: 		guacadmin</li>
+<li>Password: 	guacadmin</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS is working
+<div class="tab-panel" data-tab-group="R-tabs-9a70311cfb4fbaf8dc61730a71ce4cd8">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-4737cddb2a62a7666502c781cc736fef" aria-expanded="true"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-9a70311cfb4fbaf8dc61730a71ce4cd8','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+    >
+      <span class="tab-nav-text">from Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-4737cddb2a62a7666502c781cc736fef"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping oob
+</span></span><span style="display:flex;"><span>ping oob.home.internal
+</span></span><span style="display:flex;"><span>ping oob.fortinet.internal</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li>NAT/Forwarding working
+<ul>
+<li>Should see multiple: <strong>PREROUTING 172.16.3.X addresses</strong> and <strong>POSTROUTING MASQUERADE</strong>
+<div class="tab-panel" data-tab-group="R-tabs-d0a6f2ef37288e0a754ca825ae91e30b">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-d92cf03b0d81d5fb0d224e0df9418914" aria-expanded="true"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-d0a6f2ef37288e0a754ca825ae91e30b','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+    >
+      <span class="tab-nav-text">from Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-d92cf03b0d81d5fb0d224e0df9418914"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo iptables -t nat -L -n -v”</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">SE How-To Build Lab</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-url="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
+            <li class="" data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="" data-nav-url="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="active " data-nav-url="/steps/oob/index.html"><a class="padding" href="/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="" data-nav-url="/steps/ansible/index.html"><a class="padding" href="/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-url="/steps/tcgui/index.html"><a class="padding" href="/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="" data-nav-url="/steps/fortigate/index.html"><a class="padding" href="/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="" data-nav-url="/steps/fortimanager/index.html"><a class="padding" href="/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-url="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-url="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-url="/tips_and_tricks/index.html"><a class="padding default-animation" href="/tips_and_tricks/index.html">Tips and Tricks</a><ul id="R-subsections-3804529d5c4e5de1c51e74d2a4e2c190" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/about/index.html"><a class="padding" href="/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1767795750" defer></script>
+    <script src="/js/theme.js?1767795750" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

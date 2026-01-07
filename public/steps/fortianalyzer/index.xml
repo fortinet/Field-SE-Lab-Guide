@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create FortiAnalyzer VM :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/steps/fortianalyzer/index.html</link>
+    <description>RDP to OOB.&#xA;​&#xD;from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortinet ./create-vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; faz v7.6.4.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; faz&#x9;started&#xD;Make sure FortiAnalyzer VM has fully started before continuing.&#xA;Suggest opening console windows and verifying login prompt showing.&#xA;Configure FortiAnalyzer&#xA;From the VM’s console on ProxMox&#xA;Login using admin / “no password”</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/fortianalyzer/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create FortiGate VMs :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/steps/fortigate/index.html</link>
+    <description>RDP to OOB.&#xA;​&#xD;from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortinet ./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; ./create-vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; fortigate_sdwan v7.6.3.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; fortigate_sdwan started&#xD;Make sure all FortiGate VMs have fully started before exeucting the following.&#xA;Suggest opening console windows and verifying login prompt showing.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/fortigate/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

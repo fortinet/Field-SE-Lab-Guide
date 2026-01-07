@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create Ubuntu VMs :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/steps/ubuntu/index.html</link>
+    <description>RDP to OOB.&#xA;​&#xD;from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/ubuntu ./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; ubuntu_sdwan ./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;name of your PVE server&gt; ubuntu_sdwan started&#xD;Make sure Ubuntu-x VMs have fully started (i.e. GUI is up and running) before exeucting the following.&#xA;Suggest opening console windows on PVE to verify.&#xA;​&#xD;from Terminal in OOB&#xD;./wallpaper_update.sh ubuntu_sdwan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

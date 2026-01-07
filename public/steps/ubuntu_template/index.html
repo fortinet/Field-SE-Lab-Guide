@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
+    <meta name="description" content="Create the VMIn PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General
+Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS
+Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create Ubuntu VM Template :: SE How-To Build Lab">
+    <meta name="twitter:description" content="Create the VMIn PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General
+Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS
+Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System">
+    <meta property="og:url" content="http://localhost:1313/steps/ubuntu_template/index.html">
+    <meta property="og:site_name" content="SE How-To Build Lab">
+    <meta property="og:title" content="Create Ubuntu VM Template :: SE How-To Build Lab">
+    <meta property="og:description" content="Create the VMIn PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General
+Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS
+Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Create Ubuntu VM Template :: SE How-To Build Lab">
+    <meta itemprop="description" content="Create the VMIn PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General
+Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS
+Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System">
+    <meta itemprop="wordCount" content="610">
+    <title>Create Ubuntu VM Template :: SE How-To Build Lab</title>
+    <link href="/steps/ubuntu_template/index.xml" rel="alternate" type="application/rss+xml" title="Create Ubuntu VM Template :: SE How-To Build Lab">
+    <link href="/css/auto-complete/auto-complete.min.css?1767795750" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1767795750" defer></script>
+    <script src="/js/search-lunr.js?1767795750" defer></script>
+    <script src="/js/search.js?1767795750" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1767795750";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1767795750" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1767795750" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767795750" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1767795750" rel="stylesheet">
+    <link href="/css/theme.css?1767795750" rel="stylesheet">
+    <link href="/css/format-html.css?1767795750" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/steps\/ubuntu_template\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+<style>
+:root {
+    --MAIN-WIDTH-MAX: 1000rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-url="/steps/ubuntu_template/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create-the-vm">Create the VM</a></li>
+        <li><a href="#install-ubuntu">Install Ubuntu</a></li>
+        <li><a href="#install-packages-and-user-config">Install Packages and User Config</a></li>
+        <li><a href="#verify-configuration-and-prep-cloud-init">Verify Configuration and Prep Cloud-Init</a></li>
+        <li><a href="#convert-vm-to-template">Convert VM to Template</a></li>
+        <li><a href="#complete">Complete</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Create Ubuntu VM Template</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/index.html" title="Steps To Build This Lab (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/oob/index.html" title="Create OOB Management VM (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="create-ubuntu-vm-template">Create Ubuntu VM Template</h1>
+
+<h3 id="create-the-vm">Create the VM<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>In PVE GUI  &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM
+<a href="#R-image-8e71d6d652133fb83f987a6a1082265f" class="lightbox-link"><img alt="Create_VM" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8e71d6d652133fb83f987a6a1082265f"><img alt="Create_VM" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png"></a></p>
+<ul>
+<li>
+<p>General</p>
+<ul>
+<li>Choose Node</li>
+<li>Choose VM_id == 491</li>
+<li>Type VM Name == Ubuntu-Template</li>
+</ul>
+</li>
+<li>
+<p>OS</p>
+<ul>
+<li>Use CD/DVD disc image</li>
+<li>Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt;</li>
+<li>ISO Image: Ubuntu_Installer.iso</li>
+<li>Default values for &lsquo;Guest OS&rsquo; (Linux 6.x – 2.6 Kernel)</li>
+</ul>
+</li>
+<li>
+<p>System</p>
+<ul>
+<li>Leave Defaults:
+<ul>
+<li>Graphic Card: Default</li>
+<li>Machine: Default (i440fx)</li>
+<li>Bios: Default (SeaBios)</li>
+<li>SCSI: VirtIO single</li>
+</ul>
+</li>
+<li>Tick: “Qemu Agent”</li>
+</ul>
+</li>
+<li>
+<p>Disks</p>
+<ul>
+<li>Create Disk (SCSI 0, &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt;, 32GB, uncheck Backup)</li>
+</ul>
+</li>
+<li>
+<p>CPU</p>
+<ul>
+<li>Cores == 2 cores</li>
+<li>Type == Default (x86-64-v2-AES)</li>
+</ul>
+</li>
+<li>
+<p>Memory</p>
+<ul>
+<li>2 GB is minimum&hellip;recommend 4 GB</li>
+</ul>
+</li>
+<li>
+<p>Network</p>
+<ul>
+<li>Bridge == vmbr0</li>
+<li>Untick Firewall</li>
+</ul>
+</li>
+<li>
+<p>Confirm</p>
+<ul>
+<li>Click Finish</li>
+</ul>
+</li>
+<li>
+<p>Add a 2nd NIC</p>
+<ul>
+<li>In PVE GUI &gt; (left click) Datacenter &gt; Node &gt; VM (one just created) &gt; Hardware &gt; Add &gt; Network Device
+<ul>
+<li>Bridge == FTNTMGT  (uncheck Firewall)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>VM’s config should look like the following.
+<a href="#R-image-800b2f7cc8a4304ffe5645998243e935" class="lightbox-link"><img alt="VM_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-800b2f7cc8a4304ffe5645998243e935"><img alt="VM_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png"></a></p>
+</li>
+</ul>
+<h3 id="install-ubuntu">Install Ubuntu<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>In PVE GUI  &gt; (left click) Datacenter &gt; Node &gt; VM (the vm just created)
+<ul>
+<li>Click on Console and Click on Start</li>
+</ul>
+</li>
+<li>Press Enter on “Try or Install Ubuntu” (if no keys pressed, GRUB will timeout and choose this option)</li>
+<li>If following appears, you can safely ignore it as both NICs have NOT been fully configured yet.
+<a href="#R-image-0e4c71759698a6e6436a3d100a9290fe" class="lightbox-link"><img alt="Connection_Failed" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0e4c71759698a6e6436a3d100a9290fe"><img alt="Connection_Failed" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png"></a></li>
+<li>Choose Language, Accessibility - Click Next, Choose Keyboard, Internet Do Not Connect,</li>
+<li>Click on Install Ubuntu, Interactive installation, Apps – Default selection, Do not install proprietary software</li>
+<li>Erase disk and install Ubuntu (start from scratch on selected disk)
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Your name</td>
+          <td style="text-align: left">fortinet (all lower case)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Computer name</td>
+          <td style="text-align: left">ubuntu-template</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">User name</td>
+          <td style="text-align: left">fortinet (all lower case)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Password</td>
+          <td style="text-align: left">password</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Leave checked “Require my password to login”</td>
+          <td style="text-align: left">&lt;= critical for next script to run successfully</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Timezone</td>
+          <td style="text-align: left">America/Chicago</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>Click on “Install”</li>
+<li>When screen says:
+<ul>
+<li>“Ubuntu 24.04.3 LTS installed and ready to use”</li>
+<li>Click on “Restart Now”</li>
+</ul>
+</li>
+<li>At the prompt to remove installation media
+<ul>
+<li>In PVE GUI
+<ul>
+<li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Hardware &gt; CD/DVD Drive &gt; Edit
+<ul>
+<li>Tick “Do not use any media”</li>
+</ul>
+</li>
+<li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Hardware &gt; Add &gt; Cloud-Init
+<ul>
+<li>Bus/Device: SCSI 1</li>
+<li>Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt;</li>
+<li>Format: QEMU image formate (if it&rsquo;s available)
+<a href="#R-image-ef6611110e3f27625c09a3f0e874d49c" class="lightbox-link"><img alt="Cloud_Init_Add" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef6611110e3f27625c09a3f0e874d49c"><img alt="Cloud_Init_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Config Cloud-Init
+<a href="#R-image-3f16948c595ec3b262bfcdd5f4678245" class="lightbox-link"><img alt="Cloud_Init_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f16948c595ec3b262bfcdd5f4678245"><img alt="Cloud_Init_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png"></a></li>
+</ul>
+</li>
+<li>Go back to VM console and press “Enter”</li>
+<li>Wait for VM to reboot</li>
+<li>Login user &ldquo;fortinet&rdquo;
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Welcome to Ubuntu 24.04.3 LTS</td>
+          <td style="text-align: left">Click Next</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Enable Ubuntu Pro</td>
+          <td style="text-align: left">Tick “Skip for now”, Click Skip</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">No, don’t share system data</td>
+          <td style="text-align: left">Click Next</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Get started with more applications</td>
+          <td style="text-align: left">Click Finish</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>If following dialog box pops up, Click “Remind Me Later”
+<a href="#R-image-d8887c7c84148b8871324b1b67f0e345" class="lightbox-link"><img alt="Software_Updater" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d8887c7c84148b8871324b1b67f0e345"><img alt="Software_Updater" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png"></a></li>
+</ul>
+<h3 id="install-packages-and-user-config">Install Packages and User Config<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-5dfd009ed0006ba6294fa5fcafdc5f06">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-3d92d797c0687413ad9a5fb71587d53d" aria-expanded="true"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-5dfd009ed0006ba6294fa5fcafdc5f06','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+    >
+      <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-3d92d797c0687413ad9a5fb71587d53d"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install git -y
+</span></span><span style="display:flex;"><span>git clone https://github.com/stevesweeneywisc/SE-Lab-Ubuntu-Template /home/fortinet/Downloads
+</span></span><span style="display:flex;"><span>cd /home/fortinet/Downloads/
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> *.sh
+</span></span><span style="display:flex;"><span>./Ubuntu_Base_Install.sh</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li>System will reboot after script runs</li>
+<li>Login user &ldquo;fortinet&rdquo;</li>
+<li>Remove keyring password
+<ul>
+<li><strong>Note:</strong> This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot</li>
+<li>Open Utilities folder
+<a href="#R-image-28b1c683407ae7cdb0180030f94b7aed" class="lightbox-link"><img alt="Key_Ring_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-28b1c683407ae7cdb0180030f94b7aed"><img alt="Key_Ring_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png"></a></li>
+<li>Open “Passwords and Keys”
+<a href="#R-image-e689593042a32f75f96b29f29b17f675" class="lightbox-link"><img alt="Key_Ring_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e689593042a32f75f96b29f29b17f675"><img alt="Key_Ring_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png"></a></li>
+<li>Right Click on Login, and choose Change Password
+<a href="#R-image-88cecdfa216c9dd4cd745ede72913d27" class="lightbox-link"><img alt="Key_Ring_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-88cecdfa216c9dd4cd745ede72913d27"><img alt="Key_Ring_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png"></a></li>
+<li>Enter the old password: &ldquo;password&rdquo;
+<a href="#R-image-e22f2b694a7e684c0f7d198293972228" class="lightbox-link"><img alt="Key_Ring_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e22f2b694a7e684c0f7d198293972228"><img alt="Key_Ring_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png"></a></li>
+<li>Leave new password blank for both and click “Continue”
+<a href="#R-image-7cce3e166c9250fc15a6ccbe77747e2c" class="lightbox-link"><img alt="Key_Ring_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7cce3e166c9250fc15a6ccbe77747e2c"><img alt="Key_Ring_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png"></a></li>
+<li>Store passwords unencrypted? Click Continue
+<a href="#R-image-dfc50c8257e64f351fe1f2f76b242f38" class="lightbox-link"><img alt="Key_Ring_6" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dfc50c8257e64f351fe1f2f76b242f38"><img alt="Key_Ring_6" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png"></a></li>
+</ul>
+</li>
+<li>Configure user “fortinet” for “Automatic Login”
+<ul>
+<li>Settings
+<a href="#R-image-e624fa6b7be73e4d370d1658324faead" class="lightbox-link"><img alt="Config_User_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Config_User_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e624fa6b7be73e4d370d1658324faead"><img alt="Config_User_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Config_User_1.png"></a></li>
+<li>System/Users
+<a href="#R-image-936f4cc4c92129ba62cdb8821e325e0e" class="lightbox-link"><img alt="Config_User_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Config_User_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-936f4cc4c92129ba62cdb8821e325e0e"><img alt="Config_User_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Config_User_2.png"></a></li>
+<li>Unlock and Enable “Automatic Login”
+<a href="#R-image-21250be72aa8ed4833fc04a4cdea0273" class="lightbox-link"><img alt="Config_User_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Config_User_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21250be72aa8ed4833fc04a4cdea0273"><img alt="Config_User_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Config_User_3.png"></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="verify-configuration-and-prep-cloud-init">Verify Configuration and Prep Cloud-Init<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Reboot and verify auto login</li>
+<li>RDP to VM
+<div class="tab-panel" data-tab-group="R-tabs-f74304c2b9713d1f7c6701bae106cb92">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-633ae2a7ad4c1da1965127a73b543c00" aria-expanded="true"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-f74304c2b9713d1f7c6701bae106cb92','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+    >
+      <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-633ae2a7ad4c1da1965127a73b543c00"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cloud-init clean -–machine-id
+</span></span><span style="display:flex;"><span>sudo shutdown now</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+<h3 id="convert-vm-to-template">Convert VM to Template<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>In PVE GUI
+<ul>
+<li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Cloud-Init &gt; Edit</li>
+<li>Remove IP Address
+<a href="#R-image-a6cfdf6066240f6ea0b2beea8f4e6b52" class="lightbox-link"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6cfdf6066240f6ea0b2beea8f4e6b52"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png"></a></li>
+<li>Datacenter &gt; Node &gt; Right Click on VM (one just created) &gt; Convert to template
+<a href="#R-image-4ad2173207253e4ce3f513060f49f735" class="lightbox-link"><img alt="Convert_to_Template" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4ad2173207253e4ce3f513060f49f735"><img alt="Convert_to_Template" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png"></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">SE How-To Build Lab</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-url="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
+            <li class="" data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="active " data-nav-url="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="" data-nav-url="/steps/oob/index.html"><a class="padding" href="/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="" data-nav-url="/steps/ansible/index.html"><a class="padding" href="/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-url="/steps/tcgui/index.html"><a class="padding" href="/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="" data-nav-url="/steps/fortigate/index.html"><a class="padding" href="/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="" data-nav-url="/steps/fortimanager/index.html"><a class="padding" href="/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-url="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-url="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-url="/tips_and_tricks/index.html"><a class="padding default-animation" href="/tips_and_tricks/index.html">Tips and Tricks</a><ul id="R-subsections-3804529d5c4e5de1c51e74d2a4e2c190" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/about/index.html"><a class="padding" href="/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1767795750" defer></script>
+    <script src="/js/theme.js?1767795750" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

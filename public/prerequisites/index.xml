@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prerequisites :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/prerequisites/index.html</link>
+    <description>Proxmox Virtual Environment (PVE)&#xD;This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and Tools&#xD;Proxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:&#xD;7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention Assumptions&#xD;Internal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standard&#xD;User Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commands&#xD;source Edit text files in Ubuntu (one of the following)&#xD;vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/prerequisites/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

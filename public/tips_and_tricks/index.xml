@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips and Tricks :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/tips_and_tricks/index.html</link>
+    <description>Proxmox Install Guacamole</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tips_and_tricks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxmox Install</title>
+      <link>http://localhost:1313/tips_and_tricks/proxmox_install/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips_and_tricks/proxmox_install/index.html</guid>
+      <description>“Official” Proxmox documentation&#xA;PVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”&#xA;Base Install Post Installation “Must Do’s”</description>
+    </item>
+    <item>
+      <title>Guacamole</title>
+      <link>http://localhost:1313/tips_and_tricks/guacamole/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips_and_tricks/guacamole/index.html</guid>
+      <description>“behind the scenes”&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
+    </item>
+  </channel>
+</rss>

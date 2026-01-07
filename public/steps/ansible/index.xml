@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible Prerequisites :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/steps/ansible/index.html</link>
+    <description>SSH Key&#xA;Generate SSH Key on Ubuntu-OOB ​&#xD;from Ubuntu-OOB Terminal&#xD;ssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twice&#xD;Place public key on Proxmox ​&#xD;from Ubuntu-OOB Terminal&#xD;ssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;&#xD;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yes&#xD;Prompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​&#xD;from Ubuntu-OOB Terminal&#xD;ssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;&#xD;Edit Ansible global.vars file ​&#xD;from Ubuntu-OOB Terminal&#xD;cat /home/fortinet/.ssh/ansible_key.pub&#xD;Highlight, Right Click and Copy ansible_key.pub contents Edit global.yml located in /home/Fortinet/automation/ansible/vars/ proxmox_IaC_sshkey is located at bottom of file MAKE SURE there are single quotes at beginning and end of key Ansible API Token</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/ansible/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

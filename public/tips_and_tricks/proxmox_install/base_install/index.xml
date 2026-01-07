@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base Install :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/tips_and_tricks/proxmox_install/base_install/index.html</link>
+    <description>Download latest ISO Prepare USB Flash Drive Install using Proxmox VE Installer Insert the prepared installation USB Flash Drive Hit enter on “Install Proxmox VE (Graphical)&#34;&#xD;Agree to EULA&#xD;Configure Hard disk by clicking “Next” for default (use whole drive, in a default configuration)&#xD;Configure Country, Time Zone, Keyboard and click “next” Set root user password, enter a valid email address and click “next”&#xD;Set Management Interface, Hostname (full FQDN), IP address/subnet, Gateway, DNS&#xD;Uncheck Automatically Reboot after successful installation (provides time to remove USB Flash Drive) Confirm information displayed and click Next Remove USB Flash Drive, click Reboot</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tips_and_tricks/proxmox_install/base_install/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
