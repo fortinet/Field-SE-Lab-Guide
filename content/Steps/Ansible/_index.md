@@ -143,7 +143,7 @@ cd /home/fortinet/automation/ansible/vars
 cat global.yml
 ````
 {{% /tab %}}
-    ![alt](/images/pic-global_yml.png)
+    ![global_yml](pic-global_yml.png)
 
 **DNS**
 
@@ -164,4 +164,4 @@ qcow2 files must have the following format:
 - FMG-v7.6.4.F.qcow2
 - FAZ-v7.4.8.M.qcow2
 
-![alt](/images/pic-import_qcow2.png)
+![import_qcow2](pic-import_qcow2.png)
