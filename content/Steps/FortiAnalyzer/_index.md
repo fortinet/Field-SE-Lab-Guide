@@ -11,9 +11,9 @@ RDP to OOB.
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
 
-./create-vm.sh ../vars/all-hosts.yml 	<name of your PVE server> 	faz 	v7.6.4.F
+./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	faz  v7.6.4.F
 
-./start_remove_vm.sh ../vars/all-hosts.yml <name of your PVE server> 	faz	started
+./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	faz	 started
 ````
 {{% /tab %}}
 
@@ -83,6 +83,6 @@ Login to FortiAnalyzer's console using: admin / Fort1net!
 		
 {{% tab title="Inject FortiFlex Token" %}}
 ````bash
-execute vm-license <token>
+execute  vm-license  <token>
 ````
 {{% /tab %}}

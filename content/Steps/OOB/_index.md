@@ -68,14 +68,14 @@ docker compose up -d
             - Click on: Datacenter/Permissions/Groups
                 - Click on Create button	
                 - Name:	Homepage-readonly-users
-                ![Homepage_API_1](Homepage_API_1.png)
+                ![Homepage_API_1](Homepage_API_1.png)<br />
             - Click on: Datacenter/Permissions
                 - Click: Add => Group Permission
                     - Path: 	/
                     - Group:	Homepage-readonly-users
                     - Role: 	PVEAuditor
                     - Propagate: 	Checked
-                ![Homepage_API_2](Homepage_API_2.png)
+                ![Homepage_API_2](Homepage_API_2.png)<br />
             - Click on: Datacenter/Permissions/Users
                 - Click: Add
                     - User name: 	Homepage
@@ -83,19 +83,19 @@ docker compose up -d
                     - Group:	Homepage-readonly-users
                     - Expires:	never
                     - Enabled:	checked
-                ![Homepage_API_3](Homepage_API_3.png)
+                ![Homepage_API_3](Homepage_API_3.png)<br />
             - Click on: Datacenter/Permissions/API Tokens
                 - Click: Add
                     - User: Homepage
                     - Token ID: api-readonly
                     - Privilege Separation: Unchecked
-                ![Homepage_API_4](Homepage_API_4.png)
+                ![Homepage_API_4](Homepage_API_4.png)<br />
             - Copy the Token ID and Secret generated
                 - **Note:** Secret value is only displayed once when token generated
-                ![Homepage_API_5](Homepage_API_5.png)
+                ![Homepage_API_5](Homepage_API_5.png)<br />
         - On Ubuntu-OOB VM
             - Edit **widgets.yaml** located in **/home/fortinet/c_data/homepage/config**
-                ![Widgets_API](Widgets_API.png)
+                ![Widgets_API](Widgets_API.png)<br />
 - **Guacamole**
 {{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash

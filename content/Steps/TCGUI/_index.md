@@ -10,9 +10,9 @@ RDP to OOB.
 ````bash
 cd /home/fortinet/automation/ansible/ubuntu
 
-./create_tcgui.sh ../vars/all-hosts.yml <name of your PVE server> ubuntu_tcgui
+./create_tcgui.sh          ../vars/all-hosts.yml  <PVE server name>  ubuntu_tcgui
 
-./start_stop_remove_vm.sh ../vars/all-hosts.yml <name of your PVE server> ubuntu_tcgui started
+./start_stop_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name>  ubuntu_tcgui started
 ````
 {{% /tab %}}
 
@@ -22,8 +22,8 @@ Suggest opening TCGUI's console window on PVE to verify.
 
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-./configure_tcgui.sh ubuntu_tcgui
+./configure_tcgui.sh   ubuntu_tcgui
 
-./wallpaper_update.sh ubuntu_tcgui
+./wallpaper_update.sh  ubuntu_tcgui
 ````
 {{% /tab %}}

@@ -20,10 +20,14 @@ weight = 20
 -	Browser - all testing for this build guide was done with [Firefox](https://www.firefox.com/en-US/)
 
 ### IP Addressing and Naming Convention Assumptions 
--	Internal to PVE Server, VM's and Proxmox VNET's follow this XLS: “IP Scheme.xls”
--   External to PVE Server this guide assumes 172.16.3.x/24
-    - If at all possible, use this default subnet external to PVE Server as described [here](/Introduction#se-lab-topology)
-    - If you can't or don't want to use that subnet, there are quite a few modifications found "here (need to create)" that you will need to make.
+- Subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
+    - Used for the physical interface of the PVE server
+    - Installation scripts assumes this subnet and IP range
+    - Documented in <a href="/downloads/IP%20Scheme.xlsx" download>IP Scheme.xlsx</a>
+
+    - Shown in the [topology](/Introduction#se-lab-topology)
+- If unable to use subnet 172.16.3.x/24 and reserve IP's from .2 thru .125
+    - Then several modifications are required as described [here](/Extras/External_Subnet)
 
 ### User Name / Passwords utilizes the following standard
 - User Name: fortinet (all lowercase)

@@ -5,42 +5,42 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsInternal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standardUser Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta name="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsSubnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Prerequisites :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsInternal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standardUser Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta name="twitter:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsSubnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server">
     <meta property="og:url" content="http://localhost:1313/prerequisites/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Prerequisites :: SE How-To Build Lab">
-    <meta property="og:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsInternal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standardUser Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta property="og:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsSubnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Prerequisites :: SE How-To Build Lab">
-    <meta itemprop="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsInternal to PVE Server, VM’s and Proxmox VNET’s follow this XLS: “IP Scheme.xls” External to PVE Server this guide assumes 172.16.3.x/24 If at all possible, use this default subnet external to PVE Server as described here If you can’t or don’t want to use that subnet, there are quite a few modifications found “here (need to create)” that you will need to make. User Name / Passwords utilizes the following standardUser Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
-    <meta itemprop="wordCount" content="233">
+    <meta itemprop="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsSubnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server">
+    <meta itemprop="wordCount" content="225">
     <title>Prerequisites :: SE How-To Build Lab</title>
     <link href="/prerequisites/index.xml" rel="alternate" type="application/rss+xml" title="Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1767820430" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1767820430" defer></script>
-    <script src="/js/search-lunr.js?1767820430" defer></script>
-    <script src="/js/search.js?1767820430" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1767849592" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1767849592" defer></script>
+    <script src="/js/search-lunr.js?1767849592" defer></script>
+    <script src="/js/search.js?1767849592" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1767820430";
+      window.relearn.index_js_url="/searchindex.en.js?1767849592";
     </script>
-    <script src="/js/lunr/lunr.min.js?1767820430" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1767820430" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1767820430" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1767820430" defer></script>
+    <script src="/js/lunr/lunr.min.js?1767849592" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1767849592" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1767849592" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1767849592" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767820430" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767820430" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1767820430" rel="stylesheet">
-    <link href="/css/theme.css?1767820430" rel="stylesheet">
-    <link href="/css/format-html.css?1767820430" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767849592" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1767849592" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1767849592" rel="stylesheet">
+    <link href="/css/theme.css?1767849592" rel="stylesheet">
+    <link href="/css/format-html.css?1767849592" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,6 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
+    <link href="/css/custom.css?1767849592" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -172,7 +173,7 @@
 <ul>
 <li>Proxmox Server accessible from your Work laptop via
 <ul>
-<li>Web Console <!-- raw HTML omitted --></li>
+<li>Web Console <ip address:8006></li>
 <li>SSH</li>
 </ul>
 </li>
@@ -187,11 +188,25 @@
 </ul>
 <h3 id="ip-addressing-and-naming-convention-assumptions">IP Addressing and Naming Convention Assumptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li>Internal to PVE Server, VM&rsquo;s and Proxmox VNET&rsquo;s follow this XLS: “IP Scheme.xls”</li>
-<li>External to PVE Server this guide assumes 172.16.3.x/24
+<li>Subnet 172.16.3.x/24 with IP&rsquo;s reserved from .2 thru .125
 <ul>
-<li>If at all possible, use this default subnet external to PVE Server as described <a href="/introduction/index.html#se-lab-topology">here</a></li>
-<li>If you can&rsquo;t or don&rsquo;t want to use that subnet, there are quite a few modifications found &ldquo;here (need to create)&rdquo; that you will need to make.</li>
+<li>
+<p>Used for the physical interface of the PVE server</p>
+</li>
+<li>
+<p>Installation scripts assumes this subnet and IP range</p>
+</li>
+<li>
+<p>Documented in <a href="/downloads/IP%20Scheme.xlsx" download>IP Scheme.xlsx</a></p>
+</li>
+<li>
+<p>Shown in the <a href="/introduction/index.html#se-lab-topology">topology</a></p>
+</li>
+</ul>
+</li>
+<li>If unable to use subnet 172.16.3.x/24 and reserve IP&rsquo;s from .2 thru .125
+<ul>
+<li>Then several modifications are required as described <a href="/extras/external_subnet/index.html">here</a></li>
 </ul>
 </li>
 </ul>
@@ -203,8 +218,8 @@
 <h3 id="basic-understanding-and-knowledge-of-linux-cli-commands">Basic Understanding and Knowledge of Linux CLI Commands<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line?target=_blank" rel="external" target="_blank">source</a>
-<a href="#R-image-5c0572362d5177b43f83d54bbf595c24" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c0572362d5177b43f83d54bbf595c24"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
+<a href="#R-image-fa7b5a7ac0229b98c47ed8b9f048013a" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fa7b5a7ac0229b98c47ed8b9f048013a"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
 </ul>
 <h3 id="edit-text-files-in-ubuntu-one-of-the-following">Edit text files in Ubuntu (one of the following)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
@@ -222,8 +237,8 @@
 <li>Ubuntu <a href="/prerequisites/GUI_Text_Editor.png?target=_blank" target="_blank">GNOME GUI Text Editor</a></li>
 </ul>
 <h3 id="upload-iso-and-qcow2-files">Upload ISO and qcow2 Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-9f8d530d1868eef1a3aa5dbe851b6443" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f8d530d1868eef1a3aa5dbe851b6443"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
+<p><a href="#R-image-6d1163ef47b9bd8d08dc2ab38e196aea" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6d1163ef47b9bd8d08dc2ab38e196aea"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
 <ul>
 <li>Ubuntu Desktop - <a href="https://ubuntu.com/download/desktop?target=_blank" rel="external" target="_blank">64-bit Desktop ISO Image</a>
 <ul>
@@ -243,8 +258,8 @@
 </ul>
 </li>
 </ul>
-<p><a href="#R-image-5edfcdd1c2230f9422680f3d160eb201" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/images/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5edfcdd1c2230f9422680f3d160eb201"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-b83e7d0730c1cdd0f713f65aa5f2d16e" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/images/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b83e7d0730c1cdd0f713f65aa5f2d16e"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/pic-import_qcow2.png"></a></p>
 <h3 id="ready-to-start-the-build">Ready to start the build<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><strong><a href="/steps/index.html">Steps To Build This Lab</a></strong></li>
@@ -297,7 +312,7 @@
             <li class="" data-nav-url="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
             <li class="active " data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
             <li class="" data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="/tips_and_tricks/index.html"><a class="padding default-animation" href="/tips_and_tricks/index.html">Tips and Tricks</a><ul id="R-subsections-3804529d5c4e5de1c51e74d2a4e2c190" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="/about/index.html"><a class="padding" href="/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
           </ul>
         </div>
@@ -316,8 +331,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1767820430" defer></script>
-    <script src="/js/theme.js?1767820430" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1767849592" defer></script>
+    <script src="/js/theme.js?1767849592" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

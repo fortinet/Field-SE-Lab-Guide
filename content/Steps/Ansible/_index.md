@@ -37,7 +37,7 @@ ssh root@<your pve server name 02>
 ````
 {{% /tab %}} 
 
--	Edit Ansible global.vars file
+- Update Ansible global.vars file
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 cat /home/fortinet/.ssh/ansible_key.pub
@@ -45,10 +45,12 @@ cat /home/fortinet/.ssh/ansible_key.pub
 {{% /tab %}}
     - Highlight, Right Click and Copy ansible_key.pub contents
     ![ansible_key_pub](ansible_key_pub.png)
-    - Edit **global.yml** located in **/home/Fortinet/automation/ansible/vars/**
-        - **proxmox_IaC_sshkey** is located at bottom of file
-        - *MAKE SURE* there are single quotes at beginning and end of key
-            ![global_yml](global_yml.png) 
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+cd /home/fortinet/automation/ansible/vars
+./upate_sshkey.sh <right click - paste SSH KEY here>
+````
+{{% /tab %}}
 
 **Ansible API Token**
 - On PVE Server => create Automation User and API Token (with full Administrator access)
@@ -80,15 +82,68 @@ cat /home/fortinet/.ssh/ansible_key.pub
     - Copy the Token ID and Secret generated
         - **Note:** Secret value is only displayed once when token generated
         ![Ansible_API_5](Ansible_API_5.png)
-- On Ubuntu-OOB VM
-    - Edit **global.yaml** located in **/home/fortinet/automation/ansible/vars/**
-    - Update the following:
-        - Token ID and Secret
-        - fortinet_timezone: US/Central
-        - proxmox_api_host: pve01		<= DNS name of PVE Server
-        - proxmox_storage: NFS-VMS	<= if not using NAS this should be lvm-local
-        - proxmox_ubuntu_template_name: Ubuntu-Template <= Name of Proxmox template used for ansible
-        ![global_yml_api](global_yml_api.png)
+
+**Global VARS File on Ubuntu-OOB**
+- Update **global.yml** file located in **/home/fortinet/automation/ansible/vars/**
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+cd /home/fortinet/automation/ansible/vars
+````
+{{% /tab %}}
+    - **proxmox_api_token_secret:**
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_api_token_secret.sh  <right click - paste Token Secret here>
+````
+{{% /tab %}}
+    - **fortinet_timezone:** US/Central <= Default Timzone **(no change needed if this is your timezone)**
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_timezone.sh  <examples: US/Eastern, US/Mountain, US/Pacific>
+````
+{{% /tab %}}
+    - **proxmox_api_host:** pve01		<= Default PVE Server name **(no change needed if already this name)**
+    - If different than 'pve01', then need to do all three of the following
+        - Edit file **/automation/ansible/vars/all-hosts.yml**
+            -   Search for pve01 and change to your server name
+        - Edit file **/automation/ansible/inventory/inventory.yml**
+            -   Search for pve01 and change to your server name
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_pve_server_name.sh  <Your PVE Server Name>
+````
+{{% /tab %}}
+    - **proxmox_storage_name:** local-lvm	<= if storage on PVE, or NAS name if not
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_storage_name.sh  <local-lvm if default, or NAS name if not>
+````
+{{% /tab %}}
+    - **proxmox_storage:** /var/lib/vz	<= if storage on PVE, or /mnt/pve/<NFS name> for NAS
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_VM_image_directory.sh  <directory where VM images reside>
+````
+{{% /tab %}}
+    - **proxmox_ubuntu_template_name:** Ubuntu-Template <= Name of Ubuntu template
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_ubuntu_template_name.sh  <VM Template Name>
+````
+{{% /tab %}}
+    - **proxmox_ubuntu_template_vmid:** 491 <= VMID of Ubuntu VM Template
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+./upate_ubuntu_template_vmid.sh  <VM Template VMID>
+````
+{{% /tab %}}
+    - **Verify**
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+cat global.yml
+````
+{{% /tab %}}
+    ![alt](/images/pic-global_yml.png)
 
 **DNS**
 
@@ -99,20 +154,6 @@ ping <your pve server name>
 ping Ubuntu-OOB
 ````
 {{% /tab %}} 
-
-
-**Global VARS File on Ubuntu-OOB:**
-
-The following file is updated with your lab’s specific configuration:
-
-~~~~bash
-/home/fortinet/automation/ansible/vars/global.yml
-~~~~
-- API User/Token/host	
-- *Storage* - Directory where VM Disk Images and qcow2 files being imported
-- *Storage_Name* - Name of Storage 
-- Ubuntu Template Name and vmid
-![alt](/images/pic-global_yml.png)
 
 **QCOW2 Files Uploaded**
 

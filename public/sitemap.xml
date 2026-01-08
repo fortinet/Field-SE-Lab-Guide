@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tips_and_tricks/proxmox_install/base_install/index.html</loc>
+    <loc>http://localhost:1313/extras/proxmox_install/base_install/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/ubuntu_template/index.html</loc>
@@ -10,13 +10,13 @@
     <loc>http://localhost:1313/introduction/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/tips_and_tricks/proxmox_install/index.html</loc>
+    <loc>http://localhost:1313/extras/proxmox_install/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/oob/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/tips_and_tricks/proxmox_install/post_installation/index.html</loc>
+    <loc>http://localhost:1313/extras/proxmox_install/post_installation/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/prerequisites/index.html</loc>
@@ -25,7 +25,7 @@
     <loc>http://localhost:1313/steps/ansible/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/tips_and_tricks/guacamole/index.html</loc>
+    <loc>http://localhost:1313/extras/guacamole/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/index.html</loc>
@@ -37,7 +37,7 @@
     <loc>http://localhost:1313/steps/fortigate/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/tips_and_tricks/index.html</loc>
+    <loc>http://localhost:1313/extras/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/fortimanager/index.html</loc>
@@ -47,6 +47,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/steps/ubuntu/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/extras/external_subnet/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/about/index.html</loc>

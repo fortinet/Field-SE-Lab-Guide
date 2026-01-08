@@ -7,6 +7,9 @@ ignoreLogs = [
   'warning-goldmark-raw-html',       # To hide raw HTML warnings
 ]
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   themeVariant = "red"
   externalLinkTarget = '_blank'

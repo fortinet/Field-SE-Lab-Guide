@@ -10,9 +10,9 @@ RDP to OOB.
 ````bash
 cd /home/fortinet/automation/ansible/ubuntu
 
-./create_ubuntu_vm.sh ../vars/all-hosts.yml <name of your PVE server> ubuntu_sdwan
+./create_ubuntu_vm.sh      ../vars/all-hosts.yml  <PVE server name>  ubuntu_sdwan
 
-./start_stop_remove_vm.sh ../vars/all-hosts.yml <name of your PVE server> ubuntu_sdwan started
+./start_stop_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name>  ubuntu_sdwan started
 
 ````
 {{% /tab %}}
@@ -23,6 +23,6 @@ Suggest opening console windows on PVE to verify.
 
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-./wallpaper_update.sh ubuntu_sdwan
+./wallpaper_update.sh  ubuntu_sdwan
 ````
 {{% /tab %}}
