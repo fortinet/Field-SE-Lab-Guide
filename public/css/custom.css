@@ -1,0 +1,13 @@
+table {
+  max-width: fit-content; /* Or a specific value like 80% or 600px */
+  margin-left: auto;
+  margin-right: auto;
+  /* Ensure it doesn't default to display: block; if that causes issues */
+  display: table;
+}
+
+/* Optional: Center the table on the page */
+.article-content table {
+    margin-left: auto;
+    margin-right: auto;
+}

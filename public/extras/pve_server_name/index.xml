@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PVE Server name != &#39;pve01&#39; :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/extras/pve_server_name/index.html</link>
+    <description>Update Ansible automation files with non-default PVE Server name Edit file /automation/ansible/vars/all-hosts.yml&#xA;Search for pve01 and change to your server name Edit file /automation/ansible/inventory/inventory.yml&#xA;Search for pve01 and change to your server name</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/pve_server_name/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

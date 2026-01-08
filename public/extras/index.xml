@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extras :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/extras/index.html</link>
+    <description>Proxmox Install Guacamole Change 172.16.3.x Subnet</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxmox Install</title>
+      <link>http://localhost:1313/extras/proxmox_install/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/extras/proxmox_install/index.html</guid>
+      <description>“Official” Proxmox documentation&#xA;PVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”&#xA;Base Install Post Installation “Must Do’s”</description>
+    </item>
+    <item>
+      <title>Guacamole</title>
+      <link>http://localhost:1313/extras/guacamole/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/extras/guacamole/index.html</guid>
+      <description>Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://172.16.3.80:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
+    </item>
+    <item>
+      <title>Change 172.16.3.x Subnet</title>
+      <link>http://localhost:1313/extras/external_subnet/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/extras/external_subnet/index.html</guid>
+      <description>Important Not tested. Change 172.16.3.x subnet that is the external subnet to Proxmox and the SE Lab&#xA;Proxmox Server&#xA;Change IP address of vmbr0 Change OOB’s eth0&#xA;Make sure VM is off Edit Cloud-Init Turn VM on Edit /usr/local/bin/generate-dynamic-netplan.sh Search for and replace 172.16.3.80 with x.y.z.80 Reboot VM Verify via conky and/or cli (ip a) that only x.y.z.- exists and no 172.16.3.- Change contents of DNS zone file:</description>
+    </item>
+  </channel>
+</rss>
