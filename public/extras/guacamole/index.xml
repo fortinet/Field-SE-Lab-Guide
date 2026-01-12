@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guacamole :: Field SE Lab Guide</title>
+    <link>http://localhost:1313/extras/guacamole/index.html</link>
+    <description>Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://172.16.3.80:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/guacamole/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

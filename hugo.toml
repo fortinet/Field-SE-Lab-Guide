@@ -1,0 +1,15 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Field SE Lab Guide'
+theme = 'hugo-theme-relearn'
+
+[params]
+  linkTitle = "GitHub How-To"
+  themeVariant = "red"
+  externalLinkTarget = '_blank'
+  
+  [params.image]
+    errorlevel = 'warning'
+
+  [params.link]
+    errorlevel = 'warning'

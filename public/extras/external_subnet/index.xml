@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Change 172.16.3.x Subnet :: Field SE Lab Guide</title>
+    <link>http://localhost:1313/extras/external_subnet/index.html</link>
+    <description>Important Not tested. Change 172.16.3.x subnet that is the external subnet to Proxmox and the SE Lab&#xA;Proxmox Server&#xA;Change IP address of vmbr0 Change OOB’s eth0&#xA;Make sure VM is off Edit Cloud-Init Turn VM on Edit /usr/local/bin/generate-dynamic-netplan.sh Search for and replace 172.16.3.80 with x.y.z.80 Reboot VM Verify via conky and/or cli (ip a) that only x.y.z.- exists and no 172.16.3.- Change contents of DNS zone file:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/external_subnet/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

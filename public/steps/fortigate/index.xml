@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create FortiGate VMs :: Field SE Lab Guide</title>
+    <link>http://localhost:1313/steps/fortigate/index.html</link>
+    <description>RDP to OOB.&#xA;​&#xD;from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortinet ./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan v7.6.3.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan started&#xD;Make sure all FortiGate VMs have fully started before exeucting the following.&#xA;Suggest opening console windows and verifying login prompt showing.&#xA;​&#xD;from Terminal in OOB&#xD;./install_flex_token.sh fortigate_sdwan&#x9;**Note: Ansible will say failed, but is successful if VM’s reboot** ./configure_fgt.sh fortigate_sdwan ./make_ha.sh fortigate_hub_ha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/fortigate/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

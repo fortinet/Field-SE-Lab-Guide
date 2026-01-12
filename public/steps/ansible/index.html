@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="SSH Key
+Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;Ansible API Token">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ansible Prerequisites :: Field SE Lab Guide">
+    <meta name="twitter:description" content="SSH Key
+Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;Ansible API Token">
+    <meta property="og:url" content="http://localhost:1313/steps/ansible/index.html">
+    <meta property="og:site_name" content="Field SE Lab Guide">
+    <meta property="og:title" content="Ansible Prerequisites :: Field SE Lab Guide">
+    <meta property="og:description" content="SSH Key
+Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;Ansible API Token">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Ansible Prerequisites :: Field SE Lab Guide">
+    <meta itemprop="description" content="SSH Key
+Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;Ansible API Token">
+    <meta itemprop="wordCount" content="492">
+    <title>Ansible Prerequisites :: Field SE Lab Guide</title>
+    <link href="/steps/ansible/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Prerequisites :: Field SE Lab Guide">
+    <link href="/css/auto-complete/auto-complete.min.css?1768188911" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1768188911" defer></script>
+    <script src="/js/search-lunr.js?1768188911" defer></script>
+    <script src="/js/search.js?1768188911" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1768188911";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1768188911" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1768188911" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1768188911" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1768188911" rel="stylesheet">
+    <link href="/css/theme.css?1768188911" rel="stylesheet">
+    <link href="/css/format-html.css?1768188911" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/steps\/ansible\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/steps/ansible/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Field SE Lab Guide</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Ansible Prerequisites</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/oob/index.html" title="Create OOB Management VM (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/tcgui/index.html" title="Create TCGUI VM (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="ansible-prerequisites">Ansible Prerequisites</h1>
+
+<p><strong>SSH Key</strong></p>
+<ul>
+<li>Generate SSH Key on Ubuntu-OOB
+<div class="tab-panel" data-tab-group="R-tabs-2f9a3ecd56392d438fca4b73ec2afdc3">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-94fa88fcd8c91097107a354b70a049d6" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-2f9a3ecd56392d438fca4b73ec2afdc3','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-94fa88fcd8c91097107a354b70a049d6"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C se_lab@fortinet.internal
+</span></span><span style="display:flex;"><span>  File 	     <span style="color:#f92672">=</span>&gt;  /home/fortinet/.ssh/ansible_key
+</span></span><span style="display:flex;"><span>  Passphrase <span style="color:#f92672">=</span>&gt;  &lt;none&gt; just hit enter twice</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li>Place public key on Proxmox
+<div class="tab-panel" data-tab-group="R-tabs-ceb34d22af666c6db31733c79d3a631e">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-e8fe09b3bd0fec2027aa3d9837a3c1a8" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-ceb34d22af666c6db31733c79d3a631e','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-e8fe09b3bd0fec2027aa3d9837a3c1a8"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li>Prompted with the following, respond “yes”</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>The authenticity of host <span style="color:#e6db74">&#39;pve01 (172.16.3.121)&#39;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t be established.
+</span></span><span style="display:flex;"><span>This key is not known by any other names.
+</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span> connecting <span style="color:#f92672">(</span>yes/no/<span style="color:#f92672">[</span>fingerprint<span style="color:#f92672">])</span>? yes</span></span></code></pre></div>
+<ul>
+<li>Prompted for <!-- raw HTML omitted --> password
+<ul>
+<li>&lt; enter password &gt;</li>
+</ul>
+</li>
+<li>Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password
+<ul>
+<li><strong>Note:</strong> The first time only, you will be prompted similar to sequence above</li>
+</ul>
+</li>
+</ul>
+<div class="tab-panel" data-tab-group="R-tabs-213af2f7ecd9b3cf492193de6fad23be">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-f0dab2a16adb26992cfced4fff5ed3c3" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-213af2f7ecd9b3cf492193de6fad23be','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-f0dab2a16adb26992cfced4fff5ed3c3"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh root@&lt;your pve server name 01&gt;
+</span></span><span style="display:flex;"><span>ssh root@&lt;your pve server name 02&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li>Update Ansible global.vars file
+<div class="tab-panel" data-tab-group="R-tabs-babfc1eda85e927a3fb32b69781a72ed">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ccd00958c88606a205400194002d9874" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-babfc1eda85e927a3fb32b69781a72ed','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ccd00958c88606a205400194002d9874"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /home/fortinet/.ssh/ansible_key.pub</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li>Highlight, Right Click and Copy ansible_key.pub contents
+<a href="#R-image-762a9b194929b5b809e9a4bab2f57655" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-762a9b194929b5b809e9a4bab2f57655"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-b6a9a1b7f646ea58deb969b7a8e34130">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-8e0e589b8841bf9119aefce3014da585" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-b6a9a1b7f646ea58deb969b7a8e34130','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-8e0e589b8841bf9119aefce3014da585"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/vars
+</span></span><span style="display:flex;"><span>./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+</li>
+</ul>
+<p><strong>Ansible API Token</strong></p>
+<ul>
+<li>On PVE Server =&gt; create Automation User and API Token (with full Administrator access)
+<ul>
+<li>Click on: Datacenter/Permissions/Groups
+<ul>
+<li>Click on Create button</li>
+<li>Name:	IaC-admin-users
+<a href="#R-image-c8caa352a674ded4c189ea12a47dda7a" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8caa352a674ded4c189ea12a47dda7a"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions
+<ul>
+<li>Click: Add =&gt; Group Permission
+<ul>
+<li>Path: 	/</li>
+<li>Group:	IaC-admin-users</li>
+<li>Role: 	Administrator</li>
+<li>Propagate: 	Checked
+<a href="#R-image-6bab97bb817052f173dccde65809dc55" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6bab97bb817052f173dccde65809dc55"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions/Users
+<ul>
+<li>Click: Add
+<ul>
+<li>User name: 	IaC</li>
+<li>Realm: 	Linux PAM standard authentication</li>
+<li>Group:	IaC-admin-users</li>
+<li>Expires:	never</li>
+<li>Enabled:	checked
+<a href="#R-image-dbf3498e59c305edf8e037dc75f1938b" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbf3498e59c305edf8e037dc75f1938b"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click on: Datacenter/Permissions/API Tokens
+<ul>
+<li>Click: Add
+<ul>
+<li>User: IaC</li>
+<li>Token ID: Automation</li>
+<li>Privilege Separation: Unchecked
+<a href="#R-image-4c9a5be55e3ff118666d5a1e7a6b7ed6" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4c9a5be55e3ff118666d5a1e7a6b7ed6"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Copy the Token ID and Secret generated
+<ul>
+<li><strong>Note:</strong> Secret value is only displayed once when token generated
+<a href="#R-image-e58a11b172758bcb0b5f146f08ee1d12" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e58a11b172758bcb0b5f146f08ee1d12"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Global VARS File on Ubuntu-OOB</strong></p>
+<ul>
+<li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
+<div class="tab-panel" data-tab-group="R-tabs-1a260153c339fe8ad45cef6efac6efac">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-cf89e3e471d540bd248d3312df390d05" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-1a260153c339fe8ad45cef6efac6efac','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-cf89e3e471d540bd248d3312df390d05"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/vars</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong>proxmox_api_token_secret:</strong>
+<div class="tab-panel" data-tab-group="R-tabs-3e200a840cfbb67b4a2e0e153dc17e9f">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-6f04493cd31ff7f2194fbbe0482e5dd0" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-3e200a840cfbb67b4a2e0e153dc17e9f','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-6f04493cd31ff7f2194fbbe0482e5dd0"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_api_token_secret.sh  &lt;right click - paste Token Secret here&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>fortinet_timezone:</strong> US/Central &lt;= Default Timzone <strong>(no change needed if this is your timezone)</strong>
+<div class="tab-panel" data-tab-group="R-tabs-0f309228482c5e6f40d00c6c02276bbb">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-14f986f05b7ecf56649a5abd62b17353" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-0f309228482c5e6f40d00c6c02276bbb','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-14f986f05b7ecf56649a5abd62b17353"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_timezone.sh  &lt;examples: US/Eastern, US/Mountain, US/Pacific&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(no change needed if already this name)</strong></li>
+<li>If different than &lsquo;pve01&rsquo;, then need to do all three of the following
+<ul>
+<li>Edit file <strong>/automation/ansible/vars/all-hosts.yml</strong>
+<ul>
+<li>Search for pve01 and change to your server name</li>
+</ul>
+</li>
+<li>Edit file <strong>/automation/ansible/inventory/inventory.yml</strong>
+<ul>
+<li>Search for pve01 and change to your server name
+<div class="tab-panel" data-tab-group="R-tabs-355824eaadfa0efda7b472dd96258691">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-b9ee48b81edc580923935636c3bbb888" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-355824eaadfa0efda7b472dd96258691','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-b9ee48b81edc580923935636c3bbb888"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_pve_server_name.sh  &lt;Your PVE Server Name&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>proxmox_storage_name:</strong> local-lvm	&lt;= if storage on PVE, or NAS name if not
+<div class="tab-panel" data-tab-group="R-tabs-eacc7333e201bfc6a733cb35df6bc82a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-6fc815ff4b943e33989e480ce2a3a7c2" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-eacc7333e201bfc6a733cb35df6bc82a','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-6fc815ff4b943e33989e480ce2a3a7c2"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_storage_name.sh  &lt;local-lvm <span style="color:#66d9ef">if</span> default, or NAS name <span style="color:#66d9ef">if</span> not&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<!-- raw HTML omitted --> for NAS
+<div class="tab-panel" data-tab-group="R-tabs-b0d142eeaafec190422b42c99e34d6ce">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-1167131b03b5f0ac26902540c9c7e6c1" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-b0d142eeaafec190422b42c99e34d6ce','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-1167131b03b5f0ac26902540c9c7e6c1"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_VM_image_directory.sh  &lt;directory where VM images reside&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>proxmox_ubuntu_template_name:</strong> Ubuntu-Template &lt;= Name of Ubuntu template
+<div class="tab-panel" data-tab-group="R-tabs-01ff2c969c4d647f8d3e44d81d983f0a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-b903e46b47f5e647e47c2faebf5ef7a5" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-01ff2c969c4d647f8d3e44d81d983f0a','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-b903e46b47f5e647e47c2faebf5ef7a5"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_ubuntu_template_name.sh  &lt;VM Template Name&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>proxmox_ubuntu_template_vmid:</strong> 491 &lt;= VMID of Ubuntu VM Template
+<div class="tab-panel" data-tab-group="R-tabs-28a27b9cfcec73b3c45f8c99e9ab35b9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-cc337b0c65920ca40a6d82240067e681" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-28a27b9cfcec73b3c45f8c99e9ab35b9','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-cc337b0c65920ca40a6d82240067e681"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_ubuntu_template_vmid.sh  &lt;VM Template VMID&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li><strong>Verify</strong>
+<div class="tab-panel" data-tab-group="R-tabs-60914ba14770697e8a026f63fda76d5f">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-991c763e9b639f6f77ea7d8478cdf1e2" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-60914ba14770697e8a026f63fda76d5f','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-991c763e9b639f6f77ea7d8478cdf1e2"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat global.yml</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#R-image-80a29e2e16847c1da54f388c2be53666" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-80a29e2e16847c1da54f388c2be53666"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></li>
+</ul>
+</li>
+</ul>
+<p><strong>DNS</strong></p>
+<p>All hosts and VMs can be resolved by name.
+<div class="tab-panel" data-tab-group="R-tabs-824a6f2adb823fd0a0a177f0a894490c">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-51f07036194e1d223b34555e0565e4d3" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-824a6f2adb823fd0a0a177f0a894490c','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-51f07036194e1d223b34555e0565e4d3"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping &lt;your pve server name&gt;
+</span></span><span style="display:flex;"><span>ping Ubuntu-OOB</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><strong>QCOW2 Files Uploaded</strong></p>
+<p>qcow2 files must have the following format:</p>
+<p>&lt; 3 letters &gt; dash &lt; version &gt; .qcow2</p>
+<ul>
+<li>FGT-v7.4.8.M.qcow2</li>
+<li>FMG-v7.6.4.F.qcow2</li>
+<li>FAZ-v7.4.8.M.qcow2</li>
+</ul>
+<p><a href="#R-image-b19e5090ac830b9d25312052e62beb26" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b19e5090ac830b9d25312052e62beb26"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">GitHub How-To</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-id="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="" data-nav-id="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="" data-nav-id="/steps/oob/index.html"><a class="padding" href="/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="active " data-nav-id="/steps/ansible/index.html"><a class="padding" href="/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-id="/steps/tcgui/index.html"><a class="padding" href="/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="" data-nav-id="/steps/fortigate/index.html"><a class="padding" href="/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="" data-nav-id="/steps/fortimanager/index.html"><a class="padding" href="/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-id="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-id="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-id="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1768188911" defer></script>
+    <script src="/js/theme.js?1768188911" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

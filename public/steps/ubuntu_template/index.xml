@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create Ubuntu VM Template :: Field SE Lab Guide</title>
+    <link>http://localhost:1313/steps/ubuntu_template/index.html</link>
+    <description>Create the VM&#xD;In PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General&#xA;Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS&#xA;Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/steps/ubuntu_template/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

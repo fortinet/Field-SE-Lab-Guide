@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="RDP to OOB.
+​from Terminal in OOBcd /home/fortinet/automation/ansible/fortinet ./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg v7.6.4.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg startedMake sure FortiManager VM has fully started before continuing.
+Suggest opening console windows and verifying login prompt showing.
+Configure FortiManager
+From the VM’s console on ProxMox
+Login using admin / “no password”">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create FortiManager VM :: Field SE Lab Guide">
+    <meta name="twitter:description" content="RDP to OOB.
+​from Terminal in OOBcd /home/fortinet/automation/ansible/fortinet ./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg v7.6.4.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg startedMake sure FortiManager VM has fully started before continuing.
+Suggest opening console windows and verifying login prompt showing.
+Configure FortiManager
+From the VM’s console on ProxMox
+Login using admin / “no password”">
+    <meta property="og:url" content="http://localhost:1313/steps/fortimanager/index.html">
+    <meta property="og:site_name" content="Field SE Lab Guide">
+    <meta property="og:title" content="Create FortiManager VM :: Field SE Lab Guide">
+    <meta property="og:description" content="RDP to OOB.
+​from Terminal in OOBcd /home/fortinet/automation/ansible/fortinet ./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg v7.6.4.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg startedMake sure FortiManager VM has fully started before continuing.
+Suggest opening console windows and verifying login prompt showing.
+Configure FortiManager
+From the VM’s console on ProxMox
+Login using admin / “no password”">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Create FortiManager VM :: Field SE Lab Guide">
+    <meta itemprop="description" content="RDP to OOB.
+​from Terminal in OOBcd /home/fortinet/automation/ansible/fortinet ./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg v7.6.4.F ./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg startedMake sure FortiManager VM has fully started before continuing.
+Suggest opening console windows and verifying login prompt showing.
+Configure FortiManager
+From the VM’s console on ProxMox
+Login using admin / “no password”">
+    <meta itemprop="wordCount" content="266">
+    <title>Create FortiManager VM :: Field SE Lab Guide</title>
+    <link href="/steps/fortimanager/index.xml" rel="alternate" type="application/rss+xml" title="Create FortiManager VM :: Field SE Lab Guide">
+    <link href="/css/auto-complete/auto-complete.min.css?1768188911" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1768188911" defer></script>
+    <script src="/js/search-lunr.js?1768188911" defer></script>
+    <script src="/js/search.js?1768188911" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1768188911";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1768188911" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1768188911" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1768188911" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1768188911" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1768188911" rel="stylesheet">
+    <link href="/css/theme.css?1768188911" rel="stylesheet">
+    <link href="/css/format-html.css?1768188911" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/steps\/fortimanager\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/steps/fortimanager/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Field SE Lab Guide</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Create FortiManager VM</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/fortigate/index.html" title="Create FortiGate VMs (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/fortianalyzer/index.html" title="Create FortiAnalyzer VM (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="create-fortimanager-vm">Create FortiManager VM</h1>
+
+<p>RDP to OOB.</p>
+<div class="tab-panel" data-tab-group="R-tabs-49919decdb7b07af5eea6d03dbd586cf">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-1939e6f430864543df831a0a2552ba0c" aria-expanded="true"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-49919decdb7b07af5eea6d03dbd586cf','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+    >
+      <span class="tab-nav-text">from Terminal in OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-1939e6f430864543df831a0a2552ba0c"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/fortinet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>./create-vm.sh        ../vars/all-hosts.yml  &lt;PVE server name&gt; 	fmg  v7.6.4.F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>./start_remove_vm.sh  ../vars/all-hosts.yml  &lt;PVE server name&gt; 	fmg  started</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Make sure FortiManager VM has fully started before continuing.</p>
+<p>Suggest opening console windows and verifying login prompt showing.</p>
+<p><strong>Configure FortiManager</strong></p>
+<p>From the VM’s console on ProxMox</p>
+<p>Login using admin / &ldquo;no password&rdquo;</p>
+<p>Set Password to the following:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Fort1net!</span></span></code></pre></div>
+<p><strong>Note:</strong> Starting with 7.6.4 a password policy for local users is enabled and configured by default. Password must have at least 8 characters and must contain uppercase letter(s), lowercase letter(s), number(s), and special character(s).</p>
+<p>Configure interfaces so the Ubuntu-OOB can run Ansible modules</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>config system interface
+</span></span><span style="display:flex;"><span>    edit <span style="color:#e6db74">&#34;port1&#34;</span>
+</span></span><span style="display:flex;"><span>        unset mode
+</span></span><span style="display:flex;"><span>    next    
+</span></span><span style="display:flex;"><span>    edit <span style="color:#e6db74">&#34;port2&#34;</span>
+</span></span><span style="display:flex;"><span>        set ip 10.100.55.12/24
+</span></span><span style="display:flex;"><span>        set allowaccess ping https ssh http
+</span></span><span style="display:flex;"><span>        set serviceaccess fgtupdates
+</span></span><span style="display:flex;"><span>    next
+</span></span><span style="display:flex;"><span>end</span></span></code></pre></div>
+<p>Allow VM device registration.</p>
+<p><strong>Note:</strong>  A new “feature” was added in v7.6.3 to disable VM registration.</p>
+<p>Disable change notes</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>config system global
+</span></span><span style="display:flex;"><span>    set fgfm-allow-vm enable 
+</span></span><span style="display:flex;"><span>    set object-revision-mandatory-note disable
+</span></span><span style="display:flex;"><span>end</span></span></code></pre></div>
+<p>Allow admin user to use JSON</p>
+<p><strong>Note:</strong>  After this command, you will be automatically logged out</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>config system admin user
+</span></span><span style="display:flex;"><span>    edit <span style="color:#e6db74">&#34;admin&#34;</span>
+</span></span><span style="display:flex;"><span>        set rpc-permit read-write
+</span></span><span style="display:flex;"><span>    next
+</span></span><span style="display:flex;"><span>end</span></span></code></pre></div>
+<p>RDP to OOB.
+<div class="tab-panel" data-tab-group="R-tabs-bcfaaec6854ecdc2429e08112633598a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-924c3ed7b0e8e35fb07c56949acc3841" aria-expanded="true"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-bcfaaec6854ecdc2429e08112633598a','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+    >
+      <span class="tab-nav-text">from Terminal in OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-924c3ed7b0e8e35fb07c56949acc3841"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/fortinet</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<strong>Note:</strong>  Run the following command from OOB 3x.</p>
+<p>It will fail on Port 1, and then work, and then fail on Port3 and then work, and on the third run, all tasks run successfully.</p>
+<div class="tab-panel" data-tab-group="R-tabs-af80208f957e44d33f249de004f77b4c">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-6a936233929bc87404daffbe208636c5" aria-expanded="true"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-af80208f957e44d33f249de004f77b4c','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+    >
+      <span class="tab-nav-text">from Terminal in OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-6a936233929bc87404daffbe208636c5"
+      data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./configure_fmg.sh  fmg</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>From the VM’s console on ProxMox</p>
+<p>Login to FortiManager&rsquo;s console using: admin / Fort1net!</p>
+<p><strong>Note:</strong>  After this command, the system will automatically reboot</p>
+<div class="tab-panel" data-tab-group="R-tabs-15f02f192ca20b2d3d4e30aa18de82f5">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-f659c8bd97ea22f6ce69bf36e50e6ba0" aria-expanded="true"
+      data-tab-item="R-tab-36271d41ad4274d26ef0fd5012dd7ca7"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-15f02f192ca20b2d3d4e30aa18de82f5','R-tab-36271d41ad4274d26ef0fd5012dd7ca7')"
+    >
+      <span class="tab-nav-text">Inject FortiFlex Token</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-f659c8bd97ea22f6ce69bf36e50e6ba0"
+      data-tab-item="R-tab-36271d41ad4274d26ef0fd5012dd7ca7"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>execute  vm-license  &lt;token&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">GitHub How-To</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-id="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="" data-nav-id="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="" data-nav-id="/steps/oob/index.html"><a class="padding" href="/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="" data-nav-id="/steps/ansible/index.html"><a class="padding" href="/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-id="/steps/tcgui/index.html"><a class="padding" href="/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="" data-nav-id="/steps/fortigate/index.html"><a class="padding" href="/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="active " data-nav-id="/steps/fortimanager/index.html"><a class="padding" href="/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-id="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-id="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-id="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1768188911" defer></script>
+    <script src="/js/theme.js?1768188911" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
