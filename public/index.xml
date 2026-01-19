@@ -12,14 +12,14 @@
       <link>http://localhost:1313/introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/introduction/index.html</guid>
-      <description>The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.&#xA;This Lab removes the need to:&#xA;plan and develop an IP Addressing scheme (this lab uses FNDN’s) learn, understand and implement WAN Emulation (this lab uses TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below and at which point an SE can spend time on learning and utilizing Fortinet technologies.</description>
+      <description>The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.&#xA;This Lab removes the need to:&#xA;plan and develop an IP Addressing scheme (this lab follows FNDN’s) learn, understand and implement WAN Emulation (this lab utilizes TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below, at which point an SE can spend time learning and utilizing Fortinet technologies.</description>
     </item>
     <item>
       <title>Prerequisites</title>
       <link>http://localhost:1313/prerequisites/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/prerequisites/index.html</guid>
-      <description>Proxmox Virtual Environment (PVE)&#xD;This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and Tools&#xD;Proxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:&#xD;7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention Assumptions&#xD;Subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server Installation scripts assumes this subnet and IP range Documented in IP Scheme.xlsx Shown in the topology If unable to use subnet 172.16.3.x/24 and reserve IP’s from .2 thru .125 Then several modifications are required as described here User Name / Passwords utilizes the following standard&#xD;User Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commands&#xD;source Edit text files in Ubuntu (one of the following)&#xD;vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files</description>
+      <description>Proxmox Virtual Environment (PVE)&#xD;This lab requires (obviously), a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and Tools&#xD;Proxmox Server accessible from your Work laptop via Web Console SSH Work laptop has installed or equivalent capable applications:&#xD;7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention Assumptions&#xD;Subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of the PVE server Installation scripts assumes this subnet and IP range Documented here Shown in the topology If unable to use subnet 172.16.3.x/24 and reserve IP’s from .2 thru .125 Then several modifications are required as described here User Name / Passwords utilizes the following standard&#xD;User Name: fortinet (all lowercase) Password: password (all lowercase) Basic Understanding and Knowledge of Linux CLI Commands&#xD;source Edit text files in Ubuntu (one of the following)&#xD;vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files</description>
     </item>
     <item>
       <title>Steps To Build This Lab</title>
@@ -33,7 +33,7 @@
       <link>http://localhost:1313/extras/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/extras/index.html</guid>
-      <description>Proxmox Install Guacamole Change 172.16.3.x Subnet</description>
+      <description>Proxmox Install Guacamole Nesting ESXi Change 172.16.3.x Subnet</description>
     </item>
   </channel>
 </rss>

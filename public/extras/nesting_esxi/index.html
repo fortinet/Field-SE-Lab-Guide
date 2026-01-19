@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
+There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
+global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nesting ESXi :: Field SE Lab Guide">
+    <meta name="twitter:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
+There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
+global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta property="og:url" content="http://localhost:1313/extras/nesting_esxi/index.html">
+    <meta property="og:site_name" content="Field SE Lab Guide">
+    <meta property="og:title" content="Nesting ESXi :: Field SE Lab Guide">
+    <meta property="og:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
+There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
+global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Nesting ESXi :: Field SE Lab Guide">
+    <meta itemprop="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
+There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
+global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta itemprop="wordCount" content="360">
+    <title>Nesting ESXi :: Field SE Lab Guide</title>
+    <link href="/extras/nesting_esxi/index.xml" rel="alternate" type="application/rss+xml" title="Nesting ESXi :: Field SE Lab Guide">
+    <link href="/css/auto-complete/auto-complete.min.css?1768797974" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1768797974" defer></script>
+    <script src="/js/search-lunr.js?1768797974" defer></script>
+    <script src="/js/search.js?1768797974" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1768797974";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1768797974" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1768797974" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1768797974" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1768797974" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1768797974" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1768797974" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1768797974" rel="stylesheet">
+    <link href="/css/theme.css?1768797974" rel="stylesheet">
+    <link href="/css/format-html.css?1768797974" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/extras\/nesting_esxi\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/extras/nesting_esxi/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong></a></li>
+        <li><a href="#esxi-vm-creation"><strong>ESXi VM Creation</strong></a></li>
+        <li><a href="#start-esxi-vm"><strong>Start ESXi VM</strong></a></li>
+        <li><a href="#post-install-must-do"><strong>Post install MUST DO’S</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Field SE Lab Guide</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Nesting ESXi</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/extras/guacamole/index.html" title="Guacamole (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/extras/external_subnet/index.html" title="Change 172.16.3.x Subnet (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="nesting-esxi">Nesting ESXi</h1>
+
+<p>Why would do this?  FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).</p>
+<p>There are &ldquo;how-to&rdquo; posts that I could not make FortiLink work in Proxmox: (examples below)</p>
+<ul>
+<li><a href="https://teams.microsoft.com/l/message/19:104c76bd09954d5794f64ac25e5b6e86@thread.skype/1720003124774?tenantId=2c36c478-3d00-452f-8535-48396f5f01f0&groupId=62fd9f66-e24c-403e-81bc-d8dfd7bf0ea8&parentMessageId=1720003124774&teamName=FortiChat%20Global%20Channels&channelName=swat_fap_fsw_fex_switch_access&createdTime=1720003124774" rel="external" target="_blank">global channels</a></li>
+<li><a href="https://forum.proxmox.com/threads/unable-to-create-sdn-vnet-without-tag.148566/" rel="external" target="_blank">Support Forum</a></li>
+</ul>
+<h3 id="verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><a href="https://pve.proxmox.com/wiki/Nested_Virtualization" rel="external" target="_blank">https://pve.proxmox.com/wiki/Nested_Virtualization</a></li>
+<li><a href="https://devopstales.github.io/virtualization/install-vmware-in-proxmox/" rel="external" target="_blank">https://devopstales.github.io/virtualization/install-vmware-in-proxmox/</a>
+<ul>
+<li>At CLI:	cat /sys/module/kvm_intel/parameters/nested
+<ul>
+<li>If it returns “Y”, proceed to Creation Step</li>
+<li>If it returns “N”, follow steps in URL above to enable</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="esxi-vm-creation"><strong>ESXi VM Creation</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>In PVE GUI  &gt; Click &ldquo;Create VM&rdquo;
+<ul>
+<li>
+<p><strong>General</strong></p>
+<ul>
+<li>Choose Node</li>
+<li>Choose VM_id (or use the default)</li>
+<li>Type VM Name</li>
+</ul>
+</li>
+<li>
+<p><strong>OS</strong></p>
+<ul>
+<li>Add ESXi installation media</li>
+<li>Default values for &lsquo;Guest OS&rsquo; (Linux 6.x – 2.6 Kernel)</li>
+</ul>
+</li>
+<li>
+<p><strong>System</strong></p>
+<ul>
+<li><strong>Graphic card:</strong> Default</li>
+<li><strong>Machine:</strong> q35</li>
+<li><strong>BIOS:</strong> SeaBIOS</li>
+<li><strong>SCSI Controller:</strong> VMware PVSCSI</li>
+</ul>
+</li>
+<li>
+<p><strong>Disks</strong></p>
+<ul>
+<li><strong>Bus/Device:</strong> SATA</li>
+<li><strong>Size:</strong> minimum is 128GB</li>
+<li><strong>SSD emulation:</strong> Check</li>
+<li><strong>Discard:</strong> Check</li>
+<li><strong>Backup:</strong> Un-Check</li>
+</ul>
+</li>
+<li>
+<p><strong>CPU</strong></p>
+<ul>
+<li><strong>Cores:</strong> 4</li>
+<li><strong>Type:</strong> host</li>
+</ul>
+</li>
+<li>
+<p><strong>Memory</strong></p>
+<ul>
+<li>4GB is minimum, (Suggest 8GB)</li>
+</ul>
+</li>
+<li>
+<p><strong>Network</strong></p>
+<ul>
+<li><strong>Model:</strong> VMware vmxnet3</li>
+</ul>
+</li>
+<li>
+<p><strong>Confirm</strong></p>
+<ul>
+<li>Click <strong>Finish</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Wait for the VM Create process to complete (i.e. Status OK)</p>
+<p>Add as many NICs as needed</p>
+<ul>
+<li>PVE GUI  &gt; Click on ESXi VM &gt; Hardware &gt; Add &gt; Network Device</li>
+</ul>
+<h3 id="start-esxi-vm"><strong>Start ESXi VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Reduce size of system partition (<span class="badge cstyle default"><span class="badge-content">Important</span></span> <strong>MUST BE DONE AT INITIAL INSTALL</strong>)
+<ul>
+<li>Background:
+<ul>
+<li>ESXi 7.0 introduced a system-storage boot media layout designed to ensure new features and capabilities could be added in future releases. The partition layout can consume up to 138GB of disk space, significantly limiting usable space to create a VMFS datastore on small server with finite hardware resources.</li>
+</ul>
+</li>
+<li>Documentation:
+<ul>
+<li><a href="https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html" rel="external" target="_blank">https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html</a></li>
+</ul>
+</li>
+<li>&ldquo;How-To&rdquo; reduce system partition size:
+<ul>
+<li>Start host with install image</li>
+<li>When ESXi installer window appears</li>
+<li>Press Shift+O within 5 seconds to edit the boot options.</li>
+<li>Add the following to the end of the prompt:
+<ul>
+<li>systemMediaSize=min</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="post-install-must-do"><strong>Post install MUST DO&rsquo;S</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Assign a License in DCUI
+<ul>
+<li>Click on: Host/Manage/Licensing/Assign License</li>
+</ul>
+</li>
+<li>Enable SSH
+<ul>
+<li>Click on: Host / Actions / Services / Enable Secure Shell (SSH)</li>
+</ul>
+</li>
+<li>Enable SSH on boot:
+<ul>
+<li>Click on: Host/Manage/Services/Right click TSM-SSH/Policy/Select &ldquo;Start and stop with host&rdquo;</li>
+</ul>
+</li>
+<li>Configure DCUI
+<ul>
+<li>Click on: Host/Manage/System/Advanced Settings
+<ul>
+<li>UserVars.DcuiTimeOut Value=0</li>
+<li>UserVars.HostClientSessionTimeout Value=0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Edit NTP Settings
+<ul>
+<li>Click on: Host/Manage/System/Time &amp; date</li>
+<li>Enable NTP client/Start and stop with host/208.91.112.63  	&lt;=ntp1.fortiguard.com</li>
+</ul>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">GitHub How-To</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/introduction/index.html"><a class="padding default-animation" href="/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
+            <li class="" data-nav-id="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/extras/proxmox_install/index.html"><a class="padding default-animation" href="/extras/proxmox_install/index.html">Proxmox Install</a><ul id="R-subsections-4610f3560435c0a3771f1a2e92899f7a" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/extras/guacamole/index.html"><a class="padding" href="/extras/guacamole/index.html">Guacamole</a></li>
+            <li class="active " data-nav-id="/extras/nesting_esxi/index.html"><a class="padding" href="/extras/nesting_esxi/index.html">Nesting ESXi</a></li>
+            <li class="" data-nav-id="/extras/external_subnet/index.html"><a class="padding" href="/extras/external_subnet/index.html">Change 172.16.3.x Subnet</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1768797974" defer></script>
+    <script src="/js/theme.js?1768797974" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

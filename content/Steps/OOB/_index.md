@@ -57,9 +57,10 @@ docker compose up -d
 {{% /tab %}}
 
 - **"homepage"**
+    - homepage available via browswer via OOB's IP **_< 172.16.3.80 >_**
     - [homepage](https://gethomepage.dev/) is a customizable application dashboard
     -  YAML files located here: **/home/fortinet/c_data/homepage/config**
-        - **bookmarks.yaml** <= [Lab URL’s](https://gethomepage.dev/configs/bookmarks/)
+        - **bookmarks.yaml** <= [URL's for GUI and SSH access to Lab VM’s](https://gethomepage.dev/configs/bookmarks/)
         - **services.yaml**  <= [ProxMox Server GUI URL/Status](https://gethomepage.dev/widgets/services/proxmox/)
         - **settings.yaml**  <= [Column Headings/Layout](https://gethomepage.dev/configs/settings/)
         - **widgets.yaml**	<= [Date/Time](https://gethomepage.dev/widgets/info/datetime/) – [Weather/Location](https://gethomepage.dev/widgets/info/openweathermap/)
@@ -97,6 +98,7 @@ docker compose up -d
             - Edit **widgets.yaml** located in **/home/fortinet/c_data/homepage/config**
                 ![Widgets_API](Widgets_API.png)<br />
 - **Guacamole**
+    - Following steps need executed
 {{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose ps
@@ -116,14 +118,14 @@ docker compose down
 docker compose up –d
 ````
 {{% /tab %}}
-    - *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
-    - See **[Tips and Tricks](Tips_and_Tricks)** section if additions and or changes required in the future
+    - *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
+    - See **[Guacamole](/extras/guacamole/)** section if additions and or changes required in the future
  
 ### Verification 
 - "homepage" is working
-    - via Work Laptop browser: http://172.16.3.80
+    - via Work Laptop browser: [http://172.16.3.80](http://172.16.3.80)
 - Guacamole is working
-    - via Work Laptop browser: http://172.16.3.80:8080/guacamole 
+    - via Work Laptop browser: [http://172.16.3.80:8080/guacamole](http://172.16.3.80:8080/guacamole)
         - User: 		guacadmin
         - Password: 	guacadmin
 - DNS is working
@@ -135,7 +137,7 @@ ping oob.fortinet.internal
 ````
 {{% /tab %}}
 - NAT/Forwarding working
-    - Should see multiple: **PREROUTING 172.16.3.X addresses** and **POSTROUTING MASQUERADE**
+    - Should see multiple: **_PREROUTING 172.16.3.X addresses_** and **_POSTROUTING MASQUERADE_**
 {{% tab title="from Terminal" %}}
 ````bash
 sudo iptables -t nat -L -n -v”

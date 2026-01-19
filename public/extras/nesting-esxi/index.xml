@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nesting ESXi :: Field SE Lab Guide</title>
+    <link>http://localhost:1313/extras/nesting-esxi/index.html</link>
+    <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make work found in:&#xA;global channels Support Forum working which means I could not get FortiSwitch VM’s to come online in Proxmox (and I know it works in ESXi.)&#xA;Instead of building/needing a separate physical ESXi server (as it would be used solely for FortiSwitch VM’s), I nested ESXi inside Proxmox using the following steps. Important Not tested. Change 172.16.3.x subnet that is the external subnet to Proxmox and the SE Lab</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/nesting-esxi/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
