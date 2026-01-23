@@ -8,15 +8,15 @@ weight = 30
 Execute and complete the following 11 steps in order
 
 **1) PVE server**
-- If creating a new PVE, use the following section **[Proxmox Install](/Extras/Proxmox_Install)**
-- If using an existing PVE, verify version (i.e. scripts/steps tested against 9.x, but will likely work with 8.x too)
+- PVE should be built with the steps found here: **[Proxmox Install](/Extras/Proxmox_Install)**
+- {{% badge %}}Note{{% /badge %}} The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too)
 ![Version](Version.png)
 
 **2) Create VNETs on PVE server**
 {{% tab title="from PVE Shell" %}}
 ````bash
 cd /root
-curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-Build/refs/heads/main/Create_VNETs.sh > Create_VNETs.sh
+curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh > Create_VNETs.sh
 chmod 777 Create_VNETs.sh
 ./Create_VNETs.sh
 ````

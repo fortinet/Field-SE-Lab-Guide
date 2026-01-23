@@ -22,29 +22,29 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
     <meta itemprop="name" content="Ansible Prerequisites :: SE How-To Build Lab">
     <meta itemprop="description" content="SSH Key
 Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./upate_sshkey.sh &lt;right click - paste SSH KEY here&gt;Ansible API Token">
-    <meta itemprop="wordCount" content="492">
+    <meta itemprop="wordCount" content="490">
     <title>Ansible Prerequisites :: SE How-To Build Lab</title>
     <link href="/steps/ansible/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1768455894" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1768455894" defer></script>
-    <script src="/js/search-lunr.js?1768455894" defer></script>
-    <script src="/js/search.js?1768455894" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1769190762" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1769190762" defer></script>
+    <script src="/js/search-lunr.js?1769190762" defer></script>
+    <script src="/js/search.js?1769190762" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1768455894";
+      window.relearn.index_js_url="/searchindex.en.js?1769190762";
     </script>
-    <script src="/js/lunr/lunr.min.js?1768455894" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1768455894" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1768455894" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1768455894" defer></script>
+    <script src="/js/lunr/lunr.min.js?1769190762" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1769190762" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1769190762" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1769190762" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1768455894" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1768455894" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1768455894" rel="stylesheet">
-    <link href="/css/theme.css?1768455894" rel="stylesheet">
-    <link href="/css/format-html.css?1768455894" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1769190762" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1769190762" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1769190762" rel="stylesheet">
+    <link href="/css/theme.css?1769190762" rel="stylesheet">
+    <link href="/css/format-html.css?1769190762" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1768455894" rel="stylesheet">
+    <link href="/css/custom.css?1769190762" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -117,7 +117,16 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
             <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#complete">Complete</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -155,21 +164,21 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <p><strong>SSH Key</strong></p>
 <ul>
 <li>Generate SSH Key on Ubuntu-OOB
-<div class="tab-panel" data-tab-group="R-tabs-7ce3d76f336d7d4c4d623cc5662955ec">
+<div class="tab-panel" data-tab-group="R-tabs-12b559714690afacd0ef18ef92a204e0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f3cba1686d75478c61f900879b517af6" aria-expanded="true"
+      aria-controls="R-tab-id-c0f9312b6b4284979563f5c1d941e306" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-7ce3d76f336d7d4c4d623cc5662955ec','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-12b559714690afacd0ef18ef92a204e0','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f3cba1686d75478c61f900879b517af6"
+      id="R-tab-id-c0f9312b6b4284979563f5c1d941e306"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -181,21 +190,21 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
   </div>
 </div></li>
 <li>Place public key on Proxmox
-<div class="tab-panel" data-tab-group="R-tabs-4946c9166f3c1dbb76b0cbadadeeb933">
+<div class="tab-panel" data-tab-group="R-tabs-52d5e10d165d047ffe7fae0b5d778b13">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-efef698b9051cdc64050f4cc93797de7" aria-expanded="true"
+      aria-controls="R-tab-id-e5460ae33331d43f4ed7e7b030900bc7" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4946c9166f3c1dbb76b0cbadadeeb933','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-52d5e10d165d047ffe7fae0b5d778b13','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-efef698b9051cdc64050f4cc93797de7"
+      id="R-tab-id-e5460ae33331d43f4ed7e7b030900bc7"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -221,21 +230,21 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-216eb534161e9703c66322452534d17f">
+<div class="tab-panel" data-tab-group="R-tabs-85e4e30f0b34b1c6766bd3df5ebe002b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-165d01dc10965d0d3ba4fec3de3deec0" aria-expanded="true"
+      aria-controls="R-tab-id-e09938b255e42e12036ddf1225490aeb" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-216eb534161e9703c66322452534d17f','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-85e4e30f0b34b1c6766bd3df5ebe002b','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-165d01dc10965d0d3ba4fec3de3deec0"
+      id="R-tab-id-e09938b255e42e12036ddf1225490aeb"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -247,21 +256,21 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 </div>
 <ul>
 <li>Update Ansible global.vars file
-<div class="tab-panel" data-tab-group="R-tabs-5d2dd3cd8fd1f13d64d05cad1abdc4df">
+<div class="tab-panel" data-tab-group="R-tabs-2879add36bb5ad2418e8bef2f6da6cba">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-1a668df76046f7e0e8471732696ee293" aria-expanded="true"
+      aria-controls="R-tab-id-572cd8b01d2c3bb9ab4291ea1e5999ca" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-5d2dd3cd8fd1f13d64d05cad1abdc4df','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-2879add36bb5ad2418e8bef2f6da6cba','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-1a668df76046f7e0e8471732696ee293"
+      id="R-tab-id-572cd8b01d2c3bb9ab4291ea1e5999ca"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -272,23 +281,23 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 </div>
 <ul>
 <li>Highlight, Right Click and Copy ansible_key.pub contents
-<a href="#R-image-3581165bfa86ca947d2bbe5a70948b22" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3581165bfa86ca947d2bbe5a70948b22"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-717dfac8d86fe6a7f98ddcb26d9f7466">
+<a href="#R-image-b7313f0819e2dcb49d25dd89e5f9d9ff" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b7313f0819e2dcb49d25dd89e5f9d9ff"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-597129a16da0b5cbc0d8e971c6f24bb4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-05c88cf6d4479605cb3413d4e626dca1" aria-expanded="true"
+      aria-controls="R-tab-id-02810036548c6416331e982339fbcab1" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-717dfac8d86fe6a7f98ddcb26d9f7466','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-597129a16da0b5cbc0d8e971c6f24bb4','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-05c88cf6d4479605cb3413d4e626dca1"
+      id="R-tab-id-02810036548c6416331e982339fbcab1"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -309,8 +318,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <ul>
 <li>Click on Create button</li>
 <li>Name:	IaC-admin-users
-<a href="#R-image-0c3ac737a7ec9cd08249097bee19c61b" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c3ac737a7ec9cd08249097bee19c61b"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
+<a href="#R-image-36eff665a5443fd9c35201f6136709c7" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-36eff665a5443fd9c35201f6136709c7"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
 </ul>
 </li>
 <li>Click on: Datacenter/Permissions
@@ -321,8 +330,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <li>Group:	IaC-admin-users</li>
 <li>Role: 	Administrator</li>
 <li>Propagate: 	Checked
-<a href="#R-image-3e46a848b9bd3706c0078e13873884e4" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e46a848b9bd3706c0078e13873884e4"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
+<a href="#R-image-7fe62256cb0cee311e5949a9faa2f503" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fe62256cb0cee311e5949a9faa2f503"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -336,8 +345,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <li>Group:	IaC-admin-users</li>
 <li>Expires:	never</li>
 <li>Enabled:	checked
-<a href="#R-image-5e91a16994e2b46b6ffc1bd88b6a7e7d" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e91a16994e2b46b6ffc1bd88b6a7e7d"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
+<a href="#R-image-276656119d86f77e6185af3aed8c9ce7" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-276656119d86f77e6185af3aed8c9ce7"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -349,8 +358,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <li>User: IaC</li>
 <li>Token ID: Automation</li>
 <li>Privilege Separation: Unchecked
-<a href="#R-image-9b35cd4b82a44d2e4ddcd4b86f5ec8ad" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9b35cd4b82a44d2e4ddcd4b86f5ec8ad"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
+<a href="#R-image-9d7be0b6cf88c4ced8800a9ca6b344f3" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d7be0b6cf88c4ced8800a9ca6b344f3"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -358,8 +367,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <li>Copy the Token ID and Secret generated
 <ul>
 <li><strong>Note:</strong> Secret value is only displayed once when token generated
-<a href="#R-image-bba6d0603631b79bca3d590c53b14551" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bba6d0603631b79bca3d590c53b14551"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
+<a href="#R-image-2a3a61f812636a316babc8ff4b53a5ad" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a3a61f812636a316babc8ff4b53a5ad"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -368,21 +377,21 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <p><strong>Global VARS File on Ubuntu-OOB</strong></p>
 <ul>
 <li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
-<div class="tab-panel" data-tab-group="R-tabs-e42f33a54a096cfdb923c908e489a69f">
+<div class="tab-panel" data-tab-group="R-tabs-fd6b6e66eaa4807ee29b1b08072a5ce0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c2bd507576ca9fa18ecc4b5404eef2f8" aria-expanded="true"
+      aria-controls="R-tab-id-4be5afee36fac47e3b1ab6dc24ce44b6" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e42f33a54a096cfdb923c908e489a69f','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-fd6b6e66eaa4807ee29b1b08072a5ce0','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c2bd507576ca9fa18ecc4b5404eef2f8"
+      id="R-tab-id-4be5afee36fac47e3b1ab6dc24ce44b6"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -393,203 +402,197 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 </div>
 <ul>
 <li><strong>proxmox_api_token_secret:</strong>
-<div class="tab-panel" data-tab-group="R-tabs-848b7a79c5a0061f0ecead7c947eb680">
+<div class="tab-panel" data-tab-group="R-tabs-a9dbd8ddffd0f7c86b7f0284721ca442">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-1726006d2d692998e9625d65375c006a" aria-expanded="true"
+      aria-controls="R-tab-id-abcd046c316b9aff36da1b3262bbb28b" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-848b7a79c5a0061f0ecead7c947eb680','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-a9dbd8ddffd0f7c86b7f0284721ca442','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-1726006d2d692998e9625d65375c006a"
+      id="R-tab-id-abcd046c316b9aff36da1b3262bbb28b"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_api_token_secret.sh  &lt;right click - paste Token Secret here&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_api_token_secret.sh  &lt;right click - paste Token Secret here&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
 <li><strong>fortinet_timezone:</strong> US/Central &lt;= Default Timzone <strong>(no change needed if this is your timezone)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-caf19dc0a46d910955e5e8045d668346">
+<div class="tab-panel" data-tab-group="R-tabs-da53d0959b505a0f3519004b43819c36">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-481974953827e77bc455115d8fe9d92b" aria-expanded="true"
+      aria-controls="R-tab-id-29b8f39836f75956afe3d478c00101c7" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-caf19dc0a46d910955e5e8045d668346','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-da53d0959b505a0f3519004b43819c36','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-481974953827e77bc455115d8fe9d92b"
+      id="R-tab-id-29b8f39836f75956afe3d478c00101c7"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_timezone.sh  &lt;examples: US/Eastern, US/Mountain, US/Pacific&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_timezone.sh  &lt;examples: US/Eastern, US/Mountain, US/Pacific&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
-<li><strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(no change needed if already this name)</strong></li>
-<li>If different than &lsquo;pve01&rsquo;, then need to do all three of the following
-<ul>
-<li>Edit file <strong>/automation/ansible/vars/all-hosts.yml</strong>
-<ul>
-<li>Search for pve01 and change to your server name</li>
-</ul>
-</li>
-<li>Edit file <strong>/automation/ansible/inventory/inventory.yml</strong>
-<ul>
-<li>Search for pve01 and change to your server name
-<div class="tab-panel" data-tab-group="R-tabs-96993ab9df7f6dab88d89ec7374cf29d">
+<li><strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(Following changes NOT needed if == pve01)</strong>
+<div class="tab-panel" data-tab-group="R-tabs-e09e9193feea64e9a57db5e2e9e4b39e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6d4bd1cd286acafa46d9b368ea9f2cef" aria-expanded="true"
+      aria-controls="R-tab-id-048f2d4fda86704c369311b722d1266c" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-96993ab9df7f6dab88d89ec7374cf29d','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-e09e9193feea64e9a57db5e2e9e4b39e','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6d4bd1cd286acafa46d9b368ea9f2cef"
+      id="R-tab-id-048f2d4fda86704c369311b722d1266c"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_pve_server_name.sh  &lt;Your PVE Server Name&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_pve_server_name.sh  &lt;Your PVE Server Name&gt;</span></span></code></pre></div>
+<pre><code>- Also:
+
+    - Edit file **/automation/ansible/vars/all-hosts.yml**
+        -   Search for pve01 and change to your server name
+
+    - Edit file **/automation/ansible/inventory/inventory.yml**
+        -   Search for pve01 and change to your server name
+</code></pre>
       </div>
     </div>
   </div>
 </div></li>
-</ul>
-</li>
-</ul>
-</li>
 <li><strong>proxmox_storage_name:</strong> local-lvm	&lt;= if storage on PVE, or NAS name if not
-<div class="tab-panel" data-tab-group="R-tabs-a64c648d6fc1ba1f1563ed0d9147a661">
+<div class="tab-panel" data-tab-group="R-tabs-c9a29436d217e8ee3ce39d9fabca14cf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c9af48093aac72815443dfb09f24cfa4" aria-expanded="true"
+      aria-controls="R-tab-id-5684ffd510b69b1bb3ae2c2db428acb8" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-a64c648d6fc1ba1f1563ed0d9147a661','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-c9a29436d217e8ee3ce39d9fabca14cf','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c9af48093aac72815443dfb09f24cfa4"
+      id="R-tab-id-5684ffd510b69b1bb3ae2c2db428acb8"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_storage_name.sh  &lt;local-lvm <span style="color:#66d9ef">if</span> default, or NAS name <span style="color:#66d9ef">if</span> not&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_storage_name.sh  &lt;local-lvm <span style="color:#66d9ef">if</span> default, or NAS name <span style="color:#66d9ef">if</span> not&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
-<li><strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<NFS name> for NAS
-<div class="tab-panel" data-tab-group="R-tabs-23da92b67f336b24d02a908fd609eb19">
+<li><strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<strong><em>&lt; NFS name &gt;</em></strong> if using NAS
+<div class="tab-panel" data-tab-group="R-tabs-16de831f6f388f1164f7e207057af6ed">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-29df7dac9f338fad083e4596130aa11b" aria-expanded="true"
+      aria-controls="R-tab-id-43685feaeb20c61df48048e48cd72be5" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-23da92b67f336b24d02a908fd609eb19','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-16de831f6f388f1164f7e207057af6ed','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-29df7dac9f338fad083e4596130aa11b"
+      id="R-tab-id-43685feaeb20c61df48048e48cd72be5"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_VM_image_directory.sh  &lt;directory where VM images reside&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_VM_image_directory.sh  &lt;directory where VM images reside&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
 <li><strong>proxmox_ubuntu_template_name:</strong> Ubuntu-Template &lt;= Name of Ubuntu template
-<div class="tab-panel" data-tab-group="R-tabs-e7be362996839a6802363d23dd90987f">
+<div class="tab-panel" data-tab-group="R-tabs-b8cdb10406f5881a0efe153d56cb56b2">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c4810c1be2a34d550a95018fbed00e8f" aria-expanded="true"
+      aria-controls="R-tab-id-c6077090730623efb4b590386ade41e9" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e7be362996839a6802363d23dd90987f','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-b8cdb10406f5881a0efe153d56cb56b2','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c4810c1be2a34d550a95018fbed00e8f"
+      id="R-tab-id-c6077090730623efb4b590386ade41e9"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_ubuntu_template_name.sh  &lt;VM Template Name&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_ubuntu_template_name.sh  &lt;VM Template Name&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
 <li><strong>proxmox_ubuntu_template_vmid:</strong> 491 &lt;= VMID of Ubuntu VM Template
-<div class="tab-panel" data-tab-group="R-tabs-99275e57de6d3b7e3795dcfd1f3bfad6">
+<div class="tab-panel" data-tab-group="R-tabs-99a0a52d5825380ff7053fd84f8f6682">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-e5a559d943dec553fe2e7a5864e956d7" aria-expanded="true"
+      aria-controls="R-tab-id-de66f4fc0e168ce460386c3d95a687e5" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-99275e57de6d3b7e3795dcfd1f3bfad6','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-99a0a52d5825380ff7053fd84f8f6682','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-e5a559d943dec553fe2e7a5864e956d7"
+      id="R-tab-id-de66f4fc0e168ce460386c3d95a687e5"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./upate_ubuntu_template_vmid.sh  &lt;VM Template VMID&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_ubuntu_template_vmid.sh  &lt;VM Template VMID&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div></li>
 <li><strong>Verify</strong>
-<div class="tab-panel" data-tab-group="R-tabs-76830d87dd62731b62f8fd53668ce74b">
+<div class="tab-panel" data-tab-group="R-tabs-1b8c3ab1032908ba5a5372c4559d83f6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-54571dabbacf6a590d287ebf14be735b" aria-expanded="true"
+      aria-controls="R-tab-id-2cf47f2542194d47e85619fcec3074ba" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-76830d87dd62731b62f8fd53668ce74b','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-1b8c3ab1032908ba5a5372c4559d83f6','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-54571dabbacf6a590d287ebf14be735b"
+      id="R-tab-id-2cf47f2542194d47e85619fcec3074ba"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -598,28 +601,28 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
     </div>
   </div>
 </div>
-<a href="#R-image-6ac729ff84bd8764b3593e762348f1df" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6ac729ff84bd8764b3593e762348f1df"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></li>
+<a href="#R-image-37ab6c494b43b01fd3e74bb7bda5e88c" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-37ab6c494b43b01fd3e74bb7bda5e88c"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></li>
 </ul>
 </li>
 </ul>
 <p><strong>DNS</strong></p>
 <p>All hosts and VMs can be resolved by name.
-<div class="tab-panel" data-tab-group="R-tabs-4c911a1d1743faf853f8fc4dff6eef26">
+<div class="tab-panel" data-tab-group="R-tabs-8b0cc0feaa01e7aa4c0c4a7ba9b8b42c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f0af7dca02dadff40c35d12d91855b60" aria-expanded="true"
+      aria-controls="R-tab-id-c792e5c065cd38d0b9615fbee43c27f0" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4c911a1d1743faf853f8fc4dff6eef26','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-8b0cc0feaa01e7aa4c0c4a7ba9b8b42c','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f0af7dca02dadff40c35d12d91855b60"
+      id="R-tab-id-c792e5c065cd38d0b9615fbee43c27f0"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -637,8 +640,9 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <li>FMG-v7.6.4.F.qcow2</li>
 <li>FAZ-v7.4.8.M.qcow2</li>
 </ul>
-<p><a href="#R-image-66d86e022659cc68d53465a5762cc681" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-66d86e022659cc68d53465a5762cc681"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-d7cfe7f86c3cb3f24373f507a48d4d98" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d7cfe7f86c3cb3f24373f507a48d4d98"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
+<h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 
   <footer class="footline">
   </footer>
@@ -684,7 +688,7 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-url="/introduction/index.html"><a class="padding" href="/introduction/index.html">Introduction</a></li>
+            <li class="" data-nav-url="/introduction/index.html"><a class="padding default-animation" href="/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
             <li class="parent " data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
             <li class="" data-nav-url="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
@@ -696,7 +700,6 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
             <li class="" data-nav-url="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
             <li class="" data-nav-url="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
             <li class="" data-nav-url="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="/about/index.html"><a class="padding" href="/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
@@ -714,8 +717,8 @@ Generate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1768455894" defer></script>
-    <script src="/js/theme.js?1768455894" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1769190762" defer></script>
+    <script src="/js/theme.js?1769190762" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

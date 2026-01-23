@@ -17,8 +17,7 @@ weight = 20
 - Click on Console and Click on Start
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-git clone git@github.com:/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloads
-
+git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
 cd /home/fortinet/Downloads/
 
 chmod 777 *.sh
@@ -40,7 +39,7 @@ cd /home/fortinet/Downloads/
     - **Note:** Using RDP will be “EASIER” as it allows “cut and paste”
 
 - **DNS (CoreDNS)**
-    - *NO CHANGES REQUIRED* Information below intended for how and where to make future DNS changes 
+    - {{% badge %}}Important{{% /badge %}} - *UPDATE REQUIRED* if your PVE Server Name is NOT "PVE01".  If different, update the two "db" files listed below. 
     - DNS is critical for Ansible automation 
     - [CoreDNS](https://di-marco.net/blog/it/2024-05-09-Intall_and_configure_coredns/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
     - Two [RFC 1035-style](https://www.rfc-editor.org/rfc/rfc1035) zone database files have been preconfigured here:
@@ -68,7 +67,7 @@ docker compose up -d
         - On the PVE Server => Create User and API Token
             - Click on: Datacenter/Permissions/Groups
                 - Click on Create button	
-                - Name:	Homepage-readonly-users
+                - Name:	`Homepage-readonly-users`
                 ![Homepage_API_1](Homepage_API_1.png)<br />
             - Click on: Datacenter/Permissions
                 - Click: Add => Group Permission
@@ -79,7 +78,7 @@ docker compose up -d
                 ![Homepage_API_2](Homepage_API_2.png)<br />
             - Click on: Datacenter/Permissions/Users
                 - Click: Add
-                    - User name: 	Homepage
+                    - User name: 	`Homepage`
                     - Realm: 	Linux PAM standard authentication
                     - Group:	Homepage-readonly-users
                     - Expires:	never
@@ -87,15 +86,16 @@ docker compose up -d
                 ![Homepage_API_3](Homepage_API_3.png)<br />
             - Click on: Datacenter/Permissions/API Tokens
                 - Click: Add
-                    - User: Homepage
-                    - Token ID: api-readonly
+                    - User: Homepage@pam
+                    - Token ID: `api-readonly`
                     - Privilege Separation: Unchecked
                 ![Homepage_API_4](Homepage_API_4.png)<br />
             - Copy the Token ID and Secret generated
                 - **Note:** Secret value is only displayed once when token generated
                 ![Homepage_API_5](Homepage_API_5.png)<br />
         - On Ubuntu-OOB VM
-            - Edit **widgets.yaml** located in **/home/fortinet/c_data/homepage/config**
+            - Edit **services.yaml** located in **/home/fortinet/c_data/homepage/config**
+            - Update PVE Server Name, PVE Server IP address, and API Secret/password as described below
                 ![Widgets_API](Widgets_API.png)<br />
 - **Guacamole**
     - Following steps need executed

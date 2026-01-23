@@ -17,11 +17,12 @@ weight = 20
     - Node > Updates > Repositories
 ![Config_apt_get_update](Config_apt_get_update.png)
         - Add: Repository >  No-Subscription
-        - Disable: https://enterprise.proxmox.com/debian/ceph-quincy
-        - Disable: https://enterprise.proxmox.com/debian/pve
+        - Disable: `https://enterprise.proxmox.com/debian/ceph-quincy`
+        - Disable: `https://enterprise.proxmox.com/debian/pve`
 ![Repositories](Repositories.png)
         - Perform upgrade from either CLI or GUI
 {{% tab title="from PVE Shell" %}}
+- If at the end of the following commands, it says reboot....do it.
 ````bash
 apt update –y
 apt dist-upgrade –y

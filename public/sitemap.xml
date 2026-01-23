@@ -10,6 +10,9 @@
     <loc>http://localhost:1313/introduction/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/introduction/ip_scheme/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/extras/proxmox_install/index.html</loc>
   </url>
   <url>
@@ -40,6 +43,9 @@
     <loc>http://localhost:1313/extras/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/nesting_esxi/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/fortimanager/index.html</loc>
   </url>
   <url>
@@ -50,9 +56,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/extras/external_subnet/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/about/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>

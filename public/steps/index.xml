@@ -3,7 +3,7 @@
   <channel>
     <title>Steps To Build This Lab :: SE How-To Build Lab</title>
     <link>http://localhost:1313/steps/index.html</link>
-    <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;If creating a new PVE, use the following section Proxmox Install If using an existing PVE, verify version (i.e. scripts/steps tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-Build/refs/heads/main/Create_VNETs.sh &gt; Create_VNETs.sh chmod 777 Create_VNETs.sh ./Create_VNETs.sh</description>
+    <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh chmod 777 Create_VNETs.sh ./Create_VNETs.sh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/steps/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,7 @@
       <link>http://localhost:1313/steps/ubuntu_template/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/steps/ubuntu_template/index.html</guid>
-      <description>Create the VM&#xD;In PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General&#xA;Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS&#xA;Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System</description>
+      <description>Create the VM&#xD;In PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General&#xA;Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS&#xA;Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System</description>
     </item>
     <item>
       <title>Create OOB Management VM</title>

@@ -10,11 +10,11 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 
 - General
     - Choose Node
-    - Choose VM_id == 491
-    - Type VM Name == Ubuntu-Template
+    - Choose VM_id == `491`
+    - Type VM Name == `Ubuntu-Template`
 - OS
     - Use CD/DVD disc image
-    - Storage: <your Proxmox storage, if no NAS, then “local-lvm”>	
+    - Storage: <your Proxmox storage, if no NAS, then “local”>	
     - ISO Image: Ubuntu_Installer.iso
     - Default values for 'Guest OS' (Linux 6.x – 2.6 Kernel)
 - System
@@ -25,12 +25,16 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
         - SCSI: VirtIO single
     - Tick: “Qemu Agent”
 - Disks
-    - Create Disk (SCSI 0, <your Proxmox storage, if no NAS, then “local-lvm”>, 32GB, uncheck Backup)
+    - Create Disk
+        - SCSI 0
+        - Storage: <your Proxmox storage, if no NAS, then “local-lvm”>
+        - Disk Size (GB): 32
+        - Untick: "Backup"   (Not shown when using "local-lvm")
 - CPU
     - Cores == 2 cores
     - Type == Default (x86-64-v2-AES)
 - Memory
-    - 2 GB is minimum...recommend 4 GB 
+    - Memory (MB): 2048  <= this is minimum...recommend 4096 
 - Network
     - Bridge == vmbr0
     - Untick Firewall
@@ -55,10 +59,10 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 -	Erase disk and install Ubuntu (start from scratch on selected disk) 
     |  |  |
     | :- | :- | 
-    | Your name	| fortinet (all lower case) |
-    | Computer name	| ubuntu-template |
-    | User name	| fortinet (all lower case) |
-    | Password | password |
+    | Your name	| `fortinet` (all lower case) |
+    | Computer name	| `Ubuntu-Template` |
+    | User name	| `fortinet` (all lower case) |
+    | Password | `password` |
     | Leave checked “Require my password to login” | <= critical for next script to run successfully |
     |Timezone | America/Chicago |
 -	Click on “Install”
@@ -72,7 +76,7 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
         - Datacenter > Node > VM (one just created) >  Hardware > Add > Cloud-Init
             - Bus/Device: SCSI 1
             - Storage: <your Proxmox storage, if no NAS, then “local-lvm”>
-            - Format: QEMU image formate (if it's available)
+            - Format: QEMU image format (if it's available)
 ![Cloud_Init_Add](Cloud_Init_Add.png)
     - Config Cloud-Init
 ![Cloud_Init_Config](Cloud_Init_Config.png)  
@@ -92,7 +96,7 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
 sudo apt install git -y
-git clone git@github.com:/fortinet/Field-SE-Lab-VM-Template /home/fortinet/Downloads
+git clone https://github.com/stevesweeneywisc/SE-Lab-Ubuntu-Template /home/fortinet/Downloads
 cd /home/fortinet/Downloads/
 chmod 777 *.sh
 ./Ubuntu_Base_Install.sh

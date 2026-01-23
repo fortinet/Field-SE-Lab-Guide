@@ -3,7 +3,7 @@
   <channel>
     <title>Extras :: SE How-To Build Lab</title>
     <link>http://localhost:1313/extras/index.html</link>
-    <description>Proxmox Install Guacamole Change 172.16.3.x Subnet</description>
+    <description>Proxmox Install Guacamole Nesting ESXi Change 172.16.3.x Subnet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/extras/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/extras/guacamole/index.html</guid>
       <description>Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://172.16.3.80:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
+    </item>
+    <item>
+      <title>Nesting ESXi</title>
+      <link>http://localhost:1313/extras/nesting_esxi/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/extras/nesting_esxi/index.html</guid>
+      <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM Creation&#xD;In PVE GUI &gt; Click “Create VM” General</description>
     </item>
     <item>
       <title>Change 172.16.3.x Subnet</title>
