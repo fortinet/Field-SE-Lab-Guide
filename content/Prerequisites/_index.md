@@ -5,11 +5,11 @@ weight = 20
 +++
 
 ### Proxmox Virtual Environment (PVE)
-- This lab requires (obviously), a Hypervisor.  This lab was written and installation scripts tested with Proxmox 9.x  
+- This lab requires (obviously) a Hypervisor.  This lab was written and installation scripts tested with Proxmox 9.x  
 
 ### Accessibility and Tools
 - Proxmox Server accessible from your Work laptop via
-    -	Web Console <ip address:8006>
+    -	Web Console via browser **_< PVE Server ip address:8006 >_**
     -	SSH	
 
 ### Work laptop has installed or equivalent capable applications:
@@ -23,8 +23,7 @@ weight = 20
 - Subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
     - Used for the physical interface of the PVE server
     - Installation scripts assumes this subnet and IP range
-    - Documented in <a href="/downloads/IP%20Scheme.xlsx" download>IP Scheme.xlsx</a>
-
+    - Documented [here](Introduction/ip_scheme)
     - Shown in the [topology](/Introduction#se-lab-topology)
 - If unable to use subnet 172.16.3.x/24 and reserve IP's from .2 thru .125
     - Then several modifications are required as described [here](/Extras/External_Subnet)
@@ -56,8 +55,7 @@ weight = 20
         - FMG-v7.6.4.F.qcow2
         - FAZ-v7.4.8.M.qcow2
 
-![alt](/images/pic-import_qcow2.png)
-
+![alt](pic-import_qcow2.png)
 
 ### Ready to start the build
 - **[Steps To Build This Lab](Steps)**

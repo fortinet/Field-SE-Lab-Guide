@@ -93,48 +93,50 @@ cd /home/fortinet/automation/ansible/vars
     - **proxmox_api_token_secret:**
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_api_token_secret.sh  <right click - paste Token Secret here>
+./update_api_token_secret.sh  <right click - paste Token Secret here>
 ````
 {{% /tab %}}
     - **fortinet_timezone:** US/Central <= Default Timzone **(no change needed if this is your timezone)**
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_timezone.sh  <examples: US/Eastern, US/Mountain, US/Pacific>
+./update_timezone.sh  <examples: US/Eastern, US/Mountain, US/Pacific>
 ````
 {{% /tab %}}
-    - **proxmox_api_host:** pve01		<= Default PVE Server name **(no change needed if already this name)**
-    - If different than 'pve01', then need to do all three of the following
-        - Edit file **/automation/ansible/vars/all-hosts.yml**
-            -   Search for pve01 and change to your server name
-        - Edit file **/automation/ansible/inventory/inventory.yml**
-            -   Search for pve01 and change to your server name
+    - **proxmox_api_host:** pve01		<= Default PVE Server name **(Following changes NOT needed if == pve01)**
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_pve_server_name.sh  <Your PVE Server Name>
+./update_pve_server_name.sh  <Your PVE Server Name>
 ````
+    - Also:
+
+        - Edit file **/automation/ansible/vars/all-hosts.yml**
+            -   Search for pve01 and change to your server name
+
+        - Edit file **/automation/ansible/inventory/inventory.yml**
+            -   Search for pve01 and change to your server name
 {{% /tab %}}
     - **proxmox_storage_name:** local-lvm	<= if storage on PVE, or NAS name if not
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_storage_name.sh  <local-lvm if default, or NAS name if not>
+./update_storage_name.sh  <local-lvm if default, or NAS name if not>
 ````
 {{% /tab %}}
-    - **proxmox_storage:** /var/lib/vz	<= if storage on PVE, or /mnt/pve/<NFS name> for NAS
+    - **proxmox_storage:** /var/lib/vz	<= if storage on PVE, or /mnt/pve/**_< NFS name >_** if using NAS
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_VM_image_directory.sh  <directory where VM images reside>
+./update_VM_image_directory.sh  <directory where VM images reside>
 ````
 {{% /tab %}}
     - **proxmox_ubuntu_template_name:** Ubuntu-Template <= Name of Ubuntu template
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_ubuntu_template_name.sh  <VM Template Name>
+./update_ubuntu_template_name.sh  <VM Template Name>
 ````
 {{% /tab %}}
     - **proxmox_ubuntu_template_vmid:** 491 <= VMID of Ubuntu VM Template
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-./upate_ubuntu_template_vmid.sh  <VM Template VMID>
+./update_ubuntu_template_vmid.sh  <VM Template VMID>
 ````
 {{% /tab %}}
     - **Verify**
@@ -165,3 +167,5 @@ qcow2 files must have the following format:
 - FAZ-v7.4.8.M.qcow2
 
 ![import_qcow2](pic-import_qcow2.png)
+
+### Complete

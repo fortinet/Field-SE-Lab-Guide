@@ -92,7 +92,7 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
 sudo apt install git -y
-git clone https://github.com/stevesweeneywisc/SE-Lab-Ubuntu-Template /home/fortinet/Downloads
+git clone git@github.com:/fortinet/Field-SE-Lab-VM-Template /home/fortinet/Downloads
 cd /home/fortinet/Downloads/
 chmod 777 *.sh
 ./Ubuntu_Base_Install.sh

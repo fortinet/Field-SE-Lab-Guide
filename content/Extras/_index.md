@@ -6,4 +6,5 @@ weight = 50
 
 - **[Proxmox Install](Proxmox_Install)**
 - **[Guacamole](Guacamole)**
+- **[Nesting ESXi](Nesting_ESXi)**
 - **[Change 172.16.3.x Subnet](External_Subnet)**
