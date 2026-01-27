@@ -140,7 +140,7 @@ ping oob.fortinet.internal
     - Should see multiple: **_PREROUTING 172.16.3.X addresses_** and **_POSTROUTING MASQUERADE_**
 {{% tab title="from Terminal" %}}
 ````bash
-sudo iptables -t nat -L -n -v”
+sudo iptables -t nat -L -n -v
 ````
 {{% /tab %}}
 

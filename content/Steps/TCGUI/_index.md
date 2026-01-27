@@ -25,5 +25,9 @@ Suggest opening TCGUI's console window on PVE to verify.
 ./configure_tcgui.sh   ubuntu_tcgui
 
 ./wallpaper_update.sh  ubuntu_tcgui
+
+./start_stop_remove_vm.sh ../vars/all-hosts.yml <PVE server name> ubuntu_tcgui stopped
+
+./start_stop_remove_vm.sh ../vars/all-hosts.yml <PVE server name> ubuntu_tcgui started
 ````
 {{% /tab %}}
