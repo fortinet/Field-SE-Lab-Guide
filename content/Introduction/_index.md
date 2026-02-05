@@ -7,7 +7,7 @@ weight = 10
 The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the "infrastructure" around Fortinet technologies often needed in an SE Lab.  
 
 This Lab removes the need to:
-- plan and develop an IP Addressing scheme (this lab follows [FNDN's](Introduction\#fndn-topology))
+- plan and develop an IP Addressing scheme (this lab follows [FNDN's](#fndn-topology))
 - learn, understand and implement WAN Emulation (this lab utilizes [TCGUI](https://github.com/tum-lkn/tcgui))
 - plan and install multiple "end user" end points (this lab uses [Ubuntu](https://ubuntu.com/download/desktop))
 
