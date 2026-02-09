@@ -6,8 +6,8 @@ weight = 20
 
 ### Create Full Clone and Install Packages
 -	Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template
-    - VM ID: 441
-    - Name: Ubuntu-OOB
+    - VM ID: `441`
+    - Name: `Ubuntu-OOB`
 ![Create_Clone](Create_Clone.png) 
 - Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT
 ![Verify_Hardware](Verify_Hardware.png) 
@@ -18,11 +18,20 @@ weight = 20
 {{% tab title="from Terminal in OOB" %}}
 ````bash
 git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
+
 cd /home/fortinet/Downloads/
 
 chmod 777 *.sh
+````
+{{% /tab %}}
 
-./OOB_Install.sh
+{{% tab title="from Terminal in OOB" %}}
+- Run the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets)
+````bash
+
+./update_subnet.sh <external subnet to SE Lab> 
+
+Example: ./update_subnet.sh 192.168.10
 ````
 {{% /tab %}}
 -	**Note:** VM will auto reboot after “OOB_Install.sh” script runs

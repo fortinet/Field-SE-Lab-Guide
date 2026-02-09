@@ -20,13 +20,16 @@ weight = 20
 -	Browser - all testing for this build guide was done with [Firefox](https://www.firefox.com/en-US/)
 
 ### IP Addressing and Naming Convention Assumptions 
-- Subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
-    - Used for the physical interface of the PVE server
-    - Installation scripts assumes this subnet and IP range
+- The VNETs "inside" of this lab use FNDN's IP addressing scheme
     - Documented [here](Introduction/ip_scheme)
     - Shown in the [topology](/Introduction#se-lab-topology)
-- If unable to use subnet 172.16.3.x/24 and reserve IP's from .2 thru .125
-    - Then several modifications are required as described [here](/Extras/External_Subnet)
+    - This scheme cannot be changed easily and no script nor mechanism is being provided to do so.
+- The "outside" or *physical network* of Proxmox has a default subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
+    - This lab requires a full Class C subnet with the first 125 addresses reserved. 
+    - Used for the physical interface of PVE server(s)
+    - OOB and TCGUI VMs IP addresses
+    - OOB VIPs to the "inside"
+    - The "outside" subnet can be changed via a script during creation of OOB.
 
 ### User Name / Passwords utilizes the following standard
 - User Name: fortinet (all lowercase)
