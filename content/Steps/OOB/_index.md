@@ -11,10 +11,17 @@ weight = 20
 ![Create_Clone](Create_Clone.png) 
 - Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT
 ![Verify_Hardware](Verify_Hardware.png) 
-- Configure Cloud-Init 
+- Configure Cloud-Init
+   - If not using the default 172.16.3.x subnet, put in yours
+   - Example: *ip=192.168.10.80,gw=192.168.10.1*
 ![Config_Cloud_Init](Config_Cloud_Init.png) 
  
-- Click on Console and Click on Start
+- Start the OOB VM
+- RDP to OOB VM
+    - **Note:** Using RDP will be “EASIER” as it allows “cut and paste”
+
+- If you see the following dialog, click on *"Remind Me Later"*
+![Remind_Me_Later](Remind_Me_Later.png)
 {{% tab title="from Terminal in OOB" %}}
 ````bash
 git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
@@ -32,6 +39,14 @@ chmod 777 *.sh
 ./update_subnet.sh <external subnet to SE Lab> 
 
 Example: ./update_subnet.sh 192.168.10
+````
+{{% /tab %}}
+- Next start the install script
+{{% tab title="from Terminal in OOB" %}}
+````bash
+
+./OOB_Install.sh
+
 ````
 {{% /tab %}}
 -	**Note:** VM will auto reboot after “OOB_Install.sh” script runs
@@ -65,7 +80,7 @@ docker compose up -d
 {{% /tab %}}
 
 - **"homepage"**
-    - homepage available via browswer via OOB's IP **_< 172.16.3.80 >_**
+    - homepage available via browswer via OOB's IP **_< 172.16.3.80 >_** *or via the subnet you changed to from the default*
     - [homepage](https://gethomepage.dev/) is a customizable application dashboard
     -  YAML files located here: **/home/fortinet/c_data/homepage/config**
         - **bookmarks.yaml** <= [URL's for GUI and SSH access to Lab VM’s](https://gethomepage.dev/configs/bookmarks/)
@@ -127,16 +142,16 @@ docker compose down
 docker compose up –d
 ````
 {{% /tab %}}
-    - *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
-    - See **[Guacamole](/extras/guacamole/)** section if additions and or changes required in the future
+    - If using the default subnet 172.16.3.x, there are *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
+    - If using a non-default subnet, see **[Guacamole](/extras/guacamole/)** section for "how-to" change **Hostname:** *IP address* to reflect your subnet.
  
 ### Verification 
 - "homepage" is working
-    - via Work Laptop browser: [http://172.16.3.80](http://172.16.3.80)
+    - via Work Laptop browser: [http://172.16.3.80](http://172.16.3.80) **(URL should reflect your subnet if not-default)**
 - Guacamole is working
-    - via Work Laptop browser: [http://172.16.3.80:8080/guacamole](http://172.16.3.80:8080/guacamole)
-        - User: 		guacadmin
-        - Password: 	guacadmin
+    - via Work Laptop browser: [http://172.16.3.80:8080/guacamole](http://172.16.3.80:8080/guacamole) **(URL should reflect your subnet if not-default)**
+        - **User:** 		*guacadmin*
+        - **Password:** 	*guacadmin*
 - DNS is working
 {{% tab title="from Terminal" %}}
 ````bash
@@ -146,7 +161,7 @@ ping oob.fortinet.internal
 ````
 {{% /tab %}}
 - NAT/Forwarding working
-    - Should see multiple: **_PREROUTING 172.16.3.X addresses_** and **_POSTROUTING MASQUERADE_**
+    - Should see multiple: **_PREROUTING 172.16.3.X (or your subnet if not-default) addresses_** and **_POSTROUTING MASQUERADE_** 
 {{% tab title="from Terminal" %}}
 ````bash
 sudo iptables -t nat -L -n -v

@@ -63,7 +63,7 @@ cat /home/fortinet/.ssh/ansible_key.pub
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 cd /home/fortinet/automation/ansible/vars
-./upate_sshkey.sh <right click - paste SSH KEY here>
+./update_sshkey.sh '<right click - paste SSH KEY here>' (make sure single quotes)
 ````
 {{% /tab %}}
 
@@ -107,6 +107,8 @@ cd /home/fortinet/automation/ansible/vars
 {{% /tab %}}
     - Update FortiFlex **Username/Password, Account ID and Serial Number**
 {{% tab title="from Ubuntu-OOB Terminal" %}}
+- The username/password below is not what you use to sign into Support Portal
+- It is the API's credentials 
 ````bash
 ./update_fortiflex_username.sh  <FortiFlex Username here>
 ./update_fortiflex_password.sh  <FortiFlex Password here>

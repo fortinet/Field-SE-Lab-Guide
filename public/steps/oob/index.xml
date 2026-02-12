@@ -3,7 +3,7 @@
   <channel>
     <title>Create OOB Management VM :: SE How-To Build Lab</title>
     <link>http://localhost:1313/steps/oob/index.html</link>
-    <description>Create Full Clone and Install Packages&#xD;Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template&#xA;VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init Click on Console and Click on Start ​&#xD;from Terminal in OOB&#xD;git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads cd /home/fortinet/Downloads/ chmod 777 *.sh</description>
+    <description>Create Full Clone and Install Packages&#xD;Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template&#xA;VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init&#xA;If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 Start the OOB VM</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/steps/oob/index.xml" rel="self" type="application/rss+xml" />
