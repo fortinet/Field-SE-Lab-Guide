@@ -4,9 +4,10 @@ type = "default"
 weight = 40
 +++
 
-RDP to OOB.
+- If you receive an error {{% badge %}}No route to host{{% /badge %}} with any of the following steps, use the **[Troubleshoot Ansible](/Extras/Troubleshoot_Ansible)** steps
 
-{{% tab title="from Terminal in OOB" %}}
+{{% tab title="RDP to OOB" %}}
+- from Terminal in OOB
 ````bash
 cd /home/fortinet/automation/ansible/ubuntu
 
@@ -16,11 +17,11 @@ cd /home/fortinet/automation/ansible/ubuntu
 ````
 {{% /tab %}}
 
-Make sure TCGUI VM has fully started (GUI is up and running) before exeucting the following.
 
-Suggest opening TCGUI's console window on PVE to verify.
+{{% tab title="Continuing from Terminal in OOB" %}}
+- Make sure TCGUI VM has fully started (GUI is up and running) before exeucting the following.
+- Suggest opening TCGUI's console window on PVE to verify.
 
-{{% tab title="from Terminal in OOB" %}}
 ````bash
 ./configure_tcgui.sh   ubuntu_tcgui
 
@@ -31,3 +32,4 @@ Suggest opening TCGUI's console window on PVE to verify.
 ./start_stop_remove_vm.sh ../vars/all-hosts.yml <PVE server name> ubuntu_tcgui started
 ````
 {{% /tab %}}
+

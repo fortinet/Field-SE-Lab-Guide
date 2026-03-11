@@ -4,9 +4,11 @@ type = "default"
 weight = 80
 +++
 
-RDP to OOB.
+- If you get the error {{% badge %}}No route to host{{% /badge %}} with any of the following steps, use the **[Troubleshoot Ansible](/Extras/Troubleshoot_Ansible)** steps
 
-{{% tab title="from Terminal in OOB" %}}
+
+{{% tab title="RDP to OOB" %}}
+- from Terminal in OOB
 ````bash
 cd /home/fortinet/automation/ansible/ubuntu
 
@@ -17,11 +19,11 @@ cd /home/fortinet/automation/ansible/ubuntu
 ````
 {{% /tab %}}
 
-Make sure Ubuntu-x VMs have fully started (i.e. GUI is up and running) before exeucting the following.
 
-Suggest opening console windows on PVE to verify.
+{{% tab title="Continuing from Terminal in OOB" %}}
+- Make sure Ubuntu-x VMs have fully started (i.e. GUI is up and running) before exeucting the following.
+- Suggest opening console windows on PVE to verify.
 
-{{% tab title="from Terminal in OOB" %}}
 ````bash
 ./wallpaper_update.sh  ubuntu_sdwan
 ````

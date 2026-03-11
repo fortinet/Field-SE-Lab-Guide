@@ -43,7 +43,7 @@
     <loc>http://localhost:1313/extras/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/nesting_esxi/index.html</loc>
+    <loc>http://localhost:1313/extras/troubleshoot_ansible/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/fortimanager/index.html</loc>
@@ -52,10 +52,10 @@
     <loc>http://localhost:1313/steps/fortianalyzer/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/steps/ubuntu/index.html</loc>
+    <loc>http://localhost:1313/extras/nesting_esxi/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/external_subnet/index.html</loc>
+    <loc>http://localhost:1313/steps/ubuntu/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>

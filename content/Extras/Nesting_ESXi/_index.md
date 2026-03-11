@@ -1,7 +1,7 @@
 +++
 title = "Nesting ESXi"
 type = "default"
-weight = 50
+weight = 70
 +++
 
 Why would do this?  FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).

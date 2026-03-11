@@ -5,30 +5,26 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta name="description" content="Below are common Ansible issues that require troubleshooting
+No Route to HostNetwork Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​from PVE ShellForce regeneration of self-cert pvecm updatecerts --force​from PVE ShellRestart the web interface services systemctl restart pvedaemon pveproxy">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nesting ESXi :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
-    <meta property="og:url" content="http://localhost:1313/extras/nesting_esxi/index.html">
+    <meta name="twitter:title" content="Troubleshoot Ansible :: SE How-To Build Lab">
+    <meta name="twitter:description" content="Below are common Ansible issues that require troubleshooting
+No Route to HostNetwork Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​from PVE ShellForce regeneration of self-cert pvecm updatecerts --force​from PVE ShellRestart the web interface services systemctl restart pvedaemon pveproxy">
+    <meta property="og:url" content="http://localhost:1313/extras/troubleshoot_ansible/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
-    <meta property="og:title" content="Nesting ESXi :: SE How-To Build Lab">
-    <meta property="og:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
+    <meta property="og:title" content="Troubleshoot Ansible :: SE How-To Build Lab">
+    <meta property="og:description" content="Below are common Ansible issues that require troubleshooting
+No Route to HostNetwork Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​from PVE ShellForce regeneration of self-cert pvecm updatecerts --force​from PVE ShellRestart the web interface services systemctl restart pvedaemon pveproxy">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Nesting ESXi :: SE How-To Build Lab">
-    <meta itemprop="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM CreationIn PVE GUI &gt; Click “Create VM” General">
-    <meta itemprop="wordCount" content="360">
-    <title>Nesting ESXi :: SE How-To Build Lab</title>
-    <link href="/extras/nesting_esxi/index.xml" rel="alternate" type="application/rss+xml" title="Nesting ESXi :: SE How-To Build Lab">
+    <meta itemprop="name" content="Troubleshoot Ansible :: SE How-To Build Lab">
+    <meta itemprop="description" content="Below are common Ansible issues that require troubleshooting
+No Route to HostNetwork Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​from PVE ShellForce regeneration of self-cert pvecm updatecerts --force​from PVE ShellRestart the web interface services systemctl restart pvedaemon pveproxy">
+    <meta itemprop="wordCount" content="142">
+    <title>Troubleshoot Ansible :: SE How-To Build Lab</title>
+    <link href="/extras/troubleshoot_ansible/index.xml" rel="alternate" type="application/rss+xml" title="Troubleshoot Ansible :: SE How-To Build Lab">
     <link href="/css/auto-complete/auto-complete.min.css?1773234464" rel="stylesheet">
     <script src="/js/auto-complete/auto-complete.min.js?1773234464" defer></script>
     <script src="/js/search-lunr.js?1773234464" defer></script>
@@ -53,7 +49,7 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
-      window.relearn.path='\/extras\/nesting_esxi\/index.html';
+      window.relearn.path='\/extras\/troubleshoot_ansible\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
@@ -108,7 +104,7 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 }
 </style>
   </head>
-  <body class="mobile-support html" data-url="/extras/nesting_esxi/index.html">
+  <body class="mobile-support html" data-url="/extras/troubleshoot_ansible/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar" class="default-animation">
@@ -126,10 +122,7 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
   <ul>
     <li>
       <ul>
-        <li><a href="#verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong></a></li>
-        <li><a href="#esxi-vm-creation"><strong>ESXi VM Creation</strong></a></li>
-        <li><a href="#start-esxi-vm"><strong>Start ESXi VM</strong></a></li>
-        <li><a href="#post-install-must-do"><strong>Post install MUST DO’S</strong></a></li>
+        <li><a href="#no-route-to-host"><strong>No Route to Host</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -138,14 +131,14 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Nesting ESXi</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Troubleshoot Ansible</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/extras/troubleshoot_ansible/index.html" title="Troubleshoot Ansible (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/extras/guacamole/index.html" title="Guacamole (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle"><span><i class="fa-fw fas fa-chevron-right"></i></span></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/extras/nesting_esxi/index.html" title="Nesting ESXi (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -166,159 +159,91 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
   <header class="headline">
   </header>
 
-<h1 id="nesting-esxi">Nesting ESXi</h1>
+<h1 id="troubleshoot-ansible">Troubleshoot Ansible</h1>
 
-<p>Why would do this?  FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).</p>
-<p>There are &ldquo;how-to&rdquo; posts that I could not make FortiLink work in Proxmox: (examples below)</p>
+<p>Below are common Ansible issues that require troubleshooting</p>
+<h3 id="no-route-to-host"><strong>No Route to Host</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li><a href="https://teams.microsoft.com/l/message/19:104c76bd09954d5794f64ac25e5b6e86@thread.skype/1720003124774?tenantId=2c36c478-3d00-452f-8535-48396f5f01f0&groupId=62fd9f66-e24c-403e-81bc-d8dfd7bf0ea8&parentMessageId=1720003124774&teamName=FortiChat%20Global%20Channels&channelName=swat_fap_fsw_fex_switch_access&createdTime=1720003124774" rel="external" target="_blank">global channels</a></li>
-<li><a href="https://forum.proxmox.com/threads/unable-to-create-sdn-vnet-without-tag.148566/" rel="external" target="_blank">Support Forum</a></li>
-</ul>
-<h3 id="verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<li>Network Connectivity
 <ul>
-<li><a href="https://pve.proxmox.com/wiki/Nested_Virtualization" rel="external" target="_blank">https://pve.proxmox.com/wiki/Nested_Virtualization</a></li>
-<li><a href="https://devopstales.github.io/virtualization/install-vmware-in-proxmox/" rel="external" target="_blank">https://devopstales.github.io/virtualization/install-vmware-in-proxmox/</a>
-<ul>
-<li>At CLI:	cat /sys/module/kvm_intel/parameters/nested
-<ul>
-<li>If it returns “Y”, proceed to Creation Step</li>
-<li>If it returns “N”, follow steps in URL above to enable</li>
+<li>Host reachable via ping (using IP address and hostname)</li>
+<li>DNS Resolution using hostname, resolves to correct IP address</li>
 </ul>
 </li>
+<li>SSH Connection
+<ul>
+<li>Via CLI: ssh <username>@&lt;target_ip_address&gt;</li>
+<li>Via CLI: ssh <username>@&lt;target_hostname&gt;</li>
 </ul>
 </li>
-</ul>
-<h3 id="esxi-vm-creation"><strong>ESXi VM Creation</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<li>If target is Proxmox server (i.e. deploying a new VM on Proxmox )
 <ul>
-<li>In PVE GUI  &gt; Click &ldquo;Create VM&rdquo;
+<li>Check Firewall Rules (In this lab, Proxmox should have Firewall turned off)</li>
+<li>Check IP addresses match in the following files
 <ul>
-<li>
-<p><strong>General</strong></p>
-<ul>
-<li>Choose Node</li>
-<li>Choose VM_id (or use the default)</li>
-<li>Type VM Name</li>
+<li>/etc/network/interfaces</li>
+<li>/etc/hosts</li>
+<li>If not, after making these the same, reboot Proxmox</li>
 </ul>
 </li>
-<li>
-<p><strong>OS</strong></p>
+<li>Check Self-Signed Certificate
 <ul>
-<li>Add ESXi installation media</li>
-<li>Default values for &lsquo;Guest OS&rsquo; (Linux 6.x – 2.6 Kernel)</li>
+<li>The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step.</li>
+<li>If it doesn&rsquo;t, execute the next two steps
+<div class="tab-panel" data-tab-group="R-tabs-80587a8599b97f38adaae38c460f37ab">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-8608a2900c9e6288bfdefe8a5ad571e8" aria-expanded="true"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-80587a8599b97f38adaae38c460f37ab','R-tab-9e406c683825368f9bc5a34897773e7d')"
+    >
+      <span class="tab-nav-text">from PVE Shell</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-8608a2900c9e6288bfdefe8a5ad571e8"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Force regeneration of self-cert</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pvecm updatecerts --force</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-dc167c21c04e70e42b7cb4f645c1254b">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-6be013a2b3125658d354495d3475645a" aria-expanded="true"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-dc167c21c04e70e42b7cb4f645c1254b','R-tab-9e406c683825368f9bc5a34897773e7d')"
+    >
+      <span class="tab-nav-text">from PVE Shell</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-6be013a2b3125658d354495d3475645a"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Restart the web interface services</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart pvedaemon pveproxy</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
 </ul>
 </li>
-<li>
-<p><strong>System</strong></p>
-<ul>
-<li><strong>Graphic card:</strong> Default</li>
-<li><strong>Machine:</strong> q35</li>
-<li><strong>BIOS:</strong> SeaBIOS</li>
-<li><strong>SCSI Controller:</strong> VMware PVSCSI</li>
-</ul>
-</li>
-<li>
-<p><strong>Disks</strong></p>
-<ul>
-<li><strong>Bus/Device:</strong> SATA</li>
-<li><strong>Size:</strong> minimum is 128GB</li>
-<li><strong>SSD emulation:</strong> Check</li>
-<li><strong>Discard:</strong> Check</li>
-<li><strong>Backup:</strong> Un-Check</li>
-</ul>
-</li>
-<li>
-<p><strong>CPU</strong></p>
-<ul>
-<li><strong>Cores:</strong> 4</li>
-<li><strong>Type:</strong> host</li>
-</ul>
-</li>
-<li>
-<p><strong>Memory</strong></p>
-<ul>
-<li>4GB is minimum, (Suggest 8GB)</li>
-</ul>
-</li>
-<li>
-<p><strong>Network</strong></p>
-<ul>
-<li><strong>Model:</strong> VMware vmxnet3</li>
-</ul>
-</li>
-<li>
-<p><strong>Confirm</strong></p>
-<ul>
-<li>Click <strong>Finish</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Wait for the VM Create process to complete (i.e. Status OK)</p>
-<p>Add as many NICs as needed</p>
-<ul>
-<li>PVE GUI  &gt; Click on ESXi VM &gt; Hardware &gt; Add &gt; Network Device</li>
-</ul>
-<h3 id="start-esxi-vm"><strong>Start ESXi VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>Reduce size of system partition (<span class="badge cstyle default"><span class="badge-content">Important</span></span> <strong>MUST BE DONE AT INITIAL INSTALL</strong>)
-<ul>
-<li>Background:
-<ul>
-<li>ESXi 7.0 introduced a system-storage boot media layout designed to ensure new features and capabilities could be added in future releases. The partition layout can consume up to 138GB of disk space, significantly limiting usable space to create a VMFS datastore on small server with finite hardware resources.</li>
-</ul>
-</li>
-<li>Documentation:
-<ul>
-<li><a href="https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html" rel="external" target="_blank">https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html</a></li>
-</ul>
-</li>
-<li>&ldquo;How-To&rdquo; reduce system partition size:
-<ul>
-<li>Start host with install image</li>
-<li>When ESXi installer window appears</li>
-<li>Press Shift+O within 5 seconds to edit the boot options.</li>
-<li>Add the following to the end of the prompt:
-<ul>
-<li>systemMediaSize=min</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="post-install-must-do"><strong>Post install MUST DO&rsquo;S</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>Assign a License in DCUI
-<ul>
-<li>Click on: Host/Manage/Licensing/Assign License</li>
-</ul>
-</li>
-<li>Enable SSH
-<ul>
-<li>Click on: Host / Actions / Services / Enable Secure Shell (SSH)</li>
-</ul>
-</li>
-<li>Enable SSH on boot:
-<ul>
-<li>Click on: Host/Manage/Services/Right click TSM-SSH/Policy/Select &ldquo;Start and stop with host&rdquo;</li>
-</ul>
-</li>
-<li>Configure DCUI
-<ul>
-<li>Click on: Host/Manage/System/Advanced Settings
-<ul>
-<li>UserVars.DcuiTimeOut Value=0</li>
-<li>UserVars.HostClientSessionTimeout Value=0</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Edit NTP Settings
-<ul>
-<li>Click on: Host/Manage/System/Time &amp; date</li>
-<li>Enable NTP client/Start and stop with host/208.91.112.63  	&lt;=ntp1.fortiguard.com</li>
 </ul>
 </li>
 </ul>
@@ -373,8 +298,8 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
             <li class="parent " data-nav-url="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu">
             <li class="alwaysopen " data-nav-url="/extras/proxmox_install/index.html"><a class="padding default-animation" href="/extras/proxmox_install/index.html">Proxmox Install</a><ul id="R-subsections-4610f3560435c0a3771f1a2e92899f7a" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="/extras/guacamole/index.html"><a class="padding" href="/extras/guacamole/index.html">Guacamole</a></li>
-            <li class="" data-nav-url="/extras/troubleshoot_ansible/index.html"><a class="padding" href="/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></li>
-            <li class="active " data-nav-url="/extras/nesting_esxi/index.html"><a class="padding" href="/extras/nesting_esxi/index.html">Nesting ESXi</a></li></ul></li>
+            <li class="active " data-nav-url="/extras/troubleshoot_ansible/index.html"><a class="padding" href="/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></li>
+            <li class="" data-nav-url="/extras/nesting_esxi/index.html"><a class="padding" href="/extras/nesting_esxi/index.html">Nesting ESXi</a></li></ul></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
