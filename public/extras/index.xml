@@ -3,7 +3,7 @@
   <channel>
     <title>Extras :: SE How-To Build Lab</title>
     <link>http://localhost:1313/extras/index.html</link>
-    <description>Proxmox Install Guacamole Troubleshoot Ansible Nesting ESXi</description>
+    <description>Proxmox Install Guacamole Troubleshoot Ansible Nesting ESXi Windows Persistant Route</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/extras/index.xml" rel="self" type="application/rss+xml" />
@@ -34,6 +34,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/extras/nesting_esxi/index.html</guid>
       <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM Creation&#xD;In PVE GUI &gt; Click “Create VM” General</description>
+    </item>
+    <item>
+      <title>Windows Persistant Route</title>
+      <link>http://localhost:1313/extras/windows_persistant_route/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/extras/windows_persistant_route/index.html</guid>
+      <description>Why would do this? VPN Split Tunnel (SASE) “blocking” access to SE Lab’s subnet.&#xA;Adding a persistent network route in Windows 11 that survives reboots&#xA;Syntax: route -p add [destination_network] mask [subnet_mask] [gateway_ip]&#xA;Steps: Open Command Prompt as Admin: Right-click on CMD Example: route -p add 192.168.50.0 mask 255.255.255.0 192.168.1.1 Verify via CMD: route print</description>
     </item>
   </channel>
 </rss>

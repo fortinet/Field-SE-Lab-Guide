@@ -8,3 +8,4 @@ weight = 50
 - **[Guacamole](Guacamole)**
 - **[Troubleshoot Ansible](Troubleshoot_Ansible)**
 - **[Nesting ESXi](Nesting_ESXi)**
+- **[Windows Persistant Route](Windows_Persistant_Route)**
