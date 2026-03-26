@@ -55,6 +55,9 @@
     <loc>http://localhost:1313/extras/nesting_esxi/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/windows_persistant_route/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/ubuntu/index.html</loc>
   </url>
   <url>

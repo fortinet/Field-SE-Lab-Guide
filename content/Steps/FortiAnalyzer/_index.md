@@ -27,9 +27,9 @@ From the VM’s console on ProxMox
 
 Login using admin / "no password"
 
-Set Password to the following:  	
+Set Password to this [Lab's standard](/Prerequisites#user-name--passwords-utilizes-the-following-standard) : 
 ````bash
-Fort1net!
+Leadership-1
 ````
 **Note:** Starting with 7.6.4 a password policy for local users is enabled and configured by default. Password must have at least 8 characters and must contain uppercase letter(s), lowercase letter(s), number(s), and special character(s).
 

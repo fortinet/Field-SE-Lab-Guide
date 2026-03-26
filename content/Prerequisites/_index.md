@@ -32,8 +32,13 @@ weight = 20
     - The "outside" subnet can be changed via a script during creation of OOB.
 
 ### User Name / Passwords utilizes the following standard
-- User Name: fortinet (all lowercase)
-- Password: password (all lowercase)
+- Ubuntu VMs
+    - User Name: fortinet (all lowercase)
+    - Password: password (all lowercase)
+- Fortinet VMs
+    - User Name: fortinet (all lowercase)
+    - Password: Leadership-1 (meets following [FortiOS Policy](https://docs.fortinet.com/document/fortigate/7.6.6/administration-guide/364729/password-policy) )
+
 
 ### Basic Understanding and Knowledge of Linux CLI Commands
 - [source](https://cheatography.com/davechild/cheat-sheets/linux-command-line?target=_blank)
