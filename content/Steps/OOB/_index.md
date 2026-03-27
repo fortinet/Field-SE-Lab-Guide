@@ -28,7 +28,7 @@ git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Download
 
 cd /home/fortinet/Downloads/
 
-chmod 777 *.sh
+chmod 755 *.sh
 ````
 {{% /tab %}}
 

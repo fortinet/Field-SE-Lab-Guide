@@ -54,7 +54,9 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 - Press Enter on “Try or Install Ubuntu” (if no keys pressed, GRUB will timeout and choose this option)
 -	If following appears, you can safely ignore it as both NICs have NOT been fully configured yet.
 ![Connection_Failed](Connection_Failed.png)
--	Choose Language, Accessibility - Click Next, Choose Keyboard, Internet Do Not Connect,  
+- If you see the following Icon, click on it
+![Install Ubuntu](Install_Ubuntu.png)
+-	Choose Language, Accessibility, Keyboard, Internet Do Not Connect,  
 -	Click on Install Ubuntu, Interactive installation, Apps – Default selection, Do not install proprietary software
 -	Erase disk and install Ubuntu (start from scratch on selected disk) 
     |  |  |
@@ -67,25 +69,27 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
     |Timezone | America/Chicago |
 -	Click on “Install”
 -	When screen says:
-    - “Ubuntu 24.04.3 LTS installed and ready to use”
+    - “Ubuntu 24.04.4 LTS installed and ready to use”
     -  Click on “Restart Now”
 - At the prompt to remove installation media
     - In PVE GUI  
         - Datacenter > Node > VM (one just created) >  Hardware > CD/DVD Drive > Edit 
             - Tick “Do not use any media”
+            ![Remove_ISO](Remove_ISO.png)
         - Datacenter > Node > VM (one just created) >  Hardware > Add > Cloud-Init
             - Bus/Device: SCSI 1
             - Storage: <your Proxmox storage, if no NAS, then “local-lvm”>
             - Format: QEMU image format (if it's available)
 ![Cloud_Init_Add](Cloud_Init_Add.png)
     - Config Cloud-Init
+    - {{% badge %}}NOTE:{{% /badge %}} If NOT using default subnet 172.16.3.x, then config IP address and gateway appropriately
 ![Cloud_Init_Config](Cloud_Init_Config.png)  
 - Go back to VM console and press “Enter”
 - Wait for VM to reboot
-- Login user "fortinet"
+- Login user/password "fortinet/password"
 |  |  |
 | :- | :- | 
-| Welcome to Ubuntu 24.04.3 LTS | Click Next | 
+| Welcome to Ubuntu 24.04.4 LTS | Click Next | 
 | Enable Ubuntu Pro | Tick “Skip for now”, Click Skip | 
 | No, don’t share system data | Click Next | 
 | Get started with more applications | Click Finish|
@@ -93,17 +97,33 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 ![Software_Updater](Software_Updater.png)
 
 ### Install Packages and User Config
+- Enable RDP
+    - Click on Network/Sound/Power in upper right corner of screen
+    - Click on Gear
+![Settings_1](Settings_1.png)
+    - Scroll down on left side to "System" click on it
+    - Click on "Remote Desktop"
+![Settings_2](Settings_2.png)
+    - Enable "Desktop Sharing" and "Remote Control"
+    - Click on Password's "eyeball" and change Password to "password"
+![Settings_3](Settings_3.png)
+
+- From your laptop/desktop connect to the VM via RDP
+
+- Start Terminal
+![Start_Terminal](Start_Terminal.png)
+
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
 sudo apt install git -y
 git clone https://github.com/stevesweeneywisc/SE-Lab-Ubuntu-Template /home/fortinet/Downloads
 cd /home/fortinet/Downloads/
-chmod 777 *.sh
+chmod 755 *.sh
 ./Ubuntu_Base_Install.sh
 ~~~~
 {{% /tab %}}
 - System will reboot after script runs
-- Login user "fortinet"
+- Login user/password "fortinet/password"
 - Remove keyring password
     - **Note:** This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot
     - Open Utilities folder
@@ -118,13 +138,18 @@ chmod 777 *.sh
 ![Key_Ring_5](Key_Ring_5.png)
     - Store passwords unencrypted? Click Continue
 ![Key_Ring_6](Key_Ring_6.png)
+    - Close "Passwords and Keys" window
 - Configure user “fortinet” for “Automatic Login”
-    - Settings
-![Config_User_1](Config_User_1.png)
-    - System/Users
-![Config_User_2](Config_User_2.png)
-    - Unlock and Enable “Automatic Login”
-![Config_User_3](Config_User_3.png)
+    - Click on Network/Sound/Power in upper right corner of screen
+    - Click on Gear
+![Settings_1](Settings_1.png)
+    - Scroll down on left side to "System" click on it
+    - Click on "Users"
+![Settings_2](Settings_4.png)
+    - Click on "Unlock"
+    - Enable "Automatic Login"
+![Settings_3](Settings_5.png)
+    - Close the Settings Window
 
 ### Verify Configuration and Prep Cloud-Init
 - Reboot and verify auto login
@@ -138,7 +163,7 @@ sudo shutdown now
 ### Convert VM to Template
  - In PVE GUI  
     - Datacenter > Node > VM (one just created) >  Cloud-Init > Edit
-    - Remove IP Address 
+    - Remove IP Address and Gateway
 ![Cloud_Init_Remove_IP](Cloud_Init_Remove_IP.png)
     - Datacenter > Node > Right Click on VM (one just created) > Convert to template
 ![Convert_to_Template](Convert_to_Template.png)
