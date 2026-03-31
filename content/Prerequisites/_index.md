@@ -36,9 +36,10 @@ weight = 20
     - User Name: fortinet (all lowercase)
     - Password: password (all lowercase)
 - Fortinet VMs
-    - User Name: fortinet (all lowercase)
-    - Password: password (starting with v7.6.5 a [default password policy](https://docs.fortinet.com/document/fortigate/7.6.6/administration-guide/364729/password-policy) was introduced.  While not recommended for production, this being a non-internet facing lab, for simplicity and to reduce complexity disables this policy. )
-
+    - User Name: admin (all lowercase)
+    - Password: password (all lowercase) 
+- {{% badge style="info" %}}While "password" should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. ){{% /badge %}}
+    - Starting with v7.6.5 a [default password policy](https://docs.fortinet.com/document/fortigate/7.6.6/administration-guide/364729/password-policy) was introduced.  
 
 ### Basic Understanding and Knowledge of Linux CLI Commands
 - [source](https://cheatography.com/davechild/cheat-sheets/linux-command-line?target=_blank)
@@ -59,9 +60,9 @@ weight = 20
 - Fortinet (FGT/FMG/FAZ) firmware qcow2 files
     - qcow2 files must use the following format:
         - < 3 letters > dash < version > .qcow2
-        - FGT-v7.4.8.M.qcow2
-        - FMG-v7.6.4.F.qcow2
-        - FAZ-v7.4.8.M.qcow2
+        - FGT-v7.4.11.M.qcow2
+        - FMG-v7.6.6.M.qcow2
+        - FAZ-v8.0.0.F.qcow2
 
 ![alt](pic-import_qcow2.png)
 
