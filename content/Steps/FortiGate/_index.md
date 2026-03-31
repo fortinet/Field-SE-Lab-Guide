@@ -16,7 +16,7 @@ cd /home/fortinet/automation/ansible/fortinet
 
 ./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml  <PVE server name>
 
-./create-vm.sh              ../vars/all-hosts.yml  <PVE server name>  fortigate_sdwan v7.6.3.F
+./create-vm.sh              ../vars/all-hosts.yml  <PVE server name>  fortigate_sdwan v7.6.6.M
 
 ./start_remove_vm.sh        ../vars/all-hosts.yml  <PVE server name>  fortigate_sdwan started
 ````

@@ -25,26 +25,26 @@ Branch FortiGatesVNET FTNTMGT BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCH
 Branch FortiGatesVNET FTNTMGT BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCHWAN6 BRCHLAN1 BRCHLAN2 BRCHLAN3 Device port4 10.100.55.x /24 port1 10.198.1.x port2 10.198.2.x /29 port1 10.198.3.x port2 10.198.4.x /29 port1 10.198.5.x port2 10.198.6.x /29 port3 10.1.1.x /24 port3 10.1.2.x /24 port3 10.1.3.x /24 Branch01 .55 .2 .1 Branch02 .56 .2 .1 Branch03 .57 .2 .1 Hub FortiGatesVNET FTNTMGT COREWAN1 COREWAN2 COREWAN3 COREWAN4 ISFW01 ISFW02 DMZ01 HAHUB01 Device port4 10.100.55.x /24 port1 10.198.7.x port2 10.198.8.x /29 port1 10.198.9.x port2 10.198.10.x /29 port3 10.100.88.x /24 port3 10.100.99.x /24 port5 10.100.77. /24 port6 No_IP Hub01a .51 .2 .1 .1 Hub01b .52 .3 .2 .2 Hub02a .53 .2 .1 FMG and FAZVNET ISFW01 FTNTMGT vmbr0 FTNTMGT Device port1 10.100.55.x /24 port2 10.100.88.x /24 port3 172.16.3.x /24 port4 FMG .12 .12 .12 down FAZ .2 .2 .2 down Ubuntu EndpointsVNET FTNTMGT OFFNET BRCHLAN1 BRCHLAN2 BRCHLAN3 ISFW01 ISFW02 Device eth1 10.100.55.x /24 eth0 10.100.66.x /24 eth0 10.1.1.x /24 eth0 10.1.2.x /24 eth0 10.1.3.x /24 eth0 10.100.88.x /24 eth0 10.100.99.x /24 Ubuntu-00 .70 .10 Ubuntu-01 .71 .10 Ubuntu-02 .72 .10 Ubuntu-03 .73 .10 Ubuntu-11 .81 .10 Ubuntu-21 .91 .10 OOB &amp; TCGUIVNET FTNTMGT vmbr0 BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCHWAN6 COREWAN1 COREWAN2 COREWAN3 COREWAN4 OFFNET Device eth0 10.100.55.x /24 (below) 172.16.3.x /24 eth1 10.198.1.x eth2 10.198.2.x /29 eth3 10.198.3.x eth4 10.198.4.x /29 eth5 10.198.5.x eth6 10.198.6.x /29 eth7 10.198.7.x eth8 10.198.8.x /29 eth9 10.198.9.x eth10 10.198.10.x /29 eth11 10.100.66.x /24 Ubuntu-OOB .80 eth1 .80 Ubuntu-TCGUI eth0 .90 .1 .1 .1 .1 .1">
     <meta itemprop="wordCount" content="252">
     <title>IP Scheme :: SE How-To Build Lab</title>
-    <link href="/css/auto-complete/auto-complete.min.css?1774553940" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774553940" defer></script>
-    <script src="/js/search-lunr.js?1774553940" defer></script>
-    <script src="/js/search.js?1774553940" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1774787970" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774787970" defer></script>
+    <script src="/js/search-lunr.js?1774787970" defer></script>
+    <script src="/js/search.js?1774787970" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774553940";
+      window.relearn.index_js_url="/searchindex.en.js?1774787970";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774553940" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774553940" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774553940" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774553940" defer></script>
+    <script src="/js/lunr/lunr.min.js?1774787970" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774787970" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774787970" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774787970" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774553940" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774553940" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774553940" rel="stylesheet">
-    <link href="/css/theme.css?1774553940" rel="stylesheet">
-    <link href="/css/format-html.css?1774553940" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774787970" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774787970" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774787970" rel="stylesheet">
+    <link href="/css/theme.css?1774787970" rel="stylesheet">
+    <link href="/css/format-html.css?1774787970" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@ Branch FortiGatesVNET FTNTMGT BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCH
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1774553940" rel="stylesheet">
+    <link href="/css/custom.css?1774787970" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -520,8 +520,8 @@ Branch FortiGatesVNET FTNTMGT BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCH
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774553940" defer></script>
-    <script src="/js/theme.js?1774553940" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774787970" defer></script>
+    <script src="/js/theme.js?1774787970" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

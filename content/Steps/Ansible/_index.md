@@ -11,12 +11,14 @@ weight = 30
 
 **Create VM Configuration**
 - Follow the steps in section "**Creating a VM configuration**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration)
-- Example Configurations below:
+- {{% badge %}}Note:{{% /badge %}} Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT
 ![FortiFlex_Configuration](FortiFlex_Configurations.png)
 
 **Create VM entitlements**
 - Follow the steps in section "**Creating VM entitlements**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/91804/creating-vm-entitlements)
-- {{% badge %}}Important{{% /badge %}} Description **MUST match exactly** (upper/lower case and dashes) what is outlined in red in the example below
+- {{% badge style="tip"%}}Description **MUST match exactly** (upper/lower case and dashes) what is outlined in red in the example below{{% /badge %}} 
+- {{% badge style="info"%}}It is possible to use a pool of entitlements and have Ansible returns the first available (i.e. unassigned) token by asset folder or Configuration id.  However, that is beyond the scope of this lab and left to the reader to investigate and implement.{{% /badge %}}
+
 ![FortiFlex_Entitlements](FortiFlex_Entitlements.png)
 
 ### Create SSH Key on OOB
@@ -97,6 +99,13 @@ cd /home/fortinet/automation/ansible/vars
     - Copy the Token ID and Secret generated
         - **Note:** Secret value is only displayed once when token generated
         ![Ansible_API_5](Ansible_API_5.png)
+    - Update **proxmox_api_token_secret:**
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+cd /home/fortinet/automation/ansible/vars
+./update_api_token_secret.sh  <Token Secret here>
+````
+{{% /tab %}}
 
 ### Update Global VARS File on Ubuntu-OOB
 - Update **global.yml** file located in **/home/fortinet/automation/ansible/vars/**
@@ -110,19 +119,13 @@ cd /home/fortinet/automation/ansible/vars
 - The username/password below is not what you use to sign into Support Portal
 - It is the API's credentials 
 ````bash
-./update_fortiflex_username.sh  <FortiFlex Username here>
-./update_fortiflex_password.sh  <FortiFlex Password here>
-./update_fortiflex_accountID.sh <FortiFlex Account ID here>
-./update_fortiflex_SN.sh        <FortiFlex Serial Number here>
+./update_fortiflex_username.sh   <FortiFlex Username here>
+./update_fortiflex_password.sh  '<FortiFlex Password here>'  <- Make sure to use single quotes
+./update_fortiflex_accountID.sh  <FortiFlex Account ID here>
+./update_fortiflex_SN.sh         <FortiFlex Serial Number here>
 ````
 {{% /tab %}}
 
-    - Update **proxmox_api_token_secret:**
-{{% tab title="from Ubuntu-OOB Terminal" %}}
-````bash
-./update_api_token_secret.sh  <Token Secret here>
-````
-{{% /tab %}}
     - Update **fortinet_timezone:** US/Central <= Default Timzone **(no change needed if this is your timezone)**
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
@@ -189,9 +192,9 @@ ping Ubuntu-OOB
 qcow2 files must have the following format:
 
 < 3 letters > dash < version > .qcow2
-- FGT-v7.4.8.M.qcow2
-- FMG-v7.6.4.F.qcow2
-- FAZ-v7.4.8.M.qcow2
+- FGT-v7.6.6.M.qcow2
+- FMG-v7.6.6.M.qcow2
+- FAZ-v7.6.6.M.qcow2
 
 ![import_qcow2](pic-import_qcow2.png)
 

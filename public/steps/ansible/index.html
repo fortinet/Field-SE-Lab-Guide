@@ -7,52 +7,48 @@
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
     <meta name="description" content="Create FortiFlex API User and TokensCreate User and Download Credentials
 Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration
-Follow the steps in section “Creating a VM configuration” on Docs Fortinet Example Configurations below: Create VM entitlements
-Follow the steps in section “Creating VM entitlements” on Docs Fortinet Important Description MUST match exactly (upper/lower case and dashes) what is outlined in red in the example below Create SSH Key on OOBGenerate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./update_sshkey.sh &#39;&lt;right click - paste SSH KEY here&gt;&#39; (make sure single quotes)Create Ansible API Token on Proxmox ServerOn PVE Server =&gt; create Automation User and API Token (with full Administrator access) Click on: Datacenter/Permissions/Groups Click on Create button Name:	IaC-admin-users Click on: Datacenter/Permissions Click: Add =&gt; Group Permission Path: / Group:	IaC-admin-users Role: Administrator Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: IaC Realm: Linux PAM standard authentication Group:	IaC-admin-users Expires:	never Enabled:	checked Click on: Datacenter/Permissions/API Tokens Click: Add User: IaC Token ID: Automation Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated Update Global VARS File on Ubuntu-OOBUpdate global.yml file located in /home/fortinet/automation/ansible/vars/ ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/varsUpdate FortiFlex Username/Password, Account ID and Serial Number ​from Ubuntu-OOB TerminalThe username/password below is not what you use to sign into Support Portal It is the API’s credentials ./update_fortiflex_username.sh &lt;FortiFlex Username here&gt; ./update_fortiflex_password.sh &lt;FortiFlex Password here&gt; ./update_fortiflex_accountID.sh &lt;FortiFlex Account ID here&gt; ./update_fortiflex_SN.sh &lt;FortiFlex Serial Number here&gt;">
+Follow the steps in section “Creating a VM configuration” on Docs Fortinet Note: Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT Create VM entitlements">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ansible Prerequisites :: SE How-To Build Lab">
     <meta name="twitter:description" content="Create FortiFlex API User and TokensCreate User and Download Credentials
 Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration
-Follow the steps in section “Creating a VM configuration” on Docs Fortinet Example Configurations below: Create VM entitlements
-Follow the steps in section “Creating VM entitlements” on Docs Fortinet Important Description MUST match exactly (upper/lower case and dashes) what is outlined in red in the example below Create SSH Key on OOBGenerate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./update_sshkey.sh &#39;&lt;right click - paste SSH KEY here&gt;&#39; (make sure single quotes)Create Ansible API Token on Proxmox ServerOn PVE Server =&gt; create Automation User and API Token (with full Administrator access) Click on: Datacenter/Permissions/Groups Click on Create button Name:	IaC-admin-users Click on: Datacenter/Permissions Click: Add =&gt; Group Permission Path: / Group:	IaC-admin-users Role: Administrator Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: IaC Realm: Linux PAM standard authentication Group:	IaC-admin-users Expires:	never Enabled:	checked Click on: Datacenter/Permissions/API Tokens Click: Add User: IaC Token ID: Automation Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated Update Global VARS File on Ubuntu-OOBUpdate global.yml file located in /home/fortinet/automation/ansible/vars/ ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/varsUpdate FortiFlex Username/Password, Account ID and Serial Number ​from Ubuntu-OOB TerminalThe username/password below is not what you use to sign into Support Portal It is the API’s credentials ./update_fortiflex_username.sh &lt;FortiFlex Username here&gt; ./update_fortiflex_password.sh &lt;FortiFlex Password here&gt; ./update_fortiflex_accountID.sh &lt;FortiFlex Account ID here&gt; ./update_fortiflex_SN.sh &lt;FortiFlex Serial Number here&gt;">
+Follow the steps in section “Creating a VM configuration” on Docs Fortinet Note: Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT Create VM entitlements">
     <meta property="og:url" content="http://localhost:1313/steps/ansible/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Ansible Prerequisites :: SE How-To Build Lab">
     <meta property="og:description" content="Create FortiFlex API User and TokensCreate User and Download Credentials
 Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration
-Follow the steps in section “Creating a VM configuration” on Docs Fortinet Example Configurations below: Create VM entitlements
-Follow the steps in section “Creating VM entitlements” on Docs Fortinet Important Description MUST match exactly (upper/lower case and dashes) what is outlined in red in the example below Create SSH Key on OOBGenerate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./update_sshkey.sh &#39;&lt;right click - paste SSH KEY here&gt;&#39; (make sure single quotes)Create Ansible API Token on Proxmox ServerOn PVE Server =&gt; create Automation User and API Token (with full Administrator access) Click on: Datacenter/Permissions/Groups Click on Create button Name:	IaC-admin-users Click on: Datacenter/Permissions Click: Add =&gt; Group Permission Path: / Group:	IaC-admin-users Role: Administrator Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: IaC Realm: Linux PAM standard authentication Group:	IaC-admin-users Expires:	never Enabled:	checked Click on: Datacenter/Permissions/API Tokens Click: Add User: IaC Token ID: Automation Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated Update Global VARS File on Ubuntu-OOBUpdate global.yml file located in /home/fortinet/automation/ansible/vars/ ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/varsUpdate FortiFlex Username/Password, Account ID and Serial Number ​from Ubuntu-OOB TerminalThe username/password below is not what you use to sign into Support Portal It is the API’s credentials ./update_fortiflex_username.sh &lt;FortiFlex Username here&gt; ./update_fortiflex_password.sh &lt;FortiFlex Password here&gt; ./update_fortiflex_accountID.sh &lt;FortiFlex Account ID here&gt; ./update_fortiflex_SN.sh &lt;FortiFlex Serial Number here&gt;">
+Follow the steps in section “Creating a VM configuration” on Docs Fortinet Note: Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT Create VM entitlements">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Ansible Prerequisites :: SE How-To Build Lab">
     <meta itemprop="description" content="Create FortiFlex API User and TokensCreate User and Download Credentials
 Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration
-Follow the steps in section “Creating a VM configuration” on Docs Fortinet Example Configurations below: Create VM entitlements
-Follow the steps in section “Creating VM entitlements” on Docs Fortinet Important Description MUST match exactly (upper/lower case and dashes) what is outlined in red in the example below Create SSH Key on OOBGenerate SSH Key on Ubuntu-OOB ​from Ubuntu-OOB Terminalssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal File =&gt; /home/fortinet/.ssh/ansible_key Passphrase =&gt; &lt;none&gt; just hit enter twicePlace public key on Proxmox ​from Ubuntu-OOB Terminalssh-copy-id -i /home/fortinet/.ssh/ansible_key root@&lt;your pve server name&gt;Prompted with the following, respond “yes” The authenticity of host &#39;pve01 (172.16.3.121)&#39; can&#39;t be established. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? yesPrompted for password &lt; enter password &gt; Verify ability to ssh from Ubuntu-OOB to each PVE server in the cluster without a password Note: The first time only, you will be prompted similar to sequence above ​from Ubuntu-OOB Terminalssh root@&lt;your pve server name 01&gt; ssh root@&lt;your pve server name 02&gt;Update Ansible global.vars file ​from Ubuntu-OOB Terminalcat /home/fortinet/.ssh/ansible_key.pubHighlight, Right Click and Copy ansible_key.pub contents ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/vars ./update_sshkey.sh &#39;&lt;right click - paste SSH KEY here&gt;&#39; (make sure single quotes)Create Ansible API Token on Proxmox ServerOn PVE Server =&gt; create Automation User and API Token (with full Administrator access) Click on: Datacenter/Permissions/Groups Click on Create button Name:	IaC-admin-users Click on: Datacenter/Permissions Click: Add =&gt; Group Permission Path: / Group:	IaC-admin-users Role: Administrator Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: IaC Realm: Linux PAM standard authentication Group:	IaC-admin-users Expires:	never Enabled:	checked Click on: Datacenter/Permissions/API Tokens Click: Add User: IaC Token ID: Automation Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated Update Global VARS File on Ubuntu-OOBUpdate global.yml file located in /home/fortinet/automation/ansible/vars/ ​from Ubuntu-OOB Terminalcd /home/fortinet/automation/ansible/varsUpdate FortiFlex Username/Password, Account ID and Serial Number ​from Ubuntu-OOB TerminalThe username/password below is not what you use to sign into Support Portal It is the API’s credentials ./update_fortiflex_username.sh &lt;FortiFlex Username here&gt; ./update_fortiflex_password.sh &lt;FortiFlex Password here&gt; ./update_fortiflex_accountID.sh &lt;FortiFlex Account ID here&gt; ./update_fortiflex_SN.sh &lt;FortiFlex Serial Number here&gt;">
-    <meta itemprop="wordCount" content="628">
+Follow the steps in section “Creating a VM configuration” on Docs Fortinet Note: Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT Create VM entitlements">
+    <meta itemprop="wordCount" content="698">
     <title>Ansible Prerequisites :: SE How-To Build Lab</title>
     <link href="/steps/ansible/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1774584498" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774584498" defer></script>
-    <script src="/js/search-lunr.js?1774584498" defer></script>
-    <script src="/js/search.js?1774584498" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1774929297" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774929297" defer></script>
+    <script src="/js/search-lunr.js?1774929297" defer></script>
+    <script src="/js/search.js?1774929297" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774584498";
+      window.relearn.index_js_url="/searchindex.en.js?1774929297";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774584498" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774584498" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774584498" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774584498" defer></script>
+    <script src="/js/lunr/lunr.min.js?1774929297" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774929297" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774929297" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774929297" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774584498" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774584498" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774584498" rel="stylesheet">
-    <link href="/css/theme.css?1774584498" rel="stylesheet">
-    <link href="/css/format-html.css?1774584498" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774929297" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774929297" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774929297" rel="stylesheet">
+    <link href="/css/theme.css?1774929297" rel="stylesheet">
+    <link href="/css/format-html.css?1774929297" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -105,7 +101,7 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1774584498" rel="stylesheet">
+    <link href="/css/custom.css?1774929297" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -183,35 +179,36 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <p><strong>Create VM Configuration</strong></p>
 <ul>
 <li>Follow the steps in section &ldquo;<strong>Creating a VM configuration</strong>&rdquo; on <a href="https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration" rel="external" target="_blank">Docs Fortinet</a></li>
-<li>Example Configurations below:
-<a href="#R-image-f32ab7b3702226589d69bc6ea3374af0" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f32ab7b3702226589d69bc6ea3374af0"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png"></a></li>
+<li><span class="badge cstyle default"><span class="badge-content">Note:</span></span> Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT
+<a href="#R-image-791f4e0edc68a3486d8fd1c3e33bbaf8" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-791f4e0edc68a3486d8fd1c3e33bbaf8"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png"></a></li>
 </ul>
 <p><strong>Create VM entitlements</strong></p>
 <ul>
 <li>Follow the steps in section &ldquo;<strong>Creating VM entitlements</strong>&rdquo; on <a href="https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/91804/creating-vm-entitlements" rel="external" target="_blank">Docs Fortinet</a></li>
-<li><span class="badge cstyle default"><span class="badge-content">Important</span></span> Description <strong>MUST match exactly</strong> (upper/lower case and dashes) what is outlined in red in the example below
-<a href="#R-image-a5253bf6b83f0fe74c039ada66e47f1d" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a5253bf6b83f0fe74c039ada66e47f1d"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png"></a></li>
+<li><span class="badge cstyle tip badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-lightbulb"></i> Tip</span><span class="badge-content">Description <strong>MUST match exactly</strong> (upper/lower case and dashes) what is outlined in red in the example below</span></span></li>
+<li><span class="badge cstyle info badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-info-circle"></i> Info</span><span class="badge-content">It is possible to use a pool of entitlements and have Ansible returns the first available (i.e. unassigned) token by asset folder or Configuration id.  However, that is beyond the scope of this lab and left to the reader to investigate and implement.</span></span></li>
 </ul>
+<p><a href="#R-image-7def6580586f699534c704ba256f9c7d" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7def6580586f699534c704ba256f9c7d"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png"></a></p>
 <h3 id="create-ssh-key-on-oob">Create SSH Key on OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Generate SSH Key on Ubuntu-OOB
-<div class="tab-panel" data-tab-group="R-tabs-fa235f333b50f41da3856fe31678b768">
+<div class="tab-panel" data-tab-group="R-tabs-76fb7abe7cf8d29b35f3d04c47223b8b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-87d932771a04cddf971add71ff7b799c" aria-expanded="true"
+      aria-controls="R-tab-id-70a5165d8e1c575cfa8c3845b7fec87b" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fa235f333b50f41da3856fe31678b768','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-76fb7abe7cf8d29b35f3d04c47223b8b','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-87d932771a04cddf971add71ff7b799c"
+      id="R-tab-id-70a5165d8e1c575cfa8c3845b7fec87b"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -223,21 +220,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
   </div>
 </div></li>
 <li>Place public key on Proxmox
-<div class="tab-panel" data-tab-group="R-tabs-46ea9ad8eaa25dc354df6ab634ffeb7d">
+<div class="tab-panel" data-tab-group="R-tabs-38c40e89a1663cf7914511fd98ed4972">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-1ffb7e6514ca614caa2b55941a8eedef" aria-expanded="true"
+      aria-controls="R-tab-id-12bd88f04020d4eb0b4de78f2418ab52" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-46ea9ad8eaa25dc354df6ab634ffeb7d','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-38c40e89a1663cf7914511fd98ed4972','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-1ffb7e6514ca614caa2b55941a8eedef"
+      id="R-tab-id-12bd88f04020d4eb0b4de78f2418ab52"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -263,21 +260,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-b69e468e5fbe442ec6c7bf74938d22dd">
+<div class="tab-panel" data-tab-group="R-tabs-46c609a2655cf0fc6af34ffed538fb37">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a9688ad854f066ca03b24d0269b75c37" aria-expanded="true"
+      aria-controls="R-tab-id-056b65a83dd418903b84db2cba103612" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-b69e468e5fbe442ec6c7bf74938d22dd','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-46c609a2655cf0fc6af34ffed538fb37','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a9688ad854f066ca03b24d0269b75c37"
+      id="R-tab-id-056b65a83dd418903b84db2cba103612"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -289,21 +286,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </div>
 <ul>
 <li>Update Ansible global.vars file
-<div class="tab-panel" data-tab-group="R-tabs-fd00760790dfa10e27b069b9bbd0bb8f">
+<div class="tab-panel" data-tab-group="R-tabs-bfc2174c806297bb253d34d598b93033">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f9cc333a937921fa706f8dbb7186db5d" aria-expanded="true"
+      aria-controls="R-tab-id-d2ddb1cd44a39b690cd08182b1042698" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fd00760790dfa10e27b069b9bbd0bb8f','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-bfc2174c806297bb253d34d598b93033','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f9cc333a937921fa706f8dbb7186db5d"
+      id="R-tab-id-d2ddb1cd44a39b690cd08182b1042698"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -314,23 +311,23 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </div>
 <ul>
 <li>Highlight, Right Click and Copy ansible_key.pub contents
-<a href="#R-image-d44089a9931f7bc881c2f15f55e3d7de" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d44089a9931f7bc881c2f15f55e3d7de"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-41ef406c3eaf6136b6ab82f247e9aa8a">
+<a href="#R-image-fd5bdf5ebacd7c1ad4d0471be34982b9" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd5bdf5ebacd7c1ad4d0471be34982b9"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-d09ad3a5b2ed8f82b7bd12d83d631304">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-9f1a4a4f09c8393881abfca6c4e6e2dd" aria-expanded="true"
+      aria-controls="R-tab-id-1383d1e782d7c565d878bf2343c65545" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-41ef406c3eaf6136b6ab82f247e9aa8a','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-d09ad3a5b2ed8f82b7bd12d83d631304','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-9f1a4a4f09c8393881abfca6c4e6e2dd"
+      id="R-tab-id-1383d1e782d7c565d878bf2343c65545"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -351,8 +348,8 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <ul>
 <li>Click on Create button</li>
 <li>Name:	<code>IaC-admin-users</code>
-<a href="#R-image-f0b13417c4c6e251c7194e84006a6870" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f0b13417c4c6e251c7194e84006a6870"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
+<a href="#R-image-0314edb593f9f8e433c6339de89bec8f" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0314edb593f9f8e433c6339de89bec8f"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
 </ul>
 </li>
 <li>Click on: Datacenter/Permissions
@@ -363,8 +360,8 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <li>Group:	IaC-admin-users</li>
 <li>Role: 	Administrator</li>
 <li>Propagate: 	Checked
-<a href="#R-image-9ecff0c4763ded19bdc72882416646ee" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9ecff0c4763ded19bdc72882416646ee"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
+<a href="#R-image-2e3ec2513e01ff886fb2f59448cdcfab" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e3ec2513e01ff886fb2f59448cdcfab"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -378,8 +375,8 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <li>Group:	IaC-admin-users</li>
 <li>Expires:	never</li>
 <li>Enabled:	checked
-<a href="#R-image-d521dc572406f80eece2171aa36898f9" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d521dc572406f80eece2171aa36898f9"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
+<a href="#R-image-55e0b2412fa2086c1d3bf8f9f7681518" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-55e0b2412fa2086c1d3bf8f9f7681518"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -391,8 +388,8 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <li>User: IaC</li>
 <li>Token ID: <code>Automation</code></li>
 <li>Privilege Separation: Unchecked
-<a href="#R-image-6c60d39bf88815592abf1613e7eab5d7" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c60d39bf88815592abf1613e7eab5d7"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
+<a href="#R-image-62dc220c3c007c29cf352517d1a94b03" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-62dc220c3c007c29cf352517d1a94b03"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -400,31 +397,56 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <li>Copy the Token ID and Secret generated
 <ul>
 <li><strong>Note:</strong> Secret value is only displayed once when token generated
-<a href="#R-image-25309450712d527061f68d206762e14d" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-25309450712d527061f68d206762e14d"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
+<a href="#R-image-39fca09c7c3ca42d5e3e9df14d99098e" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-39fca09c7c3ca42d5e3e9df14d99098e"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-<h3 id="update-global-vars-file-on-ubuntu-oob">Update Global VARS File on Ubuntu-OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
-<div class="tab-panel" data-tab-group="R-tabs-61ef8d872ca12f8b4517555a155396f7">
+<li>Update <strong>proxmox_api_token_secret:</strong>
+<div class="tab-panel" data-tab-group="R-tabs-e0ab5013bf0cb98d0e6589902226adf1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-45982844a86517025fa51469d10677b7" aria-expanded="true"
+      aria-controls="R-tab-id-c1e36a1e027220a34c213555838d6261" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-61ef8d872ca12f8b4517555a155396f7','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-e0ab5013bf0cb98d0e6589902226adf1','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-45982844a86517025fa51469d10677b7"
+      id="R-tab-id-c1e36a1e027220a34c213555838d6261"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/vars
+</span></span><span style="display:flex;"><span>./update_api_token_secret.sh  &lt;Token Secret here&gt;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h3 id="update-global-vars-file-on-ubuntu-oob">Update Global VARS File on Ubuntu-OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
+<div class="tab-panel" data-tab-group="R-tabs-965b289d46f0a22fc664f2e6fdcc9b80">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-dec5d75281f7e03da7595314e7c8111e" aria-expanded="true"
+      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-965b289d46f0a22fc664f2e6fdcc9b80','R-tab-e1d299586400621799b2d1a10d35e556')"
+    >
+      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-dec5d75281f7e03da7595314e7c8111e"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -436,21 +458,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <ul>
 <li>
 <p>Update FortiFlex <strong>Username/Password, Account ID and Serial Number</strong>
-<div class="tab-panel" data-tab-group="R-tabs-a54446457e1b8a7063d849cbf858de5c">
+<div class="tab-panel" data-tab-group="R-tabs-3096b289e2f5eedc131e8535329c94bc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-d0fda15094cef67290bf07d28c09305c" aria-expanded="true"
+      aria-controls="R-tab-id-9725b2d9b36baf51c0e7dccae0142425" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-a54446457e1b8a7063d849cbf858de5c','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-3096b289e2f5eedc131e8535329c94bc','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-d0fda15094cef67290bf07d28c09305c"
+      id="R-tab-id-9725b2d9b36baf51c0e7dccae0142425"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -458,36 +480,10 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <li>The username/password below is not what you use to sign into Support Portal</li>
 <li>It is the API&rsquo;s credentials</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_fortiflex_username.sh  &lt;FortiFlex Username here&gt;
-</span></span><span style="display:flex;"><span>./update_fortiflex_password.sh  &lt;FortiFlex Password here&gt;
-</span></span><span style="display:flex;"><span>./update_fortiflex_accountID.sh &lt;FortiFlex Account ID here&gt;
-</span></span><span style="display:flex;"><span>./update_fortiflex_SN.sh        &lt;FortiFlex Serial Number here&gt;</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div></p>
-</li>
-<li>
-<p>Update <strong>proxmox_api_token_secret:</strong>
-<div class="tab-panel" data-tab-group="R-tabs-65b8c0619042fe64764c25ea5ec828ab">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-aed2411798a9ea2f15347b96e253ba64" aria-expanded="true"
-      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-65b8c0619042fe64764c25ea5ec828ab','R-tab-e1d299586400621799b2d1a10d35e556')"
-    >
-      <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-aed2411798a9ea2f15347b96e253ba64"
-      data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_api_token_secret.sh  &lt;Token Secret here&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_fortiflex_username.sh   &lt;FortiFlex Username here&gt;
+</span></span><span style="display:flex;"><span>./update_fortiflex_password.sh  <span style="color:#e6db74">&#39;&lt;FortiFlex Password here&gt;&#39;</span>  &lt;- Make sure to use single quotes
+</span></span><span style="display:flex;"><span>./update_fortiflex_accountID.sh  &lt;FortiFlex Account ID here&gt;
+</span></span><span style="display:flex;"><span>./update_fortiflex_SN.sh         &lt;FortiFlex Serial Number here&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
@@ -495,21 +491,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>fortinet_timezone:</strong> US/Central &lt;= Default Timzone <strong>(no change needed if this is your timezone)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-35eff96179fd907ee3876e97f71ec342">
+<div class="tab-panel" data-tab-group="R-tabs-f453b00bdc4f6f28db027802686f862c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7ebef33eb8c1e8b70583fe1b3a6a25c8" aria-expanded="true"
+      aria-controls="R-tab-id-466686074c67fa2486f20580e6ffac38" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-35eff96179fd907ee3876e97f71ec342','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-f453b00bdc4f6f28db027802686f862c','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7ebef33eb8c1e8b70583fe1b3a6a25c8"
+      id="R-tab-id-466686074c67fa2486f20580e6ffac38"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -521,21 +517,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(Following changes NOT needed if == pve01)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-e0cdc17589a79b99ae86f47bdf793b55">
+<div class="tab-panel" data-tab-group="R-tabs-4e48fbd8d348a507108f0528448171af">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-9fdae34433a96a21baf47bb09288b012" aria-expanded="true"
+      aria-controls="R-tab-id-0d72cd74b4dd197c88dea6d0311527fa" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e0cdc17589a79b99ae86f47bdf793b55','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-4e48fbd8d348a507108f0528448171af','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-9fdae34433a96a21baf47bb09288b012"
+      id="R-tab-id-0d72cd74b4dd197c88dea6d0311527fa"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -555,21 +551,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>proxmox_storage_name:</strong> local-lvm	&lt;= if storage on PVE, or NAS name if not
-<div class="tab-panel" data-tab-group="R-tabs-83d74f6bd8a96a18cca87f489cecc0ec">
+<div class="tab-panel" data-tab-group="R-tabs-2f9d331afa96bdf7edb4e00ab839557e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-db3318960644c8e18408c7db1654abe9" aria-expanded="true"
+      aria-controls="R-tab-id-63ba403f0c17e8f638ff69c7aae4c215" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-83d74f6bd8a96a18cca87f489cecc0ec','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-2f9d331afa96bdf7edb4e00ab839557e','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-db3318960644c8e18408c7db1654abe9"
+      id="R-tab-id-63ba403f0c17e8f638ff69c7aae4c215"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -581,21 +577,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<strong><em>&lt; NFS name &gt;</em></strong> if using NAS
-<div class="tab-panel" data-tab-group="R-tabs-28e98aa7c889581feef5271456ace52e">
+<div class="tab-panel" data-tab-group="R-tabs-4c31087d44a3ac8a2a0bc8029aba4726">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-668c410f3bf6e5053c3afb95936b2d42" aria-expanded="true"
+      aria-controls="R-tab-id-041ef8146487ffd53ca5ea2714463933" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-28e98aa7c889581feef5271456ace52e','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-4c31087d44a3ac8a2a0bc8029aba4726','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-668c410f3bf6e5053c3afb95936b2d42"
+      id="R-tab-id-041ef8146487ffd53ca5ea2714463933"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -607,21 +603,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_name:</strong> Ubuntu-Template &lt;= Name of Ubuntu template
-<div class="tab-panel" data-tab-group="R-tabs-12f893a3c40bc664d2479b5cd31daf5d">
+<div class="tab-panel" data-tab-group="R-tabs-7bcfbfd925fd1ce2d661feafa3ac2c65">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-00e779180168cd6375c02f3b48bf665d" aria-expanded="true"
+      aria-controls="R-tab-id-9a36ea0f997a2f7ea4343a511fb2b72e" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-12f893a3c40bc664d2479b5cd31daf5d','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-7bcfbfd925fd1ce2d661feafa3ac2c65','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-00e779180168cd6375c02f3b48bf665d"
+      id="R-tab-id-9a36ea0f997a2f7ea4343a511fb2b72e"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -633,21 +629,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_vmid:</strong> 491 &lt;= VMID of Ubuntu VM Template
-<div class="tab-panel" data-tab-group="R-tabs-112c71f1c848aa2c5399f3abc32870ba">
+<div class="tab-panel" data-tab-group="R-tabs-601fa444ee9c56092bfee4070f57eb54">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-51e8534d1ffb7f54a6ba1d37e49aab86" aria-expanded="true"
+      aria-controls="R-tab-id-a36dfc0c66e3ac4a64f1c61b5962be85" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-112c71f1c848aa2c5399f3abc32870ba','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-601fa444ee9c56092bfee4070f57eb54','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-51e8534d1ffb7f54a6ba1d37e49aab86"
+      id="R-tab-id-a36dfc0c66e3ac4a64f1c61b5962be85"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -659,21 +655,21 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 </li>
 <li>
 <p><strong>Verify</strong>
-<div class="tab-panel" data-tab-group="R-tabs-659d8c6e6ea66a8ad7309905a329aedc">
+<div class="tab-panel" data-tab-group="R-tabs-e504eb1dd0ada8d1c96d9ecb66b10055">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f514baf74bd633a9f98d74328ed8d3d3" aria-expanded="true"
+      aria-controls="R-tab-id-451a65dd928cafaf07551eb006a28292" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-659d8c6e6ea66a8ad7309905a329aedc','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-e504eb1dd0ada8d1c96d9ecb66b10055','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f514baf74bd633a9f98d74328ed8d3d3"
+      id="R-tab-id-451a65dd928cafaf07551eb006a28292"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -682,29 +678,29 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
     </div>
   </div>
 </div>
-<a href="#R-image-b17e72438d31957e9525cdc69434806e" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b17e72438d31957e9525cdc69434806e"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></p>
+<a href="#R-image-4145ff4bee659e46f458b0fc34063dc4" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4145ff4bee659e46f458b0fc34063dc4"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="dns">DNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All hosts and VMs can be resolved by name.
-<div class="tab-panel" data-tab-group="R-tabs-49c19116fb2a464df222f5df82772b33">
+<div class="tab-panel" data-tab-group="R-tabs-844c63168bea3e3f0abd8e673cf6d9c6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-db8870e394d9e4b516b7cff097f4bd83" aria-expanded="true"
+      aria-controls="R-tab-id-1a5f6ecd9d950e738e588ee4e782d1ba" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-49c19116fb2a464df222f5df82772b33','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-844c63168bea3e3f0abd8e673cf6d9c6','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-db8870e394d9e4b516b7cff097f4bd83"
+      id="R-tab-id-1a5f6ecd9d950e738e588ee4e782d1ba"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -718,12 +714,12 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <p>qcow2 files must have the following format:</p>
 <p>&lt; 3 letters &gt; dash &lt; version &gt; .qcow2</p>
 <ul>
-<li>FGT-v7.4.8.M.qcow2</li>
-<li>FMG-v7.6.4.F.qcow2</li>
-<li>FAZ-v7.4.8.M.qcow2</li>
+<li>FGT-v7.6.6.M.qcow2</li>
+<li>FMG-v7.6.6.M.qcow2</li>
+<li>FAZ-v7.6.6.M.qcow2</li>
 </ul>
-<p><a href="#R-image-3b7d4b99e33f728c10346f50c384b48b" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b7d4b99e33f728c10346f50c384b48b"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-2f7eddad67dc62d7e087834f601e59d5" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2f7eddad67dc62d7e087834f601e59d5"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
 <h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 
   <footer class="footline">
@@ -799,8 +795,8 @@ Follow the steps in section “Creating VM entitlements” on Docs Fortinet Impo
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774584498" defer></script>
-    <script src="/js/theme.js?1774584498" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774929297" defer></script>
+    <script src="/js/theme.js?1774929297" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

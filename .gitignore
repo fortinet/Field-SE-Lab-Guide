@@ -1,0 +1,4 @@
+# Ignore scripts - bat and ps1
+
+/psgit.bat
+/psgit.ps1

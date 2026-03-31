@@ -10,7 +10,7 @@ RDP to OOB.
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
 
-./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	fmg  v7.6.4.F
+./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	fmg  v7.6.6.M
 
 ./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	fmg  started
 ````

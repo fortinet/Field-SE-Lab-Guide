@@ -142,8 +142,8 @@ docker compose down
 docker compose up –d
 ````
 {{% /tab %}}
-    - If using the default subnet 172.16.3.x, there are *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
-    - If using a non-default subnet, see **[Guacamole](/extras/guacamole/)** section for "how-to" change **Hostname:** *IP address* to reflect your subnet.
+    - There are *NO ADDITIONAL CHANGES REQUIRED* => [Guacamole](https://guacamole.apache.org/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
+    - In the future when your lab has additions/changes, see **[Guacamole](/extras/guacamole/)** section.
  
 ### Verification 
 - "homepage" is working
