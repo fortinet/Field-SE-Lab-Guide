@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Upgrade Existing OOB :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/extras/upgrade_existing_oob/index.html</link>
+    <description>Why would do this?&#xA;Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Automation Ansible Build Scripts Backup Config&#xD;Guacamole ​&#xD;from Terminal in /home/Fortinet/c_data/guacamole&#xD;docker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sql</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/upgrade_existing_oob/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

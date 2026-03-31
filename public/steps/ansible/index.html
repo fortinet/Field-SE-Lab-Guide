@@ -29,26 +29,26 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
     <meta itemprop="wordCount" content="698">
     <title>Ansible Prerequisites :: SE How-To Build Lab</title>
     <link href="/steps/ansible/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1774965749" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774965749" defer></script>
-    <script src="/js/search-lunr.js?1774965749" defer></script>
-    <script src="/js/search.js?1774965749" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1774982991" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774982991" defer></script>
+    <script src="/js/search-lunr.js?1774982991" defer></script>
+    <script src="/js/search.js?1774982991" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774965749";
+      window.relearn.index_js_url="/searchindex.en.js?1774982991";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774965749" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774965749" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774965749" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774965749" defer></script>
+    <script src="/js/lunr/lunr.min.js?1774982991" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774982991" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774982991" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774982991" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774965749" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774965749" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774965749" rel="stylesheet">
-    <link href="/css/theme.css?1774965749" rel="stylesheet">
-    <link href="/css/format-html.css?1774965749" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774982991" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1774982991" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774982991" rel="stylesheet">
+    <link href="/css/theme.css?1774982991" rel="stylesheet">
+    <link href="/css/format-html.css?1774982991" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +101,7 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1774965749" rel="stylesheet">
+    <link href="/css/custom.css?1774982991" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -180,8 +180,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <ul>
 <li>Follow the steps in section &ldquo;<strong>Creating a VM configuration</strong>&rdquo; on <a href="https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration" rel="external" target="_blank">Docs Fortinet</a></li>
 <li><span class="badge cstyle default"><span class="badge-content">Note:</span></span> Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT
-<a href="#R-image-fe89af3cec541f723915234c76c7e2c6" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fe89af3cec541f723915234c76c7e2c6"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png"></a></li>
+<a href="#R-image-6380cf388f6af7367629c9d40ad60125" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6380cf388f6af7367629c9d40ad60125"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Configurations.png"></a></li>
 </ul>
 <p><strong>Create VM entitlements</strong></p>
 <ul>
@@ -189,26 +189,26 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li><span class="badge cstyle tip badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-lightbulb"></i> Tip</span><span class="badge-content">Description <strong>MUST match exactly</strong> (upper/lower case and dashes) what is outlined in red in the example below</span></span></li>
 <li><span class="badge cstyle info badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-info-circle"></i> Info</span><span class="badge-content">It is possible to use a pool of entitlements and have Ansible returns the first available (i.e. unassigned) token by asset folder or Configuration id.  However, that is beyond the scope of this lab and left to the reader to investigate and implement.</span></span></li>
 </ul>
-<p><a href="#R-image-40e7704a2452a1837328f7166c266b57" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-40e7704a2452a1837328f7166c266b57"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png"></a></p>
+<p><a href="#R-image-6c827e07a604bb3e25e10fbdf6f0b556" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c827e07a604bb3e25e10fbdf6f0b556"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/FortiFlex_Entitlements.png"></a></p>
 <h3 id="create-ssh-key-on-oob">Create SSH Key on OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Generate SSH Key on Ubuntu-OOB
-<div class="tab-panel" data-tab-group="R-tabs-e89211c77c7693c10ef769489d298d5a">
+<div class="tab-panel" data-tab-group="R-tabs-f960ee1ba8aa8bd7f607968a626ec9e6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7d97f736800b32c3860667fe40c30473" aria-expanded="true"
+      aria-controls="R-tab-id-b5066aa8ffae9ce7fb0aaf31fbd1756b" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e89211c77c7693c10ef769489d298d5a','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-f960ee1ba8aa8bd7f607968a626ec9e6','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7d97f736800b32c3860667fe40c30473"
+      id="R-tab-id-b5066aa8ffae9ce7fb0aaf31fbd1756b"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -220,21 +220,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
   </div>
 </div></li>
 <li>Place public key on Proxmox
-<div class="tab-panel" data-tab-group="R-tabs-c0596fc0f4ef13885c23029089b9cd98">
+<div class="tab-panel" data-tab-group="R-tabs-90045af7a6aa0bf8e125373806f3121f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-fcd4a5d8b1261901fb757a29714e9453" aria-expanded="true"
+      aria-controls="R-tab-id-ec9c9f294ac30bec806b2c970985bdd1" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-c0596fc0f4ef13885c23029089b9cd98','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-90045af7a6aa0bf8e125373806f3121f','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-fcd4a5d8b1261901fb757a29714e9453"
+      id="R-tab-id-ec9c9f294ac30bec806b2c970985bdd1"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -260,21 +260,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-181b76dfa31c794ee06181825a6d6399">
+<div class="tab-panel" data-tab-group="R-tabs-e5c04173b4d521873f29d246b6cbe379">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-dd68a49d8748a3a2793d914716e94c2e" aria-expanded="true"
+      aria-controls="R-tab-id-3236ce1901fc0613e85ca5f02d588b75" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-181b76dfa31c794ee06181825a6d6399','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-e5c04173b4d521873f29d246b6cbe379','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-dd68a49d8748a3a2793d914716e94c2e"
+      id="R-tab-id-3236ce1901fc0613e85ca5f02d588b75"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -286,21 +286,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </div>
 <ul>
 <li>Update Ansible global.vars file
-<div class="tab-panel" data-tab-group="R-tabs-9df27965b15fe818621647389b0f233e">
+<div class="tab-panel" data-tab-group="R-tabs-d038a0c9e79c5e7352c8ec44db8e0807">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-500b3d3d2fe14f48d2033d9fe7a595b6" aria-expanded="true"
+      aria-controls="R-tab-id-85203d74243f690347307e716351ca30" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-9df27965b15fe818621647389b0f233e','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-d038a0c9e79c5e7352c8ec44db8e0807','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-500b3d3d2fe14f48d2033d9fe7a595b6"
+      id="R-tab-id-85203d74243f690347307e716351ca30"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -311,23 +311,23 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </div>
 <ul>
 <li>Highlight, Right Click and Copy ansible_key.pub contents
-<a href="#R-image-9d3376420b24242454d8d85f7c398290" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d3376420b24242454d8d85f7c398290"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-5d0b6a933ee78c11d674e1a52c7062b8">
+<a href="#R-image-597abbd26b26d20368c847d38846ada1" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-597abbd26b26d20368c847d38846ada1"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/ansible_key_pub.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-be4d7a5aca08ebc2a511ec9255fb143e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a3e78a0f0d9f3b2d0c6db000387439ff" aria-expanded="true"
+      aria-controls="R-tab-id-0d28d3aef47cd0b2c09dab384b178c48" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-5d0b6a933ee78c11d674e1a52c7062b8','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-be4d7a5aca08ebc2a511ec9255fb143e','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a3e78a0f0d9f3b2d0c6db000387439ff"
+      id="R-tab-id-0d28d3aef47cd0b2c09dab384b178c48"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -348,8 +348,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <ul>
 <li>Click on Create button</li>
 <li>Name:	<code>IaC-admin-users</code>
-<a href="#R-image-70eef13a60261394246717bf355e4a3d" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-70eef13a60261394246717bf355e4a3d"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
+<a href="#R-image-df085d1552dfe28902bbf7e815f6540c" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-df085d1552dfe28902bbf7e815f6540c"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_1.png"></a></li>
 </ul>
 </li>
 <li>Click on: Datacenter/Permissions
@@ -360,8 +360,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li>Group:	IaC-admin-users</li>
 <li>Role: 	Administrator</li>
 <li>Propagate: 	Checked
-<a href="#R-image-1fda7304e24d8141b32373f1245b1da0" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fda7304e24d8141b32373f1245b1da0"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
+<a href="#R-image-e73d7f0ebe309831f641c0f962f3e0ea" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e73d7f0ebe309831f641c0f962f3e0ea"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_2.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -375,8 +375,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li>Group:	IaC-admin-users</li>
 <li>Expires:	never</li>
 <li>Enabled:	checked
-<a href="#R-image-fdca3c463148658c86120f5d0d88743b" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdca3c463148658c86120f5d0d88743b"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
+<a href="#R-image-b1b71d11c9986f9e5bc3a7a5ce2e58bb" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1b71d11c9986f9e5bc3a7a5ce2e58bb"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_3.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -388,8 +388,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li>User: IaC</li>
 <li>Token ID: <code>Automation</code></li>
 <li>Privilege Separation: Unchecked
-<a href="#R-image-cbebb2b91c13ddb1663591782a348c08" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbebb2b91c13ddb1663591782a348c08"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
+<a href="#R-image-480fdf3609e9d7dd414867cce9aa0fb2" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-480fdf3609e9d7dd414867cce9aa0fb2"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_4.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -397,26 +397,26 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li>Copy the Token ID and Secret generated
 <ul>
 <li><strong>Note:</strong> Secret value is only displayed once when token generated
-<a href="#R-image-19956478b062500280c50bf1da3bbbdb" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-19956478b062500280c50bf1da3bbbdb"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
+<a href="#R-image-48bd67b331d17bd052785bb4d28c8b10" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48bd67b331d17bd052785bb4d28c8b10"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/Ansible_API_5.png"></a></li>
 </ul>
 </li>
 <li>Update <strong>proxmox_api_token_secret:</strong>
-<div class="tab-panel" data-tab-group="R-tabs-38f0ebf85b7541a9ed701e6ebfd2690e">
+<div class="tab-panel" data-tab-group="R-tabs-38c189d3c925cfb2702e064bad88aef1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c3fb70b3a4d3723a6aa6344560ac487d" aria-expanded="true"
+      aria-controls="R-tab-id-4c3a5dbe8e05b57e7b8ac80d6aabd5a5" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-38f0ebf85b7541a9ed701e6ebfd2690e','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-38c189d3c925cfb2702e064bad88aef1','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c3fb70b3a4d3723a6aa6344560ac487d"
+      id="R-tab-id-4c3a5dbe8e05b57e7b8ac80d6aabd5a5"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -432,21 +432,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <h3 id="update-global-vars-file-on-ubuntu-oob">Update Global VARS File on Ubuntu-OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
-<div class="tab-panel" data-tab-group="R-tabs-869666354f2adba8697736d007c25a6e">
+<div class="tab-panel" data-tab-group="R-tabs-47c88f507b2bf68a1a964061948be888">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7b41bcec23aa204e63da7b90fcee61a2" aria-expanded="true"
+      aria-controls="R-tab-id-3b5c73c9a5dde99d1c1ca06489e1f41e" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-869666354f2adba8697736d007c25a6e','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-47c88f507b2bf68a1a964061948be888','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7b41bcec23aa204e63da7b90fcee61a2"
+      id="R-tab-id-3b5c73c9a5dde99d1c1ca06489e1f41e"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -458,21 +458,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <ul>
 <li>
 <p>Update FortiFlex <strong>Username/Password, Account ID and Serial Number</strong>
-<div class="tab-panel" data-tab-group="R-tabs-bfe6d34ba5b0ea002c429ed8127a31e6">
+<div class="tab-panel" data-tab-group="R-tabs-474f311e0142c1647962c2f5233150cb">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b867b8943b624adf5d21a563c07761d4" aria-expanded="true"
+      aria-controls="R-tab-id-55152264243f15095c5b4f6b86765172" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bfe6d34ba5b0ea002c429ed8127a31e6','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-474f311e0142c1647962c2f5233150cb','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b867b8943b624adf5d21a563c07761d4"
+      id="R-tab-id-55152264243f15095c5b4f6b86765172"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -491,21 +491,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>fortinet_timezone:</strong> US/Central &lt;= Default Timzone <strong>(no change needed if this is your timezone)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-fc5ff6c3a7c703fc147a9ab19bd202b0">
+<div class="tab-panel" data-tab-group="R-tabs-08ab803ff228e753517494df67c38e26">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3d4a8e3605ef01d13cc6cb847b28b8de" aria-expanded="true"
+      aria-controls="R-tab-id-5f34efc43a96fa1bb116a3ccb68737bc" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fc5ff6c3a7c703fc147a9ab19bd202b0','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-08ab803ff228e753517494df67c38e26','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3d4a8e3605ef01d13cc6cb847b28b8de"
+      id="R-tab-id-5f34efc43a96fa1bb116a3ccb68737bc"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -517,21 +517,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(Following changes NOT needed if == pve01)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-437e2dc52224f4b5df2c4526251221a2">
+<div class="tab-panel" data-tab-group="R-tabs-e2ead8d6975cc3fadcc464312e7c9937">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-11649eae6785b92be8bbf094d57a244f" aria-expanded="true"
+      aria-controls="R-tab-id-7ef9a0d9be31b0b57840f5c660c03090" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-437e2dc52224f4b5df2c4526251221a2','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-e2ead8d6975cc3fadcc464312e7c9937','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-11649eae6785b92be8bbf094d57a244f"
+      id="R-tab-id-7ef9a0d9be31b0b57840f5c660c03090"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -551,21 +551,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>proxmox_storage_name:</strong> local-lvm	&lt;= if storage on PVE, or NAS name if not
-<div class="tab-panel" data-tab-group="R-tabs-4c2d5ec2aa74b0b79021a535dbed4811">
+<div class="tab-panel" data-tab-group="R-tabs-ad4788898d78e6e64d7f82133c5e87d1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f62fe72d69bb1aaa24a5547491bc9550" aria-expanded="true"
+      aria-controls="R-tab-id-a31908f2f7d18cd06ef98d1d67c93050" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4c2d5ec2aa74b0b79021a535dbed4811','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-ad4788898d78e6e64d7f82133c5e87d1','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f62fe72d69bb1aaa24a5547491bc9550"
+      id="R-tab-id-a31908f2f7d18cd06ef98d1d67c93050"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -577,21 +577,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<strong><em>&lt; NFS name &gt;</em></strong> if using NAS
-<div class="tab-panel" data-tab-group="R-tabs-2d91bab27b122a2de6c211631559b54b">
+<div class="tab-panel" data-tab-group="R-tabs-d7ac968898838e1c7296813a47b1dc9b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-753a193c07a2fb09dade6ac03584abe5" aria-expanded="true"
+      aria-controls="R-tab-id-993736a9e324134a0e4842b4e2dc6da9" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2d91bab27b122a2de6c211631559b54b','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-d7ac968898838e1c7296813a47b1dc9b','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-753a193c07a2fb09dade6ac03584abe5"
+      id="R-tab-id-993736a9e324134a0e4842b4e2dc6da9"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -603,21 +603,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_name:</strong> Ubuntu-Template &lt;= Name of Ubuntu template
-<div class="tab-panel" data-tab-group="R-tabs-40460999c0e6aff43955f03ea6baf8e4">
+<div class="tab-panel" data-tab-group="R-tabs-8b7985d34d5fbbbb7917236b3ad89d02">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6300732ad167c6fb353e0fdcda0c01fb" aria-expanded="true"
+      aria-controls="R-tab-id-0e4a07a477221eb7b466272bee2da973" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-40460999c0e6aff43955f03ea6baf8e4','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-8b7985d34d5fbbbb7917236b3ad89d02','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6300732ad167c6fb353e0fdcda0c01fb"
+      id="R-tab-id-0e4a07a477221eb7b466272bee2da973"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -629,21 +629,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_vmid:</strong> 491 &lt;= VMID of Ubuntu VM Template
-<div class="tab-panel" data-tab-group="R-tabs-d6205ccbf3ab4da75f6567ebe234b50b">
+<div class="tab-panel" data-tab-group="R-tabs-4becf0b6ec5009d8afb39a354ab05e60">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-29b985ff3adcb100ba5d98daa5304085" aria-expanded="true"
+      aria-controls="R-tab-id-e2eab2ab091d7ab2d464ba5260be4ee3" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-d6205ccbf3ab4da75f6567ebe234b50b','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-4becf0b6ec5009d8afb39a354ab05e60','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-29b985ff3adcb100ba5d98daa5304085"
+      id="R-tab-id-e2eab2ab091d7ab2d464ba5260be4ee3"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -655,21 +655,21 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 </li>
 <li>
 <p><strong>Verify</strong>
-<div class="tab-panel" data-tab-group="R-tabs-b8a0e1d1cd14bf8d538629f0e6a3c0a0">
+<div class="tab-panel" data-tab-group="R-tabs-6beb163ef43e54929d9da8638b9dee97">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-682347f97c1335c1044d4c4df7280dfd" aria-expanded="true"
+      aria-controls="R-tab-id-13532395a84f7cb2e07ff40d01bed2d0" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-b8a0e1d1cd14bf8d538629f0e6a3c0a0','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-6beb163ef43e54929d9da8638b9dee97','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-682347f97c1335c1044d4c4df7280dfd"
+      id="R-tab-id-13532395a84f7cb2e07ff40d01bed2d0"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -678,29 +678,29 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
     </div>
   </div>
 </div>
-<a href="#R-image-8b2f4d7e10e5bb6e2094ed3926c88fc6" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b2f4d7e10e5bb6e2094ed3926c88fc6"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></p>
+<a href="#R-image-2fac7db85b81809d7617665e1ebe0172" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2fac7db85b81809d7617665e1ebe0172"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-global_yml.png"></a></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="dns">DNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All hosts and VMs can be resolved by name.
-<div class="tab-panel" data-tab-group="R-tabs-3dc356e2f1e161748ff315e9a312e677">
+<div class="tab-panel" data-tab-group="R-tabs-eaca3d9e60574cf5b261fd20c60b22bb">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-32c0a0311a5f04fb764ea4993729d2de" aria-expanded="true"
+      aria-controls="R-tab-id-8890bdefad8fcfc90958ce9810cffbc4" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-3dc356e2f1e161748ff315e9a312e677','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-eaca3d9e60574cf5b261fd20c60b22bb','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-32c0a0311a5f04fb764ea4993729d2de"
+      id="R-tab-id-8890bdefad8fcfc90958ce9810cffbc4"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -718,8 +718,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <li>FMG-v7.6.6.M.qcow2</li>
 <li>FAZ-v7.6.6.M.qcow2</li>
 </ul>
-<p><a href="#R-image-75b81ed2c4feda7442d0291ba6e1cca4" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-75b81ed2c4feda7442d0291ba6e1cca4"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-b62a5f9d93827c461a324f4e85512861" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b62a5f9d93827c461a324f4e85512861"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ansible/pic-import_qcow2.png"></a></p>
 <h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 
   <footer class="footline">
@@ -795,8 +795,8 @@ Follow the steps in section “Creating a VM configuration” on Docs Fortinet N
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774965749" defer></script>
-    <script src="/js/theme.js?1774965749" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774982991" defer></script>
+    <script src="/js/theme.js?1774982991" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
