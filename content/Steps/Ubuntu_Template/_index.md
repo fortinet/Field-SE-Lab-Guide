@@ -97,6 +97,9 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 ![Software_Updater](Software_Updater.png)
 
 ### Install Packages and User Config
+- If during this section you see the following error, 
+    - Log out and log back into VM and try again
+![Settings_not_responding](Settings_not_responding.png)
 - Enable RDP
     - Click on Network/Sound/Power in upper right corner of screen
     - Click on Gear
@@ -108,8 +111,11 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
     - Click on Password's "eyeball" and change Password to "password"
 ![Settings_3](Settings_3.png)
 
-- From your laptop/desktop connect to the VM via RDP
 
+- Find IP address of VM here:
+    ![Settings_Network_IP](Settings_Network_IP.png)
+
+- From your laptop/desktop connect to the VM via RDP
 - Start Terminal
 ![Start_Terminal](Start_Terminal.png)
 
@@ -126,6 +132,7 @@ chmod 755 *.sh
 - Login user/password "fortinet/password"
 - Remove keyring password
     - **Note:** This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot
+    - {{% badge style="info" %}}While this should never be done in production, this being done in this non-internet facing lab, for simplicity and to reduce complexity.{{% /badge %}}
     - Open Utilities folder
 ![Key_Ring_1](Key_Ring_1.png)
     - Open “Passwords and Keys”

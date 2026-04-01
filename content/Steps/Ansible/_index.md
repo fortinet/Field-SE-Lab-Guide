@@ -11,13 +11,14 @@ weight = 30
 
 **Create VM Configuration**
 - Follow the steps in section "**Creating a VM configuration**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration)
-- {{% badge %}}Note:{{% /badge %}} Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having services like OT
+- {{% badge style="tip" %}}Use a consistent naming convention, especially when running multiple lab environments{{% /badge %}}
+- {{% badge style="info" %}}Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services{{% /badge %}}
 ![FortiFlex_Configuration](FortiFlex_Configurations.png)
 
 **Create VM entitlements**
 - Follow the steps in section "**Creating VM entitlements**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/91804/creating-vm-entitlements)
 - {{% badge style="tip"%}}Description **MUST match exactly** (upper/lower case and dashes) what is outlined in red in the example below{{% /badge %}} 
-- {{% badge style="info"%}}It is possible to use a pool of entitlements and have Ansible returns the first available (i.e. unassigned) token by asset folder or Configuration id.  However, that is beyond the scope of this lab and left to the reader to investigate and implement.{{% /badge %}}
+- {{% badge style="info"%}}While possible to use a pool of entitlements and have Ansible return the first available (i.e. unassigned) token by configuration id.  However, that is beyond the scope of this how-to build document and left to the reader to investigate and implement.{{% /badge %}}
 
 ![FortiFlex_Entitlements](FortiFlex_Entitlements.png)
 

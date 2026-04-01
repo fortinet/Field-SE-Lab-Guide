@@ -34,7 +34,7 @@ docker compose cp guacamole-sql:/backup.sql ./backup.sql
 {{% tab title="from Terminal in /home/Fortinet" %}}
 - The following is a single command all on one line
 ````bash
-zip backup_config.zip /home/fortinet/automation/ansible/inventory/inventory.yml /home/fortinet/automation/ansible/vars/all-hosts.yml /home/fortinet/automation/ansible/vars/flex-serial-numbers.yml /home/fortinet/automation/ansible/vars/global.yml /home/fortinet/c_data/coredns/conf/zones/db.fortinet.internal /home/fortinet/c_data/coredns/conf/zones/db.home.internal /home/fortinet/c_data/homepage/config/bookmarks.yaml /home/fortinet/c_data/homepage/config/services.yaml /home/fortinet/c_data/homepage/config/settings.yaml /home/fortinet/c_data/homepage/config/widgets.yaml /home/fortinet/.ssh/ansible_key /home/fortinet/.ssh/ansible_key.pub
+zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pub
 ````
 {{% /tab %}}
 

@@ -38,7 +38,7 @@ weight = 20
 - Fortinet VMs
     - User Name: admin (all lowercase)
     - Password: password (all lowercase) 
-- {{% badge style="info" %}}While "password" should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. ){{% /badge %}}
+- {{% badge style="info" %}}While "password" should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy.{{% /badge %}}
     - Starting with v7.6.5 a [default password policy](https://docs.fortinet.com/document/fortigate/7.6.6/administration-guide/364729/password-policy) was introduced.  
 
 ### Basic Understanding and Knowledge of Linux CLI Commands
