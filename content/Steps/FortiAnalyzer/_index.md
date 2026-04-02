@@ -4,36 +4,66 @@ type = "default"
 weight = 70
 +++
 
-
-RDP to OOB.
+### Deploy FortiAnalyzer VM
 
 {{% tab title="from Terminal in OOB" %}}
+- from Terminal in OOB
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
 
 ./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	faz  v7.6.6.M
 
-./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	faz	 started
+./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	faz  started
+````
+- Make sure FortiAnalyzer VM has fully started before continuing.
+- Suggest opening console windows and verifying login prompt showing.
+{{% /tab %}}
+
+### Configure FortiAnalyzer from Console
+
+{{% tab title="from FAZ VM's console on Proxmox"%}}
+- from FAZ VM's console on Proxmox
+- In the log in prompt, enter the initial/default log in:
+    - username: admin, and no password
+- Prompted to enter new password complying with new [password policy introduced in v7.6.4](https://docs.fortinet.com/document/fortimanager/7.6.0/new-features/244624/add-a-default-local-user-password-policy-7-6-4)
+
+````bash
+FMG-VM64-KVM login: admin
+password: 
+
+You are forced to change your password!
+According to the password policy enforced on this device, please change your password!
+New password must conform to the following policy:
+minimum-length=8; must contain upper-case-letter lower-case-letter number non-alphanumeric; expire=0; password-history=0
+
+New Password:
 ````
 {{% /tab %}}
 
-Make sure FortiAnalyzer VM has fully started before continuing.
-
-Suggest opening console windows and verifying login prompt showing.
-
-**Configure FortiAnalyzer**
-
-From the VM’s console on ProxMox 
-
-Login using admin / "no password"
-
-Set Password to this [Lab's standard](/Prerequisites#user-name--passwords-utilizes-the-following-standard) : 
+**Disable Password Policy and Set to Lab Standard** 
+{{% tab title="from FAZ VM's console on Proxmox"%}}
+- Set a password that is compliant with Password Policy
+    - Example: **Fortinet1!**
+- Change admin password to [Lab's standard](/Prerequisites#user-name--passwords-utilizes-the-following-standard)
+-  Allow admin user to use JSON
 ````bash
-Leadership-1
-````
-**Note:** Starting with 7.6.4 a password policy for local users is enabled and configured by default. Password must have at least 8 characters and must contain uppercase letter(s), lowercase letter(s), number(s), and special character(s).
+config system password-policy
+     set status disable
+end
 
-Configure interfaces so the Ubuntu-OOB can run Ansible modules
+config system admin user
+   edit admin
+     set password password
+     set rpc-permit read-write
+   next
+end
+````
+- After typeing **end** you will be automatically logged out.  
+- Log back in and continue
+{{% /tab %}}
+
+{{% tab title="from FAZ VM's console on Proxmox"%}}
+- Configure interfaces so Ubuntu-OOB can run Ansible modules
 ````bash
 config system interface
     edit "port1"
@@ -45,44 +75,42 @@ config system interface
     next
 end
 ````
+{{% /tab %}}
 
-Disable change notes
+{{% tab title="from FAZ VM's console on Proxmox"%}}
+- Disable change notes **Note:** Starting in 7.0.2 a [change note is mandatory](https://docs.fortinet.com/document/fortimanager/7.0.0/new-features/944728/change-note-is-mandatory-for-every-object-and-policy-change-7-0-2#:~:text=Change%20notes%20are%20mandatory%20for%20every%20object,**set%20object%2Drevision%2Dobject%2Dmax:%20100**%20*%20**set%20object%2Drevision%2Dstatus:%20enable**) for every object and policy change.
 ````bash
 config system global
     set object-revision-mandatory-note disable
 end
 ````
+{{% /tab %}}
 
-Allow admin user to use JSON 	
-
-**Note:**  After this command, you will be automatically logged out
-
-````bash
-config system admin user
-    edit "admin"
-        set rpc-permit read-write
-    next
-end
-````
-
-RDP to OOB.
+### Configuraton of FortiAnalyzer from OOB
 {{% tab title="from Terminal in OOB" %}}
+- from Terminal in OOB 
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
-
+````
+- **Note:**  Run the following command 3 times.
+    - It will fail on Port 1, and then work, and then fail on Port3 and then work, and on the third run, all tasks run successfully.
+````bash
 ./configure_fmg.sh  faz
 ````
 {{% /tab %}}
 
-From the VM’s console on ProxMox 
 
-Login to FortiAnalyzer's console using: admin / Fort1net!
-
-**Note:**  After this command, the system will automatically reboot
-
+### Inject FortiFlex Token
 		
-{{% tab title="Inject FortiFlex Token" %}}
+{{% tab title="from FAZ VM's console on Proxmox"%}}
+- Get FAZ's FortiToken:
+    - Here: **/home/Fortinet/automation/ansible/fortinet/license/FAZ.lic**
+    - Or: **https://support.fortinet.com**
+- From FMG VM's console execute the following command
 ````bash
 execute  vm-license  <token>
 ````
+**Note:**  After this command, the system will automatically reboot
 {{% /tab %}}
+
+### FortiAnalyzer Complete
