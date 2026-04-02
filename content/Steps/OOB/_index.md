@@ -33,7 +33,7 @@ chmod 755 *.sh
 {{% /tab %}}
 
 {{% tab title="from Terminal in OOB" %}}
-- Run the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets)
+- Run the following script _**ONLY IF**_ changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets)
 ````bash
 
 ./update_subnet.sh <external subnet to SE Lab> 
