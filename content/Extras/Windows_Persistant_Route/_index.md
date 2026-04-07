@@ -1,7 +1,7 @@
 +++
 title = "Windows Persistant Route"
 type = "default"
-weight = 70
+weight = 80
 +++
 
 Why would do this?  VPN Split Tunnel (SASE) "blocking" access to SE Lab's subnet.
