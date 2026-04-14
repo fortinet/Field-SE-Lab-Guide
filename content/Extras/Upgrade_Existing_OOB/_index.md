@@ -18,7 +18,7 @@ docker compose ps
 	 
 docker compose exec guacamole-sql /bin/sh
 
-sh-5.1# mysqldump -u root -p --all-databases > backup.sql
+sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF > backup.sql
 Enter password: password
 
 sh-5.1# exit
