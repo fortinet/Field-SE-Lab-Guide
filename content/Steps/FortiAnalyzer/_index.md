@@ -95,7 +95,7 @@ cd /home/fortinet/automation/ansible/fortinet
 - **Note:**  Run the following command 3 times.
     - It will fail on Port 1, and then work, and then fail on Port3 and then work, and on the third run, all tasks run successfully.
 ````bash
-./configure_fmg.sh  faz
+./configure_faz.sh  faz
 ````
 {{% /tab %}}
 
