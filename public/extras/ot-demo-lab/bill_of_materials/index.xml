@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bill of Materials :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/extras/ot-demo-lab/bill_of_materials/index.html</link>
+    <description>InfoQuantity column denotes how many required, but the Description URL often refers to a “pack” with a bulk quantity Enclosure/Case&#xD;Quantity Description 1 Enclosure 3 DIN Rails (24” x 5Pcs) 14 Terminal Blocks 7 Terminal Block Jumper 1 Hookup Wire - 6 Colors 1 C14 Power Plug 1 Universal AC Power Cable (C13) 1 Heat Shrink Tubing 1 Bolts and Nuts 3 Ethernet Patch Cables Modbus Devices&#xD;Quantity Description 2 Arduino UNO WiFi REV2 2 W5100 Ethernet Network Shield 2 PoE Splitter Adapter 48V to 12V, 5.5x2.1mm DC, 2 pack 1 LED - Red - 5mm 1 Resistor 1K ohm 2 Momentary Push Button - Normally Open 6 Breadboard Jumper Wire</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/ot-demo-lab/bill_of_materials/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

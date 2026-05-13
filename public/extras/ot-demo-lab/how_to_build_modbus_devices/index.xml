@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How-To Build Modbus Devices :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/extras/ot-demo-lab/how_to_build_modbus_devices/index.html</link>
+    <description>Arduino Modbus Sketches:&#xA;Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino Modbus 3D Printed Case&#xD;Arduino LED and Button Wiring</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/extras/ot-demo-lab/how_to_build_modbus_devices/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -4,6 +4,9 @@
     <loc>http://localhost:1313/extras/proxmox_install/base_install/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/ot-demo-lab/bill_of_materials/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/ubuntu_template/index.html</loc>
   </url>
   <url>
@@ -31,6 +34,9 @@
     <loc>http://localhost:1313/extras/guacamole/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_build_enclosure/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/index.html</loc>
   </url>
   <url>
@@ -38,6 +44,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/steps/fortigate/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_demo/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/extras/index.html</loc>
@@ -49,19 +58,25 @@
     <loc>http://localhost:1313/steps/fortimanager/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/gns3/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/fortianalyzer/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/extras/nesting_esxi/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/windows_persistant_route/index.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/steps/ubuntu/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/windows_persistant_route/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/extras/upgrade_existing_oob/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/extras/ot-demo-lab/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>
