@@ -43,6 +43,9 @@
     <loc>http://localhost:1313/steps/tcgui/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_build_modbus_devices/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/steps/fortigate/index.html</loc>
   </url>
   <url>
