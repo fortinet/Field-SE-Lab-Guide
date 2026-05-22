@@ -75,23 +75,3 @@ weight = 30
 ![Case_20](Case_20.png)
 
 ![Case_21](Case_21.png)
-
-
-"Official" Proxmox documentation
--	[PVE Docs](https://pve.proxmox.com/pve-docs/)
--	[PVE Wiki](https://pve.proxmox.com/wiki/Main_Page)
-
-The following is “how I did it” and “lessons learned (the hard way).”
-
-- **[Base Install](Base_Install)**
-- **[Post Installation "Must Do's"](Post_Installation)**
-
-### **Introduction**
-
-This guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases. 
-
-There are two main sections in this guide: 
-1) **[How-To Build this OT Lab](How_To_Build)** - describes the tools and bill of materials required.
-2) **[Demo Use Cases](How_To_Demo)** 
-
-This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demo using this OT Lab.
