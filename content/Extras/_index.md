@@ -11,3 +11,4 @@ weight = 50
 - **[Nesting ESXi](Nesting_ESXi)**
 - **[Windows Persistant Route](Windows_Persistant_Route)**
 - **[Upgrade Existing OOB](Upgrade_Existing_OOB)**
+- **[OT Demo Lab](OT_Demo_Lab)**

@@ -4,7 +4,7 @@
     <loc>http://localhost:1313/extras/proxmox_install/base_install/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot-demo-lab/bill_of_materials/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/bill_of_materials/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/ubuntu_template/index.html</loc>
@@ -34,7 +34,7 @@
     <loc>http://localhost:1313/extras/guacamole/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_build_enclosure/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_build_enclosure/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/index.html</loc>
@@ -43,13 +43,13 @@
     <loc>http://localhost:1313/steps/tcgui/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_build_modbus_devices/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_build_modbus_devices/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/fortigate/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot-demo-lab/how_to_demo/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_demo/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/extras/index.html</loc>
@@ -79,7 +79,7 @@
     <loc>http://localhost:1313/extras/upgrade_existing_oob/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot-demo-lab/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>
