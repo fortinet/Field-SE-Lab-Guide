@@ -6,8 +6,13 @@ weight = 30
 
 ### Create FortiFlex API User and Tokens
 
-**Create User and Download Credentials**
+**Create API User and Download Credentials**
 - Follow the 5 steps in section "**To create an API user:**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/463716/fortiflex-api)
+
+![FortiFlex_API_User_Portal_Profile](FortiFlex_API_User_Portal_Profile.png)
+![FortiFlex_API_User_Create](FortiFlex_API_User_Create.png)
+![FortiFlex_API_User_Credentials](FortiFlex_API_User_Credentials.png)
+
 
 **Create VM Configuration**
 - Follow the steps in section "**Creating a VM configuration**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration)

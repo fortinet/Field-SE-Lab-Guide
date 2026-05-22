@@ -26,7 +26,7 @@
       <link>http://localhost:1313/steps/ansible/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/steps/ansible/index.html</guid>
-      <description>Create FortiFlex API User and Tokens&#xD;Create User and Download Credentials&#xA;Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration&#xA;Follow the steps in section “Creating a VM configuration” on Docs Fortinet TipUse a consistent naming convention, especially when running multiple lab environments InfoExample below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services Create VM entitlements</description>
+      <description>Create FortiFlex API User and Tokens&#xD;Create API User and Download Credentials&#xA;Follow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration&#xA;Follow the steps in section “Creating a VM configuration” on Docs Fortinet TipUse a consistent naming convention, especially when running multiple lab environments InfoExample below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services Create VM entitlements</description>
     </item>
     <item>
       <title>Create TCGUI VM</title>
