@@ -27,11 +27,13 @@ weight = 30
 
 ![FortiFlex_Entitlements](FortiFlex_Entitlements.png)
 
+
 ### Create SSH Key on OOB
 - Generate SSH Key on Ubuntu-OOB
+<!-- ssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal -->
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
-ssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal
+ssh-keygen -t ed25519
   File 	     =>  /home/fortinet/.ssh/ansible_key
   Passphrase =>  <none> just hit enter twice
 ````

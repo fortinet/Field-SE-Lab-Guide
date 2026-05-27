@@ -89,7 +89,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
-    "content": "Enclosure Build Steps\rEnclosure Prep Remove Lid Remove Pick-and-Pull Foam Insert Mount DIN Rails\rRemove Back of Enclosure Cut DIN Rails to length\nUse 1/8” drill bit to make pilot holes Secure with M4x12 bolts Use 2 bolts each side, at the edge of a slot, preventing DIN rail from moving side to side. Inside View Backside View Wall Power Adapter\rMake Hole to Fit Adapter Wiring Wall Power Adapter\rSolder Wires to 3-Prong Adapter Use standard colors for US single-phase AC: Line/Black Neutral/White Earth-Ground/Green Use shrink tubing to cover soldered connections Cut wires to length for inserting/affixing to DIN Rail Terminal Blocks Wiring Wall Power Adapter to AC Terminal Blocks\rWiring AC Terminal Blocks to DC Power Supplies\rUse standard colors for US single-phase AC: Line/Black Neutral/White Earth-Ground/Green Wiring DC Power Supplies to DC Terminal Blocks\rSuggested 48VDC colors: V+ == Blue V- == White If using dual power supplies, do this step twice (once for each Power Supply) Mount and Wire = FGR and FSR\r“Official” Proxmox documentation\nPVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”\nBase Install Post Installation “Must Do’s” Introduction\rThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.\nThere are two main sections in this guide:\nHow-To Build this OT Lab - describes the tools and bill of materials required. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demo using this OT Lab.",
+    "content": "Enclosure Build Steps\rEnclosure Prep Remove Lid Remove Pick-and-Pull Foam Insert Mount DIN Rails\rRemove Back of Enclosure Cut DIN Rails to length\nUse 1/8” drill bit to make pilot holes Secure with M4x12 bolts Use 2 bolts each side, at the edge of a slot, preventing DIN rail from moving side to side. Inside View Backside View Wall Power Adapter\rMake Hole to Fit Adapter Wiring Wall Power Adapter\rSolder Wires to 3-Prong Adapter Use standard colors for US single-phase AC: Line/Black Neutral/White Earth-Ground/Green Use shrink tubing to cover soldered connections Cut wires to length for inserting/affixing to DIN Rail Terminal Blocks Wiring Wall Power Adapter to AC Terminal Blocks\rWiring AC Terminal Blocks to DC Power Supplies\rUse standard colors for US single-phase AC: Line/Black Neutral/White Earth-Ground/Green Wiring DC Power Supplies to DC Terminal Blocks\rSuggested 48VDC colors: V+ == Blue V- == White If using dual power supplies, do this step twice (once for each Power Supply) Mount and Wire = FGR and FSR",
     "description": "Enclosure Build Steps\rEnclosure Prep Remove Lid Remove Pick-and-Pull Foam Insert Mount DIN Rails\rRemove Back of Enclosure Cut DIN Rails to length",
     "tags": [],
     "title": "How-To Build Enclosure",
@@ -137,8 +137,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "SE How-To Build Lab",
-    "content": "Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT_Demo_Lab",
-    "description": "Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT_Demo_Lab",
+    "content": "Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT Demo Lab",
+    "description": "Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT Demo Lab",
     "tags": [],
     "title": "Extras",
     "uri": "/extras/index.html"
