@@ -31,3 +31,9 @@ weight =10
 || 2 | **[Momentary Push Button - Normally Open ](https://www.amazon.com/gp/product/B07FS55G9P/ref=ppx_yo_dt_b_search_asin_title)** ||
 || 6 | **[Breadboard Jumper Wire](https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B09ZQP9LB6/ref=sr_1_1_sspa)** ||
 
+### **Digital I/O Components**
+|| Quantity | Description||
+| :---: | :---: | :---: | :---: | 
+|| 1 | **[Emergency Latching Stop Button](https://www.amazon.com/dp/B07WTL3KPB?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)** ||
+|| 1 | **[RED/GREEN Indicator LEDs](https://www.amazon.com/dp/B085Y6THNF?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)** ||
+|| 1 | **[AC to 12VDC DIN-Rail Power Supply](https://www.amazon.com/dp/B0B2JG6GFZ?ref=ppx_pop_mob_ap_share)** ||
