@@ -3,7 +3,7 @@
   <channel>
     <title>How-To Build Modbus Devices :: SE How-To Build Lab</title>
     <link>http://localhost:1313/extras/ot_demo_lab/how_to_build_modbus_devices/index.html</link>
-    <description>Arduino Modbus Sketches:&#xA;Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:&#xA;Uno_Ethernet_Enclosure-Box.3mf 3D Printed Parts&#xD;Attach DIN Rail Mount</description>
+    <description>Arduino Modbus Sketches:&#xA;Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:&#xA;Uno_Ethernet_Enclosure-Box.3mf 3D Printed Parts&#xD;Use ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/extras/ot_demo_lab/how_to_build_modbus_devices/index.xml" rel="self" type="application/rss+xml" />
