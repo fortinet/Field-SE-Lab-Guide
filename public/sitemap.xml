@@ -49,16 +49,19 @@
     <loc>http://localhost:1313/steps/fortigate/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_demo/index.html</loc>
+    <loc>http://localhost:1313/extras/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/extras/index.html</loc>
+    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_build_digital_io/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/extras/troubleshoot_ansible/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/steps/fortimanager/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/extras/ot_demo_lab/how_to_demo/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/extras/gns3/index.html</loc>
