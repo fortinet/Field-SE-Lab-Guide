@@ -34,12 +34,12 @@ weight = 50
 
 ### **Wiring Schematic - Overview for this lab**
 
- {{% badge style="info" %}}This wiring schematic shows a 24VDC.  The Fortinet Power Supply is 48VDC only, thus a seperate Power Supply is REQUIRED.  The 12VDC listed in the BOM is the suggested Power Supply{{% /badge %}}
+ {{% badge style="info" %}}This wiring schematic shows a 24VDC.  The Fortinet Power Supply is 48VDC only, thus a seperate Power Supply is REQUIRED.  The 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components) is the suggested Power Supply{{% /badge %}}
 
 ![Digital_IO_Schematic_Overview](Digital_IO_Schematic_Overview.png)
 
 ### **Final Assembly**
 
-{{% badge style="note" %}}In the picture below a 24VDC power supply is "sandwiched" between the two Fortinet Power Supplies. The 12VDC listed in the BOM is the suggested Power Supply{{% /badge %}}
+{{% badge style="note" %}}In the picture below a 24VDC power supply is "sandwiched" between the two Fortinet Power Supplies. The 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components) is the suggested Power Supply{{% /badge %}}
 
 ![Digital_IO_Final_Assembly](Digital_IO_Final_Assembly.png)
