@@ -51,6 +51,9 @@ weight = 30
 
 ![Case_09](Case_09.png)
 
+### **USE CORRECT WIRE**
+![Correct_Wire](Correct_Wire.png)
+
 ### **Wiring Wall Power Adapter**
 - Solder Wires to 3-Prong Adapter
 - Use standard colors for US single-phase AC:
@@ -59,6 +62,10 @@ weight = 30
    - Earth-Ground/Green
 - Use shrink tubing to cover soldered connections
 - Cut wires to length for inserting/affixing to DIN Rail Terminal Blocks 
+![Power_Plug_Front](Power_Plug_Front.jpg)
+
+![Power_Plug_Back](Power_Plug_Back.jpg)
+
 ![Case_10](Case_10.png)
 
 ![Case_11](Case_11.png)
