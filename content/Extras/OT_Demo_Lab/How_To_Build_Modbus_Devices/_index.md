@@ -8,7 +8,7 @@ weight = 40
 
 {{% button href="https://stevesweeneywisc.github.io/SE-Lab-Build/extras/ot_demo_lab/how_to_build_modbus_devices/Ethernet_Modbus_TCP_Server_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_LED.ino{{% /button %}} 
  
-{{% button href="https://stevesweeneywisc.github.io/SE-Lab-Build/extras/ot_demo_lab/how_to_build_modbus_devices/Ethernet_Modbus_TCP_Client_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_Client.ino{{% /button %}}  
+{{% button href="https://stevesweeneywisc.github.io/SE-Lab-Build/extras/ot_demo_lab/how_to_build_modbus_devices/Ethernet_Modbus_TCP_Client_Toggle.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Client_Toggle.ino{{% /button %}}  
 
 **3D Printed Parts 3mf File:**
 
