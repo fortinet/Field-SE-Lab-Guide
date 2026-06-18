@@ -4,7 +4,7 @@ type = "default"
 weight = 10
 +++
 
-Download following as {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/tree/main/content/Introduction/IP%20Scheme.xlsx" style="tip" icon="angle-down" %}}IP Scheme.xlsx{{% /button %}}
+Download following as {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Introduction/IP%20Scheme.xlsx" style="tip" icon="angle-down" %}}IP Scheme.xlsx{{% /button %}}
 
 ### **Branch FortiGates**
 | VNET| FTNTMGT | BRCHWAN1 BRCHWAN2| BRCHWAN3 BRCHWAN4| BRCHWAN5 BRCHWAN6|  BRCHLAN1 | BRCHLAN2 | BRCHLAN3 |

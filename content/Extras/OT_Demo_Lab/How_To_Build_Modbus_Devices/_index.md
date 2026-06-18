@@ -6,13 +6,13 @@ weight = 40
 
 **Arduino Modbus Sketches:**
 
-{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/tree/main/content/Introduction/Ethernet_Modbus_TCP_Server_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_LED.ino{{% /button %}} 
+{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Server_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_LED.ino{{% /button %}} 
  
-{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/tree/main/content/Introduction/Ethernet_Modbus_TCP_Client_Toggle.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Client_Toggle.ino{{% /button %}}  
+{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Client_Toggle.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Client_Toggle.ino{{% /button %}}  
 
 **3D Printed Parts 3mf File:**
 
-{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/tree/main/content/Introduction/Uno_Ethernet_Enclosure-Box.3mf" style="tip" icon="angle-down" %}}Uno_Ethernet_Enclosure-Box.3mf{{% /button %}}
+{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Uno_Ethernet_Enclosure-Box.3mf" style="tip" icon="angle-down" %}}Uno_Ethernet_Enclosure-Box.3mf{{% /button %}}
 
 
 ### **3D Printed Parts**
