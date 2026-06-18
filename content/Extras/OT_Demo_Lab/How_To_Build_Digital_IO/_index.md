@@ -6,7 +6,7 @@ weight = 50
 
 **3D Printed Parts 3mf File:**
 
-{{% button href="https://fortinet.github.io/Field-SE-Lab-Guide/extras/ot_demo_lab/eStop_Enclosure.3mf" style="tip" icon="angle-down" %}}Uno_Ethernet_Enclosure-Box.3mf{{% /button %}}
+{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/tree/main/content/Introduction/eStop_Enclosure.3mf" style="tip" icon="angle-down" %}}Uno_Ethernet_Enclosure-Box.3mf{{% /button %}}
 
 ### **Digital I/O Components**
 
