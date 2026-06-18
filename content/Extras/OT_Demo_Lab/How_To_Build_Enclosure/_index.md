@@ -21,14 +21,15 @@ weight = 30
 **Cut DIN Rails to length**
 - Use 1/8” drill bit to make 4 evenly spaced holes for bolts
 - Secure with M4x16 bolts
-- DIN rail needs to be "just above" or "just below" nubs as it MUST sit flat
 - Drill holes from Inside case
 
+- Bottom DIN rail (Power Supply Rail) needs to be "just below" nubs as seen below
 ![Case_05a](Case_05a.png)
 
+- Middle DIN rail (FGR/FSR Rail) needs to be "just above" nubs as seen below
 ![Case_05b](Case_05b.png)
 
-**Inside View**
+- Top DIN rail (Modbus/Digital I/O Rail) needs to be "just below" nubs as seen below
 ![Case_06](Case_06.png)
 
 **Backside View**
@@ -41,18 +42,22 @@ weight = 30
 ![Case_07](Case_07.png)
 
 - Create Ground Wire daisy chain between each rail as show below
-- Use fork connectors and attach between washer and nut on the end bolt
 - The last rail will be connected to Ground Terminal Block (it will use ferrule connector)
 ![Case_07a](Case_07a.png)
 
 ### **Wall Power Adapter**
 **Make Hole to Fit Adapter**
-![Case_08](Case_08.png)
+- Use Hole Template
+![Case_08a](Case_08a.jpg)
 
-![Case_09](Case_09.png)
+- Create Hole
+![Case_08b](Case_08b.jpg)
 
-### **USE CORRECT WIRE**
-![Correct_Wire](Correct_Wire.png)
+- Fit Power Plug into Hole 
+![Case_08b](Case_08c.jpg)
+
+### **Wiring Topology**
+![Wiring_Topology](Wiring_Topology.png)
 
 ### **Wiring Wall Power Adapter**
 - Solder Wires to 3-Prong Adapter
@@ -62,25 +67,22 @@ weight = 30
    - Earth-Ground/Green
 - Use shrink tubing to cover soldered connections
 - Cut wires to length for inserting/affixing to DIN Rail Terminal Blocks 
-![Power_Plug_Front](Power_Plug_Front.jpg)
-
 ![Power_Plug_Back](Power_Plug_Back.jpg)
 
-![Case_10](Case_10.png)
-
-![Case_11](Case_11.png)
+![Case_08d](Case_08d.jpg)
 
 ### **Wiring Wall Power Adapter to AC Terminal Blocks**
-![Case_12](Case_12.png)
 
-![Case_13](Case_13.png)
+![Case_09a](Case_09a.jpg)
+
+![Case_13a](Case_13a.jpg)
 
 ### **Wiring AC Terminal Blocks to DC Power Supplies**
 - Use standard colors for US single-phase AC:
    - Line/Black
    - Neutral/White
    - Earth-Ground/Green
-![Case_14](Case_14.png)
+![Case_14a](Case_14a.jpg)
 
 ![Case_15](Case_15.png)
 
@@ -89,13 +91,17 @@ weight = 30
    - V+ == Blue
    - V- == White
 - If using dual power supplies, do this step twice (once for each Power Supply)
-![Case_16](Case_16.png)
+![Case_16a](Case_16a.jpg)
 
-![Case_17](Case_17.png)
-
-![Case_18](Case_18.png)
+![Case_16b](Case_16b.jpg)
 
 ### **Mount and Wire = FGR and FSR**
+
+![Case_17](Case_17.jpg)
+
+![Case_18](Case_18.jpg)
+
+### **Finished**
 
 ![Case_19](Case_19.png)
 
