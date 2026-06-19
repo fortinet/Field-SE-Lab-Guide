@@ -41,7 +41,7 @@ weight =10
 || Quantity | Description||
 | :---: | :---: | :---: | :---: | 
 || 1 | **[Emergency Latching Stop Button](https://www.amazon.com/dp/B07WTL3KPB?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)** ||
-|| 1 Red, 1 Green | **[12V RED/GREEN Indicator LEDs](https://www.amazon.com/dp/B085Y66PSJ?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)** ||
+|| 1 Red, 1 Green | **[12V RED/GREEN Indicator LEDs 16mm](https://www.amazon.com/dp/B088KC6BP4?th=1)** ||
 || 1 | **[AC to 12VDC DIN-Rail Power Supply](https://www.amazon.com/dp/B0B2JG6GFZ?ref=ppx_pop_mob_ap_share)** ||
 
 ### **Tools**

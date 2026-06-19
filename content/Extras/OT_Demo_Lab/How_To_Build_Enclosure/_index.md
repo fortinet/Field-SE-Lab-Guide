@@ -72,9 +72,12 @@ weight = 30
 ![Case_08d](Case_08d.jpg)
 
 ### **Wiring Wall Power Adapter to AC Terminal Blocks**
-
+- Picture below shows 2 each of terminal blocks (appropriate for 2 Power Supplies)
+- **Note:** Jumper used to connect the two terminal blocks
 ![Case_09a](Case_09a.jpg)
 
+- Picture below shows 3 each of terminal blocks (appropriate for 3 Power Supplies)
+- **Note:** Two Jumpers used to connect the three terminal blocks
 ![Case_13a](Case_13a.jpg)
 
 ### **Wiring AC Terminal Blocks to DC Power Supplies**
@@ -82,6 +85,7 @@ weight = 30
    - Line/Black
    - Neutral/White
    - Earth-Ground/Green
+- **Note:** Three Power Supplies shown below, Left most is the 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components), the two right most are the Fortinet Rugged Power Supplies
 ![Case_14a](Case_14a.jpg)
 
 ![Case_15](Case_15.png)

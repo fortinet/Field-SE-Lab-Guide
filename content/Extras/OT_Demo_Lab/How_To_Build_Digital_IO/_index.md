@@ -8,42 +8,57 @@ weight = 50
 
 {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Digital_IO/eStop_Enclosure.3mf" style="tip" icon="angle-down" %}}Uno_Ethernet_Enclosure-Box.3mf{{% /button %}}
 
-### **Digital I/O Components**
+### **3D Printed Parts**
 
+![Enclosure](Enclosure.jpg)
+
+- Use ONLY small pen screwdriver on bolts (Don't Over Tighten)
+
+
+### **Digital I/O Components**
+**Latching Emergency Stop Button**
 ![Button_01](Button_01.jpg)
 
-![Button_02](Button_02.jpg)
-
+**16mm Indicator Lights**
 ![LED_01](LED_01.jpg)
 
 ![LED_02](LED_02.jpg)
 
-### **Create Holes in Encloser**
+### **Attach DIN Rail Mount**
 
-![Case_Holes](Case_Holes.jpg)
+![DIN_01](DIN_01.jpg)
 
-### **Mount Components**
+- Attach with nuts on back side (Don't Over Tighten)
+![DIN_02](DIN_02.jpg)
 
-![Case_Top_with_Digital_IO_02](Case_Top_with_Digital_IO_02.jpg)
+### **Insert Digital I/O Components into Lid**
 
-![Case_Top_with_Digital_IO_01](Case_Top_with_Digital_IO_01.jpg)
+![Lid_Top](Lid_Top.jpg)
 
-### **Wiring Schematic - Input (Button)**
+### **Insert Wires into Digital I/O LEDs**
 
-![Digital_IO_Schematic_Input](Digital_IO_Schematic_Input.png)
+![Lid_Bottom](Lid_Bottom.jpg)
 
-### **Wiring Schematic - Output (LEDs)**
+### **Insert Digital I/O into Box with Wires out Egress Hole**
 
-![Digital_IO_Schematic_Output](Digital_IO_Schematic_Output.png)
+![Lid_Insert](Lid_Insert.jpg)
 
 ### **Wiring Schematic - Overview for this lab**
 
- {{% badge style="info" %}}This wiring schematic shows a 24VDC.  The Fortinet Power Supply is 48VDC only, thus a seperate Power Supply is REQUIRED.  The 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components) is the suggested Power Supply{{% /badge %}}
-
 ![Digital_IO_Schematic_Overview](Digital_IO_Schematic_Overview.png)
+
+### **12 VDC Power Supply**
+
+![12VDC](12VDC.jpg)
+
+### **Terminal Blocks**
+
+![Terminal_Blocks](Terminal_Blocks.jpg)
+
+### **Digital I/O Wires into FGR**
+
+![Wires_Into_FGR](Wires_Into_FGR.jpg)
 
 ### **Final Assembly**
 
-{{% badge style="note" %}}In the picture below a 24VDC power supply is "sandwiched" between the two Fortinet Power Supplies. The 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components) is the suggested Power Supply{{% /badge %}}
-
-![Digital_IO_Final_Assembly](Digital_IO_Final_Assembly.png)
+![Digital_IO_Final_Assembly](Digital_IO_Final_Assembly.jpg)
