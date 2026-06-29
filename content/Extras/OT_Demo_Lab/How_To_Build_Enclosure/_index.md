@@ -72,19 +72,27 @@ weight = 30
 ![Case_08d](Case_08d.jpg)
 
 ### **Wiring Wall Power Adapter to AC Terminal Blocks**
+- Attach wires to Terminal Blocks before attaching Terminal Blocks to DIN Rails
+![Case_13b](Case_13b.png)
+
+- Then attach Terminal Blocks to DIN Rail
 - Picture below shows 2 each of terminal blocks (appropriate for 2 Power Supplies)
 - **Note:** Jumper used to connect the two terminal blocks
 ![Case_09a](Case_09a.jpg)
 
 - Picture below shows 3 each of terminal blocks (appropriate for 3 Power Supplies)
 - **Note:** Two Jumpers used to connect the three terminal blocks
-![Case_13a](Case_13a.jpg)
+![Case_13c](Case_13c.png)
 
 ### **Wiring AC Terminal Blocks to DC Power Supplies**
 - Use standard colors for US single-phase AC:
    - Line/Black
    - Neutral/White
    - Earth-Ground/Green
+
+- Attach wires from Terminal Blocks to PSU's before attaching PSU's to DIN Rails
+![Case_13d](Case_13d.png)
+
 - **Note:** Three Power Supplies shown below, Left most is the 12VDC Power Supply [listed in the Digital I/O BOM](Extras/OT_Demo_Lab/Bill_of_Materials/#digital-io-components), the two right most are the Fortinet Rugged Power Supplies
 ![Case_14a](Case_14a.jpg)
 
@@ -99,10 +107,16 @@ weight = 30
 
 ![Case_16b](Case_16b.jpg)
 
-### **Mount and Wire = FGR and FSR**
+- Attach wires from PSU's to Terminal Blocks and from Terminal Blocks to FGR/FSR before attaching Terminal Blocks to DIN Rails
+![Case_16c](Case_16c.png)
 
+![Case_16d](Case_16d.png)
+
+### **Mount and Wire = FGR and FSR**
+- FGR Power Attached 
 ![Case_17](Case_17.jpg)
 
+- FSR Power Attached
 ![Case_18](Case_18.jpg)
 
 ### **Finished**

@@ -47,13 +47,20 @@ weight = 50
 
 ![Digital_IO_Schematic_Overview](Digital_IO_Schematic_Overview.png)
 
+![Wiring_Topology](Wiring_Topology.png)
+
 ### **12 VDC Power Supply**
 
 ![12VDC](12VDC.jpg)
 
 ### **Terminal Blocks**
+- Attach the following wires before attaching Terminal Blocks to DIN Rails
+   - from PSU to Terminal Blocks
+   - from Terminal Blocks to Digital I/O Box
+   - from Terminal Blocks to FGR 
+![Terminal_Blocks_Before](Terminal_Blocks_Before.jpg)
 
-![Terminal_Blocks](Terminal_Blocks.jpg)
+![Terminal_Blocks_1](Terminal_Blocks_1.jpg)
 
 ### **Digital I/O Wires into FGR**
 
