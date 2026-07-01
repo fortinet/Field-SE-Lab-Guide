@@ -4,8 +4,11 @@ type = "default"
 weight = 30
 +++
 
+{{% badge style="note" %}}This section assumes OOB VM has been successfully installed.{{% /badge %}}
+
 ### Change/Add/Delete Guacamole Connections
-Open browswer and login to `http://172.16.3.80:8080/guacamole`
+
+Open browswer and login to `http://<IP Address of OOB>:8080/guacamole`
 - **User/Password:** guacadmin / guacadmin
 - Click on **Settings**
 ![Guac1](Guac_1.png)<br />

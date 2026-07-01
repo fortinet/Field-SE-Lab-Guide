@@ -19,7 +19,7 @@
       <link>http://localhost:1313/extras/guacamole/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/extras/guacamole/index.html</guid>
-      <description>Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://172.16.3.80:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
+      <description>NoteThis section assumes OOB VM has been successfully installed. Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://&lt;IP Address of OOB&gt;:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
     </item>
     <item>
       <title>Troubleshoot Ansible</title>

@@ -55,8 +55,9 @@ weight = 20
 
 ### Upload ISO and qcow2 Files
 ![Import Files](Import_Files.png)
-- Ubuntu Desktop - [64-bit Desktop ISO Image](https://ubuntu.com/download/desktop?target=_blank) 
-    - **Note:** Install Scripts tested with 24.04.4 LTS
+- Ubuntu Desktop - [64-bit Desktop ISO Image](https://releases.ubuntu.com/noble/) 
+    - {{% badge style="note" %}}Install Scripts tested with 24.04.4 LTS{{% /badge %}}
+
 - Fortinet (FGT/FMG/FAZ) firmware qcow2 files
     - qcow2 files must use the following format:
         - < 3 letters > dash < version > .qcow2
