@@ -122,9 +122,25 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
 sudo apt install git -y
-git clone https://github.com/stevesweeneywisc/SE-Lab-Ubuntu-Template /home/fortinet/Downloads
+~~~~
+{{% /tab %}}
+{{% tab title="from Terminal in Ubuntu VM" %}}
+~~~~bash
+git clone https://github.com/fortinet/Field-SE-Lab-VM-Template /home/fortinet/Downloads
+~~~~
+{{% /tab %}}
+{{% tab title="from Terminal in Ubuntu VM" %}}
+~~~~bash
 cd /home/fortinet/Downloads/
+~~~~
+{{% /tab %}}
+{{% tab title="from Terminal in Ubuntu VM" %}}
+~~~~bash
 chmod 755 *.sh
+~~~~
+{{% /tab %}}
+{{% tab title="from Terminal in Ubuntu VM" %}}
+~~~~bash
 ./Ubuntu_Base_Install.sh
 ~~~~
 {{% /tab %}}
@@ -153,8 +169,9 @@ chmod 755 *.sh
     - Scroll down on left side to "System" click on it
     - Click on "Users"
 ![Settings_2](Settings_4.png)
-    - Click on "Unlock"
-    - Enable "Automatic Login"
+    - Do the two following steps as shown below 
+        - Click on "Unlock"
+        - Enable "Automatic Login"
 ![Settings_3](Settings_5.png)
     - Close the Settings Window
 

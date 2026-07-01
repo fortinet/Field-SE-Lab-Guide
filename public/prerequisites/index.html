@@ -18,29 +18,29 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Prerequisites :: SE How-To Build Lab">
     <meta itemprop="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsThe VNETs “inside” of this lab use FNDN’s IP addressing scheme Documented here Shown in the topology This scheme cannot be changed easily and no script nor mechanism is being provided to do so. The “outside” or physical network of Proxmox has a default subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 This lab requires a full Class C subnet with the first 125 addresses reserved. Used for the physical interface of PVE server(s) OOB and TCGUI VMs IP addresses OOB VIPs to the “inside” The “outside” subnet can be changed via a script during creation of OOB. User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
-    <meta itemprop="wordCount" content="323">
+    <meta itemprop="wordCount" content="334">
     <title>Prerequisites :: SE How-To Build Lab</title>
     <link href="/prerequisites/index.xml" rel="alternate" type="application/rss+xml" title="Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1782924359" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1782924359" defer></script>
-    <script src="/js/search-lunr.js?1782924359" defer></script>
-    <script src="/js/search.js?1782924359" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1782932660" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1782932660" defer></script>
+    <script src="/js/search-lunr.js?1782932660" defer></script>
+    <script src="/js/search.js?1782932660" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1782924359";
+      window.relearn.index_js_url="/searchindex.en.js?1782932660";
     </script>
-    <script src="/js/lunr/lunr.min.js?1782924359" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1782924359" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1782924359" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1782924359" defer></script>
+    <script src="/js/lunr/lunr.min.js?1782932660" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1782932660" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1782932660" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1782932660" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782924359" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782924359" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782924359" rel="stylesheet">
-    <link href="/css/theme.css?1782924359" rel="stylesheet">
-    <link href="/css/format-html.css?1782924359" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782932660" rel="stylesheet">
+    <link href="/css/theme.css?1782932660" rel="stylesheet">
+    <link href="/css/format-html.css?1782932660" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,7 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1782924359" rel="stylesheet">
+    <link href="/css/custom.css?1782932660" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -228,8 +228,8 @@
 <h3 id="basic-understanding-and-knowledge-of-linux-cli-commands">Basic Understanding and Knowledge of Linux CLI Commands<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line?target=_blank" rel="external" target="_blank">source</a>
-<a href="#R-image-bba0ee950c24060eb1be574e200df50c" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bba0ee950c24060eb1be574e200df50c"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
+<a href="#R-image-27667ba46380f28fd5a4227e7f0edaee" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27667ba46380f28fd5a4227e7f0edaee"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
 </ul>
 <h3 id="edit-text-files-in-ubuntu-one-of-the-following">Edit text files in Ubuntu (one of the following)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
@@ -247,8 +247,8 @@
 <li>Ubuntu <a href="/prerequisites/GUI_Text_Editor.png?target=_blank" target="_blank">GNOME GUI Text Editor</a></li>
 </ul>
 <h3 id="upload-iso-and-qcow2-files">Upload ISO and qcow2 Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-41562d4167d04487ea747554dd6f90d7" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-41562d4167d04487ea747554dd6f90d7"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
+<p><a href="#R-image-353cdd5c62d3bac7e1d619ad0dcfcacc" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-353cdd5c62d3bac7e1d619ad0dcfcacc"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
 <ul>
 <li>
 <p>Ubuntu Desktop - <a href="https://releases.ubuntu.com/noble/" rel="external" target="_blank">64-bit Desktop ISO Image</a></p>
@@ -259,7 +259,7 @@
 <li>
 <p>Fortinet (FGT/FMG/FAZ) firmware qcow2 files</p>
 <ul>
-<li>qcow2 files must use the following format:
+<li>Below are examples of qcow2 file formats that must be followed for the ansible scripts to work successfully:
 <ul>
 <li>&lt; 3 letters &gt; dash &lt; version &gt; .qcow2</li>
 <li>FGT-v7.4.11.M.qcow2</li>
@@ -270,8 +270,8 @@
 </ul>
 </li>
 </ul>
-<p><a href="#R-image-8cabbb0bae1420ce104014967e675861" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cabbb0bae1420ce104014967e675861"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-09be369cd7595282dfc8aa3f6e13ea30" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-09be369cd7595282dfc8aa3f6e13ea30"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png"></a></p>
 <h3 id="ready-to-start-the-build">Ready to start the build<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><strong><a href="/steps/index.html">Steps To Build This Lab</a></strong></li>
@@ -342,8 +342,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782924359" defer></script>
-    <script src="/js/theme.js?1782924359" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782932660" defer></script>
+    <script src="/js/theme.js?1782932660" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

@@ -59,7 +59,7 @@ weight = 20
     - {{% badge style="note" %}}Install Scripts tested with 24.04.4 LTS{{% /badge %}}
 
 - Fortinet (FGT/FMG/FAZ) firmware qcow2 files
-    - qcow2 files must use the following format:
+    - Below are examples of qcow2 file formats that must be followed for the ansible scripts to work successfully:
         - < 3 letters > dash < version > .qcow2
         - FGT-v7.4.11.M.qcow2
         - FMG-v7.6.6.M.qcow2
