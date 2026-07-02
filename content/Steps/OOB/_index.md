@@ -30,9 +30,15 @@ weight = 20
 {{% tab title="from Terminal in OOB" %}}
 ````bash
 git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in OOB" %}}
+````bash
 cd /home/fortinet/Downloads/
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in OOB" %}}
+````bash
 chmod 755 *.sh
 ````
 {{% /tab %}}
@@ -79,7 +85,10 @@ cd /home/fortinet/Downloads/
 {{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
 ````bash
 docker compose down
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
+````bash
 docker compose up -d  
 ````
 {{% /tab %}}
@@ -131,19 +140,40 @@ docker compose up -d
 {{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose ps
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 docker compose cp ./dump.sql guacamole-sql:/dump.sql
-	 
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 docker compose exec guacamole-sql /bin/sh
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 sh-5.1# mysql -u root -p <  ./dump.sql
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 Enter password: password
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 sh-5.1# exit
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 docker compose down
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
+````bash
 docker compose up –d
 ````
 {{% /tab %}}
@@ -161,7 +191,15 @@ docker compose up –d
 {{% tab title="from Terminal" %}}
 ````bash
 ping oob
+````
+{{% /tab %}}
+{{% tab title="from Terminal" %}}
+````bash
 ping oob.home.internal
+````
+{{% /tab %}}
+{{% tab title="from Terminal" %}}
+````bash
 ping oob.fortinet.internal
 ````
 {{% /tab %}}

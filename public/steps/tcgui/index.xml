@@ -3,7 +3,7 @@
   <channel>
     <title>Create TCGUI VM :: SE How-To Build Lab</title>
     <link>http://localhost:1313/steps/tcgui/index.html</link>
-    <description>If you receive an error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​&#xD;RDP to OOB&#xD;from Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu ./create_tcgui.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui ./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui started&#xD;​&#xD;Continuing from Terminal in OOB&#xD;Make sure TCGUI VM has fully started (GUI is up and running) before exeucting the following. Suggest opening TCGUI’s console window on PVE to verify. ./configure_tcgui.sh ubuntu_tcgui ./wallpaper_update.sh ubuntu_tcgui ./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui stopped ./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui started</description>
+    <description>If you receive an error No route to host with any of the following steps, use the Troubleshoot Ansible steps&#xA;from Terminal in OOB ​&#xD;RDP to OOB&#xD;cd /home/fortinet/automation/ansible/ubuntu&#xD;​&#xD;RDP to OOB&#xD;./create_tcgui.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui&#xD;​&#xD;RDP to OOB&#xD;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui started</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/steps/tcgui/index.xml" rel="self" type="application/rss+xml" />

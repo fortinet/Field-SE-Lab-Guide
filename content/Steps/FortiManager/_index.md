@@ -6,18 +6,25 @@ weight = 60
 
 ### Deploy FortiManager VM
 
-{{% tab title="from Terminal in OOB" %}}
 - from Terminal in OOB
+{{% tab title="from Terminal in OOB" %}}
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in OOB" %}}
+````bash
 ./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	fmg  v7.6.6.M
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in OOB" %}}
+````bash
 ./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	fmg  started
 ````
-- Make sure FortiManager VM has fully started before continuing.
-- Suggest opening console windows and verifying login prompt showing.
 {{% /tab %}}
+
+- Make sure FortiManager VM has fully started before continuing.
+    - Suggest opening console windows and verifying login prompt showing.
 
 ### Configure FortiManager from Console
 

@@ -58,6 +58,11 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ssh root@<your pve server name 01>
+````
+{{% /tab %}} 
+
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ssh root@<your pve server name 02>
 ````
 {{% /tab %}} 
@@ -73,6 +78,10 @@ cat /home/fortinet/.ssh/ansible_key.pub
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 cd /home/fortinet/automation/ansible/vars
+````
+{{% /tab %}}
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ./update_sshkey.sh '<right click - paste SSH KEY here>' (make sure single quotes)
 ````
 {{% /tab %}}
@@ -108,9 +117,15 @@ cd /home/fortinet/automation/ansible/vars
         - **Note:** Secret value is only displayed once when token generated
         ![Ansible_API_5](Ansible_API_5.png)
     - Update **proxmox_api_token_secret:**
+
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 cd /home/fortinet/automation/ansible/vars
+````
+{{% /tab %}}
+
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ./update_api_token_secret.sh  <Token Secret here>
 ````
 {{% /tab %}}
@@ -122,14 +137,26 @@ cd /home/fortinet/automation/ansible/vars
 cd /home/fortinet/automation/ansible/vars
 ````
 {{% /tab %}}
-    - Update FortiFlex **Username/Password, Account ID and Serial Number**
+- Update FortiFlex **Username/Password, Account ID and Serial Number**
+    - The username/password below is not what you use to sign into Support Portal
+    - It is the API's credentials 
 {{% tab title="from Ubuntu-OOB Terminal" %}}
-- The username/password below is not what you use to sign into Support Portal
-- It is the API's credentials 
 ````bash
 ./update_fortiflex_username.sh   <FortiFlex Username here>
+````
+{{% /tab %}}
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ./update_fortiflex_password.sh  '<FortiFlex Password here>'  <- Make sure to use single quotes
+````
+{{% /tab %}}
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ./update_fortiflex_accountID.sh  <FortiFlex Account ID here>
+````
+{{% /tab %}}
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ./update_fortiflex_SN.sh         <FortiFlex Serial Number here>
 ````
 {{% /tab %}}
@@ -191,6 +218,10 @@ All hosts and VMs can be resolved by name.
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ping <your pve server name>
+````
+{{% /tab %}} 
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
 ping Ubuntu-OOB
 ````
 {{% /tab %}} 
