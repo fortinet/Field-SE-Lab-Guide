@@ -26,29 +26,29 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
     <meta itemprop="description" content="Create the VMIn PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General
 Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS
 Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System">
-    <meta itemprop="wordCount" content="808">
+    <meta itemprop="wordCount" content="831">
     <title>Create Ubuntu VM Template :: SE How-To Build Lab</title>
     <link href="/steps/ubuntu_template/index.xml" rel="alternate" type="application/rss+xml" title="Create Ubuntu VM Template :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1782932660" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1782932660" defer></script>
-    <script src="/js/search-lunr.js?1782932660" defer></script>
-    <script src="/js/search.js?1782932660" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1782940285" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1782940285" defer></script>
+    <script src="/js/search-lunr.js?1782940285" defer></script>
+    <script src="/js/search.js?1782940285" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1782932660";
+      window.relearn.index_js_url="/searchindex.en.js?1782940285";
     </script>
-    <script src="/js/lunr/lunr.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1782932660" defer></script>
+    <script src="/js/lunr/lunr.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1782940285" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782932660" rel="stylesheet">
-    <link href="/css/theme.css?1782932660" rel="stylesheet">
-    <link href="/css/format-html.css?1782932660" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782940285" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782940285" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782940285" rel="stylesheet">
+    <link href="/css/theme.css?1782940285" rel="stylesheet">
+    <link href="/css/format-html.css?1782940285" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +101,7 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1782932660" rel="stylesheet">
+    <link href="/css/custom.css?1782940285" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -129,7 +129,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
         <li><a href="#create-the-vm">Create the VM</a></li>
         <li><a href="#install-ubuntu">Install Ubuntu</a></li>
         <li><a href="#install-packages-and-user-config">Install Packages and User Config</a></li>
-        <li><a href="#verify-configuration-and-prep-cloud-init">Verify Configuration and Prep Cloud-Init</a></li>
+        <li><a href="#verify-configuration">Verify Configuration</a></li>
+        <li><a href="#prep-cloud-init">Prep Cloud-Init</a></li>
         <li><a href="#convert-vm-to-template">Convert VM to Template</a></li>
         <li><a href="#complete">Complete</a></li>
       </ul>
@@ -172,8 +173,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 
 <h3 id="create-the-vm">Create the VM<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>In PVE GUI  &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM
-<a href="#R-image-810aeaaf4e85f432c7027e9c6a349bc3" class="lightbox-link"><img alt="Create_VM" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-810aeaaf4e85f432c7027e9c6a349bc3"><img alt="Create_VM" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png"></a></p>
+<a href="#R-image-dee8a2bcb12f9bd56427a5305b961676" class="lightbox-link"><img alt="Create_VM" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dee8a2bcb12f9bd56427a5305b961676"><img alt="Create_VM" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Create_VM.png"></a></p>
 <ul>
 <li>
 <p>General</p>
@@ -257,8 +258,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 </li>
 <li>
 <p>VM’s config should look like the following.
-<a href="#R-image-c5fe13901c4b8cb00f791637be347428" class="lightbox-link"><img alt="VM_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c5fe13901c4b8cb00f791637be347428"><img alt="VM_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png"></a></p>
+<a href="#R-image-8d72e2fb43d246230ee61a3abf2c3ce4" class="lightbox-link"><img alt="VM_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8d72e2fb43d246230ee61a3abf2c3ce4"><img alt="VM_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/VM_Config.png"></a></p>
 </li>
 </ul>
 <h3 id="install-ubuntu">Install Ubuntu<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
@@ -270,11 +271,11 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 </li>
 <li>Press Enter on “Try or Install Ubuntu” (if no keys pressed, GRUB will timeout and choose this option)</li>
 <li>If following appears, you can safely ignore it as both NICs have NOT been fully configured yet.
-<a href="#R-image-a23264724621bc3c6bbe75f3ad7a8384" class="lightbox-link"><img alt="Connection_Failed" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a23264724621bc3c6bbe75f3ad7a8384"><img alt="Connection_Failed" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png"></a></li>
+<a href="#R-image-68dffcc08810c0b6c38a833359d11fab" class="lightbox-link"><img alt="Connection_Failed" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68dffcc08810c0b6c38a833359d11fab"><img alt="Connection_Failed" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Connection_Failed.png"></a></li>
 <li>If you see the following Icon, click on it
-<a href="#R-image-62f397fe6b27ec29da4b6f024056b6d5" class="lightbox-link"><img alt="Install Ubuntu" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Install_Ubuntu.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-62f397fe6b27ec29da4b6f024056b6d5"><img alt="Install Ubuntu" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Install_Ubuntu.png"></a></li>
+<a href="#R-image-b69e3af702dc384cd51c4bcabf41b5ce" class="lightbox-link"><img alt="Install Ubuntu" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Install_Ubuntu.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b69e3af702dc384cd51c4bcabf41b5ce"><img alt="Install Ubuntu" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Install_Ubuntu.png"></a></li>
 <li>Choose Language, Accessibility, Keyboard, Internet Do Not Connect,</li>
 <li>Click on Install Ubuntu, Interactive installation, Apps – Default selection, Do not install proprietary software</li>
 <li>Erase disk and install Ubuntu (start from scratch on selected disk)
@@ -327,8 +328,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Hardware &gt; CD/DVD Drive &gt; Edit
 <ul>
 <li>Tick “Do not use any media”
-<a href="#R-image-8a5278e1d7c0100ef2d33a6504c1838c" class="lightbox-link"><img alt="Remove_ISO" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Remove_ISO.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a5278e1d7c0100ef2d33a6504c1838c"><img alt="Remove_ISO" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Remove_ISO.png"></a></li>
+<a href="#R-image-42cce2eb7292971594d0846cf0a9ff13" class="lightbox-link"><img alt="Remove_ISO" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Remove_ISO.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-42cce2eb7292971594d0846cf0a9ff13"><img alt="Remove_ISO" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Remove_ISO.png"></a></li>
 </ul>
 </li>
 <li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Hardware &gt; Add &gt; Cloud-Init
@@ -336,16 +337,16 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <li>Bus/Device: SCSI 1</li>
 <li>Storage: &lt;your Proxmox storage, if no NAS, then “local-lvm”&gt;</li>
 <li>Format: QEMU image format (if it&rsquo;s available)
-<a href="#R-image-1dc8863f17cb93ec88676c58b2e29283" class="lightbox-link"><img alt="Cloud_Init_Add" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1dc8863f17cb93ec88676c58b2e29283"><img alt="Cloud_Init_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png"></a></li>
+<a href="#R-image-4f3171812607420287cedd015bf3e4eb" class="lightbox-link"><img alt="Cloud_Init_Add" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f3171812607420287cedd015bf3e4eb"><img alt="Cloud_Init_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Add.png"></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Config Cloud-Init</li>
 <li><span class="badge cstyle default"><span class="badge-content">NOTE:</span></span> If NOT using default subnet 172.16.3.x, then config IP address and gateway appropriately
-<a href="#R-image-d910b2ad64d231c4027cad04c8d2ee0f" class="lightbox-link"><img alt="Cloud_Init_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d910b2ad64d231c4027cad04c8d2ee0f"><img alt="Cloud_Init_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png"></a></li>
+<a href="#R-image-ddef0d99b9bad65bea33df32f5d9f106" class="lightbox-link"><img alt="Cloud_Init_Config" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ddef0d99b9bad65bea33df32f5d9f106"><img alt="Cloud_Init_Config" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Config.png"></a></li>
 </ul>
 </li>
 <li>Go back to VM console and press “Enter”</li>
@@ -379,8 +380,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 </table>
 </li>
 <li>If following dialog box pops up, Click “Remind Me Later”
-<a href="#R-image-b315e3380d110e971a07a6c6922ed877" class="lightbox-link"><img alt="Software_Updater" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b315e3380d110e971a07a6c6922ed877"><img alt="Software_Updater" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png"></a></li>
+<a href="#R-image-b65f79b8c1e14c57bc9aa0e1f40043f3" class="lightbox-link"><img alt="Software_Updater" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b65f79b8c1e14c57bc9aa0e1f40043f3"><img alt="Software_Updater" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Software_Updater.png"></a></li>
 </ul>
 <h3 id="install-packages-and-user-config">Install Packages and User Config<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
@@ -388,8 +389,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <p>If during this section you see the following error,</p>
 <ul>
 <li>Log out and log back into VM and try again
-<a href="#R-image-f62a4839e742c328644a08c5734bdd48" class="lightbox-link"><img alt="Settings_not_responding" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_not_responding.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f62a4839e742c328644a08c5734bdd48"><img alt="Settings_not_responding" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_not_responding.png"></a></li>
+<a href="#R-image-fc743a935c9a93a163536783ef4fb1c4" class="lightbox-link"><img alt="Settings_not_responding" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_not_responding.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fc743a935c9a93a163536783ef4fb1c4"><img alt="Settings_not_responding" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_not_responding.png"></a></li>
 </ul>
 </li>
 <li>
@@ -397,47 +398,47 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <ul>
 <li>Click on Network/Sound/Power in upper right corner of screen</li>
 <li>Click on Gear
-<a href="#R-image-404718dda86bc71e71aeef09cd61b763" class="lightbox-link"><img alt="Settings_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-404718dda86bc71e71aeef09cd61b763"><img alt="Settings_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png"></a></li>
+<a href="#R-image-0680d93da8db7a650096bcfbcf5101d1" class="lightbox-link"><img alt="Settings_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0680d93da8db7a650096bcfbcf5101d1"><img alt="Settings_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png"></a></li>
 <li>Scroll down on left side to &ldquo;System&rdquo; click on it</li>
 <li>Click on &ldquo;Remote Desktop&rdquo;
-<a href="#R-image-5e9aefc6faab2129d51b716ff2ab5111" class="lightbox-link"><img alt="Settings_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e9aefc6faab2129d51b716ff2ab5111"><img alt="Settings_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_2.png"></a></li>
+<a href="#R-image-289bd27c0bd1bb8b575910c4582a36bc" class="lightbox-link"><img alt="Settings_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-289bd27c0bd1bb8b575910c4582a36bc"><img alt="Settings_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_2.png"></a></li>
 <li>Enable &ldquo;Desktop Sharing&rdquo; and &ldquo;Remote Control&rdquo;</li>
 <li>Click on Password&rsquo;s &ldquo;eyeball&rdquo; and change Password to &ldquo;password&rdquo;
-<a href="#R-image-e7cd70108bf7e4c4756a216357c23560" class="lightbox-link"><img alt="Settings_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e7cd70108bf7e4c4756a216357c23560"><img alt="Settings_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_3.png"></a></li>
+<a href="#R-image-73fec673eb239f0050e4a1b3a52958e2" class="lightbox-link"><img alt="Settings_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-73fec673eb239f0050e4a1b3a52958e2"><img alt="Settings_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_3.png"></a></li>
 </ul>
 </li>
 <li>
 <p>Find IP address of VM here:
-<a href="#R-image-206fe247107a894f6a0988f023840904" class="lightbox-link"><img alt="Settings_Network_IP" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_Network_IP.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-206fe247107a894f6a0988f023840904"><img alt="Settings_Network_IP" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_Network_IP.png"></a></p>
+<a href="#R-image-18aa1a052f58b15589e2e6d041ee9c92" class="lightbox-link"><img alt="Settings_Network_IP" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_Network_IP.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18aa1a052f58b15589e2e6d041ee9c92"><img alt="Settings_Network_IP" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_Network_IP.png"></a></p>
 </li>
 <li>
 <p>From your laptop/desktop connect to the VM via RDP</p>
 </li>
 <li>
 <p>Start Terminal
-<a href="#R-image-4bce33fc155fbfefad116dad48193699" class="lightbox-link"><img alt="Start_Terminal" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Start_Terminal.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bce33fc155fbfefad116dad48193699"><img alt="Start_Terminal" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Start_Terminal.png"></a></p>
+<a href="#R-image-679d5fcf014b9c4a7eea7932eb9b5dd4" class="lightbox-link"><img alt="Start_Terminal" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Start_Terminal.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-679d5fcf014b9c4a7eea7932eb9b5dd4"><img alt="Start_Terminal" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Start_Terminal.png"></a></p>
 </li>
 </ul>
-<p><div class="tab-panel" data-tab-group="R-tabs-84352d977030bd67c0b9a1eb93e07a08">
+<p><div class="tab-panel" data-tab-group="R-tabs-37eddb59785f7abbfe7df86c08722a21">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3df2d484cef553b994887430bf466f55" aria-expanded="true"
+      aria-controls="R-tab-id-07a18eb98238811e5d3d57b7a5bb8129" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-84352d977030bd67c0b9a1eb93e07a08','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-37eddb59785f7abbfe7df86c08722a21','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3df2d484cef553b994887430bf466f55"
+      id="R-tab-id-07a18eb98238811e5d3d57b7a5bb8129"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -446,21 +447,21 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-c0ce56ba5bb0b90edd89eaf58718ce80">
+<div class="tab-panel" data-tab-group="R-tabs-bacdbbdcb4e0dc5e559bb1d915e3fac6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5498cff737c15ab0971c9deb3f84350c" aria-expanded="true"
+      aria-controls="R-tab-id-cc4d5fd8aaf285637bfacd46ad5a65a7" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-c0ce56ba5bb0b90edd89eaf58718ce80','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-bacdbbdcb4e0dc5e559bb1d915e3fac6','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5498cff737c15ab0971c9deb3f84350c"
+      id="R-tab-id-cc4d5fd8aaf285637bfacd46ad5a65a7"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -469,21 +470,21 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-f197cd414666d04cc2b03691831ee9db">
+<div class="tab-panel" data-tab-group="R-tabs-4b174a895d9675d61569de676189500b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3328b1185821a3391a49f50c92518925" aria-expanded="true"
+      aria-controls="R-tab-id-3e8a2af503c7702f31d7ef2aeaf26578" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-f197cd414666d04cc2b03691831ee9db','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-4b174a895d9675d61569de676189500b','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3328b1185821a3391a49f50c92518925"
+      id="R-tab-id-3e8a2af503c7702f31d7ef2aeaf26578"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -492,21 +493,21 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-c7e5f95347029caef709d1ee28e530ae">
+<div class="tab-panel" data-tab-group="R-tabs-b47d2e957f6b9899a104716e51236025">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b129bbf70b12b4296da8f0ced6bb7928" aria-expanded="true"
+      aria-controls="R-tab-id-743034da95b053b4458469af84951492" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-c7e5f95347029caef709d1ee28e530ae','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-b47d2e957f6b9899a104716e51236025','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b129bbf70b12b4296da8f0ced6bb7928"
+      id="R-tab-id-743034da95b053b4458469af84951492"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -515,21 +516,21 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-431277cb015d1e453e8865510dd090ca">
+<div class="tab-panel" data-tab-group="R-tabs-48c8e20b3838ab04f0cce1be9ce73d9f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-18ffd9eb80e442d4b9d2edb0c3a076a4" aria-expanded="true"
+      aria-controls="R-tab-id-f4dcca5433e38c722ae8966b64d390ba" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-431277cb015d1e453e8865510dd090ca','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-48c8e20b3838ab04f0cce1be9ce73d9f','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-18ffd9eb80e442d4b9d2edb0c3a076a4"
+      id="R-tab-id-f4dcca5433e38c722ae8966b64d390ba"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -546,23 +547,23 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <li><strong>Note:</strong> This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot</li>
 <li><span class="badge cstyle info badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-info-circle"></i> Info</span><span class="badge-content">While this should never be done in production, this being done in this non-internet facing lab, for simplicity and to reduce complexity.</span></span></li>
 <li>Open Utilities folder
-<a href="#R-image-e93236e2da0a5650f979da60676ff46f" class="lightbox-link"><img alt="Key_Ring_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e93236e2da0a5650f979da60676ff46f"><img alt="Key_Ring_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png"></a></li>
+<a href="#R-image-93eb8290e38a0c7d7305dbdccca01ce5" class="lightbox-link"><img alt="Key_Ring_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-93eb8290e38a0c7d7305dbdccca01ce5"><img alt="Key_Ring_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_1.png"></a></li>
 <li>Open “Passwords and Keys”
-<a href="#R-image-10b277ad57df86036c4d2bf849bd5865" class="lightbox-link"><img alt="Key_Ring_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-10b277ad57df86036c4d2bf849bd5865"><img alt="Key_Ring_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png"></a></li>
+<a href="#R-image-84767a13e145c3c6f0c8adcd9a749803" class="lightbox-link"><img alt="Key_Ring_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-84767a13e145c3c6f0c8adcd9a749803"><img alt="Key_Ring_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_2.png"></a></li>
 <li>Right Click on Login, and choose Change Password
-<a href="#R-image-1d0bf80848246ce2061f04d9f12972fc" class="lightbox-link"><img alt="Key_Ring_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d0bf80848246ce2061f04d9f12972fc"><img alt="Key_Ring_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png"></a></li>
+<a href="#R-image-895145a1111ef1233694930e3de06479" class="lightbox-link"><img alt="Key_Ring_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-895145a1111ef1233694930e3de06479"><img alt="Key_Ring_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_3.png"></a></li>
 <li>Enter the old password: &ldquo;password&rdquo;
-<a href="#R-image-4ac08943ad8cab50d3972cccf9441e44" class="lightbox-link"><img alt="Key_Ring_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4ac08943ad8cab50d3972cccf9441e44"><img alt="Key_Ring_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png"></a></li>
+<a href="#R-image-a0a7c3b538cd6242f989d7da987d79f5" class="lightbox-link"><img alt="Key_Ring_4" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a0a7c3b538cd6242f989d7da987d79f5"><img alt="Key_Ring_4" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_4.png"></a></li>
 <li>Leave new password blank for both and click “Continue”
-<a href="#R-image-7632b329161cbb2fa083d361550c04de" class="lightbox-link"><img alt="Key_Ring_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7632b329161cbb2fa083d361550c04de"><img alt="Key_Ring_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png"></a></li>
+<a href="#R-image-56ee626d72b8546cdcb04282fb32763a" class="lightbox-link"><img alt="Key_Ring_5" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56ee626d72b8546cdcb04282fb32763a"><img alt="Key_Ring_5" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_5.png"></a></li>
 <li>Store passwords unencrypted? Click Continue
-<a href="#R-image-a25505549214293afc7f20cbfbfbcfbd" class="lightbox-link"><img alt="Key_Ring_6" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a25505549214293afc7f20cbfbfbcfbd"><img alt="Key_Ring_6" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png"></a></li>
+<a href="#R-image-4d102e92b768407721cc5b3a017f8add" class="lightbox-link"><img alt="Key_Ring_6" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d102e92b768407721cc5b3a017f8add"><img alt="Key_Ring_6" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Key_Ring_6.png"></a></li>
 <li>Close &ldquo;Passwords and Keys&rdquo; window</li>
 </ul>
 </li>
@@ -570,64 +571,88 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <ul>
 <li>Click on Network/Sound/Power in upper right corner of screen</li>
 <li>Click on Gear
-<a href="#R-image-6f936eb41ce549b24f6a1dd3904b8335" class="lightbox-link"><img alt="Settings_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6f936eb41ce549b24f6a1dd3904b8335"><img alt="Settings_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png"></a></li>
+<a href="#R-image-db5a185c5cb546078d19b4fcaf899546" class="lightbox-link"><img alt="Settings_1" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-db5a185c5cb546078d19b4fcaf899546"><img alt="Settings_1" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_1.png"></a></li>
 <li>Scroll down on left side to &ldquo;System&rdquo; click on it</li>
 <li>Click on &ldquo;Users&rdquo;
-<a href="#R-image-7cf30e6936673b6f6015d670636a60a4" class="lightbox-link"><img alt="Settings_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7cf30e6936673b6f6015d670636a60a4"><img alt="Settings_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_4.png"></a></li>
+<a href="#R-image-6c7dba9f6c42722a1df6fb88dd331889" class="lightbox-link"><img alt="Settings_2" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c7dba9f6c42722a1df6fb88dd331889"><img alt="Settings_2" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_4.png"></a></li>
 <li>Do the two following steps as shown below
 <ul>
 <li>Click on &ldquo;Unlock&rdquo;</li>
 <li>Enable &ldquo;Automatic Login&rdquo;
-<a href="#R-image-3a982388fe8c2df61aee104623e66743" class="lightbox-link"><img alt="Settings_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a982388fe8c2df61aee104623e66743"><img alt="Settings_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_5.png"></a></li>
+<a href="#R-image-95f0bc001ed3d224c680d969e70f402b" class="lightbox-link"><img alt="Settings_3" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Settings_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-95f0bc001ed3d224c680d969e70f402b"><img alt="Settings_3" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Settings_5.png"></a></li>
 </ul>
 </li>
 <li>Close the Settings Window</li>
 </ul>
 </li>
 </ul>
-<h3 id="verify-configuration-and-prep-cloud-init">Verify Configuration and Prep Cloud-Init<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h3 id="verify-configuration">Verify Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li>Reboot and verify auto login</li>
-<li>RDP to VM
-<div class="tab-panel" data-tab-group="R-tabs-1fa2f903a4b4300235a4d4de4dfe733e">
+<li>Reboot and verify VM auto login to desktop</li>
+<li>Verify you can RDP from your desktop to VM</li>
+<li>If any of these fail, review/verify configuration steps above</li>
+</ul>
+<h3 id="prep-cloud-init">Prep Cloud-Init<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-46b99582ed2fdcd6378ae7b81e50bffa">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c587e3e57f87a18bc4e7be2b396977e2" aria-expanded="true"
+      aria-controls="R-tab-id-d1118fe85e408848ae72d836fdf38f3c" aria-expanded="true"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1fa2f903a4b4300235a4d4de4dfe733e','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+      onclick="switchTab('R-tabs-46b99582ed2fdcd6378ae7b81e50bffa','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
     >
       <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c587e3e57f87a18bc4e7be2b396977e2"
+      id="R-tab-id-d1118fe85e408848ae72d836fdf38f3c"
       data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cloud-init clean -–machine-id
-</span></span><span style="display:flex;"><span>sudo shutdown now</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cloud-init clean --machine-id</span></span></code></pre></div>
       </div>
     </div>
   </div>
-</div></li>
-</ul>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-37967b4cc324563fca81b4ed069d1ab6">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-7f960366fd8a3f055f617d80f5201a25" aria-expanded="true"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-37967b4cc324563fca81b4ed069d1ab6','R-tab-c1519d7e8eef4ebec4be17b0a151e91d')"
+    >
+      <span class="tab-nav-text">from Terminal in Ubuntu VM</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-7f960366fd8a3f055f617d80f5201a25"
+      data-tab-item="R-tab-c1519d7e8eef4ebec4be17b0a151e91d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo shutdown now</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
 <h3 id="convert-vm-to-template">Convert VM to Template<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>In PVE GUI
 <ul>
 <li>Datacenter &gt; Node &gt; VM (one just created) &gt;  Cloud-Init &gt; Edit</li>
 <li>Remove IP Address and Gateway
-<a href="#R-image-bea5cebf547091498a31dff79cdc07f7" class="lightbox-link"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bea5cebf547091498a31dff79cdc07f7"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png"></a></li>
+<a href="#R-image-8a9e92f774ea2da197aa34f5a7f8bd59" class="lightbox-link"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a9e92f774ea2da197aa34f5a7f8bd59"><img alt="Cloud_Init_Remove_IP" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Cloud_Init_Remove_IP.png"></a></li>
 <li>Datacenter &gt; Node &gt; Right Click on VM (one just created) &gt; Convert to template
-<a href="#R-image-1197bb570c13972bd040800c446e7716" class="lightbox-link"><img alt="Convert_to_Template" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1197bb570c13972bd040800c446e7716"><img alt="Convert_to_Template" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png"></a></li>
+<a href="#R-image-a6bc955d9463b98d941caf48ce7e78a1" class="lightbox-link"><img alt="Convert_to_Template" class="lazy lightbox figure-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6bc955d9463b98d941caf48ce7e78a1"><img alt="Convert_to_Template" class="lazy lightbox lightbox-image" loading="lazy" src="/steps/ubuntu_template/Convert_to_Template.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -706,8 +731,8 @@ Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “loca
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782932660" defer></script>
-    <script src="/js/theme.js?1782932660" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782940285" defer></script>
+    <script src="/js/theme.js?1782940285" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

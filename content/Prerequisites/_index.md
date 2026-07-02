@@ -4,6 +4,20 @@ type = "default"
 weight = 20
 +++
 
+### IP Addressing and Naming Convention Assumptions 
+- {{% badge style="important" title=" " style="red"%}}Dedicate a full class C network{{% /badge %}}
+    - Minimally needed are IP's 4th Octet reserved from .2 thru .125
+    - Installation scripts by default assumes this class C is  172.16.3.x/24
+        - The subnet can be changed via a script during creation of OOB. 
+- **The "outside" or (physical network)** of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
+    - Used for the physical interface of PVE server(s)
+    - OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses
+    - OOB VIPs (x.y.z.-) to the "inside" (10.100.55.-)
+    - As previously described, the "outside" subnet can be changed via a script during creation of OOB.
+- **The "inside" (Proxmox VNETs)** in this lab use FNDN's IP addressing scheme
+    - Documented [here](Introduction/ip_scheme)
+    - Shown in the [topology](/Introduction#se-lab-topology)
+
 ### Proxmox Virtual Environment (PVE)
 - This lab requires (obviously) a Hypervisor.  This lab was written and installation scripts tested with Proxmox 9.x  
 
@@ -18,18 +32,6 @@ weight = 20
 -	[Multi-Tabbed PuTTY](https://ttyplus.com/multi-tabbed-putty/)
 -	RDP (%windir%\system32\mstsc.exe)
 -	Browser - all testing for this build guide was done with [Firefox](https://www.firefox.com/en-US/)
-
-### IP Addressing and Naming Convention Assumptions 
-- The VNETs "inside" of this lab use FNDN's IP addressing scheme
-    - Documented [here](Introduction/ip_scheme)
-    - Shown in the [topology](/Introduction#se-lab-topology)
-    - This scheme cannot be changed easily and no script nor mechanism is being provided to do so.
-- The "outside" or *physical network* of Proxmox has a default subnet 172.16.3.x/24 with IP's reserved from .2 thru .125
-    - This lab requires a full Class C subnet with the first 125 addresses reserved. 
-    - Used for the physical interface of PVE server(s)
-    - OOB and TCGUI VMs IP addresses
-    - OOB VIPs to the "inside"
-    - The "outside" subnet can be changed via a script during creation of OOB.
 
 ### User Name / Passwords utilizes the following standard
 - Ubuntu VMs

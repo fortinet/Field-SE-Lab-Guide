@@ -3,7 +3,7 @@
   <channel>
     <title>Steps To Build This Lab :: SE How-To Build Lab</title>
     <link>http://localhost:1313/steps/index.html</link>
-    <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh chmod 777 Create_VNETs.sh ./Create_VNETs.sh</description>
+    <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/steps/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       <link>http://localhost:1313/steps/oob/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/steps/oob/index.html</guid>
-      <description>Create Full Clone and Install Packages&#xD;Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template&#xA;VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init&#xA;If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 Start the OOB VM</description>
+      <description>Create Full Clone and Install Packages&#xD;Create Full Clone of “Ubuntu-Template” by right clicking on the VM Template&#xA;VM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init per IP addressing scheme&#xA;NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 NET1 10.100.55.80/24 NO Gateway Start the OOB VM</description>
     </item>
     <item>
       <title>Ansible Prerequisites</title>

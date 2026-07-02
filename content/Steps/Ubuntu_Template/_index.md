@@ -175,12 +175,21 @@ chmod 755 *.sh
 ![Settings_3](Settings_5.png)
     - Close the Settings Window
 
-### Verify Configuration and Prep Cloud-Init
-- Reboot and verify auto login
-- RDP to VM
+### Verify Configuration
+- Reboot and verify VM auto login to desktop
+- Verify you can RDP from your desktop to VM
+- If any of these fail, review/verify configuration steps above
+
+### Prep Cloud-Init
+
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
-sudo cloud-init clean -–machine-id
+sudo cloud-init clean --machine-id
+~~~~
+{{% /tab %}}
+
+{{% tab title="from Terminal in Ubuntu VM" %}}
+~~~~bash
 sudo shutdown now
 ~~~~
 {{% /tab %}}

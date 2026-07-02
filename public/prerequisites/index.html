@@ -5,42 +5,42 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsThe VNETs “inside” of this lab use FNDN’s IP addressing scheme Documented here Shown in the topology This scheme cannot be changed easily and no script nor mechanism is being provided to do so. The “outside” or physical network of Proxmox has a default subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 This lab requires a full Class C subnet with the first 125 addresses reserved. Used for the physical interface of PVE server(s) OOB and TCGUI VMs IP addresses OOB VIPs to the “inside” The “outside” subnet can be changed via a script during creation of OOB. User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta name="description" content="IP Addressing and Naming Convention AssumptionsDedicate a full class C network Minimally needed are IP’s 4th Octet reserved from .2 thru .125 Installation scripts by default assumes this class C is 172.16.3.x/24 The subnet can be changed via a script during creation of OOB. The “outside” or (physical network) of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of PVE server(s) OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses OOB VIPs (x.y.z.-) to the “inside” (10.100.55.-) As previously described, the “outside” subnet can be changed via a script during creation of OOB. The “inside” (Proxmox VNETs) in this lab use FNDN’s IP addressing scheme Documented here Shown in the topology Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Prerequisites :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsThe VNETs “inside” of this lab use FNDN’s IP addressing scheme Documented here Shown in the topology This scheme cannot be changed easily and no script nor mechanism is being provided to do so. The “outside” or physical network of Proxmox has a default subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 This lab requires a full Class C subnet with the first 125 addresses reserved. Used for the physical interface of PVE server(s) OOB and TCGUI VMs IP addresses OOB VIPs to the “inside” The “outside” subnet can be changed via a script during creation of OOB. User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta name="twitter:description" content="IP Addressing and Naming Convention AssumptionsDedicate a full class C network Minimally needed are IP’s 4th Octet reserved from .2 thru .125 Installation scripts by default assumes this class C is 172.16.3.x/24 The subnet can be changed via a script during creation of OOB. The “outside” or (physical network) of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of PVE server(s) OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses OOB VIPs (x.y.z.-) to the “inside” (10.100.55.-) As previously described, the “outside” subnet can be changed via a script during creation of OOB. The “inside” (Proxmox VNETs) in this lab use FNDN’s IP addressing scheme Documented here Shown in the topology Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
     <meta property="og:url" content="http://localhost:1313/prerequisites/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Prerequisites :: SE How-To Build Lab">
-    <meta property="og:description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsThe VNETs “inside” of this lab use FNDN’s IP addressing scheme Documented here Shown in the topology This scheme cannot be changed easily and no script nor mechanism is being provided to do so. The “outside” or physical network of Proxmox has a default subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 This lab requires a full Class C subnet with the first 125 addresses reserved. Used for the physical interface of PVE server(s) OOB and TCGUI VMs IP addresses OOB VIPs to the “inside” The “outside” subnet can be changed via a script during creation of OOB. User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta property="og:description" content="IP Addressing and Naming Convention AssumptionsDedicate a full class C network Minimally needed are IP’s 4th Octet reserved from .2 thru .125 Installation scripts by default assumes this class C is 172.16.3.x/24 The subnet can be changed via a script during creation of OOB. The “outside” or (physical network) of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of PVE server(s) OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses OOB VIPs (x.y.z.-) to the “inside” (10.100.55.-) As previously described, the “outside” subnet can be changed via a script during creation of OOB. The “inside” (Proxmox VNETs) in this lab use FNDN’s IP addressing scheme Documented here Shown in the topology Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Prerequisites :: SE How-To Build Lab">
-    <meta itemprop="description" content="Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox IP Addressing and Naming Convention AssumptionsThe VNETs “inside” of this lab use FNDN’s IP addressing scheme Documented here Shown in the topology This scheme cannot be changed easily and no script nor mechanism is being provided to do so. The “outside” or physical network of Proxmox has a default subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 This lab requires a full Class C subnet with the first 125 addresses reserved. Used for the physical interface of PVE server(s) OOB and TCGUI VMs IP addresses OOB VIPs to the “inside” The “outside” subnet can be changed via a script during creation of OOB. User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
-    <meta itemprop="wordCount" content="334">
+    <meta itemprop="description" content="IP Addressing and Naming Convention AssumptionsDedicate a full class C network Minimally needed are IP’s 4th Octet reserved from .2 thru .125 Installation scripts by default assumes this class C is 172.16.3.x/24 The subnet can be changed via a script during creation of OOB. The “outside” or (physical network) of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of PVE server(s) OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses OOB VIPs (x.y.z.-) to the “inside” (10.100.55.-) As previously described, the “outside” subnet can be changed via a script during creation of OOB. The “inside” (Proxmox VNETs) in this lab use FNDN’s IP addressing scheme Documented here Shown in the topology Proxmox Virtual Environment (PVE)This lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and ToolsProxmox Server accessible from your Work laptop via Web Console via browser &lt; PVE Server ip address:8006 &gt; SSH Work laptop has installed or equivalent capable applications:7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\system32\mstsc.exe) Browser - all testing for this build guide was done with Firefox User Name / Passwords utilizes the following standardUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commandssource Edit text files in Ubuntu (one of the following)vi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files">
+    <meta itemprop="wordCount" content="353">
     <title>Prerequisites :: SE How-To Build Lab</title>
     <link href="/prerequisites/index.xml" rel="alternate" type="application/rss+xml" title="Prerequisites :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1782932660" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1782932660" defer></script>
-    <script src="/js/search-lunr.js?1782932660" defer></script>
-    <script src="/js/search.js?1782932660" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1782940285" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1782940285" defer></script>
+    <script src="/js/search-lunr.js?1782940285" defer></script>
+    <script src="/js/search.js?1782940285" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1782932660";
+      window.relearn.index_js_url="/searchindex.en.js?1782940285";
     </script>
-    <script src="/js/lunr/lunr.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1782932660" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1782932660" defer></script>
+    <script src="/js/lunr/lunr.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1782940285" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1782940285" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782932660" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782932660" rel="stylesheet">
-    <link href="/css/theme.css?1782932660" rel="stylesheet">
-    <link href="/css/format-html.css?1782932660" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782940285" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1782940285" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1782940285" rel="stylesheet">
+    <link href="/css/theme.css?1782940285" rel="stylesheet">
+    <link href="/css/format-html.css?1782940285" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,7 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1782932660" rel="stylesheet">
+    <link href="/css/custom.css?1782940285" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -118,10 +118,10 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#ip-addressing-and-naming-convention-assumptions">IP Addressing and Naming Convention Assumptions</a></li>
         <li><a href="#proxmox-virtual-environment-pve">Proxmox Virtual Environment (PVE)</a></li>
         <li><a href="#accessibility-and-tools">Accessibility and Tools</a></li>
         <li><a href="#work-laptop-has-installed-or-equivalent-capable-applications">Work laptop has installed or equivalent capable applications:</a></li>
-        <li><a href="#ip-addressing-and-naming-convention-assumptions">IP Addressing and Naming Convention Assumptions</a></li>
         <li><a href="#user-name--passwords-utilizes-the-following-standard">User Name / Passwords utilizes the following standard</a></li>
         <li><a href="#basic-understanding-and-knowledge-of-linux-cli-commands">Basic Understanding and Knowledge of Linux CLI Commands</a></li>
         <li><a href="#edit-text-files-in-ubuntu-one-of-the-following">Edit text files in Ubuntu (one of the following)</a></li>
@@ -165,6 +165,33 @@
 
 <h1 id="prerequisites">Prerequisites</h1>
 
+<h3 id="ip-addressing-and-naming-convention-assumptions">IP Addressing and Naming Convention Assumptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><span class="badge cstyle red"><span class="badge-content">Dedicate a full class C network</span></span>
+<ul>
+<li>Minimally needed are IP&rsquo;s 4th Octet reserved from .2 thru .125</li>
+<li>Installation scripts by default assumes this class C is  172.16.3.x/24
+<ul>
+<li>The subnet can be changed via a script during creation of OOB.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>The &ldquo;outside&rdquo; or (physical network)</strong> of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP&rsquo;s reserved from .2 thru .125
+<ul>
+<li>Used for the physical interface of PVE server(s)</li>
+<li>OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses</li>
+<li>OOB VIPs (x.y.z.-) to the &ldquo;inside&rdquo; (10.100.55.-)</li>
+<li>As previously described, the &ldquo;outside&rdquo; subnet can be changed via a script during creation of OOB.</li>
+</ul>
+</li>
+<li><strong>The &ldquo;inside&rdquo; (Proxmox VNETs)</strong> in this lab use FNDN&rsquo;s IP addressing scheme
+<ul>
+<li>Documented <a href="/introduction/ip_scheme/index.html">here</a></li>
+<li>Shown in the <a href="/introduction/index.html#se-lab-topology">topology</a></li>
+</ul>
+</li>
+</ul>
 <h3 id="proxmox-virtual-environment-pve">Proxmox Virtual Environment (PVE)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>This lab requires (obviously) a Hypervisor.  This lab was written and installation scripts tested with Proxmox 9.x</li>
@@ -185,25 +212,6 @@
 <li><a href="https://ttyplus.com/multi-tabbed-putty/" rel="external" target="_blank">Multi-Tabbed PuTTY</a></li>
 <li>RDP (%windir%\system32\mstsc.exe)</li>
 <li>Browser - all testing for this build guide was done with <a href="https://www.firefox.com/en-US/" rel="external" target="_blank">Firefox</a></li>
-</ul>
-<h3 id="ip-addressing-and-naming-convention-assumptions">IP Addressing and Naming Convention Assumptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>The VNETs &ldquo;inside&rdquo; of this lab use FNDN&rsquo;s IP addressing scheme
-<ul>
-<li>Documented <a href="/introduction/ip_scheme/index.html">here</a></li>
-<li>Shown in the <a href="/introduction/index.html#se-lab-topology">topology</a></li>
-<li>This scheme cannot be changed easily and no script nor mechanism is being provided to do so.</li>
-</ul>
-</li>
-<li>The &ldquo;outside&rdquo; or <em>physical network</em> of Proxmox has a default subnet 172.16.3.x/24 with IP&rsquo;s reserved from .2 thru .125
-<ul>
-<li>This lab requires a full Class C subnet with the first 125 addresses reserved.</li>
-<li>Used for the physical interface of PVE server(s)</li>
-<li>OOB and TCGUI VMs IP addresses</li>
-<li>OOB VIPs to the &ldquo;inside&rdquo;</li>
-<li>The &ldquo;outside&rdquo; subnet can be changed via a script during creation of OOB.</li>
-</ul>
-</li>
 </ul>
 <h3 id="user-name--passwords-utilizes-the-following-standard">User Name / Passwords utilizes the following standard<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
@@ -228,8 +236,8 @@
 <h3 id="basic-understanding-and-knowledge-of-linux-cli-commands">Basic Understanding and Knowledge of Linux CLI Commands<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line?target=_blank" rel="external" target="_blank">source</a>
-<a href="#R-image-27667ba46380f28fd5a4227e7f0edaee" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-27667ba46380f28fd5a4227e7f0edaee"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
+<a href="#R-image-6bbb7f89d7e030fd5f634158e4936348" class="lightbox-link"><img alt="Linux_Commands" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Linux_Commands.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6bbb7f89d7e030fd5f634158e4936348"><img alt="Linux_Commands" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Linux_Commands.png"></a></li>
 </ul>
 <h3 id="edit-text-files-in-ubuntu-one-of-the-following">Edit text files in Ubuntu (one of the following)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
@@ -247,8 +255,8 @@
 <li>Ubuntu <a href="/prerequisites/GUI_Text_Editor.png?target=_blank" target="_blank">GNOME GUI Text Editor</a></li>
 </ul>
 <h3 id="upload-iso-and-qcow2-files">Upload ISO and qcow2 Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-353cdd5c62d3bac7e1d619ad0dcfcacc" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-353cdd5c62d3bac7e1d619ad0dcfcacc"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
+<p><a href="#R-image-7b62b02bc24c0952fd6a6edc820a80d0" class="lightbox-link"><img alt="Import Files" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/Import_Files.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b62b02bc24c0952fd6a6edc820a80d0"><img alt="Import Files" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/Import_Files.png"></a></p>
 <ul>
 <li>
 <p>Ubuntu Desktop - <a href="https://releases.ubuntu.com/noble/" rel="external" target="_blank">64-bit Desktop ISO Image</a></p>
@@ -270,8 +278,8 @@
 </ul>
 </li>
 </ul>
-<p><a href="#R-image-09be369cd7595282dfc8aa3f6e13ea30" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-09be369cd7595282dfc8aa3f6e13ea30"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-7407d7d536c4e42bf0b99e074e3764a4" class="lightbox-link"><img alt="alt" class="lazy lightbox figure-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7407d7d536c4e42bf0b99e074e3764a4"><img alt="alt" class="lazy lightbox lightbox-image" loading="lazy" src="/prerequisites/pic-import_qcow2.png"></a></p>
 <h3 id="ready-to-start-the-build">Ready to start the build<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><strong><a href="/steps/index.html">Steps To Build This Lab</a></strong></li>
@@ -342,8 +350,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782932660" defer></script>
-    <script src="/js/theme.js?1782932660" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1782940285" defer></script>
+    <script src="/js/theme.js?1782940285" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

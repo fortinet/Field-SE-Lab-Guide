@@ -11,9 +11,14 @@ weight = 20
 ![Create_Clone](Create_Clone.png) 
 - Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT
 ![Verify_Hardware](Verify_Hardware.png) 
-- Configure Cloud-Init
-   - If not using the default 172.16.3.x subnet, put in yours
-   - Example: *ip=192.168.10.80,gw=192.168.10.1*
+- Configure Cloud-Init per [IP addressing scheme](introduction/ip_scheme)
+    - NET0
+        - The 4th Octet for this VM **MUST be** x.y.z.80 
+        - If not using the default 172.16.3.x subnet, put in yours
+        - Example: *ip=192.168.10.80,gw=192.168.10.1*
+    - NET1 
+        - 10.100.55.80/24
+        - NO Gateway
 ![Config_Cloud_Init](Config_Cloud_Init.png) 
  
 - Start the OOB VM
