@@ -5,7 +5,7 @@ var relearn_searchindex = [
     "description": "Download latest ISO Prepare USB Flash Drive Install using Proxmox VE Installer Insert the prepared installation USB Flash Drive Hit enter on “Install Proxmox VE (Graphical)\"\rAgree to EULA\rConfigure Hard disk by clicking “Next” for default (use whole drive, in a default configuration)\rConfigure Country, Time Zone, Keyboard and click “next” Set root user password, enter a valid email address and click “next”\rSet Management Interface, Hostname (full FQDN), IP address/subnet, Gateway, DNS\rUncheck Automatically Reboot after successful installation (provides time to remove USB Flash Drive) Confirm information displayed and click Next Remove USB Flash Drive, click Reboot",
     "tags": [],
     "title": "Base Install",
-    "uri": "/extras/proxmox_install/base_install/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/proxmox_install/base_install/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
@@ -13,7 +13,7 @@ var relearn_searchindex = [
     "description": "InfoQuantity column denotes how many required, but the Description URL often refers to a “pack” with a bulk quantity Enclosure/Case\rQuantity Description 1 Enclosure 3 DIN Rails Red, Black, Green Terminal Blocks Based on Terminal Blocks Terminal Block Jumper 1 Hookup Wire - 6 Colors 1 C14 Power Plug 1 Universal AC Power Cable (C13) 1 Heat Shrink Tubing 14 Bolts 14 Nuts 14 Washers 3 Ethernet Patch Cables Based on DIN Rails Fork Spade Connectors Based on Terminal Blocks Ferrule 16AWG Connectors Modbus Devices\rQuantity Description 2 Arduino UNO WiFi REV2 2 W5100 Ethernet Network Shield 2 PoE Splitter Adapter 48V to 12V, 5.5x2.1mm DC, 2 pack 1 LED - Red - 5mm 1 Resistor 1K ohm 2 Momentary Push Button - Normally Open 8 Breadboard Jumper Wire Digital I/O Components\rQuantity Description 1 Emergency Latching Stop Button 1 Red, 1 Green 12V RED/GREEN Indicator LEDs 16mm 1 AC to 12VDC DIN-Rail Power Supply Tools\rQuantity Description Wire Stripper Ferrule Crimper ** **",
     "tags": [],
     "title": "Bill of Materials",
-    "uri": "/extras/ot_demo_lab/bill_of_materials/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -21,7 +21,7 @@ var relearn_searchindex = [
     "description": "Create the VM\rIn PVE GUI \u003e (left click) Datacenter \u003e (right click) Node \u003e Create VM General\nChoose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS\nUse CD/DVD disc image Storage: \u003cyour Proxmox storage, if no NAS, then “local”\u003e ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System",
     "tags": [],
     "title": "Create Ubuntu VM Template",
-    "uri": "/steps/ubuntu_template/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/ubuntu_template/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -29,7 +29,7 @@ var relearn_searchindex = [
     "description": "The intent of this Lab Build Guide is to significantly reduce the complexity and time required to setup the “infrastructure” around Fortinet technologies often needed in an SE Lab.\nThis Lab removes the need to:\nplan and develop an IP Addressing scheme (this lab follows FNDN’s) learn, understand and implement WAN Emulation (this lab utilizes TCGUI) plan and install multiple “end user” end points (this lab uses Ubuntu) Following this lab’s step-by-step instructions, the result is the deployment and base config for everything shown in the diagram below, at which point an SE can spend time learning and utilizing Fortinet technologies.",
     "tags": [],
     "title": "Introduction",
-    "uri": "/introduction/index.html"
+    "uri": "/Field-SE-Lab-Guide/introduction/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Introduction",
@@ -37,7 +37,7 @@ var relearn_searchindex = [
     "description": "Download following as IP Scheme.xlsx\nBranch FortiGates\rVNET FTNTMGT BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCHWAN6 BRCHLAN1 BRCHLAN2 BRCHLAN3 Device Branch01 port4 10.100.55.55 /24 port1 10.198.1.2 port2 10.198.2.2 /29 port3 10.1.1.1 /24 Branch02 port4 10.100.55.56 /24 port1 10.198.3.2 port2 10.198.4.2 /29 port3 10.1.2.1 /24 Branch03 port4 10.100.55.57 /24 port1 10.198.5.2 port2 10.198.6.2 /29 port3 10.1.3.1 /24 Hub FortiGates\rVNET FTNTMGT COREWAN1 COREWAN2 COREWAN3 COREWAN4 ISFW01 ISFW02 DMZ01 HAHUB01 Device Hub01a port4 10.100.55.51 /24 port1 10.198.7.2 port2 10.198.8.2 /29 port3 10.100.88.1 /24 port5 10.100.77.1 /24 port6 No_IP Hub01b port4 10.100.55.52 /24 port1 10.198.7.3 port2 10.198.8.3 /29 port3 10.100.88.2 /24 port5 10.100.77.2 /24 port6 No_IP Hub02a port4 10.100.55.53 /24 port1 10.198.9.2 port2 10.198.10.2 /29 port3 10.100.99.1 /24 FMG and FAZ\rVNET ISFW01 FTNTMGT vmbr0 FTNTMGT Device FMG port1 10.100.55.12 /24 port2 10.100.88.12 /24 port3 172.16.3.12 /24 port4 down FAZ port1 10.100.55.2 /24 port2 10.100.88.2 /24 port3 172.16.3.2 /24 port4 down Ubuntu Endpoints\rVNET FTNTMGT OFFNET BRCHLAN1 BRCHLAN2 BRCHLAN3 ISFW01 ISFW02 Device Ubuntu-00 eth1 10.100.55.70 /24 eth0 10.100.66.10 /24 Ubuntu-01 eth1 10.100.55.71 /24 eth0 10.1.1.10 /24 Ubuntu-02 eth1 10.100.55.72 /24 eth0 10.1.2.10 /24 Ubuntu-03 eth1 10.100.55.73 /24 eth0 10.1.3.10 /24 Ubuntu-11 eth1 10.100.55.81 /24 eth0 10.100.88.10 /24 Ubuntu-21 eth1 10.100.55.91 /24 eth0 10.100.99.10 /24 OOB \u0026 TCGUI\rVNET FTNTMGT vmbr0 BRCHWAN1 BRCHWAN2 BRCHWAN3 BRCHWAN4 BRCHWAN5 BRCHWAN6 COREWAN1 COREWAN2 COREWAN3 COREWAN4 OFFNET Device Ubuntu-OOB eth0 10.100.55.80 /24 eth1 172.16.3.80 /24 Ubuntu-TCGUI eth0 172.16.3.90 /24 eth1 10.198.1.1 eth2 10.198.2.1 /29 eth3 10.198.3.1 eth4 10.198.4.1 /29 eth5 10.198.5.1 eth6 10.198.6.1 /29 eth7 10.198.7.1 eth8 10.198.8.1 /29 eth9 10.198.9.1 eth10 10.198.10.1 /29 eth11 10.100.66.1 /24",
     "tags": [],
     "title": "IP Scheme",
-    "uri": "/introduction/ip_scheme/index.html"
+    "uri": "/Field-SE-Lab-Guide/introduction/ip_scheme/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -45,15 +45,15 @@ var relearn_searchindex = [
     "description": "“Official” Proxmox documentation\nPVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”\nBase Install Post Installation “Must Do’s”",
     "tags": [],
     "title": "Proxmox Install",
-    "uri": "/extras/proxmox_install/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/proxmox_install/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
-    "content": "Create Full Clone and Install Packages\rCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template\nVM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init per IP addressing scheme\nNET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 NET1 10.100.55.80/24 NO Gateway Start the OOB VM\nRDP to OOB VM\nNote: Using RDP will be “EASIER” as it allows “cut and paste” If you see the following dialog, click on “Remind Me Later” ​\rfrom Terminal in OOB\rgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads\r​\rfrom Terminal in OOB\rcd /home/fortinet/Downloads/\r​\rfrom Terminal in OOB\rchmod 755 *.sh\r​\rfrom Terminal in OOB\rRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) ./update_subnet.sh \u003cexternal subnet to SE Lab\u003e Example: ./update_subnet.sh 192.168.10\rNext start the install script ​\rfrom Terminal in OOB\r./OOB_Install.sh\rNote: VM will auto reboot after “OOB_Install.sh” script runs ​\rfrom Terminal in OOB\rcd /home/fortinet/Downloads/ ./OOB_Containers.sh\rConfiguraion\rRDP to OOB VM\nNote: Using RDP will be “EASIER” as it allows “cut and paste” DNS (CoreDNS)\nImportant - UPDATE REQUIRED if your PVE Server Name is NOT “PVE01”. If different, update the two “db” files listed below. DNS is critical for Ansible automation CoreDNS has been preconfigured for this topology Two RFC 1035-style zone database files have been preconfigured here: /home/Fortinet/c_data/coredns/conf/zones db.fortinet.internal\t\u003c= intended for endpoints “internal” to proxmox db.home.internal\t\u003c= intended for endpoints “external” to proxmox If changes are made to zone database files, execute the following: ​\rfrom Terminal in /home/Fortinet/c_data/coredns\rdocker compose down\r​\rfrom Terminal in /home/Fortinet/c_data/coredns\rdocker compose up -d “homepage”\nhomepage available via browswer via OOB’s IP \u003c 172.16.3.80 \u003e or via the subnet you changed to from the default homepage is a customizable application dashboard YAML files located here: /home/fortinet/c_data/homepage/config bookmarks.yaml \u003c= URL’s for GUI and SSH access to Lab VM’s services.yaml \u003c= ProxMox Server GUI URL/Status settings.yaml \u003c= Column Headings/Layout widgets.yaml\t\u003c= Date/Time – Weather/Location Configure Proxmox Widget On the PVE Server =\u003e Create User and API Token Click on: Datacenter/Permissions/Groups Click on Create button Name:\tHomepage-readonly-users Click on: Datacenter/Permissions Click: Add =\u003e Group Permission Path: / Group:\tHomepage-readonly-users Role: PVEAuditor Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: Homepage Realm: Linux PAM standard authentication Group:\tHomepage-readonly-users Expires:\tnever Enabled:\tchecked Click on: Datacenter/Permissions/API Tokens Click: Add User: Homepage@pam Token ID: api-readonly Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated On Ubuntu-OOB VM Edit services.yaml located in /home/fortinet/c_data/homepage/config Update PVE Server Name, PVE Server IP address, and API Secret/password as described below Guacamole\nFollowing steps need executed ​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose ps\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose cp ./dump.sql guacamole-sql:/dump.sql\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose exec guacamole-sql /bin/sh\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rsh-5.1# mysql -u root -p \u003c ./dump.sql\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rEnter password: password\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rsh-5.1# exit\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose down\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose up –d\rThere are NO ADDITIONAL CHANGES REQUIRED =\u003e Guacamole has been preconfigured for this topology In the future when your lab has additions/changes, see Guacamole section. Verification\r“homepage” is working via Work Laptop browser: http://172.16.3.80 (URL should reflect your subnet if not-default) Guacamole is working via Work Laptop browser: http://172.16.3.80:8080/guacamole (URL should reflect your subnet if not-default) User: guacadmin Password: guacadmin DNS is working ​\rfrom Terminal\rping oob\r​\rfrom Terminal\rping oob.home.internal\r​\rfrom Terminal\rping oob.fortinet.internal\rNAT/Forwarding working Should see multiple: PREROUTING 172.16.3.X (or your subnet if not-default) addresses and POSTROUTING MASQUERADE ​\rfrom Terminal\rsudo iptables -t nat -L -n -v\rComplete",
+    "content": "Create Full Clone and Install Packages\rCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template\nVM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init per IP addressing scheme\nNET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 NET1 10.100.55.80/24 NO Gateway Start the OOB VM\nRDP to OOB VM\nNote: Using RDP will be “EASIER” as it allows “cut and paste” If you see the following dialog, click on “Remind Me Later” ​\rfrom Terminal in OOB\rgit clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads\r​\rfrom Terminal in OOB\rcd /home/fortinet/Downloads/\r​\rfrom Terminal in OOB\rchmod 755 *.sh\r​\rfrom Terminal in OOB\rRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) ./update_subnet.sh \u003cexternal subnet to SE Lab\u003e Example: ./update_subnet.sh 192.168.10\rNext start the install script ​\rfrom Terminal in OOB\r./OOB_Install.sh\rNote: VM will auto reboot after “OOB_Install.sh” script runs ​\rfrom Terminal in OOB\rcd /home/fortinet/Downloads/\r​\rfrom Terminal in OOB\r./OOB_Containers.sh\rConfiguraion\rRDP to OOB VM\nNote: Using RDP will be “EASIER” as it allows “cut and paste” DNS (CoreDNS)\nImportant - UPDATE REQUIRED if your PVE Server Name is NOT “PVE01”. If different, update the two “db” files listed below. DNS is critical for Ansible automation CoreDNS has been preconfigured for this topology Two RFC 1035-style zone database files have been preconfigured here: /home/Fortinet/c_data/coredns/conf/zones db.fortinet.internal\t\u003c= intended for endpoints “internal” to proxmox db.home.internal\t\u003c= intended for endpoints “external” to proxmox If changes are made to zone database files, execute the following: ​\rfrom Terminal in /home/Fortinet/c_data/coredns\rdocker compose down\r​\rfrom Terminal in /home/Fortinet/c_data/coredns\rdocker compose up -d “homepage”\nhomepage available via browswer via OOB’s IP \u003c 172.16.3.80 \u003e or via the subnet you changed to from the default homepage is a customizable application dashboard YAML files located here: /home/fortinet/c_data/homepage/config bookmarks.yaml \u003c= URL’s for GUI and SSH access to Lab VM’s services.yaml \u003c= ProxMox Server GUI URL/Status settings.yaml \u003c= Column Headings/Layout widgets.yaml\t\u003c= Date/Time – Weather/Location Configure Proxmox Widget On the PVE Server =\u003e Create User and API Token Click on: Datacenter/Permissions/Groups Click on Create button Name:\tHomepage-readonly-users Click on: Datacenter/Permissions Click: Add =\u003e Group Permission Path: / Group:\tHomepage-readonly-users Role: PVEAuditor Propagate: Checked Click on: Datacenter/Permissions/Users Click: Add User name: Homepage Realm: Linux PAM standard authentication Group:\tHomepage-readonly-users Expires:\tnever Enabled:\tchecked Click on: Datacenter/Permissions/API Tokens Click: Add User: Homepage@pam Token ID: api-readonly Privilege Separation: Unchecked Copy the Token ID and Secret generated Note: Secret value is only displayed once when token generated On Ubuntu-OOB VM Edit services.yaml located in /home/fortinet/c_data/homepage/config Update PVE Server Name, PVE Server IP address, and API Secret/password as described below Guacamole\nFollowing steps need executed ​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose ps\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose cp ./dump.sql guacamole-sql:/dump.sql\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose exec guacamole-sql /bin/sh\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rsh-5.1# mysql -u root -p \u003c ./dump.sql\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rEnter password: password\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rsh-5.1# exit\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose down\r​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose up –d\rThere are NO ADDITIONAL CHANGES REQUIRED =\u003e Guacamole has been preconfigured for this topology In the future when your lab has additions/changes, see Guacamole section. Verification\r“homepage” is working via Work Laptop browser: http://172.16.3.80 (URL should reflect your subnet if not-default) Guacamole is working via Work Laptop browser: http://172.16.3.80:8080/guacamole (URL should reflect your subnet if not-default) User: guacadmin Password: guacadmin DNS is working ​\rfrom Terminal\rping oob\r​\rfrom Terminal\rping oob.home.internal\r​\rfrom Terminal\rping oob.fortinet.internal\rNAT/Forwarding working Should see multiple: PREROUTING 172.16.3.X (or your subnet if not-default) addresses and POSTROUTING MASQUERADE ​\rfrom Terminal\rsudo iptables -t nat -L -n -v\rComplete",
     "description": "Create Full Clone and Install Packages\rCreate Full Clone of “Ubuntu-Template” by right clicking on the VM Template\nVM ID: 441 Name: Ubuntu-OOB Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT Configure Cloud-Init per IP addressing scheme\nNET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.3.x subnet, put in yours Example: ip=192.168.10.80,gw=192.168.10.1 NET1 10.100.55.80/24 NO Gateway Start the OOB VM",
     "tags": [],
     "title": "Create OOB Management VM",
-    "uri": "/steps/oob/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/oob/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e Proxmox Install",
@@ -61,7 +61,7 @@ var relearn_searchindex = [
     "description": "Login to GUI https://\u003chost name\u003e or \u003cIP address\u003e:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node \u003e Firewall \u003e Option Datacenter \u003e Firewall \u003e Options Configure apt-get update and update PVE server Node \u003e Updates \u003e Repositories Add: Repository \u003e No-Subscription Disable: https://enterprise.proxmox.com/debian/ceph-quincy Disable: https://enterprise.proxmox.com/debian/pve Perform upgrade from either CLI or GUI ​\rfrom PVE Shell\rIf at the end of the following commands, it says reboot….do it. apt update –y apt dist-upgrade –y apt upgrade -y\rAllow uploading and importing of qcow2 files Add import to /etc/pve/storage.cfg file ​\rstorage.cfg\rdir: local path /var/lib/vz content iso,vztmpl,backup,import\rThen you should see Import listed",
     "tags": [],
     "title": "Post Installation - Must Do's",
-    "uri": "/extras/proxmox_install/post_installation/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -69,7 +69,7 @@ var relearn_searchindex = [
     "description": "IP Addressing and Naming Convention Assumptions\rDedicate a full class C network Minimally needed are IP’s 4th Octet reserved from .2 thru .125 Installation scripts by default assumes this class C is 172.16.3.x/24 The subnet can be changed via a script during creation of OOB. The “outside” or (physical network) of Proxmox as described above uses by default the subnet 172.16.3.x/24 with IP’s reserved from .2 thru .125 Used for the physical interface of PVE server(s) OOB (x.y.z.80) and TCGUI (x.y.z.90) IP addresses OOB VIPs (x.y.z.-) to the “inside” (10.100.55.-) As previously described, the “outside” subnet can be changed via a script during creation of OOB. The “inside” (Proxmox VNETs) in this lab use FNDN’s IP addressing scheme Documented here Shown in the topology Proxmox Virtual Environment (PVE)\rThis lab requires (obviously) a Hypervisor. This lab was written and installation scripts tested with Proxmox 9.x Accessibility and Tools\rProxmox Server accessible from your Work laptop via Web Console via browser \u003c PVE Server ip address:8006 \u003e SSH Work laptop has installed or equivalent capable applications:\r7-zip WinSCP Multi-Tabbed PuTTY RDP (%windir%\\system32\\mstsc.exe) Browser - all testing for this build guide was done with Firefox User Name / Passwords utilizes the following standard\rUbuntu VMs User Name: fortinet (all lowercase) Password: password (all lowercase) Fortinet VMs User Name: admin (all lowercase) Password: password (all lowercase) InfoWhile “password” should never be used in production, this being a non-internet facing lab, for simplicity and to reduce complexity disables the default password policy. Starting with v7.6.5 a default password policy was introduced. Basic Understanding and Knowledge of Linux CLI Commands\rsource Edit text files in Ubuntu (one of the following)\rvi cheat sheet how to use nano how to use Ubuntu GNOME GUI Text Editor Upload ISO and qcow2 Files",
     "tags": [],
     "title": "Prerequisites",
-    "uri": "/prerequisites/index.html"
+    "uri": "/Field-SE-Lab-Guide/prerequisites/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -77,7 +77,7 @@ var relearn_searchindex = [
     "description": "Create FortiFlex API User and Tokens\rCreate API User and Download Credentials\nFollow the 5 steps in section “To create an API user:” on Docs Fortinet Create VM Configuration\nFollow the steps in section “Creating a VM configuration” on Docs Fortinet TipUse a consistent naming convention, especially when running multiple lab environments InfoExample below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services Create VM entitlements",
     "tags": [],
     "title": "Ansible Prerequisites",
-    "uri": "/steps/ansible/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/ansible/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -85,7 +85,7 @@ var relearn_searchindex = [
     "description": "NoteThis section assumes OOB VM has been successfully installed. Change/Add/Delete Guacamole Connections\rOpen browswer and login to http://\u003cIP Address of OOB\u003e:8080/guacamole\nUser/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage\rLaunch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details\rCreate the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore",
     "tags": [],
     "title": "Guacamole",
-    "uri": "/extras/guacamole/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/guacamole/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
@@ -93,7 +93,7 @@ var relearn_searchindex = [
     "description": "Enclosure Build Steps\rEnclosure Prep Remove Lid Remove Pick-and-Pull Foam Insert Mount DIN Rails\rRemove Back of Enclosure",
     "tags": [],
     "title": "How-To Build Enclosure",
-    "uri": "/extras/ot_demo_lab/how_to_build_enclosure/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_enclosure/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -101,7 +101,7 @@ var relearn_searchindex = [
     "description": "Execute and complete the following 11 steps in order\n1) PVE server\nPVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​\rfrom PVE Shell\rcd /root\r​\rfrom PVE Shell\rcurl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh \u003e Create_VNETs.sh\r​\rfrom PVE Shell\rchmod 777 Create_VNETs.sh\r​\rfrom PVE Shell\r./Create_VNETs.sh",
     "tags": [],
     "title": "Steps To Build This Lab",
-    "uri": "/steps/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -109,7 +109,7 @@ var relearn_searchindex = [
     "description": "If you receive an error No route to host with any of the following steps, use the Troubleshoot Ansible steps\nfrom Terminal in OOB ​\rRDP to OOB\rcd /home/fortinet/automation/ansible/ubuntu\r​\rRDP to OOB\r./create_tcgui.sh ../vars/all-hosts.yml \u003cPVE server name\u003e ubuntu_tcgui\r​\rRDP to OOB\r./start_stop_remove_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e ubuntu_tcgui started",
     "tags": [],
     "title": "Create TCGUI VM",
-    "uri": "/steps/tcgui/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/tcgui/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
@@ -117,7 +117,7 @@ var relearn_searchindex = [
     "description": "Arduino Modbus Sketches:\nEthernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:\nUno_Ethernet_Enclosure-Box.3mf 3D Printed Parts\rUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount",
     "tags": [],
     "title": "How-To Build Modbus Devices",
-    "uri": "/extras/ot_demo_lab/how_to_build_modbus_devices/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -125,7 +125,7 @@ var relearn_searchindex = [
     "description": "If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Copy Bootstrap ISO’s, Create VM’s, Start VM’s\rfrom Terminal in OOB ​\rRDP to OOB\rcd /home/fortinet/automation/ansible/fortinet\rCopy bootstrap ISO’s to Proxmox server ​\rRDP to OOB\r./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml \u003cPVE server name\u003e\rCreate the FGT VM’s on Proxmox ​\rRDP to OOB\r./create-vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e fortigate_sdwan v7.6.6.M\rStart the VM’s just created ​\rRDP to OOB\r./start_remove_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e fortigate_sdwan started\rPull FortiFlex Tokens\rPull FortiFlex tokens from FortiCare and place them in .lic files Verify after this step: /home/fortinet/automation/ansible/fortinet/license has *.lic files with the content your FortiFlex tokens\n​\rContinuing from Terminal in OOB\rcd /home/fortinet/automation/ansible/fortiflex\r​\rContinuing from Terminal in OOB\r./flex-entitlements.sh Pull FortiFlex Tokens\rNote: This next script will “fail”, but is successful if VM’s reboot",
     "tags": [],
     "title": "Create FortiGate VMs",
-    "uri": "/steps/fortigate/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/fortigate/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -133,7 +133,7 @@ var relearn_searchindex = [
     "description": "Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT Demo Lab",
     "tags": [],
     "title": "Extras",
-    "uri": "/extras/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
@@ -141,7 +141,7 @@ var relearn_searchindex = [
     "description": "3D Printed Parts 3mf File:\nUno_Ethernet_Enclosure-Box.3mf 3D Printed Parts\rUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Digital I/O Components\rLatching Emergency Stop Button",
     "tags": [],
     "title": "How-To Digital I/O",
-    "uri": "/extras/ot_demo_lab/how_to_build_digital_io/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -149,7 +149,7 @@ var relearn_searchindex = [
     "description": "Below are common Ansible issues that require troubleshooting\nNo Route to Host\rNetwork Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @\u003ctarget_ip_address\u003e Via CLI: ssh @\u003ctarget_hostname\u003e If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​\rfrom PVE Shell\rForce regeneration of self-cert pvecm updatecerts --force\r​\rfrom PVE Shell\rRestart the web interface services systemctl restart pvedaemon pveproxy",
     "tags": [],
     "title": "Troubleshoot Ansible",
-    "uri": "/extras/troubleshoot_ansible/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -157,7 +157,7 @@ var relearn_searchindex = [
     "description": "Deploy FortiManager VM\rfrom Terminal in OOB ​\rfrom Terminal in OOB\rcd /home/fortinet/automation/ansible/fortinet\r​\rfrom Terminal in OOB\r./create-vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e fmg v7.6.6.M\r​\rfrom Terminal in OOB\r./start_remove_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e fmg started",
     "tags": [],
     "title": "Create FortiManager VM",
-    "uri": "/steps/fortimanager/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/fortimanager/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras \u003e OT Lab",
@@ -165,7 +165,7 @@ var relearn_searchindex = [
     "description": "Intra-VLAN Blocking\rOverview\nDemonstrate how a basic OT MODBUS environment unmodified, can be moved from an unmanaged switch to a FortiGate connected to a FortiSwitch via FortiLink and gain visibility, inspection, and microsegmentation.\nHigh Level Steps\nMODBUS devices (Client and Server) communicating on an unmanaged 4 port switch Move the MODBUS devices to FortiSwitch with no changes made to the MODBUS devices Configure Intra-VLAN Blocking and demonstrate the FortiGate’s visibility of the MODBUS traffic Add/Configure micro-segmentation where MODBUS devices only speak to each other only using MODBUS protocol/application Required Lab Components",
     "tags": [],
     "title": "Demo Use Cases",
-    "uri": "/extras/ot_demo_lab/how_to_demo/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_demo/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -173,7 +173,7 @@ var relearn_searchindex = [
     "description": "Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).\nThere are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)\nglobal channels Support Forum Verify Nested Virtualization is Enabled\rhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:\tcat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation\r​\rfrom Proxmox CLI (use shell in GUI)\rDownload GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 \u003c= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ova\rIn PVE GUI \u003e Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)",
     "tags": [],
     "title": "GNS3",
-    "uri": "/extras/gns3/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/gns3/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -181,7 +181,7 @@ var relearn_searchindex = [
     "description": "Deploy FortiAnalyzer VM\rfrom Terminal in OOB ​\rfrom Terminal in OOB\rcd /home/fortinet/automation/ansible/fortinet\r​\rfrom Terminal in OOB\r./create-vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e faz v7.6.6.M\r​\rfrom Terminal in OOB\r./start_remove_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e faz started\rMake sure FortiAnalyzer VM has fully started before continuing. Suggest opening console windows and verifying login prompt showing. Configure FortiAnalyzer from Console\r​\rfrom FAZ VM’s console on Proxmox\rfrom FAZ VM’s console on Proxmox In the log in prompt, enter the initial/default log in: username: admin, and no password Prompted to enter new password complying with new password policy introduced in v7.6.4 FMG-VM64-KVM login: admin password: You are forced to change your password! According to the password policy enforced on this device, please change your password! New password must conform to the following policy: minimum-length=8; must contain upper-case-letter lower-case-letter number non-alphanumeric; expire=0; password-history=0 New Password:\rDisable Password Policy and Set to Lab Standard ​\rfrom FAZ VM’s console on Proxmox\rSet a password that is compliant with Password Policy Example: Fortinet1! Change admin password to Lab’s standard Allow admin user to use JSON config system password-policy set status disable end config system admin user edit admin set password password set rpc-permit read-write next end\rAfter typeing end you will be automatically logged out. Log back in and continue",
     "tags": [],
     "title": "Create FortiAnalyzer VM",
-    "uri": "/steps/fortianalyzer/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/fortianalyzer/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -189,7 +189,7 @@ var relearn_searchindex = [
     "description": "Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).\nThere are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)\nglobal channels Support Forum Verify Nested Virtualization is Enabled\rhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:\tcat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM Creation\rIn PVE GUI \u003e Click “Create VM” General",
     "tags": [],
     "title": "Nesting ESXi",
-    "uri": "/extras/nesting_esxi/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/nesting_esxi/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Steps To Build This Lab",
@@ -197,7 +197,7 @@ var relearn_searchindex = [
     "description": "If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Create Ubuntu VM’s\rfrom Terminal in OOB ​\rRDP to OOB\rcd /home/fortinet/automation/ansible/ubuntu\r​\rRDP to OOB\r./create_ubuntu_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e ubuntu_sdwan\r​\rRDP to OOB\r./start_stop_remove_vm.sh ../vars/all-hosts.yml \u003cPVE server name\u003e ubuntu_sdwan started\rFinish Configuring Ubuntu VM’s\rMake sure Ubuntu-x VMs have fully started (i.e. GUI is up and running) before exeucting the following. Suggest opening console windows on PVE to verify. ​\rContinuing from Terminal in OOB\r./wallpaper_update.sh ubuntu_sdwan",
     "tags": [],
     "title": "Create Ubuntu VMs",
-    "uri": "/steps/ubuntu/index.html"
+    "uri": "/Field-SE-Lab-Guide/steps/ubuntu/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -205,7 +205,7 @@ var relearn_searchindex = [
     "description": "Why would do this? VPN Split Tunnel (SASE) “blocking” access to SE Lab’s subnet.\nAdding a persistent network route in Windows 11 that survives reboots\nSyntax: route -p add [destination_network] mask [subnet_mask] [gateway_ip]\nSteps: Open Command Prompt as Admin: Right-click on CMD Example: route -p add 192.168.50.0 mask 255.255.255.0 192.168.1.1 Verify via CMD: route print",
     "tags": [],
     "title": "Windows Persistant Route",
-    "uri": "/extras/windows_persistant_route/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -213,7 +213,7 @@ var relearn_searchindex = [
     "description": "Why would do this?\nRebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup Configs\rGuacamole ​\rfrom Terminal in /home/Fortinet/c_data/guacamole\rdocker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF \u003e backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sql\rOptional: SCP backup.sql to your laptop ( always good to have a copy off the VM )",
     "tags": [],
     "title": "Upgrade Existing OOB",
-    "uri": "/extras/upgrade_existing_oob/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab \u003e Extras",
@@ -221,7 +221,7 @@ var relearn_searchindex = [
     "description": "Introduction\rThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.\nThere are four main sections in this guide:\nBill of Materials - List of materials required with URL’s to purchase. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.",
     "tags": [],
     "title": "OT Lab",
-    "uri": "/extras/ot_demo_lab/index.html"
+    "uri": "/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -229,7 +229,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/categories/index.html"
+    "uri": "/Field-SE-Lab-Guide/categories/index.html"
   },
   {
     "breadcrumb": "",
@@ -237,7 +237,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "SE How-To Build Lab",
-    "uri": "/index.html"
+    "uri": "/Field-SE-Lab-Guide/index.html"
   },
   {
     "breadcrumb": "SE How-To Build Lab",
@@ -245,6 +245,6 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/tags/index.html"
+    "uri": "/Field-SE-Lab-Guide/tags/index.html"
   }
 ]

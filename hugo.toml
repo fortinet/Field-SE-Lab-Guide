@@ -1,4 +1,4 @@
-baseURL = 'https://stevesweeneywisc.github.io/'
+baseURL = 'https://fortinet.github.io/Field-SE-Lab-Guide/'
 languageCode = 'en-us'
 title = 'SE How-To Build Lab'
 theme = "hugo-theme-relearn"

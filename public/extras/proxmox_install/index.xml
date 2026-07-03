@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Proxmox Install :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/proxmox_install/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/index.html</link>
     <description>“Official” Proxmox documentation&#xA;PVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”&#xA;Base Install Post Installation “Must Do’s”</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/proxmox_install/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Base Install</title>
-      <link>http://localhost:1313/extras/proxmox_install/base_install/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/base_install/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/proxmox_install/base_install/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/base_install/index.html</guid>
       <description>Download latest ISO Prepare USB Flash Drive Install using Proxmox VE Installer Insert the prepared installation USB Flash Drive Hit enter on “Install Proxmox VE (Graphical)&#34;&#xD;Agree to EULA&#xD;Configure Hard disk by clicking “Next” for default (use whole drive, in a default configuration)&#xD;Configure Country, Time Zone, Keyboard and click “next” Set root user password, enter a valid email address and click “next”&#xD;Set Management Interface, Hostname (full FQDN), IP address/subnet, Gateway, DNS&#xD;Uncheck Automatically Reboot after successful installation (provides time to remove USB Flash Drive) Confirm information displayed and click Next Remove USB Flash Drive, click Reboot</description>
     </item>
     <item>
       <title>Post Installation - Must Do&#39;s</title>
-      <link>http://localhost:1313/extras/proxmox_install/post_installation/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/proxmox_install/post_installation/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.html</guid>
       <description>Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription Disable: https://enterprise.proxmox.com/debian/ceph-quincy Disable: https://enterprise.proxmox.com/debian/pve Perform upgrade from either CLI or GUI ​&#xD;from PVE Shell&#xD;If at the end of the following commands, it says reboot….do it. apt update –y apt dist-upgrade –y apt upgrade -y&#xD;Allow uploading and importing of qcow2 files Add import to /etc/pve/storage.cfg file ​&#xD;storage.cfg&#xD;dir: local path /var/lib/vz content iso,vztmpl,backup,import&#xD;Then you should see Import listed</description>
     </item>
   </channel>

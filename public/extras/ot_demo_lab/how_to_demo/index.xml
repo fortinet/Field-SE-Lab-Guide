@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo Use Cases :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/ot_demo_lab/how_to_demo/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_demo/index.html</link>
     <description>Intra-VLAN Blocking&#xD;Overview&#xA;Demonstrate how a basic OT MODBUS environment unmodified, can be moved from an unmanaged switch to a FortiGate connected to a FortiSwitch via FortiLink and gain visibility, inspection, and microsegmentation.&#xA;High Level Steps&#xA;MODBUS devices (Client and Server) communicating on an unmanaged 4 port switch Move the MODBUS devices to FortiSwitch with no changes made to the MODBUS devices Configure Intra-VLAN Blocking and demonstrate the FortiGate’s visibility of the MODBUS traffic Add/Configure micro-segmentation where MODBUS devices only speak to each other only using MODBUS protocol/application Required Lab Components</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/ot_demo_lab/how_to_demo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_demo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

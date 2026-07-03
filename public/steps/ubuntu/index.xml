@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Ubuntu VMs :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/steps/ubuntu/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ubuntu/index.html</link>
     <description>If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Create Ubuntu VM’s&#xD;from Terminal in OOB ​&#xD;RDP to OOB&#xD;cd /home/fortinet/automation/ansible/ubuntu&#xD;​&#xD;RDP to OOB&#xD;./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_sdwan&#xD;​&#xD;RDP to OOB&#xD;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_sdwan started&#xD;Finish Configuring Ubuntu VM’s&#xD;Make sure Ubuntu-x VMs have fully started (i.e. GUI is up and running) before exeucting the following. Suggest opening console windows on PVE to verify. ​&#xD;Continuing from Terminal in OOB&#xD;./wallpaper_update.sh ubuntu_sdwan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/steps/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/ubuntu/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create TCGUI VM :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/steps/tcgui/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/steps/tcgui/index.html</link>
     <description>If you receive an error No route to host with any of the following steps, use the Troubleshoot Ansible steps&#xA;from Terminal in OOB ​&#xD;RDP to OOB&#xD;cd /home/fortinet/automation/ansible/ubuntu&#xD;​&#xD;RDP to OOB&#xD;./create_tcgui.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui&#xD;​&#xD;RDP to OOB&#xD;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; ubuntu_tcgui started</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/steps/tcgui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/tcgui/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

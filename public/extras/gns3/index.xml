@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GNS3 :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/gns3/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html</link>
     <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation&#xD;​&#xD;from Proxmox CLI (use shell in GUI)&#xD;Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ova&#xD;In PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/gns3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

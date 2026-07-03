@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Troubleshoot Ansible :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/troubleshoot_ansible/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html</link>
     <description>Below are common Ansible issues that require troubleshooting&#xA;No Route to Host&#xD;Network Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​&#xD;from PVE Shell&#xD;Force regeneration of self-cert pvecm updatecerts --force&#xD;​&#xD;from PVE Shell&#xD;Restart the web interface services systemctl restart pvedaemon pveproxy</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/troubleshoot_ansible/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

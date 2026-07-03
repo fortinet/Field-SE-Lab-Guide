@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/Field-SE-Lab-Guide/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Field-SE-Lab-Guide/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
@@ -12,7 +12,7 @@
     <meta name="twitter:title" content="Create FortiGate VMs :: SE How-To Build Lab">
     <meta name="twitter:description" content="If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Copy Bootstrap ISO’s, Create VM’s, Start VM’sfrom Terminal in OOB ​RDP to OOBcd /home/fortinet/automation/ansible/fortinetCopy bootstrap ISO’s to Proxmox server ​RDP to OOB./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;PVE server name&gt;Create the FGT VM’s on Proxmox ​RDP to OOB./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan v7.6.6.MStart the VM’s just created ​RDP to OOB./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan startedPull FortiFlex TokensPull FortiFlex tokens from FortiCare and place them in .lic files Verify after this step: /home/fortinet/automation/ansible/fortinet/license has *.lic files with the content your FortiFlex tokens
 ​Continuing from Terminal in OOBcd /home/fortinet/automation/ansible/fortiflex​Continuing from Terminal in OOB./flex-entitlements.sh Pull FortiFlex TokensNote: This next script will “fail”, but is successful if VM’s reboot">
-    <meta property="og:url" content="http://localhost:1313/steps/fortigate/index.html">
+    <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/steps/fortigate/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Create FortiGate VMs :: SE How-To Build Lab">
     <meta property="og:description" content="If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Copy Bootstrap ISO’s, Create VM’s, Start VM’sfrom Terminal in OOB ​RDP to OOBcd /home/fortinet/automation/ansible/fortinetCopy bootstrap ISO’s to Proxmox server ​RDP to OOB./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;PVE server name&gt;Create the FGT VM’s on Proxmox ​RDP to OOB./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan v7.6.6.MStart the VM’s just created ​RDP to OOB./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan startedPull FortiFlex TokensPull FortiFlex tokens from FortiCare and place them in .lic files Verify after this step: /home/fortinet/automation/ansible/fortinet/license has *.lic files with the content your FortiFlex tokens
@@ -24,35 +24,35 @@
 ​Continuing from Terminal in OOBcd /home/fortinet/automation/ansible/fortiflex​Continuing from Terminal in OOB./flex-entitlements.sh Pull FortiFlex TokensNote: This next script will “fail”, but is successful if VM’s reboot">
     <meta itemprop="wordCount" content="228">
     <title>Create FortiGate VMs :: SE How-To Build Lab</title>
-    <link href="/steps/fortigate/index.xml" rel="alternate" type="application/rss+xml" title="Create FortiGate VMs :: SE How-To Build Lab">
-    <link href="/css/auto-complete/auto-complete.min.css?1783010712" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1783010712" defer></script>
-    <script src="/js/search-lunr.js?1783010712" defer></script>
-    <script src="/js/search.js?1783010712" defer></script>
+    <link href="/Field-SE-Lab-Guide/steps/fortigate/index.xml" rel="alternate" type="application/rss+xml" title="Create FortiGate VMs :: SE How-To Build Lab">
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783031027" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1783031027" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1783010712";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783031027";
     </script>
-    <script src="/js/lunr/lunr.min.js?1783010712" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1783010712" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1783010712" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1783010712" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783031027" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1783010712" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1783010712" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783010712" rel="stylesheet">
-    <link href="/css/theme.css?1783010712" rel="stylesheet">
-    <link href="/css/format-html.css?1783010712" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783031027" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1783031027" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783031027" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
       window.relearn.path='\/steps\/fortigate\/index.html';
       window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Field-SE-Lab-Guide';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -97,14 +97,14 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/css/custom.css?1783010712" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1783031027" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
 }
 </style>
   </head>
-  <body class="mobile-support html" data-url="/steps/fortigate/index.html">
+  <body class="mobile-support html" data-url="/Field-SE-Lab-Guide/steps/fortigate/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar" class="default-animation">
@@ -134,14 +134,14 @@
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Create FortiGate VMs</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Create FortiGate VMs</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/tcgui/index.html" title="Create TCGUI VM (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/tcgui/index.html" title="Create TCGUI VM (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/steps/fortimanager/index.html" title="Create FortiManager VM (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/fortimanager/index.html" title="Create FortiManager VM (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -165,26 +165,26 @@
 <h1 id="create-fortigate-vms">Create FortiGate VMs</h1>
 
 <ul>
-<li>If you get the error <span class="badge cstyle default"><span class="badge-content">No route to host</span></span> with any of the following steps, use the <strong><a href="/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></strong> steps</li>
+<li>If you get the error <span class="badge cstyle default"><span class="badge-content">No route to host</span></span> with any of the following steps, use the <strong><a href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></strong> steps</li>
 </ul>
 <h3 id="copy-bootstrap-isos-create-vms-start-vms">Copy Bootstrap ISO&rsquo;s, Create VM&rsquo;s, Start VM&rsquo;s<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>from Terminal in OOB
-<div class="tab-panel" data-tab-group="R-tabs-95d89f0dbee57f4b5ef2dc4f43c43a3c">
+<div class="tab-panel" data-tab-group="R-tabs-6b41ed8c154b5d16cea69700e01c3dd5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-dede791a4fbd7146bc48e4c0bb3758bb" aria-expanded="true"
+      aria-controls="R-tab-id-c2d511b342b901e6934af39996271604" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-95d89f0dbee57f4b5ef2dc4f43c43a3c','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-6b41ed8c154b5d16cea69700e01c3dd5','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-dede791a4fbd7146bc48e4c0bb3758bb"
+      id="R-tab-id-c2d511b342b901e6934af39996271604"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -195,21 +195,21 @@
 </div>
 <ul>
 <li>Copy bootstrap ISO&rsquo;s to Proxmox server
-<div class="tab-panel" data-tab-group="R-tabs-095f05a0f86c66a251c3cb083dfb7cfc">
+<div class="tab-panel" data-tab-group="R-tabs-4042b2d0c80e5bd0d768e35685eb8816">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-27eaabcb1687160c82a8cd8ac7b6ccf9" aria-expanded="true"
+      aria-controls="R-tab-id-8a35ed8a4610c3176a1275cb0d8f1168" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-095f05a0f86c66a251c3cb083dfb7cfc','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-4042b2d0c80e5bd0d768e35685eb8816','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-27eaabcb1687160c82a8cd8ac7b6ccf9"
+      id="R-tab-id-8a35ed8a4610c3176a1275cb0d8f1168"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -219,21 +219,21 @@
   </div>
 </div></li>
 <li>Create the FGT VM&rsquo;s on Proxmox
-<div class="tab-panel" data-tab-group="R-tabs-3e95e6079c4ba4257c21f2a9aa669819">
+<div class="tab-panel" data-tab-group="R-tabs-82cbd02d16c8bc7a52862ff6f61bb09b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-bff67af9f7e4fc0197bc8ee53f3a84e8" aria-expanded="true"
+      aria-controls="R-tab-id-fd87c62c869e72236e5f4f0391f04524" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-3e95e6079c4ba4257c21f2a9aa669819','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-82cbd02d16c8bc7a52862ff6f61bb09b','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-bff67af9f7e4fc0197bc8ee53f3a84e8"
+      id="R-tab-id-fd87c62c869e72236e5f4f0391f04524"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -243,21 +243,21 @@
   </div>
 </div></li>
 <li>Start the VM&rsquo;s just created
-<div class="tab-panel" data-tab-group="R-tabs-5ed793e10c00d1020ab61ea13c8f82d6">
+<div class="tab-panel" data-tab-group="R-tabs-acfece91003e82e39a8e31c53e74c97e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-0d80a5b4bed4f0c618d36d86d79c4c53" aria-expanded="true"
+      aria-controls="R-tab-id-b3b96f145d6465de8552fc8b9bc759d2" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-5ed793e10c00d1020ab61ea13c8f82d6','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-acfece91003e82e39a8e31c53e74c97e','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-0d80a5b4bed4f0c618d36d86d79c4c53"
+      id="R-tab-id-b3b96f145d6465de8552fc8b9bc759d2"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -273,21 +273,21 @@
 <ul>
 <li>Pull FortiFlex tokens from FortiCare and place them in <strong>.lic</strong> files</li>
 <li>Verify after this step: <code>/home/fortinet/automation/ansible/fortinet/license</code> has *<strong>.lic files</strong> with the content your FortiFlex tokens<br>
-<div class="tab-panel" data-tab-group="R-tabs-98df817c699679ce18454f614cd1509c">
+<div class="tab-panel" data-tab-group="R-tabs-346ccb1f589bcefc6b57f2ce6949dcd5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5a46ee8ce93a17d9e94c2ea4c6e1fa49" aria-expanded="true"
+      aria-controls="R-tab-id-cd6bc53f132cd47a41006a39c4df719a" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-98df817c699679ce18454f614cd1509c','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-346ccb1f589bcefc6b57f2ce6949dcd5','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5a46ee8ce93a17d9e94c2ea4c6e1fa49"
+      id="R-tab-id-cd6bc53f132cd47a41006a39c4df719a"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -296,21 +296,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-205e434a8ec42c77347aafb5dfa99485">
+<div class="tab-panel" data-tab-group="R-tabs-0ef9f9a11728197cbd0fb492abc25f8b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5310bdfd78c523cadb48e1c0d9f1f44b" aria-expanded="true"
+      aria-controls="R-tab-id-02e1ed3173c3ce98ee33af4145ee7022" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-205e434a8ec42c77347aafb5dfa99485','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-0ef9f9a11728197cbd0fb492abc25f8b','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5310bdfd78c523cadb48e1c0d9f1f44b"
+      id="R-tab-id-02e1ed3173c3ce98ee33af4145ee7022"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -326,21 +326,21 @@
 <li>Make sure all FortiGate VMs have fully started before exeucting the following.
 <ul>
 <li>Suggest opening FGT&rsquo;s console windows and verifying login prompt showing for all FGT&rsquo;s.
-<div class="tab-panel" data-tab-group="R-tabs-1a0a51813a90acc000af73530e5f129e">
+<div class="tab-panel" data-tab-group="R-tabs-900b6829fe5e75e0084b1aacf79600d6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a78496f53017bc746a2aa54aa7c56b44" aria-expanded="true"
+      aria-controls="R-tab-id-3fad9b027b6ce73b8ca6c7d22e32c2c6" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1a0a51813a90acc000af73530e5f129e','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-900b6829fe5e75e0084b1aacf79600d6','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a78496f53017bc746a2aa54aa7c56b44"
+      id="R-tab-id-3fad9b027b6ce73b8ca6c7d22e32c2c6"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -349,21 +349,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-b391a3f0b2423834d469b039605765ce">
+<div class="tab-panel" data-tab-group="R-tabs-2c5be9aa9ae6f764fa757aef3bd54cd1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-28d5e51d19a11d2c56afa5eef1fbb887" aria-expanded="true"
+      aria-controls="R-tab-id-f616aa70a765054bb2ccf6e3f57ef0fe" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-b391a3f0b2423834d469b039605765ce','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-2c5be9aa9ae6f764fa757aef3bd54cd1','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-28d5e51d19a11d2c56afa5eef1fbb887"
+      id="R-tab-id-f616aa70a765054bb2ccf6e3f57ef0fe"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -380,21 +380,21 @@
 <li>Make sure all FortiGate VMs have fully started before exeucting the following.
 <ul>
 <li>Suggest opening FGT&rsquo;s console windows and verifying login prompt showing for all FGT&rsquo;s.
-<div class="tab-panel" data-tab-group="R-tabs-0b341560735117f97d915908ac21789b">
+<div class="tab-panel" data-tab-group="R-tabs-14f528b5a796c83156863639e12740a9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-45c8ec3c8428b840fa58a14a518c160f" aria-expanded="true"
+      aria-controls="R-tab-id-4fdce0f44cd3f5065d65ec4ba7fd5289" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-0b341560735117f97d915908ac21789b','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-14f528b5a796c83156863639e12740a9','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-45c8ec3c8428b840fa58a14a518c160f"
+      id="R-tab-id-4fdce0f44cd3f5065d65ec4ba7fd5289"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -403,21 +403,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-42bbbf68cccd32b6ca114a7f9f2fba15">
+<div class="tab-panel" data-tab-group="R-tabs-6a39c02b015731a15e01b42daab73578">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-235d0aa024320d47858e6ec64af4385b" aria-expanded="true"
+      aria-controls="R-tab-id-468b00192888249c982877d3a141b365" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-42bbbf68cccd32b6ca114a7f9f2fba15','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-6a39c02b015731a15e01b42daab73578','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-235d0aa024320d47858e6ec64af4385b"
+      id="R-tab-id-468b00192888249c982877d3a141b365"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -439,10 +439,10 @@
     <aside id="R-sidebar" class="default-animation">
       <div id="R-header-topbar" class="default-animation"></div>
       <div id="R-header-wrapper" class="default-animation">
-        <a id="R-logo" class="R-default direction-row" href="/index.html">
+        <a id="R-logo" class="R-default direction-row" href="/Field-SE-Lab-Guide/index.html">
           <span class="logo-title default-animation">SE How-To Build Lab</span>
         </a>
-        <search><form action="/search/index.html" method="get">
+        <search><form action="/Field-SE-Lab-Guide/search/index.html" method="get">
           <div class="searchbox default-animation">
             <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
             <label class="a11y-only" for="R-search-by">Search</label>
@@ -457,7 +457,7 @@
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
           <ul class="space collapsible-menu">
-            <li class="" data-nav-url="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/index.html"><a class="padding" href="/Field-SE-Lab-Guide/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
           </ul>
         </div>
         <div class="R-menu-divider default-animation">
@@ -474,18 +474,18 @@
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-url="/introduction/index.html"><a class="padding default-animation" href="/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="/prerequisites/index.html"><a class="padding" href="/prerequisites/index.html">Prerequisites</a></li>
-            <li class="parent " data-nav-url="/steps/index.html"><a class="padding default-animation" href="/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
-            <li class="" data-nav-url="/steps/ubuntu_template/index.html"><a class="padding" href="/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
-            <li class="" data-nav-url="/steps/oob/index.html"><a class="padding" href="/steps/oob/index.html">Create OOB Management VM</a></li>
-            <li class="" data-nav-url="/steps/ansible/index.html"><a class="padding" href="/steps/ansible/index.html">Ansible Prerequisites</a></li>
-            <li class="" data-nav-url="/steps/tcgui/index.html"><a class="padding" href="/steps/tcgui/index.html">Create TCGUI VM</a></li>
-            <li class="active " data-nav-url="/steps/fortigate/index.html"><a class="padding" href="/steps/fortigate/index.html">Create FortiGate VMs</a></li>
-            <li class="" data-nav-url="/steps/fortimanager/index.html"><a class="padding" href="/steps/fortimanager/index.html">Create FortiManager VM</a></li>
-            <li class="" data-nav-url="/steps/fortianalyzer/index.html"><a class="padding" href="/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
-            <li class="" data-nav-url="/steps/ubuntu/index.html"><a class="padding" href="/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
-            <li class="" data-nav-url="/extras/index.html"><a class="padding default-animation" href="/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/introduction/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/prerequisites/index.html"><a class="padding" href="/Field-SE-Lab-Guide/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-url="/Field-SE-Lab-Guide/steps/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ansible/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/tcgui/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="active " data-nav-url="/Field-SE-Lab-Guide/steps/fortigate/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/fortimanager/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/fortianalyzer/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
@@ -503,8 +503,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783010712" defer></script>
-    <script src="/js/theme.js?1783010712" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1783031027" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nesting ESXi :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/nesting_esxi/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/nesting_esxi/index.html</link>
     <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM Creation&#xD;In PVE GUI &gt; Click “Create VM” General</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/nesting_esxi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/nesting_esxi/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post Installation - Must Do&#39;s :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/proxmox_install/post_installation/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.html</link>
     <description>Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription Disable: https://enterprise.proxmox.com/debian/ceph-quincy Disable: https://enterprise.proxmox.com/debian/pve Perform upgrade from either CLI or GUI ​&#xD;from PVE Shell&#xD;If at the end of the following commands, it says reboot….do it. apt update –y apt dist-upgrade –y apt upgrade -y&#xD;Allow uploading and importing of qcow2 files Add import to /etc/pve/storage.cfg file ​&#xD;storage.cfg&#xD;dir: local path /var/lib/vz content iso,vztmpl,backup,import&#xD;Then you should see Import listed</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/proxmox_install/post_installation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

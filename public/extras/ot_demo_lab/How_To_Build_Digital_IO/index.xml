@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How-To Digital I/O :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/ot_demo_lab/how_to_build_digital_io/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.html</link>
     <description>3D Printed Parts 3mf File:&#xA;Uno_Ethernet_Enclosure-Box.3mf 3D Printed Parts&#xD;Use ONLY small pen screwdriver on bolts (Don’t Over Tighten) Digital I/O Components&#xD;Latching Emergency Stop Button</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/ot_demo_lab/how_to_build_digital_io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

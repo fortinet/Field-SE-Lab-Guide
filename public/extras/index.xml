@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extras :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/extras/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/index.html</link>
     <description>Proxmox Install Guacamole Troubleshoot Ansible GNS3 Nesting ESXi Windows Persistant Route Upgrade Existing OOB OT Demo Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/extras/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proxmox Install</title>
-      <link>http://localhost:1313/extras/proxmox_install/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/proxmox_install/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/index.html</guid>
       <description>“Official” Proxmox documentation&#xA;PVE Docs PVE Wiki The following is “how I did it” and “lessons learned (the hard way).”&#xA;Base Install Post Installation “Must Do’s”</description>
     </item>
     <item>
       <title>Guacamole</title>
-      <link>http://localhost:1313/extras/guacamole/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/guacamole/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/guacamole/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/guacamole/index.html</guid>
       <description>NoteThis section assumes OOB VM has been successfully installed. Change/Add/Delete Guacamole Connections&#xD;Open browswer and login to http://&lt;IP Address of OOB&gt;:8080/guacamole&#xA;User/Password: guacadmin / guacadmin Click on Settings Click on Connections Configure SSH Configure RDP (for Ubuntu) Configure RDP (for Windows) Add Guacamole URL’s to homepage&#xD;Launch a connection from guacadmin / Home Copy the URL Add to homepage’s bookmark.yaml file /home/fortinet/c_data/homepage/config/bookmarks.yml From the homepage click on the link Source/Details&#xD;Create the Guacamole database Create a user for Guacamole database Configure connection settings MySQL dump and restore</description>
     </item>
     <item>
       <title>Troubleshoot Ansible</title>
-      <link>http://localhost:1313/extras/troubleshoot_ansible/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/troubleshoot_ansible/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html</guid>
       <description>Below are common Ansible issues that require troubleshooting&#xA;No Route to Host&#xD;Network Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​&#xD;from PVE Shell&#xD;Force regeneration of self-cert pvecm updatecerts --force&#xD;​&#xD;from PVE Shell&#xD;Restart the web interface services systemctl restart pvedaemon pveproxy</description>
     </item>
     <item>
       <title>GNS3</title>
-      <link>http://localhost:1313/extras/gns3/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/gns3/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html</guid>
       <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation&#xD;​&#xD;from Proxmox CLI (use shell in GUI)&#xD;Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ova&#xD;In PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)</description>
     </item>
     <item>
       <title>Nesting ESXi</title>
-      <link>http://localhost:1313/extras/nesting_esxi/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/nesting_esxi/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/nesting_esxi/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/nesting_esxi/index.html</guid>
       <description>Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).&#xA;There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)&#xA;global channels Support Forum Verify Nested Virtualization is Enabled&#xD;https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:&#x9;cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable ESXi VM Creation&#xD;In PVE GUI &gt; Click “Create VM” General</description>
     </item>
     <item>
       <title>Windows Persistant Route</title>
-      <link>http://localhost:1313/extras/windows_persistant_route/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/windows_persistant_route/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html</guid>
       <description>Why would do this? VPN Split Tunnel (SASE) “blocking” access to SE Lab’s subnet.&#xA;Adding a persistent network route in Windows 11 that survives reboots&#xA;Syntax: route -p add [destination_network] mask [subnet_mask] [gateway_ip]&#xA;Steps: Open Command Prompt as Admin: Right-click on CMD Example: route -p add 192.168.50.0 mask 255.255.255.0 192.168.1.1 Verify via CMD: route print</description>
     </item>
     <item>
       <title>Upgrade Existing OOB</title>
-      <link>http://localhost:1313/extras/upgrade_existing_oob/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/upgrade_existing_oob/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html</guid>
       <description>Why would do this?&#xA;Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup Configs&#xD;Guacamole ​&#xD;from Terminal in /home/Fortinet/c_data/guacamole&#xD;docker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sql&#xD;Optional: SCP backup.sql to your laptop ( always good to have a copy off the VM )</description>
     </item>
     <item>
       <title>OT Lab</title>
-      <link>http://localhost:1313/extras/ot_demo_lab/index.html</link>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/extras/ot_demo_lab/index.html</guid>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html</guid>
       <description>Introduction&#xD;This guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.&#xA;There are four main sections in this guide:&#xA;Bill of Materials - List of materials required with URL’s to purchase. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.</description>
     </item>
   </channel>

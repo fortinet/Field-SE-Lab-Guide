@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create FortiManager VM :: SE How-To Build Lab</title>
-    <link>http://localhost:1313/steps/fortimanager/index.html</link>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/steps/fortimanager/index.html</link>
     <description>Deploy FortiManager VM&#xD;from Terminal in OOB ​&#xD;from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortinet&#xD;​&#xD;from Terminal in OOB&#xD;./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg v7.6.6.M&#xD;​&#xD;from Terminal in OOB&#xD;./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fmg started</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/steps/fortimanager/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/fortimanager/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

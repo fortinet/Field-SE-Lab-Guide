@@ -29,7 +29,7 @@ weight = 20
 ![Remind_Me_Later](Remind_Me_Later.png)
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
+git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloads
 ````
 {{% /tab %}}
 {{% tab title="from Terminal in OOB" %}}
@@ -55,16 +55,17 @@ Example: ./update_subnet.sh 192.168.10
 - Next start the install script
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-
 ./OOB_Install.sh
-
 ````
 {{% /tab %}}
 -	**Note:** VM will auto reboot after “OOB_Install.sh” script runs
 {{% tab title="from Terminal in OOB" %}}
 ````bash
 cd /home/fortinet/Downloads/
-
+````
+{{% /tab %}}
+{{% tab title="from Terminal in OOB" %}}
+````bash
 ./OOB_Containers.sh
 ````
 {{% /tab %}}
