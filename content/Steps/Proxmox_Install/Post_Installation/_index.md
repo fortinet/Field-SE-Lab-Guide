@@ -15,14 +15,15 @@ weight = 20
 ![Data_Center_Firewall](Data_Center_Firewall.png)
 3. Configure **apt-get update** and update PVE server
     - Node > Updates > Repositories
-![Config_apt_get_update](Config_apt_get_update.png)
         - Add: Repository >  No-Subscription
-        - Disable: `https://enterprise.proxmox.com/debian/ceph-quincy`
-        - Disable: `https://enterprise.proxmox.com/debian/pve`
-![Repositories](Repositories.png)
+![Repositories_Add_No_Subscription](Repositories_Add_No_Subscription.png)
+        - Disable: Repository >  Enterprise
+![Repositories_Disable_Enterprise](Repositories_Disable_Enterprise.png)
+
         - Perform upgrade from either CLI or GUI
+            - If at the end of this step, it says reboot....do it.
+
 {{% tab title="from PVE Shell" %}}
-- If at the end of the following commands, it says reboot....do it.
 ````bash
 apt update –y
 apt dist-upgrade –y
@@ -31,6 +32,7 @@ apt upgrade -y
 ````
 {{% /tab %}}
 ![Update](Update.png)
+
 4. Allow uploading and importing of qcow2 files
     - Add **import** to /etc/pve/storage.cfg file
 {{% tab title="storage.cfg" %}}

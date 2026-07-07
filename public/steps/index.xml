@@ -3,10 +3,24 @@
   <channel>
     <title>Steps To Build This Lab :: SE How-To Build Lab</title>
     <link>http://localhost:1313/Field-SE-Lab-Guide/steps/index.html</link>
-    <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
+    <description>Execute and complete the following 11 steps in order&#xA;1) Proxmox Server Install&#xA;Follow steps in this section Proxmox Install 2) Proxmox Server Configure&#xA;Follow steps in this section Proxmox Configure 3) Create Ubuntu VM Template&#xA;Follow steps in this section Create Ubuntu VM Template 4) Create OOB Management VM&#xA;Follow steps in this section Create OOB Management VM 5) Ansible Prerequisites&#xA;Follow steps in this section Ansible Prerequisites 6) Create TCGUI VM</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxmox Install</title>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/index.html</guid>
+      <description>Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) Base Install&#xD;Base Install Post Installation “Must Do’s”&#xD;Post Installation “Must Do’s” Installation Complete&#xD;Reference Only =&gt; the “Official” Proxmox documentation</description>
+    </item>
+    <item>
+      <title>Proxmox Configure</title>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_configure/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_configure/index.html</guid>
+      <description>Create VNETs&#xD;​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/fortinet/Field-SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
+    </item>
     <item>
       <title>Create Ubuntu VM Template</title>
       <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ubuntu_template/index.html</link>

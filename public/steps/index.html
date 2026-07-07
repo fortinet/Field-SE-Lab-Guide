@@ -6,49 +6,65 @@
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
     <meta name="description" content="Execute and complete the following 11 steps in order
-1) PVE server
-PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​from PVE Shellcd /root​from PVE Shellcurl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh​from PVE Shellchmod 777 Create_VNETs.sh​from PVE Shell./Create_VNETs.sh">
+1) Proxmox Server Install
+Follow steps in this section Proxmox Install 2) Proxmox Server Configure
+Follow steps in this section Proxmox Configure 3) Create Ubuntu VM Template
+Follow steps in this section Create Ubuntu VM Template 4) Create OOB Management VM
+Follow steps in this section Create OOB Management VM 5) Ansible Prerequisites
+Follow steps in this section Ansible Prerequisites 6) Create TCGUI VM">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Steps To Build This Lab :: SE How-To Build Lab">
     <meta name="twitter:description" content="Execute and complete the following 11 steps in order
-1) PVE server
-PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​from PVE Shellcd /root​from PVE Shellcurl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh​from PVE Shellchmod 777 Create_VNETs.sh​from PVE Shell./Create_VNETs.sh">
+1) Proxmox Server Install
+Follow steps in this section Proxmox Install 2) Proxmox Server Configure
+Follow steps in this section Proxmox Configure 3) Create Ubuntu VM Template
+Follow steps in this section Create Ubuntu VM Template 4) Create OOB Management VM
+Follow steps in this section Create OOB Management VM 5) Ansible Prerequisites
+Follow steps in this section Ansible Prerequisites 6) Create TCGUI VM">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/steps/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Steps To Build This Lab :: SE How-To Build Lab">
     <meta property="og:description" content="Execute and complete the following 11 steps in order
-1) PVE server
-PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​from PVE Shellcd /root​from PVE Shellcurl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh​from PVE Shellchmod 777 Create_VNETs.sh​from PVE Shell./Create_VNETs.sh">
+1) Proxmox Server Install
+Follow steps in this section Proxmox Install 2) Proxmox Server Configure
+Follow steps in this section Proxmox Configure 3) Create Ubuntu VM Template
+Follow steps in this section Create Ubuntu VM Template 4) Create OOB Management VM
+Follow steps in this section Create OOB Management VM 5) Ansible Prerequisites
+Follow steps in this section Ansible Prerequisites 6) Create TCGUI VM">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Steps To Build This Lab :: SE How-To Build Lab">
     <meta itemprop="description" content="Execute and complete the following 11 steps in order
-1) PVE server
-PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​from PVE Shellcd /root​from PVE Shellcurl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh​from PVE Shellchmod 777 Create_VNETs.sh​from PVE Shell./Create_VNETs.sh">
-    <meta itemprop="wordCount" content="255">
+1) Proxmox Server Install
+Follow steps in this section Proxmox Install 2) Proxmox Server Configure
+Follow steps in this section Proxmox Configure 3) Create Ubuntu VM Template
+Follow steps in this section Create Ubuntu VM Template 4) Create OOB Management VM
+Follow steps in this section Create OOB Management VM 5) Ansible Prerequisites
+Follow steps in this section Ansible Prerequisites 6) Create TCGUI VM">
+    <meta itemprop="wordCount" content="129">
     <title>Steps To Build This Lab :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/steps/index.xml" rel="alternate" type="application/rss+xml" title="Steps To Build This Lab :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783031027" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1783031027" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783397539" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1783397539" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783031027";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783397539";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783397539" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783031027" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1783031027" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783031027" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783397539" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783397539" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783397539" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1783397539" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783397539" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +117,7 @@ PVE should be built with the steps found here: Proxmox Install Note The scripts/
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1783031027" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1783397539" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -133,7 +149,7 @@ PVE should be built with the steps found here: Proxmox Install Note The scripts/
 <span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/prerequisites/index.html" title="Prerequisites (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html" title="Create Ubuntu VM Template (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html" title="Proxmox Install (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -157,285 +173,43 @@ PVE should be built with the steps found here: Proxmox Install Note The scripts/
 <h1 id="steps-to-build-this-lab">Steps To Build This Lab</h1>
 
 <p>Execute and complete the following 11 steps in order</p>
-<p><strong>1) PVE server</strong></p>
+<p><strong>1) Proxmox Server Install</strong></p>
 <ul>
-<li>PVE should be built with the steps found here: <strong><a href="/Field-SE-Lab-Guide/extras/proxmox_install/index.html">Proxmox Install</a></strong></li>
-<li><span class="badge cstyle default"><span class="badge-content">Note</span></span> The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too)
-<a href="#R-image-19aa80988922a538c6e2cd2f1e41b8c8" class="lightbox-link"><img alt="Version" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/Version.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-19aa80988922a538c6e2cd2f1e41b8c8"><img alt="Version" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/Version.png"></a></li>
+<li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html">Proxmox Install</a></strong></li>
 </ul>
-<p><strong>2) Create VNETs on PVE server</strong>
-<div class="tab-panel" data-tab-group="R-tabs-b26a8f7bc8f045150670a1c508b43adf">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-cf0766a2e9eaa4018a5bc3023e782d1c" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-b26a8f7bc8f045150670a1c508b43adf','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-cf0766a2e9eaa4018a5bc3023e782d1c"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /root</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-53f959a151c2d337ebf00c83d933c4d2">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-10a1abe9d07ab43096f0efd26e12f00b" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-53f959a151c2d337ebf00c83d933c4d2','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-10a1abe9d07ab43096f0efd26e12f00b"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-05cf7009abc98de808b58d9842a49d52">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-14de3d4f28872ca0ab067967bc0d6374" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-05cf7009abc98de808b58d9842a49d52','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-14de3d4f28872ca0ab067967bc0d6374"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> Create_VNETs.sh</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-4e866928eb0a4292dcaea70bb38f171f">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-a757d604bf5560de028ffe5fc5a6a4c6" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4e866928eb0a4292dcaea70bb38f171f','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-a757d604bf5560de028ffe5fc5a6a4c6"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./Create_VNETs.sh</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div></p>
-<p><strong>3)Install proxmoxer on each PVE server</strong></p>
+<p><strong>2) Proxmox Server Configure</strong></p>
 <ul>
-<li>Starting with Proxmox 9.x, proxmoxer version 2.3 is required
-<ul>
-<li>Unforunately, &ldquo;apt install -y python3-proxmoxer&rdquo; will only install 2.2</li>
+<li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html">Proxmox Configure</a></strong></li>
 </ul>
-</li>
-<li>The following steps &ldquo;force&rdquo; installs proxmoxer version 2.3
-<div class="tab-panel" data-tab-group="R-tabs-60b599ea82c09a2307c198ca5538a94c">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-5a08956232628f7ca7ac8d7d325bc317" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-60b599ea82c09a2307c198ca5538a94c','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-5a08956232628f7ca7ac8d7d325bc317"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install pip</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-82e887ac084bef6409c0601bea8d2110">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-b8e594963950ebb1c97176331a504436" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-82e887ac084bef6409c0601bea8d2110','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-b8e594963950ebb1c97176331a504436"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install requests --break-system-packages</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-172cf1f2452473531288135e414c2737">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-8f1cc5c34ea3350ed1f5f817bcca30b8" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-172cf1f2452473531288135e414c2737','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-8f1cc5c34ea3350ed1f5f817bcca30b8"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install openssh-wrapper --break-system-packages</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-36912cd9b99f7346e01452f7ea2b10db">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-b1cc540e867c3e7d1ac48d9c23a00159" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-36912cd9b99f7346e01452f7ea2b10db','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-b1cc540e867c3e7d1ac48d9c23a00159"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install ssh_paramiko --break-system-packages</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-0c9d9b72dd2337ec5ffeb372eaa51260">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-16e9379994451b60b4516a442970aeab" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-0c9d9b72dd2337ec5ffeb372eaa51260','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-16e9379994451b60b4516a442970aeab"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install proxmoxer<span style="color:#f92672">==</span>2.3.0 --break-system-packages</span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tab-panel" data-tab-group="R-tabs-53aeaee71f9c9c851382ff5325dd62d5">
-  <div class="tab-nav">
-    <div class="tab-nav-title">&#8203;</div>
-    <button
-      aria-controls="R-tab-id-73a0d76d56a4dd2395b438ff182534b0" aria-expanded="true"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-53aeaee71f9c9c851382ff5325dd62d5','R-tab-9e406c683825368f9bc5a34897773e7d')"
-    >
-      <span class="tab-nav-text">from PVE Shell</span>
-    </button>
-  </div>
-  <div class="tab-content-container">
-    <div
-      id="R-tab-id-73a0d76d56a4dd2395b438ff182534b0"
-      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
-      class="tab-content tab-panel-style cstyle initial active">
-      <div class="tab-content-text">
-<ul>
-<li>Verify proxmoxer version 2.3 is installed</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -c <span style="color:#e6db74">&#34;import proxmoxer; print(proxmoxer.__version__)&#34;</span></span></span></code></pre></div>
-      </div>
-    </div>
-  </div>
-</div></li>
-</ul>
-<p><strong>4) Create Ubuntu VM Template</strong></p>
+<p><strong>3) Create Ubuntu VM Template</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></strong></li>
 </ul>
-<p><strong>5) Create OOB Management VM</strong></p>
+<p><strong>4) Create OOB Management VM</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/oob/index.html">Create OOB Management VM</a></strong></li>
 </ul>
-<p><strong>6) Ansible Prerequisites</strong></p>
+<p><strong>5) Ansible Prerequisites</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/ansible/index.html">Ansible Prerequisites</a></strong></li>
 </ul>
-<p><strong>7) Create TCGUI VM</strong></p>
+<p><strong>6) Create TCGUI VM</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/tcgui/index.html">Create TCGUI VM</a></strong></li>
 </ul>
-<p><strong>8) Create FortiGate VMs</strong></p>
+<p><strong>7) Create FortiGate VMs</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/fortigate/index.html">Create FortiGate VMs</a></strong></li>
 </ul>
-<p><strong>9) Create FortiManager VM</strong></p>
+<p><strong>8) Create FortiManager VM</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/fortimanager/index.html">Create FortiManager VM</a></strong></li>
 </ul>
-<p><strong>10) Create FortiAnalyzer VM</strong></p>
+<p><strong>9) Create FortiAnalyzer VM</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></strong></li>
 </ul>
-<p><strong>11) Create Ubuntu VMs</strong></p>
+<p><strong>10) Create Ubuntu VMs</strong></p>
 <ul>
 <li>Follow steps in this section <strong><a href="/Field-SE-Lab-Guide/steps/ubuntu/index.html">Create Ubuntu VMs</a></strong></li>
 </ul>
@@ -487,6 +261,8 @@ PVE should be built with the steps found here: Proxmox Install Note The scripts/
             <li class="" data-nav-url="/Field-SE-Lab-Guide/introduction/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/prerequisites/index.html"><a class="padding" href="/Field-SE-Lab-Guide/prerequisites/index.html">Prerequisites</a></li>
             <li class="active parent " data-nav-url="/Field-SE-Lab-Guide/steps/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_install/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html">Proxmox Install</a><ul id="R-subsections-029c8049e11062e3d68dc081f12271c1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html">Proxmox Configure</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/oob/index.html">Create OOB Management VM</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ansible/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ansible/index.html">Ansible Prerequisites</a></li>
@@ -513,8 +289,8 @@ PVE should be built with the steps found here: Proxmox Install Note The scripts/
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783397539" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1783397539" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

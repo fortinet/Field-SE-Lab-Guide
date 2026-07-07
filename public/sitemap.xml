@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/base_install/index.html</loc>
+    <loc>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_configure/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/base_install/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html</loc>
@@ -16,13 +22,10 @@
     <loc>http://localhost:1313/Field-SE-Lab-Guide/introduction/ip_scheme/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/index.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/Field-SE-Lab-Guide/steps/oob/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/Field-SE-Lab-Guide/extras/proxmox_install/post_installation/index.html</loc>
+    <loc>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/Field-SE-Lab-Guide/prerequisites/index.html</loc>

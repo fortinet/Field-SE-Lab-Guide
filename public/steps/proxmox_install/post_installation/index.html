@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/Field-SE-Lab-Guide/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Field-SE-Lab-Guide/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
+    <meta name="description" content="Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Post Installation - Must Do&#39;s :: SE How-To Build Lab">
+    <meta name="twitter:description" content="Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription">
+    <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.html">
+    <meta property="og:site_name" content="SE How-To Build Lab">
+    <meta property="og:title" content="Post Installation - Must Do&#39;s :: SE How-To Build Lab">
+    <meta property="og:description" content="Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Post Installation - Must Do&#39;s :: SE How-To Build Lab">
+    <meta itemprop="description" content="Login to GUI https://&lt;host name&gt; or &lt;IP address&gt;:8006 Log in as root (realm PAM) with password chosen during installation. Firewall Settings Node &gt; Firewall &gt; Option Datacenter &gt; Firewall &gt; Options Configure apt-get update and update PVE server Node &gt; Updates &gt; Repositories Add: Repository &gt; No-Subscription">
+    <meta itemprop="wordCount" content="108">
+    <title>Post Installation - Must Do&#39;s :: SE How-To Build Lab</title>
+    <link href="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.xml" rel="alternate" type="application/rss+xml" title="Post Installation - Must Do&#39;s :: SE How-To Build Lab">
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783396709" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1783396709" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783396709";
+    </script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783396709" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783396709" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783396709" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783396709" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1783396709" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783396709" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/steps\/proxmox_install\/post_installation\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Field-SE-Lab-Guide';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1783396709" rel="stylesheet">
+<style>
+:root {
+    --MAIN-WIDTH-MAX: 1000rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-url="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/steps/index.html"><span itemprop="name">Steps To Build This Lab</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html"><span itemprop="name">Proxmox Install</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Post Installation - Must Do&#39;s</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/proxmox_install/base_install/index.html" title="Base Install (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html" title="Proxmox Configure (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="post-installation---must-dos">Post Installation - Must Do&#39;s</h1>
+
+<ol>
+<li>Login to GUI
+<ul>
+<li>https://&lt;host name&gt; or &lt;IP address&gt;:8006</li>
+<li>Log in as <strong>root (realm PAM)</strong> with password chosen during installation.
+<a href="#R-image-9b15befb03e3d4aee611e92aa01f3062" class="lightbox-link"><img alt="Login" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Login.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9b15befb03e3d4aee611e92aa01f3062"><img alt="Login" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Login.png"></a></li>
+</ul>
+</li>
+<li>Firewall Settings
+<ul>
+<li>Node &gt; Firewall &gt; Option
+<a href="#R-image-6cfaeae12bbed27c600d2c43a086ddcb" class="lightbox-link"><img alt="Node_Firewall" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Node_Firewall.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6cfaeae12bbed27c600d2c43a086ddcb"><img alt="Node_Firewall" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Node_Firewall.png"></a></li>
+<li>Datacenter &gt; Firewall &gt; Options
+<a href="#R-image-48dc475807c999c6d1efd63311afac9f" class="lightbox-link"><img alt="Data_Center_Firewall" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Data_Center_Firewall.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48dc475807c999c6d1efd63311afac9f"><img alt="Data_Center_Firewall" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Data_Center_Firewall.png"></a></li>
+</ul>
+</li>
+<li>Configure <strong>apt-get update</strong> and update PVE server
+<ul>
+<li>Node &gt; Updates &gt; Repositories
+<ul>
+<li>
+<p>Add: Repository &gt;  No-Subscription
+<a href="#R-image-c721522b13a6225a9ebd6ff6cbe3fb32" class="lightbox-link"><img alt="Repositories_Add_No_Subscription" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Repositories_Add_No_Subscription.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c721522b13a6225a9ebd6ff6cbe3fb32"><img alt="Repositories_Add_No_Subscription" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Repositories_Add_No_Subscription.png"></a></p>
+</li>
+<li>
+<p>Disable: Repository &gt;  Enterprise
+<a href="#R-image-8ef539bc0721fcf6f9d58e55de95e124" class="lightbox-link"><img alt="Repositories_Disable_Enterprise" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Repositories_Disable_Enterprise.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ef539bc0721fcf6f9d58e55de95e124"><img alt="Repositories_Disable_Enterprise" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Repositories_Disable_Enterprise.png"></a></p>
+</li>
+<li>
+<p>Perform upgrade from either CLI or GUI</p>
+<ul>
+<li>If at the end of this step, it says reboot&hellip;.do it.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><div class="tab-panel" data-tab-group="R-tabs-0240d28f783f8e9944fadf7dd5dafc7a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ea9123df030dab6da9cc9aa544dc2f74" aria-expanded="true"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-0240d28f783f8e9944fadf7dd5dafc7a','R-tab-9e406c683825368f9bc5a34897773e7d')"
+    >
+      <span class="tab-nav-text">from PVE Shell</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ea9123df030dab6da9cc9aa544dc2f74"
+      data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update –y
+</span></span><span style="display:flex;"><span>apt dist-upgrade –y
+</span></span><span style="display:flex;"><span>apt upgrade -y</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#R-image-6aeeaba91c47c7f8c487bb9e0d9d68a6" class="lightbox-link"><img alt="Update" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Update.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6aeeaba91c47c7f8c487bb9e0d9d68a6"><img alt="Update" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Update.png"></a></p>
+<ol start="4">
+<li>Allow uploading and importing of qcow2 files
+<ul>
+<li>Add <strong>import</strong> to /etc/pve/storage.cfg file
+<div class="tab-panel" data-tab-group="R-tabs-201c5a97d3098b5afde617926dc0e57e">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-082ceb2a0bb7e1a6bac20ec74970d583" aria-expanded="true"
+      data-tab-item="R-tab-b0d3f3d52c636a64ecb4da84c5e4cfd4"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-201c5a97d3098b5afde617926dc0e57e','R-tab-b0d3f3d52c636a64ecb4da84c5e4cfd4')"
+    >
+      <span class="tab-nav-text">storage.cfg</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-082ceb2a0bb7e1a6bac20ec74970d583"
+      data-tab-item="R-tab-b0d3f3d52c636a64ecb4da84c5e4cfd4"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dir: local
+</span></span><span style="display:flex;"><span>        path /var/lib/vz
+</span></span><span style="display:flex;"><span>        content iso,vztmpl,backup,import</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li>Then you should see <strong>Import</strong> listed
+<a href="#R-image-72bce9c5fcdf7d71f83bd3334442da09" class="lightbox-link"><img alt="Import_Ability" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Import_Ability.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-72bce9c5fcdf7d71f83bd3334442da09"><img alt="Import_Ability" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/Import_Ability.png"></a></li>
+</ul>
+</li>
+</ol>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/Field-SE-Lab-Guide/index.html">
+          <span class="logo-title default-animation">SE How-To Build Lab</span>
+        </a>
+        <search><form action="/Field-SE-Lab-Guide/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/index.html"><a class="padding" href="/Field-SE-Lab-Guide/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/introduction/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/prerequisites/index.html"><a class="padding" href="/Field-SE-Lab-Guide/prerequisites/index.html">Prerequisites</a></li>
+            <li class="parent " data-nav-url="/Field-SE-Lab-Guide/steps/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="parent alwaysopen " data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_install/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html">Proxmox Install</a><ul id="R-subsections-029c8049e11062e3d68dc081f12271c1" class="collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_install/base_install/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/proxmox_install/base_install/index.html">Base Install</a></li>
+            <li class="active " data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/proxmox_install/post_installation/index.html">Post Installation - Must Do&#39;s</a></li></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html">Proxmox Configure</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/oob/index.html">Create OOB Management VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ansible/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ansible/index.html">Ansible Prerequisites</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/tcgui/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/tcgui/index.html">Create TCGUI VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/fortigate/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortigate/index.html">Create FortiGate VMs</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/fortimanager/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortimanager/index.html">Create FortiManager VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/fortianalyzer/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/fortianalyzer/index.html">Create FortiAnalyzer VM</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu/index.html">Create Ubuntu VMs</a></li></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1783396709" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

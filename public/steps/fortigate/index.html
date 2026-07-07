@@ -25,26 +25,26 @@
     <meta itemprop="wordCount" content="228">
     <title>Create FortiGate VMs :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/steps/fortigate/index.xml" rel="alternate" type="application/rss+xml" title="Create FortiGate VMs :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783031027" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1783031027" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783396709" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1783396709" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783031027";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783396709";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783396709" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783031027" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783031027" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1783031027" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783031027" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783396709" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783396709" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783396709" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1783396709" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783396709" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1783031027" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1783396709" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -170,21 +170,21 @@
 <h3 id="copy-bootstrap-isos-create-vms-start-vms">Copy Bootstrap ISO&rsquo;s, Create VM&rsquo;s, Start VM&rsquo;s<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>from Terminal in OOB
-<div class="tab-panel" data-tab-group="R-tabs-6b41ed8c154b5d16cea69700e01c3dd5">
+<div class="tab-panel" data-tab-group="R-tabs-a1940388dd6fa8f8785d7761ea3becea">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c2d511b342b901e6934af39996271604" aria-expanded="true"
+      aria-controls="R-tab-id-258c1ac371d437d9b94f2d46cd2844fb" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-6b41ed8c154b5d16cea69700e01c3dd5','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-a1940388dd6fa8f8785d7761ea3becea','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c2d511b342b901e6934af39996271604"
+      id="R-tab-id-258c1ac371d437d9b94f2d46cd2844fb"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -195,21 +195,21 @@
 </div>
 <ul>
 <li>Copy bootstrap ISO&rsquo;s to Proxmox server
-<div class="tab-panel" data-tab-group="R-tabs-4042b2d0c80e5bd0d768e35685eb8816">
+<div class="tab-panel" data-tab-group="R-tabs-9357c3700d058be3794431cf5df10f73">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8a35ed8a4610c3176a1275cb0d8f1168" aria-expanded="true"
+      aria-controls="R-tab-id-2fe1fed8777395bf43f1147f7ec8dc65" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4042b2d0c80e5bd0d768e35685eb8816','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-9357c3700d058be3794431cf5df10f73','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8a35ed8a4610c3176a1275cb0d8f1168"
+      id="R-tab-id-2fe1fed8777395bf43f1147f7ec8dc65"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -219,21 +219,21 @@
   </div>
 </div></li>
 <li>Create the FGT VM&rsquo;s on Proxmox
-<div class="tab-panel" data-tab-group="R-tabs-82cbd02d16c8bc7a52862ff6f61bb09b">
+<div class="tab-panel" data-tab-group="R-tabs-3e0d14f0440a81a25b86bf5b8f117d03">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-fd87c62c869e72236e5f4f0391f04524" aria-expanded="true"
+      aria-controls="R-tab-id-d8c95462512f67347aaf6c69561e9da8" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-82cbd02d16c8bc7a52862ff6f61bb09b','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-3e0d14f0440a81a25b86bf5b8f117d03','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-fd87c62c869e72236e5f4f0391f04524"
+      id="R-tab-id-d8c95462512f67347aaf6c69561e9da8"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -243,21 +243,21 @@
   </div>
 </div></li>
 <li>Start the VM&rsquo;s just created
-<div class="tab-panel" data-tab-group="R-tabs-acfece91003e82e39a8e31c53e74c97e">
+<div class="tab-panel" data-tab-group="R-tabs-ecbb07c61eb30361dc94d84d2c2e27d3">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b3b96f145d6465de8552fc8b9bc759d2" aria-expanded="true"
+      aria-controls="R-tab-id-c7c62b1724668a3acf8b63d660c15a67" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-acfece91003e82e39a8e31c53e74c97e','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-ecbb07c61eb30361dc94d84d2c2e27d3','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b3b96f145d6465de8552fc8b9bc759d2"
+      id="R-tab-id-c7c62b1724668a3acf8b63d660c15a67"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -273,21 +273,21 @@
 <ul>
 <li>Pull FortiFlex tokens from FortiCare and place them in <strong>.lic</strong> files</li>
 <li>Verify after this step: <code>/home/fortinet/automation/ansible/fortinet/license</code> has *<strong>.lic files</strong> with the content your FortiFlex tokens<br>
-<div class="tab-panel" data-tab-group="R-tabs-346ccb1f589bcefc6b57f2ce6949dcd5">
+<div class="tab-panel" data-tab-group="R-tabs-dfdf31563f512a9f95a2a2982a770eaf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-cd6bc53f132cd47a41006a39c4df719a" aria-expanded="true"
+      aria-controls="R-tab-id-7b44c5defc77d7534292400478eaf88d" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-346ccb1f589bcefc6b57f2ce6949dcd5','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-dfdf31563f512a9f95a2a2982a770eaf','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-cd6bc53f132cd47a41006a39c4df719a"
+      id="R-tab-id-7b44c5defc77d7534292400478eaf88d"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -296,21 +296,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-0ef9f9a11728197cbd0fb492abc25f8b">
+<div class="tab-panel" data-tab-group="R-tabs-99e946903730e421cc9a5786d543cbfd">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-02e1ed3173c3ce98ee33af4145ee7022" aria-expanded="true"
+      aria-controls="R-tab-id-57de495e7d156a254f8b5aa4436e8756" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-0ef9f9a11728197cbd0fb492abc25f8b','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-99e946903730e421cc9a5786d543cbfd','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-02e1ed3173c3ce98ee33af4145ee7022"
+      id="R-tab-id-57de495e7d156a254f8b5aa4436e8756"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -326,21 +326,21 @@
 <li>Make sure all FortiGate VMs have fully started before exeucting the following.
 <ul>
 <li>Suggest opening FGT&rsquo;s console windows and verifying login prompt showing for all FGT&rsquo;s.
-<div class="tab-panel" data-tab-group="R-tabs-900b6829fe5e75e0084b1aacf79600d6">
+<div class="tab-panel" data-tab-group="R-tabs-1c9ef1ed3a678b0dcaef1862796792cc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3fad9b027b6ce73b8ca6c7d22e32c2c6" aria-expanded="true"
+      aria-controls="R-tab-id-572f15003fcb87571a90212fa87713a5" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-900b6829fe5e75e0084b1aacf79600d6','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-1c9ef1ed3a678b0dcaef1862796792cc','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3fad9b027b6ce73b8ca6c7d22e32c2c6"
+      id="R-tab-id-572f15003fcb87571a90212fa87713a5"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -349,21 +349,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-2c5be9aa9ae6f764fa757aef3bd54cd1">
+<div class="tab-panel" data-tab-group="R-tabs-f55f09fb3eeb64fb2511e7a463c1f093">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f616aa70a765054bb2ccf6e3f57ef0fe" aria-expanded="true"
+      aria-controls="R-tab-id-44e737179c4e3a9fe54f23c20e5da668" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2c5be9aa9ae6f764fa757aef3bd54cd1','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-f55f09fb3eeb64fb2511e7a463c1f093','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f616aa70a765054bb2ccf6e3f57ef0fe"
+      id="R-tab-id-44e737179c4e3a9fe54f23c20e5da668"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -380,21 +380,21 @@
 <li>Make sure all FortiGate VMs have fully started before exeucting the following.
 <ul>
 <li>Suggest opening FGT&rsquo;s console windows and verifying login prompt showing for all FGT&rsquo;s.
-<div class="tab-panel" data-tab-group="R-tabs-14f528b5a796c83156863639e12740a9">
+<div class="tab-panel" data-tab-group="R-tabs-270243cabb897ccc41dcbc1e6da05eae">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-4fdce0f44cd3f5065d65ec4ba7fd5289" aria-expanded="true"
+      aria-controls="R-tab-id-98be00350babad795cd045988012ce08" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-14f528b5a796c83156863639e12740a9','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-270243cabb897ccc41dcbc1e6da05eae','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-4fdce0f44cd3f5065d65ec4ba7fd5289"
+      id="R-tab-id-98be00350babad795cd045988012ce08"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -403,21 +403,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-6a39c02b015731a15e01b42daab73578">
+<div class="tab-panel" data-tab-group="R-tabs-d490dc14e1412e5a3444e0deff8b931e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-468b00192888249c982877d3a141b365" aria-expanded="true"
+      aria-controls="R-tab-id-ae1b6e3f0d1d9cb0fef9535dab781150" aria-expanded="true"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-6a39c02b015731a15e01b42daab73578','R-tab-ca2192d193040f4ffaefd3635aa55609')"
+      onclick="switchTab('R-tabs-d490dc14e1412e5a3444e0deff8b931e','R-tab-ca2192d193040f4ffaefd3635aa55609')"
     >
       <span class="tab-nav-text">Continuing from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-468b00192888249c982877d3a141b365"
+      id="R-tab-id-ae1b6e3f0d1d9cb0fef9535dab781150"
       data-tab-item="R-tab-ca2192d193040f4ffaefd3635aa55609"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -477,6 +477,8 @@
             <li class="" data-nav-url="/Field-SE-Lab-Guide/introduction/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/prerequisites/index.html"><a class="padding" href="/Field-SE-Lab-Guide/prerequisites/index.html">Prerequisites</a></li>
             <li class="parent " data-nav-url="/Field-SE-Lab-Guide/steps/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_install/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/proxmox_install/index.html">Proxmox Install</a><ul id="R-subsections-029c8049e11062e3d68dc081f12271c1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.html">Proxmox Configure</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ubuntu_template/index.html">Create Ubuntu VM Template</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/oob/index.html">Create OOB Management VM</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/ansible/index.html"><a class="padding" href="/Field-SE-Lab-Guide/steps/ansible/index.html">Ansible Prerequisites</a></li>
@@ -503,8 +505,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783031027" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1783031027" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783396709" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1783396709" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

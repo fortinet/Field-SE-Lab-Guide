@@ -26,7 +26,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/steps/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/index.html</guid>
-      <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;PVE should be built with the steps found here: Proxmox Install Note The scripts/steps in this guide tested against 9.x, but will likely work with 8.x too) 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
+      <description>Execute and complete the following 11 steps in order&#xA;1) PVE server&#xA;Follow steps in this section Proxmox Install 2) Create VNETs on PVE server ​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/stevesweeneywisc/SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
     </item>
     <item>
       <title>Extras</title>
