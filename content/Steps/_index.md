@@ -5,7 +5,7 @@ weight = 30
 
 +++
 
-Execute and complete the following 11 steps in order
+{{% badge style="important" title=" " style="red"%}}Execute and complete the following 11 steps in sequential order{{% /badge %}}
 
 **1) Proxmox Server Install**
 - Follow steps in this section **[Proxmox Install](Proxmox_Install)**

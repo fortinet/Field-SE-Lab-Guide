@@ -3,7 +3,7 @@
   <channel>
     <title>Proxmox Configure :: SE How-To Build Lab</title>
     <link>http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_configure/index.html</link>
-    <description>Create VNETs&#xD;​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/fortinet/Field-SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 777 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
+    <description>Create VNETs&#xD;​&#xD;from PVE Shell&#xD;cd /root&#xD;​&#xD;from PVE Shell&#xD;curl https://raw.githubusercontent.com/fortinet/Field-SE-Lab-OOB/refs/heads/main/automation/proxmox/Create_VNETs.sh &gt; Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;chmod 744 Create_VNETs.sh&#xD;​&#xD;from PVE Shell&#xD;./Create_VNETs.sh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/proxmox_configure/index.xml" rel="self" type="application/rss+xml" />

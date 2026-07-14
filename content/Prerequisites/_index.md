@@ -18,6 +18,10 @@ weight = 20
     - Documented [here](Introduction/ip_scheme)
     - Shown in the [topology](/Introduction#se-lab-topology)
 
+### FortiCare Accuont with FortiFlex 
+- This lab "works" with either Prepaid or Postpaid ([see bottom of page 3](https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/og-flex-vm.pdf))
+- The easiest to maintain is Postpaid  
+
 ### Proxmox Virtual Environment (PVE)
 - This lab requires (obviously) a Hypervisor.  This lab was written and installation scripts tested with Proxmox 9.x  
 

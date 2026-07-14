@@ -7,22 +7,41 @@ weight = 30
 ### Create FortiFlex API User and Tokens
 
 **Create API User and Download Credentials**
-- Follow the 5 steps in section "**To create an API user:**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/463716/fortiflex-api)
+- Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
+- Open the Admin Guide and click on section "**Automation/FortiFlex API**
+![Admin_Guide](Admin_Guide.png)
+- Follow the steps in the section: **"To create an API User"**
+![FortiFlex_Services_IAM](FortiFlex_Services_IAM.png)
+
+![FortiFlex_Profile_Add](FortiFlex_Profile_Add.png)
+
+![FortiFlex_Portal_Add](FortiFlex_Portal_Add.png)
+
+![FortiFlex_Portal_FortiFlex](FortiFlex_Portal_FortiFlex.png)
 
 ![FortiFlex_API_User_Portal_Profile](FortiFlex_API_User_Portal_Profile.png)
+
+![FortiFlex_User_Create](FortiFlex_User_Create.png)
+
 ![FortiFlex_API_User_Create](FortiFlex_API_User_Create.png)
+
 ![FortiFlex_API_User_Credentials](FortiFlex_API_User_Credentials.png)
 
 
 **Create VM Configuration**
-- Follow the steps in section "**Creating a VM configuration**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/412722/creating-a-vm-configuration)
+- Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
+- Open the Admin Guide and click on section "**Creating a VM configuration**
+![Admin_Guide_Configuration](Admin_Guide_Configuration.png)
 - {{% badge style="tip" %}}Use a consistent naming convention, especially when running multiple lab environments{{% /badge %}}
 - {{% badge style="info" %}}Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services{{% /badge %}}
 ![FortiFlex_Configuration](FortiFlex_Configurations.png)
 
 **Create VM entitlements**
-- Follow the steps in section "**Creating VM entitlements**" on [Docs Fortinet](https://docs.fortinet.com/document/flex-vm/25.4.1/administration-guide/91804/creating-vm-entitlements)
-- {{% badge style="tip"%}}Description **MUST match exactly** (upper/lower case and dashes) what is outlined in red in the example below{{% /badge %}} 
+- Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
+- Open the Admin Guide and click on section "**Creating VM entitlements**
+![Admin_Guide_Entitlements](Admin_Guide_Entitlements.png)
+
+- {{% badge style="tip"%}}Description **MUST match exactly** (upper/lower case and dashes) as outlined in red in the example below as the automation scrips key off the exact names listed below{{% /badge %}} 
 - {{% badge style="info"%}}While possible to use a pool of entitlements and have Ansible return the first available (i.e. unassigned) token by configuration id.  However, that is beyond the scope of this how-to build document and left to the reader to investigate and implement.{{% /badge %}}
 
 ![FortiFlex_Entitlements](FortiFlex_Entitlements.png)
@@ -30,15 +49,25 @@ weight = 30
 
 ### Create SSH Key on OOB
 - Generate SSH Key on Ubuntu-OOB
+
+{{% tab title="from Ubuntu-OOB Terminal" %}}
+````bash
+cd ~/.ssh
+````
+{{% /tab %}}
+
 <!-- ssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal -->
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ssh-keygen -t ed25519
-  File 	     =>  /home/fortinet/.ssh/ansible_key
-  Passphrase =>  <none> just hit enter twice
 ````
+
+ - File 	  =>  `/home/fortinet/.ssh/ansible_key`
+ - Passphrase =>  <none> just hit enter twice
+
 {{% /tab %}} 
 -	Place public key on Proxmox
+
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ssh-copy-id -i /home/fortinet/.ssh/ansible_key root@<your pve server name>
@@ -85,6 +114,7 @@ cd /home/fortinet/automation/ansible/vars
 ./update_sshkey.sh '<right click - paste SSH KEY here>' (make sure single quotes)
 ````
 {{% /tab %}}
+    ![ansible_key_pub_global_vars](ansible_key_pub_global_vars.png)
 
 ### Create Ansible API Token on Proxmox Server
 - On PVE Server => create Automation User and API Token (with full Administrator access)
@@ -139,7 +169,7 @@ cd /home/fortinet/automation/ansible/vars
 {{% /tab %}}
 - Update FortiFlex **Username/Password, Account ID and Serial Number**
     - The username/password below is not what you use to sign into Support Portal
-    - It is the API's credentials 
+    - It is the API's credentials that were downloaded at the beginning of this Build Step (see top of page)
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ./update_fortiflex_username.sh   <FortiFlex Username here>
@@ -150,6 +180,7 @@ cd /home/fortinet/automation/ansible/vars
 ./update_fortiflex_password.sh  '<FortiFlex Password here>'  <- Make sure to use single quotes
 ````
 {{% /tab %}}
+![Account_ID_FortiFlex_SN](Account_ID_FortiFlex_SN.png)
 {{% tab title="from Ubuntu-OOB Terminal" %}}
 ````bash
 ./update_fortiflex_accountID.sh  <FortiFlex Account ID here>

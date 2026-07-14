@@ -16,7 +16,7 @@ In PVE GUI  > (left click) Datacenter > (right click) Node > Create VM
     - Use CD/DVD disc image
     - Storage: <your Proxmox storage, if no NAS, then “local”>	
     - ISO Image: Ubuntu_Installer.iso
-    - Default values for 'Guest OS' (Linux 6.x – 2.6 Kernel)
+    - Default values for 'Guest OS' (Linux 7.x – 2.6 Kernel)
 - System
     - Leave Defaults:
         - Graphic Card: Default     
@@ -136,7 +136,7 @@ cd /home/fortinet/Downloads/
 {{% /tab %}}
 {{% tab title="from Terminal in Ubuntu VM" %}}
 ~~~~bash
-chmod 755 *.sh
+chmod 744 *.sh
 ~~~~
 {{% /tab %}}
 {{% tab title="from Terminal in Ubuntu VM" %}}
@@ -147,15 +147,15 @@ chmod 755 *.sh
 - System will reboot after script runs
 - Login user/password "fortinet/password"
 - Remove keyring password
-    - **Note:** This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot
     - {{% badge style="info" %}}While this should never be done in production, this being done in this non-internet facing lab, for simplicity and to reduce complexity.{{% /badge %}}
+    - **Note:** This is not a secure way to setup Ubuntu.  However, it is done for ease of use in Lab environment.  If you don’t do this, the RDP password WILL change to a random string after every reboot
     - Open Utilities folder
 ![Key_Ring_1](Key_Ring_1.png)
     - Open “Passwords and Keys”
 ![Key_Ring_2](Key_Ring_2.png)
     - Right Click on Login, and choose Change Password
 ![Key_Ring_3](Key_Ring_3.png)
-    - Enter the old password: "password"
+    - Enter the old password: "password" and click "Continue"
 ![Key_Ring_4](Key_Ring_4.png)
     - Leave new password blank for both and click “Continue”
 ![Key_Ring_5](Key_Ring_5.png)

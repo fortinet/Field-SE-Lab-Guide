@@ -18,7 +18,7 @@ curl https://raw.githubusercontent.com/fortinet/Field-SE-Lab-OOB/refs/heads/main
 {{% /tab %}}
 {{% tab title="from PVE Shell" %}}
 ````bash
-chmod 777 Create_VNETs.sh
+chmod 744 Create_VNETs.sh
 ````
 {{% /tab %}}
 {{% tab title="from PVE Shell" %}}

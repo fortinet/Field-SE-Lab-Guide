@@ -39,17 +39,15 @@ cd /home/fortinet/Downloads/
 {{% /tab %}}
 {{% tab title="from Terminal in OOB" %}}
 ````bash
-chmod 755 *.sh
+chmod 744 *.sh
 ````
 {{% /tab %}}
 
 {{% tab title="from Terminal in OOB" %}}
-- Run the following script _**ONLY IF**_ changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets)
+- Run the following script _**ONLY IF**_ changing the external default subnet from 172.16.3.x **(provide ONLY the first 3 octets)**
+- Example: ./update_subnet.sh 192.168.10
 ````bash
-
 ./update_subnet.sh <external subnet to SE Lab> 
-
-Example: ./update_subnet.sh 192.168.10
 ````
 {{% /tab %}}
 - Next start the install script
@@ -75,7 +73,7 @@ cd /home/fortinet/Downloads/
     - **Note:** Using RDP will be “EASIER” as it allows “cut and paste”
 
 - **DNS (CoreDNS)**
-    - {{% badge %}}Important{{% /badge %}} - *UPDATE REQUIRED* if your PVE Server Name is NOT "PVE01".  If different, update the two "db" files listed below. 
+    - {{% badge %}}Important{{% /badge %}} - *UPDATE REQUIRED* if your PVE Server Name is NOT "PVE01" or if 4th octet is NOT 121.  If different, update the two "db" files listed below. 
     - DNS is critical for Ansible automation 
     - [CoreDNS](https://di-marco.net/blog/it/2024-05-09-Intall_and_configure_coredns/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
     - Two [RFC 1035-style](https://www.rfc-editor.org/rfc/rfc1035) zone database files have been preconfigured here:
@@ -98,11 +96,11 @@ docker compose up -d
     - homepage available via browswer via OOB's IP **_< 172.16.3.80 >_** *or via the subnet you changed to from the default*
     - [homepage](https://gethomepage.dev/) is a customizable application dashboard
     -  YAML files located here: **/home/fortinet/c_data/homepage/config**
-        - **bookmarks.yaml** <= [URL's for GUI and SSH access to Lab VM’s](https://gethomepage.dev/configs/bookmarks/)
-        - **services.yaml**  <= [ProxMox Server GUI URL/Status](https://gethomepage.dev/widgets/services/proxmox/)
-        - **settings.yaml**  <= [Column Headings/Layout](https://gethomepage.dev/configs/settings/)
-        - **widgets.yaml**	<= [Date/Time](https://gethomepage.dev/widgets/info/datetime/) – [Weather/Location](https://gethomepage.dev/widgets/info/openweathermap/)
-    - Configure [Proxmox Widget](https://gethomepage.dev/widgets/services/proxmox/)
+        - **bookmarks.yaml** <= [URL's for GUI and SSH access to Lab VM’s](https://gethomepage.dev/configs/bookmarks/) Only change needed is Home FGT name/IP address
+        - **services.yaml**  <= [ProxMox Server GUI URL/Status](https://gethomepage.dev/widgets/services/proxmox/) Only change needed is Proxmox Server name/IP address/API Key
+        - **settings.yaml**  <= [Column Headings/Layout](https://gethomepage.dev/configs/settings/) No change needed
+        - **widgets.yaml**	<= [Date/Time](https://gethomepage.dev/widgets/info/datetime/) – [Weather/Location](https://gethomepage.dev/widgets/info/openweathermap/) Only change needed is city name, long/lat for weather
+    - Configure Proxmox Server API Key for the [Proxmox Widget](https://gethomepage.dev/widgets/services/proxmox/)
         - On the PVE Server => Create User and API Token
             - Click on: Datacenter/Permissions/Groups
                 - Click on Create button	
@@ -134,10 +132,17 @@ docker compose up -d
                 ![Homepage_API_5](Homepage_API_5.png)<br />
         - On Ubuntu-OOB VM
             - Edit **services.yaml** located in **/home/fortinet/c_data/homepage/config**
-            - Update PVE Server Name, PVE Server IP address, and API Secret/password as described below
+            - Update PVE Server Name, PVE Server IP address, and API Secret/password as shown below
                 ![Widgets_API](Widgets_API.png)<br />
 - **Guacamole**
     - Following steps need executed
+
+{{% tab title="from Terminal" %}}
+````bash
+cd  /home/fortinet/c_data/guacamole
+````
+{{% /tab %}}
+
 {{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose ps

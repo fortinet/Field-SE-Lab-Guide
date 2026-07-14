@@ -3,7 +3,7 @@
   <channel>
     <title>Create Ubuntu VM Template :: SE How-To Build Lab</title>
     <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ubuntu_template/index.html</link>
-    <description>Create the VM&#xD;In PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General&#xA;Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS&#xA;Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 6.x – 2.6 Kernel) System</description>
+    <description>Create the VM&#xD;In PVE GUI &gt; (left click) Datacenter &gt; (right click) Node &gt; Create VM General&#xA;Choose Node Choose VM_id == 491 Type VM Name == Ubuntu-Template OS&#xA;Use CD/DVD disc image Storage: &lt;your Proxmox storage, if no NAS, then “local”&gt; ISO Image: Ubuntu_Installer.iso Default values for ‘Guest OS’ (Linux 7.x – 2.6 Kernel) System</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/ubuntu_template/index.xml" rel="self" type="application/rss+xml" />

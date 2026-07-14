@@ -34,7 +34,6 @@ cd /home/fortinet/automation/ansible/fortinet
 
 ### Pull FortiFlex Tokens
 - Pull FortiFlex tokens from FortiCare and place them in **.lic** files
-- Verify after this step: `/home/fortinet/automation/ansible/fortinet/license` has ***.lic files** with the content your FortiFlex tokens  
 {{% tab title="Continuing from Terminal in OOB" %}}
 ````bash
 cd /home/fortinet/automation/ansible/fortiflex
@@ -45,8 +44,9 @@ cd /home/fortinet/automation/ansible/fortiflex
 ./flex-entitlements.sh 
 ````
 {{% /tab %}}
+- Verify `/home/fortinet/automation/ansible/fortinet/license` has ***.lic files** with the content of your FortiFlex tokens  
 
-### Pull FortiFlex Tokens
+### Install FortiFlex Tokens
 **Note:** This next script will "fail", but is successful if VM’s reboot 
 - Make sure all FortiGate VMs have fully started before exeucting the following.
     - Suggest opening FGT's console windows and verifying login prompt showing for all FGT's.
