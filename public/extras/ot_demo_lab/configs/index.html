@@ -8,51 +8,51 @@
     <meta name="description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
 FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
 FortiGate Rugged Config - Digital I/O FAP
-FortiGate Rugged Config - Wireless">
+FortiGate Rugged Config - Wireless How-To Program Arduino Modbus DevicesStep-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Configs :: SE How-To Build Lab">
     <meta name="twitter:description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
 FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
 FortiGate Rugged Config - Digital I/O FAP
-FortiGate Rugged Config - Wireless">
+FortiGate Rugged Config - Wireless How-To Program Arduino Modbus DevicesStep-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Configs :: SE How-To Build Lab">
     <meta property="og:description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
 FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
 FortiGate Rugged Config - Digital I/O FAP
-FortiGate Rugged Config - Wireless">
+FortiGate Rugged Config - Wireless How-To Program Arduino Modbus DevicesStep-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Configs :: SE How-To Build Lab">
     <meta itemprop="description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
 FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
 FortiGate Rugged Config - Digital I/O FAP
-FortiGate Rugged Config - Wireless">
-    <meta itemprop="wordCount" content="31">
+FortiGate Rugged Config - Wireless How-To Program Arduino Modbus DevicesStep-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:">
+    <meta itemprop="wordCount" content="769">
     <title>Configs :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.xml" rel="alternate" type="application/rss+xml" title="Configs :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784211077" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784211077" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784213537" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784213537" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784211077";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784213537";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784211077" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784213537" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784211077" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784211077" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784211077" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784211077" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784211077" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213537" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213537" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784213537" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784213537" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784213537" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -105,7 +105,7 @@ FortiGate Rugged Config - Wireless">
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784211077" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784213537" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -131,6 +131,18 @@ FortiGate Rugged Config - Wireless">
     <li>
       <ul>
         <li><a href="#fgr-configs"><strong>FGR Configs</strong></a></li>
+        <li><a href="#how-to-program-arduino-modbus-devices"><strong>How-To Program Arduino Modbus Devices</strong></a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#install-the-arduino-ide">Install the Arduino IDE</a></li>
+        <li><a href="#install-board-support-package">Install Board Support Package</a></li>
+        <li><a href="#open-the-ot-sketch-files">Open the OT Sketch Files</a></li>
+        <li><a href="#connect-the-arduino">Connect the Arduino</a></li>
+        <li><a href="#install-required-libraries">Install Required Libraries</a></li>
+        <li><a href="#upload-the-sketches">Upload the Sketches</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#troubleshooting-using-the-serial-monitor"><strong>Troubleshooting Using the Serial Monitor</strong></a></li>
+        <li><a href="#opening-the-serial-monitor">Opening the Serial Monitor</a></li>
+        <li><a href="#reading-serial-output">Reading Serial Output</a></li>
       </ul>
     </li>
   </ul>
@@ -176,8 +188,8 @@ FortiGate Rugged Config - Wireless">
 <ul>
 <li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/OT_Demo_Kit-Digital_MODBUS.txt" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">FortiGate Rugged Config - Modbus</span></a></span></li>
 <li>Change FSW port mode to NAC
-<a href="#R-image-47d0a2740cc20d2e8e413f58f84c9498" class="lightbox-link"><img alt="Dynamic_VLAN" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-47d0a2740cc20d2e8e413f58f84c9498"><img alt="Dynamic_VLAN" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png"></a></li>
+<a href="#R-image-c0f38464a137034ac4ab46bbdd692ea9" class="lightbox-link"><img alt="Dynamic_VLAN" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c0f38464a137034ac4ab46bbdd692ea9"><img alt="Dynamic_VLAN" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png"></a></li>
 </ul>
 </li>
 <li>
@@ -193,6 +205,208 @@ FortiGate Rugged Config - Wireless">
 </ul>
 </li>
 </ul>
+<h3 id="how-to-program-arduino-modbus-devices"><strong>How-To Program Arduino Modbus Devices</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Step-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&quot;</li>
+</ul>
+<p><strong>Arduino Modbus Sketches:</strong></p>
+<ul>
+<li>Server (with LED)
+<ul>
+<li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/Ethernet_Modbus_TCP_Server_LED.ino" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">Ethernet_Modbus_TCP_Server_LED.ino</span></a></span></li>
+</ul>
+</li>
+<li>Client (without LED)
+<ul>
+<li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/Ethernet_Modbus_TCP_Client_Toggle.ino" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">Ethernet_Modbus_TCP_Client_Toggle.ino</span></a></span></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="prerequisites">Prerequisites<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Before starting, ensure you have the following:</p>
+<ul>
+<li>A computer running Windows 10/11 with internet access and local administrator privileges</li>
+<li>An Arduino Uno WiFi Rev2 board</li>
+<li>A USB Type-A to Type-B cable</li>
+<li>Access to the lab network (Ethernet switch with available port)</li>
+</ul>
+
+<details open class="box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Warning
+  </summary>
+  <div class="box-content">
+<p>Do not power the Arduino via both Power-over-Ethernet (PoE) and USB simultaneously. Use one power source at a time to avoid hardware damage.</p>
+  </div>
+</details>
+<hr>
+<h3 id="install-the-arduino-ide">Install the Arduino IDE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Download the Arduino IDE from <strong><a href="https://www.arduino.cc/en/software/" rel="external" target="_blank">https://www.arduino.cc/en/software/</a></strong> and run the installer.</p>
+<hr>
+<h3 id="install-board-support-package">Install Board Support Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The Arduino Uno WiFi Rev2 requires a separate board package. After installing the IDE:</p>
+<ul>
+<li>Open the <strong>Boards Manager</strong> from the left sidebar</li>
+<li>Search for <code>megaAVR</code></li>
+<li>Locate <strong>Arduino megaAVR Boards</strong> by Arduino and click <strong>Install</strong></li>
+</ul>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/boards-manager.png"><a href="#R-image-152f401faf42f70771b9da55dbd97e16" class="lightbox-link"><img alt="Boards Manager showing Arduino megaAVR Boards" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/boards-manager.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-152f401faf42f70771b9da55dbd97e16"><img alt="Boards Manager showing Arduino megaAVR Boards" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/boards-manager.png"></a></a></p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>After installation the package status will show <code>INSTALLED</code>.</p>
+  </div>
+</details>
+<hr>
+<h3 id="open-the-ot-sketch-files">Open the OT Sketch Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Open the sketch files from this page. When prompted to move the file into a sketch folder, click <strong>OK</strong>.</p>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/moving-dialog.png"><a href="#R-image-27b27af390008c0cd496bf2779f791ce" class="lightbox-link"><img alt="Arduino IDE prompts you to move the .ino file into a correctly named sketch folder" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/moving-dialog.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27b27af390008c0cd496bf2779f791ce"><img alt="Arduino IDE prompts you to move the .ino file into a correctly named sketch folder" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/moving-dialog.png"></a></a></p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>There is a known bug in Arduino IDE 2.x where a sketch may not appear in the Sketchbook after opening. To fix this, click the three-dot menu (<strong>⋯</strong>) on the sketch tab and select <strong>Rename</strong>.</p>
+  </div>
+</details>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/rename-menu.png"><a href="#R-image-aac35599bd5c877fed6e18ac33701ab0" class="lightbox-link"><img alt="Click ⋯ on the sketch tab and select Rename" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/rename-menu.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aac35599bd5c877fed6e18ac33701ab0"><img alt="Click ⋯ on the sketch tab and select Rename" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/rename-menu.png"></a></a></p>
+<ul>
+<li>Save the file (<strong>Ctrl+S</strong>) to the default Arduino documents directory</li>
+<li>Both sketches should now appear under <strong>OT Files</strong> in the Sketchbook</li>
+</ul>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/sketchbook.png"><a href="#R-image-c177ca4e9328a9cc5923708cac46d554" class="lightbox-link"><img alt="Both sketches visible in the Sketchbook under OT Files" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/sketchbook.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c177ca4e9328a9cc5923708cac46d554"><img alt="Both sketches visible in the Sketchbook under OT Files" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/sketchbook.png"></a></a></p>
+<ul>
+<li>Repeat for both the Client and Server sketch files</li>
+</ul>
+<hr>
+<h3 id="connect-the-arduino">Connect the Arduino<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Plug the Arduino into your workstation via USB. The IDE should auto-detect the board and assign a COM port.</p>
+<ul>
+<li>If not detected automatically, click <strong>Select Board</strong> in the toolbar and choose <strong>Arduino Uno WiFi Rev2</strong></li>
+</ul>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/board-select.png"><a href="#R-image-dc13f1120e08a8658e893871dd698bab" class="lightbox-link"><img alt="Board selection dropdown showing Arduino Uno WiFi Rev2 auto-detected" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/board-select.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc13f1120e08a8658e893871dd698bab"><img alt="Board selection dropdown showing Arduino Uno WiFi Rev2 auto-detected" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/board-select.png"></a></a></p>
+
+<details open class="box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Warning
+  </summary>
+  <div class="box-content">
+<p>Do not connect PoE and USB power simultaneously — use only one power source at a time.</p>
+  </div>
+</details>
+<hr>
+<h3 id="install-required-libraries">Install Required Libraries<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The OT sketches depend on two libraries. Install them via the Library Manager:</p>
+<ul>
+<li>Click the <strong>Library Manager</strong> icon in the left sidebar (or go to <strong>Tools → Manage Libraries</strong>)</li>
+<li>Search for <code>ArduinoModbus</code> and click <strong>Install</strong></li>
+<li>When the dependency dialog appears, click <strong>Install All</strong></li>
+</ul>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/install-all.png"><a href="#R-image-dab79a6576599da954881eff2a4cebf5" class="lightbox-link"><img alt="Dependency dialog — click Install All to install ArduinoModbus and ArduinoRS485" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/install-all.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dab79a6576599da954881eff2a4cebf5"><img alt="Dependency dialog — click Install All to install ArduinoModbus and ArduinoRS485" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/install-all.png"></a></a></p>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/library-rs485.png"><a href="#R-image-d26eafdb2fcd6bcfd8b237142374db89" class="lightbox-link"><img alt="ArduinoRS485 library in the Library Manager" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/library-rs485.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d26eafdb2fcd6bcfd8b237142374db89"><img alt="ArduinoRS485 library in the Library Manager" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/library-rs485.png"></a></a></p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>Always choose <strong>Install All</strong>. Installing ArduinoModbus without ArduinoRS485 will cause compilation errors.</p>
+  </div>
+</details>
+<hr>
+<h3 id="upload-the-sketches">Upload the Sketches<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Each sketch must be uploaded to a separate Arduino board — one for the Server (with LED), one for the Client (without LED).</p>
+<ul>
+<li>Open the <strong>Server</strong> sketch (<code>Ethernet_Modbus_TCP_Server_LED</code>) from the Sketchbook</li>
+<li>Confirm the correct board and port are selected in the toolbar</li>
+<li>Click the <strong>Upload</strong> button (→ arrow icon)</li>
+</ul>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/upload-button.png"><a href="#R-image-1f9069704c6991c8951019138ea7c634" class="lightbox-link"><img alt="Click the Upload button in the toolbar to compile and flash the sketch" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/upload-button.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1f9069704c6991c8951019138ea7c634"><img alt="Click the Upload button in the toolbar to compile and flash the sketch" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/upload-button.png"></a></a></p>
+<ul>
+<li>Wait for the output console to display <code>Done uploading</code></li>
+<li>Disconnect the first Arduino, connect the second, and repeat for the <strong>Client</strong> sketch (<code>Ethernet_Modbus_TCP_Client_Toggle</code>)</li>
+</ul>
+
+<details open class="box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Warning
+  </summary>
+  <div class="box-content">
+<p>If compilation errors appear, verify that <strong>ArduinoModbus</strong> and <strong>ArduinoRS485</strong> are both installed and the correct board is selected.</p>
+  </div>
+</details>
+<hr>
+<h3 id="checklist">Checklist<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Verify all steps are complete before beginning the lab exercise:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Arduino IDE installed</li>
+<li><input disabled="" type="checkbox"> Arduino megaAVR Boards package installed via Boards Manager</li>
+<li><input disabled="" type="checkbox"> Server sketch (<code>Ethernet_Modbus_TCP_Server_LED</code>) opened and saved</li>
+<li><input disabled="" type="checkbox"> Client sketch (<code>Ethernet_Modbus_TCP_Client_Toggle</code>) opened and saved</li>
+<li><input disabled="" type="checkbox"> Sketchbook visibility bug resolved (Rename → Save) for both sketches</li>
+<li><input disabled="" type="checkbox"> Arduino connected via USB; board and port confirmed in toolbar</li>
+<li><input disabled="" type="checkbox"> ArduinoModbus and ArduinoRS485 libraries installed (Install All)</li>
+<li><input disabled="" type="checkbox"> Server sketch uploaded to first Arduino board</li>
+<li><input disabled="" type="checkbox"> Client sketch uploaded to second Arduino board</li>
+</ul>
+<hr>
+<h3 id="troubleshooting-using-the-serial-monitor"><strong>Troubleshooting Using the Serial Monitor</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The Serial Monitor provides real-time terminal output from the connected Arduino, making it the primary tool for diagnosing connection and communication issues at runtime.
+
+<details open class="box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Warning
+  </summary>
+  <div class="box-content">
+<p>Do not power the Arduino via both Power-over-Ethernet (PoE) and USB simultaneously. Use one power source at a time to avoid hardware damage.</p>
+  </div>
+</details></p>
+<h3 id="opening-the-serial-monitor">Opening the Serial Monitor<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li>Ensure the Arduino is connected via USB <strong>and the POE Power is NOT connected</strong> and the correct board and port are selected</li>
+<li>Click the <strong>Serial Monitor icon</strong> (magnifying glass) in the top-right corner of the IDE toolbar.</li>
+</ol>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-icon.png"><a href="#R-image-a221e5e71832e3718857153be6fae79a" class="lightbox-link"><img alt="Serial Monitor icon in the Arduino IDE toolbar" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-icon.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a221e5e71832e3718857153be6fae79a"><img alt="Serial Monitor icon in the Arduino IDE toolbar" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-icon.png"></a></a></p>
+<ol start="3">
+<li>The Serial Monitor panel will open at the bottom of the IDE window.</li>
+<li>Confirm the baud rate is set to <strong>9600 baud</strong> (bottom-right of the Serial Monitor panel).</li>
+</ol>
+<h3 id="reading-serial-output">Reading Serial Output<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The Serial Monitor displays live text output from the Arduino sketch. Use this to verify connectivity and diagnose Modbus communication errors.</p>
+<p><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-output.png"><a href="#R-image-dd7e115ae168040604e117bf54cf673b" class="lightbox-link"><img alt="Serial Monitor output showing Modbus client connection failures" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-output.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd7e115ae168040604e117bf54cf673b"><img alt="Serial Monitor output showing Modbus client connection failures" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/serial-monitor-output.png"></a></a></p>
+<p><em>Serial Monitor output showing repeated Modbus client connection failures. This indicates the client cannot reach the server — check Ethernet cabling and IP configuration.</em></p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>The Serial Monitor is only active while the Arduino is connected via USB. Once you disconnect USB and power the device via PoE, serial output is no longer available.</p>
+  </div>
+</details>
 
   <footer class="footline">
   </footer>
@@ -272,8 +486,8 @@ FortiGate Rugged Config - Wireless">
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784211077" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784211077" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784213537" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

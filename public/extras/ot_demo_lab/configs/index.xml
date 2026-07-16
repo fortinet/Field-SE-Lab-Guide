@@ -3,7 +3,7 @@
   <channel>
     <title>Configs :: SE How-To Build Lab</title>
     <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html</link>
-    <description>FGR Configs&#xD;Microsegmentation with Modbus Traffic&#xA;FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O&#xA;FortiGate Rugged Config - Digital I/O FAP&#xA;FortiGate Rugged Config - Wireless</description>
+    <description>FGR Configs&#xD;Microsegmentation with Modbus Traffic&#xA;FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O&#xA;FortiGate Rugged Config - Digital I/O FAP&#xA;FortiGate Rugged Config - Wireless How-To Program Arduino Modbus Devices&#xD;Step-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.xml" rel="self" type="application/rss+xml" />

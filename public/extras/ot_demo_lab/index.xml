@@ -19,7 +19,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html</guid>
-      <description>FGR Configs&#xD;Microsegmentation with Modbus Traffic&#xA;FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O&#xA;FortiGate Rugged Config - Digital I/O FAP&#xA;FortiGate Rugged Config - Wireless</description>
+      <description>FGR Configs&#xD;Microsegmentation with Modbus Traffic&#xA;FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O&#xA;FortiGate Rugged Config - Digital I/O FAP&#xA;FortiGate Rugged Config - Wireless How-To Program Arduino Modbus Devices&#xD;Step-by-step guide to installing the Arduino IDE, loading OT sketches, and uploading Modbus TCP firmware to the Arduino Uno WiFi Rev2.&#34; Arduino Modbus Sketches:</description>
     </item>
     <item>
       <title>How-To Build Enclosure</title>
