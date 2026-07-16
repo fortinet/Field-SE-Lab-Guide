@@ -139,7 +139,8 @@ unzip backup_config.zip
 {{% tab title="from Terminal in /home/Fortinet/coredns" %}}
 - Restart CoreDNS
 ````bash
-cd /home/fortinet/coredns
+cd /home/fortinet/c_data/coredns/
+
 ````
 ````bash
 docker compose down

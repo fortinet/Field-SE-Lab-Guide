@@ -6,18 +6,13 @@ weight = 60
 
 ### Deploy FortiManager VM
 
-- from Terminal in OOB
 {{% tab title="from Terminal in OOB" %}}
 ````bash
 cd /home/fortinet/automation/ansible/fortinet
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in OOB" %}}
 ````bash
 ./create-vm.sh        ../vars/all-hosts.yml  <PVE server name> 	fmg  v7.6.6.M
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in OOB" %}}
 ````bash
 ./start_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name> 	fmg  started
 ````
