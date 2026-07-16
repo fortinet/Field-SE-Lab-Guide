@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configs :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html</link>
+    <description>FGR Configs&#xD;Microsegmentation with Modbus Traffic&#xA;FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O&#xA;FortiGate Rugged Config - Digital I/O FAP&#xA;FortiGate Rugged Config - Wireless</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

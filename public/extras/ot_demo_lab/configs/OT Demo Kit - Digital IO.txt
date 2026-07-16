@@ -1,0 +1,66 @@
+
+config system automation-trigger
+    edit "BUTTON_PRESSED"
+        set event-type event-log
+        set logid 22907
+        config fields
+            edit 1
+                set name "connector"
+                set value "input_IN1_REF"
+            next
+            edit 2
+                set name "state"
+                set value "closed"
+            next
+        end
+    next
+    edit "BUTTON_RELEASED"
+        set event-type event-log
+        set logid 22907
+        config fields
+            edit 1
+                set name "connector"
+                set value "input_IN1_REF"
+            next
+            edit 2
+                set name "state"
+                set value "open"
+            next
+        end
+    next
+end
+
+config system automation-action
+    edit "SYSTEMS_RED"
+        set description "Emergency Stop"
+        set action-type cli-script
+        set script "execute digital-io set-output default"
+        set accprofile "super_admin"
+    next
+    edit "SYSTEMS_GREEN"
+        set action-type cli-script
+        set script "execute digital-io set-output opposite"
+        set accprofile "super_admin"
+    next
+end
+
+config system automation-stitch
+    edit "SAFETY_BAD"
+        set trigger "BUTTON_PRESSED"
+        config actions
+            edit 1
+                set action "SYSTEMS_GREEN"
+                set required enable
+            next
+        end
+    next
+    edit "SAFETY_GOOD"
+        set trigger "BUTTON_RELEASED"
+        config actions
+            edit 1
+                set action "SYSTEMS_RED"
+                set required enable
+            next
+        end
+    next
+end

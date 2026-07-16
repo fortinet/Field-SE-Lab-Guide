@@ -5,30 +5,34 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="IntroductionThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.
-There are four main sections in this guide:
-Bill of Materials - List of materials required with URL’s to purchase. Configs - Configs for FortiGate Rugged with FortiSwitch Rugged. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.">
+    <meta name="description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
+FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
+FortiGate Rugged Config - Digital I/O FAP
+FortiGate Rugged Config - Wireless">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="OT Lab :: SE How-To Build Lab">
-    <meta name="twitter:description" content="IntroductionThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.
-There are four main sections in this guide:
-Bill of Materials - List of materials required with URL’s to purchase. Configs - Configs for FortiGate Rugged with FortiSwitch Rugged. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.">
-    <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html">
+    <meta name="twitter:title" content="Configs :: SE How-To Build Lab">
+    <meta name="twitter:description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
+FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
+FortiGate Rugged Config - Digital I/O FAP
+FortiGate Rugged Config - Wireless">
+    <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
-    <meta property="og:title" content="OT Lab :: SE How-To Build Lab">
-    <meta property="og:description" content="IntroductionThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.
-There are four main sections in this guide:
-Bill of Materials - List of materials required with URL’s to purchase. Configs - Configs for FortiGate Rugged with FortiSwitch Rugged. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.">
+    <meta property="og:title" content="Configs :: SE How-To Build Lab">
+    <meta property="og:description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
+FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
+FortiGate Rugged Config - Digital I/O FAP
+FortiGate Rugged Config - Wireless">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="OT Lab :: SE How-To Build Lab">
-    <meta itemprop="description" content="IntroductionThis guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.
-There are four main sections in this guide:
-Bill of Materials - List of materials required with URL’s to purchase. Configs - Configs for FortiGate Rugged with FortiSwitch Rugged. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.">
-    <meta itemprop="wordCount" content="125">
-    <title>OT Lab :: SE How-To Build Lab</title>
-    <link href="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.xml" rel="alternate" type="application/rss+xml" title="OT Lab :: SE How-To Build Lab">
+    <meta itemprop="name" content="Configs :: SE How-To Build Lab">
+    <meta itemprop="description" content="FGR ConfigsMicrosegmentation with Modbus Traffic
+FortiGate Rugged Config - Modbus Change FSW port mode to NAC Digital I/O
+FortiGate Rugged Config - Digital I/O FAP
+FortiGate Rugged Config - Wireless">
+    <meta itemprop="wordCount" content="31">
+    <title>Configs :: SE How-To Build Lab</title>
+    <link href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.xml" rel="alternate" type="application/rss+xml" title="Configs :: SE How-To Build Lab">
     <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784211077" rel="stylesheet">
     <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784211077" defer></script>
     <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784211077" defer></script>
@@ -53,9 +57,9 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
-      window.relearn.path='\/extras\/ot_demo_lab\/index.html';
-      window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.path='\/extras\/ot_demo_lab\/configs\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313\/Field-SE-Lab-Guide';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
@@ -108,7 +112,7 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
 }
 </style>
   </head>
-  <body class="mobile-support html" data-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html">
+  <body class="mobile-support html" data-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar" class="default-animation">
@@ -126,7 +130,7 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
   <ul>
     <li>
       <ul>
-        <li><a href="#introduction"><strong>Introduction</strong></a></li>
+        <li><a href="#fgr-configs"><strong>FGR Configs</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -135,14 +139,14 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">OT Lab</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html"><span itemprop="name">OT Lab</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Configs</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html" title="Upgrade Existing OOB (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html" title="Bill of Materials (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html" title="Bill of Materials (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_enclosure/index.html" title="How-To Build Enclosure (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -163,20 +167,32 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
   <header class="headline">
   </header>
 
-<h1 id="ot-lab">OT Lab</h1>
+<h1 id="configs">Configs</h1>
 
-<h3 id="introduction"><strong>Introduction</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>This guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.</p>
-<p>There are four main sections in this guide:</p>
-<ol>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html">Bill of Materials</a></strong> - List of materials required with URL&rsquo;s to purchase.</li>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">Configs</a></strong> - Configs for FortiGate Rugged with FortiSwitch Rugged.</li>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_enclosure/index.html">How-To Build the enclosure/case for this OT Lab</a></strong> - describes the steps with pictures.</li>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.html">How-To Build the Arduino Modbus Devices for this OT Lab</a></strong> - describes the steps with pictures.</li>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.html">How-To Digital I/O for this OT Lab</a></strong> - describes the steps with pictures.</li>
-<li><strong><a href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_demo/index.html">Demo Use Cases</a></strong></li>
-</ol>
-<p>This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.</p>
+<h3 id="fgr-configs"><strong>FGR Configs</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p>Microsegmentation with Modbus Traffic</p>
+<ul>
+<li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/OT_Demo_Kit-Digital_MODBUS.txt" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">FortiGate Rugged Config - Modbus</span></a></span></li>
+<li>Change FSW port mode to NAC
+<a href="#R-image-47d0a2740cc20d2e8e413f58f84c9498" class="lightbox-link"><img alt="Dynamic_VLAN" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-47d0a2740cc20d2e8e413f58f84c9498"><img alt="Dynamic_VLAN" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/Dynamic_VLAN.png"></a></li>
+</ul>
+</li>
+<li>
+<p>Digital I/O</p>
+<ul>
+<li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/OT_Demo_Kit-Digital_IO.txt" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">FortiGate Rugged Config - Digital I/O</span></a></span></li>
+</ul>
+</li>
+<li>
+<p>FAP</p>
+<ul>
+<li><span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/OT_Demo_Kit-Digital_Wireless.txt" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">FortiGate Rugged Config - Wireless</span></a></span></li>
+</ul>
+</li>
+</ul>
 
   <footer class="footline">
   </footer>
@@ -232,9 +248,9 @@ Bill of Materials - List of materials required with URL’s to purchase. Configs
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/nesting_esxi/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/nesting_esxi/index.html">Nesting ESXi</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html">Windows Persistant Route</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html">Upgrade Existing OOB</a></li>
-            <li class="active parent alwaysopen " data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html">OT Lab</a><ul id="R-subsections-23a505f6c78cf059e8f9f879df8b667f" class="collapsible-menu">
+            <li class="parent alwaysopen " data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html">OT Lab</a><ul id="R-subsections-23a505f6c78cf059e8f9f879df8b667f" class="collapsible-menu">
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/bill_of_materials/index.html">Bill of Materials</a></li>
-            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">Configs</a></li>
+            <li class="active " data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/configs/index.html">Configs</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_enclosure/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_enclosure/index.html">How-To Build Enclosure</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.html">How-To Build Modbus Devices</a></li>
             <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_digital_io/index.html">How-To Digital I/O</a></li>

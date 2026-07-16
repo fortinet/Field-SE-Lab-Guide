@@ -1,0 +1,161 @@
+
+config system global
+    set admintimeout 480
+    set alias "FortiGateRugged-Demo-Kit"
+    set gui-auto-upgrade-setup-warning disable
+    set hostname "FGR-Demo-Kit"
+    set switch-controller enable
+    set timezone "US/Central"
+end
+
+config system settings
+    set gui-ips enable
+end
+
+config ips global
+    set exclude-signatures none
+end
+
+config system interface
+    edit "wan1"
+		set description "** Used for FGR's Egress/Ingress **"
+        set vdom "root"
+        set ip 192.168.10.2 255.255.255.0
+        set allowaccess ping https ssh http
+        set type physical
+        set role wan
+    next
+    edit "fortilink"
+        set vdom "root"
+        set fortilink enable
+        set ip 10.255.1.1 255.255.255.0
+        set allowaccess ping fabric
+        set type aggregate
+        set member "lan1"
+        set lldp-reception enable
+        set lldp-transmission enable
+        set fortilink-neighbor-detect fortilink
+        set switch-controller-nac "fortilink"
+        set switch-controller-dynamic "fortilink"
+        set lacp-mode static
+    next
+    edit "OT_VLAN"
+		set description "** MODBUS Devices **"
+        set vdom "root"
+        set ip 192.168.1.1 255.255.255.0
+        set allowaccess ping https ssh http
+        set device-identification enable
+        set role lan
+        set switch-controller-access-vlan enable
+        set interface "fortilink"
+        set vlanid 100
+    next
+end    
+
+config system proxy-arp
+    edit 1
+        set interface "OT_VLAN"
+        set ip 192.168.1.1
+        set end-ip 192.168.1.254
+    next
+end
+
+config router static
+    edit 1
+        set comment "** Default Gateway on Port WAN1 **"
+		set gateway 192.168.10.1
+        set device "wan1"
+    next
+end
+
+config ips sensor
+    edit "OT_IPS"
+        config entries
+            edit 1
+            next
+        end
+    next
+end
+
+config firewall address
+    edit "OT_VLAN address"
+        set type interface-subnet
+        set subnet 192.168.1.0 255.255.255.0
+        set interface "OT_VLAN"
+    next
+    edit "FAP-VLAN address"
+        set type interface-subnet
+        set subnet 192.168.30.0 255.255.255.0
+        set interface "FAP-VLAN"
+    next
+    edit "FAP-OT-SSID address"
+        set type interface-subnet
+        set subnet 192.168.40.0 255.255.255.0
+        set interface "FAP-OT-SSID"
+    next
+    edit "White_Modbus_Device"
+        set associated-interface "OT_VLAN"
+        set subnet 192.168.1.20 255.255.255.255
+    next
+    edit "Red_Modbus_Device"
+        set associated-interface "OT_VLAN"
+        set subnet 192.168.1.10 255.255.255.255
+    next
+    edit "Address_Group_OT_Devices"
+        set type dynamic
+        set sub-type swc-tag
+        set comment "Dynamic Membership Managed by OT NAC Policies 1 & 2"
+    next
+end
+
+config user nac-policy
+    edit "OT-NAC-Policy-1"
+		set description "** NOTE ** => Replace the following with Red MODBUS Device"
+        set mac "de:ad:be:ef:ff:ed"
+        set switch-fortilink "fortilink"
+        set switch-mac-policy "OT-NAC-Policy-1"
+        set firewall-address "Address_Group_OT_Devices"
+    next
+    edit "OT-NAC-Policy-2"
+		set description "** NOTE ** => Replace the following with White MODBUS Device"
+        set mac "a8:61:0a:ae:84:b0"
+        set switch-fortilink "fortilink"
+        set switch-mac-policy "OT-NAC-Policy-2"
+        set firewall-address "Address_Group_OT_Devices"
+    next
+end
+
+config firewall policy
+    edit 1
+        set name "Intra-OT-VLAN"
+        set srcintf "OT_VLAN"
+        set dstintf "OT_VLAN"
+        set action accept
+        set srcaddr "Address_Group_OT_Devices"
+        set dstaddr "Red_Modbus_Device" "White_Modbus_Device"
+        set schedule "always"
+        set service "ALL"
+        set utm-status enable
+        set ssl-ssh-profile "certificate-inspection"
+        set av-profile "default"
+        set ips-sensor "OT_IPS"
+        set application-list "default"
+        set logtraffic all
+    next
+    edit 2
+        set name "Ingress to OT Demo Lab"
+        set srcintf "wan1"
+        set dstintf "OT_VLAN"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+        set utm-status enable
+        set ssl-ssh-profile "certificate-inspection"
+        set av-profile "default"
+        set ips-sensor "default"
+        set application-list "default"
+        set logtraffic all
+    next
+end

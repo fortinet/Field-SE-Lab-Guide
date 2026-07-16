@@ -1,0 +1,76 @@
+
+config system interface
+    edit "FAP-VLAN"
+		set description "** FAP Physical Connection **"
+        set vdom "root"
+        set ip 192.168.30.1 255.255.255.0
+        set allowaccess ping fabric
+        set device-identification enable
+        set role lan
+        set interface "fortilink"
+        set vlanid 386
+    next
+    edit "FAP-OT-SSID"
+		set description "** Interface for FAP's SSID **"
+        set vdom "root"
+        set ip 192.168.40.1 255.255.255.0
+        set allowaccess ping
+        set type vap-switch
+        set device-identification enable
+        set role lan
+    next
+end    
+
+config firewall address
+    edit "FAP-VLAN address"
+        set type interface-subnet
+        set subnet 192.168.30.0 255.255.255.0
+        set interface "FAP-VLAN"
+    next
+    edit "FAP-OT-SSID address"
+        set type interface-subnet
+        set subnet 192.168.40.0 255.255.255.0
+        set interface "FAP-OT-SSID"
+    next
+end
+
+
+config wireless-controller vap
+    edit "FAP-OT-SSID"
+        set ssid "Rugged-FAP"
+        set passphrase password
+        set schedule "always"
+        set quarantine enable
+    next
+end
+
+config wireless-controller wtp-profile
+    edit "FAP432FR-default"
+        config platform
+            set type 432FR
+            set ddscan enable
+        end
+        set handoff-sta-thresh 55
+        config radio-1
+            set band 802.11g 802.11n-2G 802.11ax-2G
+        end
+        config radio-2
+            set band 802.11a 802.11n-5G 802.11ac-5G 802.11ax-5G
+        end
+        config radio-3
+            set mode monitor
+        end
+    next
+end
+
+config wireless-controller wtp
+    edit "F432FRTF23000839"
+        set admin enable
+        set wtp-profile "FAP432FR-default"
+        config radio-1
+        end
+        config radio-2
+        end
+    next
+end
+

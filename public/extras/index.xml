@@ -54,7 +54,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html</guid>
-      <description>Introduction&#xD;This guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.&#xA;There are four main sections in this guide:&#xA;Bill of Materials - List of materials required with URL’s to purchase. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.</description>
+      <description>Introduction&#xD;This guide is designed to provide Field SEs with a physical OT environment with Fortinet ruggedized equipment to demonstrate OT use cases.&#xA;There are four main sections in this guide:&#xA;Bill of Materials - List of materials required with URL’s to purchase. Configs - Configs for FortiGate Rugged with FortiSwitch Rugged. How-To Build the enclosure/case for this OT Lab - describes the steps with pictures. How-To Build the Arduino Modbus Devices for this OT Lab - describes the steps with pictures. How-To Digital I/O for this OT Lab - describes the steps with pictures. Demo Use Cases This document should NOT be construed as the best and only way to build an OT Lab nor the only way to demonstrate using this OT Lab.</description>
     </item>
   </channel>
 </rss>
