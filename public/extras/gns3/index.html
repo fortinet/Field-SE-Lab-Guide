@@ -5,50 +5,42 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta name="description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="GNS3 :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta name="twitter:description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="GNS3 :: SE How-To Build Lab">
-    <meta property="og:description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta property="og:description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="GNS3 :: SE How-To Build Lab">
-    <meta itemprop="description" content="Why would do this? FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
-There are “how-to” posts that I could not make FortiLink work in Proxmox: (examples below)
-global channels Support Forum Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
-    <meta itemprop="wordCount" content="447">
+    <meta itemprop="description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta itemprop="wordCount" content="229">
     <title>GNS3 :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/gns3/index.xml" rel="alternate" type="application/rss+xml" title="GNS3 :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1783977930" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1783977930" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784167222" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784167222" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1783977930";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784167222";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1783977930" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784167222" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783977930" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1783977930" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1783977930" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1783977930" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1783977930" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784167222" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784167222" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784167222" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +93,7 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1783977930" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784167222" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -128,8 +120,6 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
       <ul>
         <li><a href="#verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong></a></li>
         <li><a href="#gns3-vm-creation"><strong>GNS3 VM Creation</strong></a></li>
-        <li><a href="#start-esxi-vm"><strong>Start ESXi VM</strong></a></li>
-        <li><a href="#post-install-must-do"><strong>Post install MUST DO’S</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -168,12 +158,6 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 
 <h1 id="gns3">GNS3</h1>
 
-<p>Why would do this?  FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).</p>
-<p>There are &ldquo;how-to&rdquo; posts that I could not make FortiLink work in Proxmox: (examples below)</p>
-<ul>
-<li><a href="https://teams.microsoft.com/l/message/19:104c76bd09954d5794f64ac25e5b6e86@thread.skype/1720003124774?tenantId=2c36c478-3d00-452f-8535-48396f5f01f0&groupId=62fd9f66-e24c-403e-81bc-d8dfd7bf0ea8&parentMessageId=1720003124774&teamName=FortiChat%20Global%20Channels&channelName=swat_fap_fsw_fex_switch_access&createdTime=1720003124774" rel="external" target="_blank">global channels</a></li>
-<li><a href="https://forum.proxmox.com/threads/unable-to-create-sdn-vnet-without-tag.148566/" rel="external" target="_blank">Support Forum</a></li>
-</ul>
 <h3 id="verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li><a href="https://pve.proxmox.com/wiki/Nested_Virtualization" rel="external" target="_blank">https://pve.proxmox.com/wiki/Nested_Virtualization</a></li>
@@ -190,21 +174,21 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 </ul>
 <h3 id="gns3-vm-creation"><strong>GNS3 VM Creation</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li><div class="tab-panel" data-tab-group="R-tabs-dbb76193ad1d4b142d71a3cee397e025">
+<li><div class="tab-panel" data-tab-group="R-tabs-c47fdb0d8d3cb8e9c6c2c5b671db6e70">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-078db93e7211fdb7935b88e27ab274c1" aria-expanded="true"
+      aria-controls="R-tab-id-70dd57c9aefc00245c1871decf6ee33f" aria-expanded="true"
       data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-dbb76193ad1d4b142d71a3cee397e025','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
+      onclick="switchTab('R-tabs-c47fdb0d8d3cb8e9c6c2c5b671db6e70','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
     >
       <span class="tab-nav-text">from Proxmox CLI (use shell in GUI)</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-078db93e7211fdb7935b88e27ab274c1"
+      id="R-tab-id-70dd57c9aefc00245c1871decf6ee33f"
       data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -238,8 +222,8 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 <li><strong>OS</strong>
 <ul>
 <li>Do not use any media
-<a href="#R-image-adf4841b4f71c40d519fd2baca34fa6d" class="lightbox-link"><img alt="No Media" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-adf4841b4f71c40d519fd2baca34fa6d"><img alt="No Media" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png"></a></li>
+<a href="#R-image-f693e1203551fff6d166f1d4b423e3ca" class="lightbox-link"><img alt="No Media" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f693e1203551fff6d166f1d4b423e3ca"><img alt="No Media" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png"></a></li>
 </ul>
 </li>
 <li><strong>System</strong>
@@ -254,8 +238,8 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 <li><strong>Disks</strong>
 <ul>
 <li>Click on Trashcan Icon and delete disk
-<a href="#R-image-20656101802ffc6d4d8df624aead31da" class="lightbox-link"><img alt="No Disks" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-20656101802ffc6d4d8df624aead31da"><img alt="No Disks" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png"></a></li>
+<a href="#R-image-93cc2f706921848ead1e6a3221f6a8a8" class="lightbox-link"><img alt="No Disks" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-93cc2f706921848ead1e6a3221f6a8a8"><img alt="No Disks" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png"></a></li>
 </ul>
 </li>
 <li><strong>CPU</strong>
@@ -273,8 +257,8 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 <ul>
 <li><strong>Bridge</strong> vmbr0</li>
 <li>Untick Firewall
-<a href="#R-image-395e2e426b0022ff66c17d7bc86a9718" class="lightbox-link"><img alt="NIC" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-395e2e426b0022ff66c17d7bc86a9718"><img alt="NIC" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png"></a></li>
+<a href="#R-image-7864a69a44aab01fb781a1f3dc62f3fe" class="lightbox-link"><img alt="NIC" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7864a69a44aab01fb781a1f3dc62f3fe"><img alt="NIC" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png"></a></li>
 </ul>
 </li>
 <li><strong>Confirm</strong>
@@ -287,21 +271,21 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 </ul>
 <p>Wait for the VM Create process to complete (i.e. Status OK)</p>
 <ul>
-<li><div class="tab-panel" data-tab-group="R-tabs-9b3c4972c27fefda5e0453134aa034f0">
+<li><div class="tab-panel" data-tab-group="R-tabs-c95a22aab7314dd2c0218456eb80b166">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8572b8a249e663c333fe3f1fa765b29d" aria-expanded="true"
+      aria-controls="R-tab-id-25746fac48b69062eb9630ead518a4e4" aria-expanded="true"
       data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-9b3c4972c27fefda5e0453134aa034f0','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
+      onclick="switchTab('R-tabs-c95a22aab7314dd2c0218456eb80b166','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
     >
       <span class="tab-nav-text">from Proxmox CLI (use shell in GUI)</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8572b8a249e663c333fe3f1fa765b29d"
+      id="R-tab-id-25746fac48b69062eb9630ead518a4e4"
       data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -320,69 +304,6 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
     </div>
   </div>
 </div></li>
-</ul>
-<h3 id="start-esxi-vm"><strong>Start ESXi VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>Reduce size of system partition (<span class="badge cstyle default"><span class="badge-content">Important</span></span> <strong>MUST BE DONE AT INITIAL INSTALL</strong>)
-<ul>
-<li>Background:
-<ul>
-<li>ESXi 7.0 introduced a system-storage boot media layout designed to ensure new features and capabilities could be added in future releases. The partition layout can consume up to 138GB of disk space, significantly limiting usable space to create a VMFS datastore on small server with finite hardware resources.</li>
-</ul>
-</li>
-<li>Documentation:
-<ul>
-<li><a href="https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html" rel="external" target="_blank">https://williamlam.com/2020/05/changing-the-default-size-of-the-esx-osdata-volume-in-esxi-7-0.html</a></li>
-</ul>
-</li>
-<li>&ldquo;How-To&rdquo; reduce system partition size:
-<ul>
-<li>Start host with install image</li>
-<li>When ESXi installer window appears</li>
-<li>Press Shift+O within 5 seconds to edit the boot options.</li>
-<li>Add the following to the end of the prompt:
-<ul>
-<li>systemMediaSize=min</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="post-install-must-do"><strong>Post install MUST DO&rsquo;S</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>Assign a License in DCUI
-<ul>
-<li>Click on: Host/Manage/Licensing/Assign License</li>
-</ul>
-</li>
-<li>Enable SSH
-<ul>
-<li>Click on: Host / Actions / Services / Enable Secure Shell (SSH)</li>
-</ul>
-</li>
-<li>Enable SSH on boot:
-<ul>
-<li>Click on: Host/Manage/Services/Right click TSM-SSH/Policy/Select &ldquo;Start and stop with host&rdquo;</li>
-</ul>
-</li>
-<li>Configure DCUI
-<ul>
-<li>Click on: Host/Manage/System/Advanced Settings
-<ul>
-<li>UserVars.DcuiTimeOut Value=0</li>
-<li>UserVars.HostClientSessionTimeout Value=0</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Edit NTP Settings
-<ul>
-<li>Click on: Host/Manage/System/Time &amp; date</li>
-<li>Enable NTP client/Start and stop with host/208.91.112.63  	&lt;=ntp1.fortiguard.com</li>
-</ul>
-</li>
 </ul>
 
   <footer class="footline">
@@ -457,8 +378,8 @@ global channels Support Forum Verify Nested Virtualization is Enabledhttps://pv
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1783977930" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1783977930" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784167222" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

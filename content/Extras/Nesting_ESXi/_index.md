@@ -4,12 +4,12 @@ type = "default"
 weight = 70
 +++
 
-Why would do this?  FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describin this).
+### Why Next ESXi?  
+- FortiLink trunks do not work in Proxmox due to Proxmox developers have reserved the use of VLANs 0 and 4095 (need to find link defintively describing this).
 
-There are "how-to" posts that I could not make FortiLink work in Proxmox: (examples below)
-- [global channels](https://teams.microsoft.com/l/message/19:104c76bd09954d5794f64ac25e5b6e86@thread.skype/1720003124774?tenantId=2c36c478-3d00-452f-8535-48396f5f01f0&groupId=62fd9f66-e24c-403e-81bc-d8dfd7bf0ea8&parentMessageId=1720003124774&teamName=FortiChat%20Global%20Channels&channelName=swat_fap_fsw_fex_switch_access&createdTime=1720003124774)
-- [Support Forum](https://forum.proxmox.com/threads/unable-to-create-sdn-vnet-without-tag.148566/)
-
+- There are "how-to" posts that I could not make FortiLink work in Proxmox: (examples below)
+   - [global channels](https://teams.microsoft.com/l/message/19:104c76bd09954d5794f64ac25e5b6e86@thread.skype/1720003124774?tenantId=2c36c478-3d00-452f-8535-48396f5f01f0&groupId=62fd9f66-e24c-403e-81bc-d8dfd7bf0ea8&parentMessageId=1720003124774&teamName=FortiChat%20Global%20Channels&channelName=swat_fap_fsw_fex_switch_access&createdTime=1720003124774)
+   - [Support Forum](https://forum.proxmox.com/threads/unable-to-create-sdn-vnet-without-tag.148566/)
 ### **Verify Nested Virtualization is Enabled** 
 - https://pve.proxmox.com/wiki/Nested_Virtualization
 - https://devopstales.github.io/virtualization/install-vmware-in-proxmox/

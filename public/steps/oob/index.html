@@ -29,26 +29,26 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     <meta itemprop="wordCount" content="694">
     <title>Create OOB Management VM :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/steps/oob/index.xml" rel="alternate" type="application/rss+xml" title="Create OOB Management VM :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784005540" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784005540" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784167222" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784167222" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784005540";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784167222";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784005540" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784167222" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784005540" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784005540" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784005540" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784005540" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784005540" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784167222" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784167222" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784167222" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +101,7 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784005540" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784167222" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -175,14 +175,14 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <ul>
 <li>VM ID: <code>441</code></li>
 <li>Name: <code>Ubuntu-OOB</code>
-<a href="#R-image-0b7601b3dadde1f973e61aa5d0d00b47" class="lightbox-link"><img alt="Create_Clone" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Create_Clone.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b7601b3dadde1f973e61aa5d0d00b47"><img alt="Create_Clone" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Create_Clone.png"></a></li>
+<a href="#R-image-5fa2e1ac8c8ab9710da9f6e44c6dd4d8" class="lightbox-link"><img alt="Create_Clone" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Create_Clone.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5fa2e1ac8c8ab9710da9f6e44c6dd4d8"><img alt="Create_Clone" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Create_Clone.png"></a></li>
 </ul>
 </li>
 <li>
 <p>Verify Hardware, specifically 2 NICs: net0 == vmbr0, net1 == FTNTMGT
-<a href="#R-image-4cbe97176e91832c9bc5a82cbc2bcd21" class="lightbox-link"><img alt="Verify_Hardware" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Verify_Hardware.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4cbe97176e91832c9bc5a82cbc2bcd21"><img alt="Verify_Hardware" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Verify_Hardware.png"></a></p>
+<a href="#R-image-36ed7daad6a205989cfe8c14fb4b2939" class="lightbox-link"><img alt="Verify_Hardware" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Verify_Hardware.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-36ed7daad6a205989cfe8c14fb4b2939"><img alt="Verify_Hardware" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Verify_Hardware.png"></a></p>
 </li>
 <li>
 <p>Configure Cloud-Init per <a href="/Field-SE-Lab-Guide/introduction/ip_scheme/index.html">IP addressing scheme</a></p>
@@ -198,8 +198,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <ul>
 <li>10.100.55.80/24</li>
 <li>NO Gateway
-<a href="#R-image-a0494cdfa457ebfc3775300f22aba932" class="lightbox-link"><img alt="Config_Cloud_Init" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Config_Cloud_Init.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a0494cdfa457ebfc3775300f22aba932"><img alt="Config_Cloud_Init" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Config_Cloud_Init.png"></a></li>
+<a href="#R-image-4f8777293aa9a8f9293a9ea7d1f394ab" class="lightbox-link"><img alt="Config_Cloud_Init" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Config_Cloud_Init.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f8777293aa9a8f9293a9ea7d1f394ab"><img alt="Config_Cloud_Init" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Config_Cloud_Init.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -215,23 +215,23 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </li>
 <li>
 <p>If you see the following dialog, click on <em>&ldquo;Remind Me Later&rdquo;</em>
-<a href="#R-image-c569a9ffeabcd2557a1ab7e4e9aeed48" class="lightbox-link"><img alt="Remind_Me_Later" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Remind_Me_Later.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c569a9ffeabcd2557a1ab7e4e9aeed48"><img alt="Remind_Me_Later" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Remind_Me_Later.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-6679159bb52e32871cf1c4f80a50de0f">
+<a href="#R-image-83d8c83561cd2f5b6fef74cabf1dc7fc" class="lightbox-link"><img alt="Remind_Me_Later" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Remind_Me_Later.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-83d8c83561cd2f5b6fef74cabf1dc7fc"><img alt="Remind_Me_Later" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Remind_Me_Later.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-3f6535c40374499720c14a737b4ba107">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5d49f9dfcab5e78945e8315a92edbe0d" aria-expanded="true"
+      aria-controls="R-tab-id-35240b44bacc53a3d497008f64e56f9a" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-6679159bb52e32871cf1c4f80a50de0f','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-3f6535c40374499720c14a737b4ba107','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5d49f9dfcab5e78945e8315a92edbe0d"
+      id="R-tab-id-35240b44bacc53a3d497008f64e56f9a"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -240,21 +240,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-71c681803dc0de3305d0a0c34baddf85">
+<div class="tab-panel" data-tab-group="R-tabs-2c3bfa3ddc9e4dd2078bbd61e9781d1f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f623fdf19b4d9b5ab09b1b5e6a13f4c6" aria-expanded="true"
+      aria-controls="R-tab-id-a7014e1f7b845477a8bd2710106837af" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-71c681803dc0de3305d0a0c34baddf85','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-2c3bfa3ddc9e4dd2078bbd61e9781d1f','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f623fdf19b4d9b5ab09b1b5e6a13f4c6"
+      id="R-tab-id-a7014e1f7b845477a8bd2710106837af"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -263,21 +263,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-23c8a96b843b95ac1a3e420d20fecaea">
+<div class="tab-panel" data-tab-group="R-tabs-5ea4f4889b4a8e4227288458b9853ed0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c4d518f55b70039f683367e0597b2ccc" aria-expanded="true"
+      aria-controls="R-tab-id-efa004f7a61f76733febf0000ebba4fa" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-23c8a96b843b95ac1a3e420d20fecaea','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-5ea4f4889b4a8e4227288458b9853ed0','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c4d518f55b70039f683367e0597b2ccc"
+      id="R-tab-id-efa004f7a61f76733febf0000ebba4fa"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -288,21 +288,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </div></p>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-b39d86d1435a2ad212b72a6e564f9729">
+<div class="tab-panel" data-tab-group="R-tabs-704487630650e400b82d38c0ea7710bf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-683f950b72b5fbe67007bf7a35036e1b" aria-expanded="true"
+      aria-controls="R-tab-id-8f652a9e7759576557671d21e319e985" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-b39d86d1435a2ad212b72a6e564f9729','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-704487630650e400b82d38c0ea7710bf','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-683f950b72b5fbe67007bf7a35036e1b"
+      id="R-tab-id-8f652a9e7759576557671d21e319e985"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -317,21 +317,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </div>
 <ul>
 <li>Next start the install script
-<div class="tab-panel" data-tab-group="R-tabs-aedbdd0ca00f4e0c2087624a2ba1c86e">
+<div class="tab-panel" data-tab-group="R-tabs-76c890352f205f6859ac8b2c9faac3d5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-92c89bf10cc97d9b3c93cb9a0882b2e6" aria-expanded="true"
+      aria-controls="R-tab-id-901e09910bce45dfb7cefb8c5217fbb4" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-aedbdd0ca00f4e0c2087624a2ba1c86e','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-76c890352f205f6859ac8b2c9faac3d5','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-92c89bf10cc97d9b3c93cb9a0882b2e6"
+      id="R-tab-id-901e09910bce45dfb7cefb8c5217fbb4"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -341,21 +341,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
   </div>
 </div></li>
 <li><strong>Note:</strong> VM will auto reboot after “OOB_Install.sh” script runs
-<div class="tab-panel" data-tab-group="R-tabs-fb7f01b9cdaf7a0f9b409171ad5d9c92">
+<div class="tab-panel" data-tab-group="R-tabs-026768dbd87a5f090cc4fdc60dc1d9cd">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-d056f0662d954a572d51dc998e731c28" aria-expanded="true"
+      aria-controls="R-tab-id-da5dfc7c0521c1001db4cddd6dba57a4" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fb7f01b9cdaf7a0f9b409171ad5d9c92','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-026768dbd87a5f090cc4fdc60dc1d9cd','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-d056f0662d954a572d51dc998e731c28"
+      id="R-tab-id-da5dfc7c0521c1001db4cddd6dba57a4"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -364,21 +364,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-69668156035798f54df65c34d546772b">
+<div class="tab-panel" data-tab-group="R-tabs-629726b611c8a38de9fe9be8c9b1d25d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-faa48c4b51fa156e770f688819ffa4ed" aria-expanded="true"
+      aria-controls="R-tab-id-b6f9fbe7da6a661585a1900971e223c3" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-69668156035798f54df65c34d546772b','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-629726b611c8a38de9fe9be8c9b1d25d','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-faa48c4b51fa156e770f688819ffa4ed"
+      id="R-tab-id-b6f9fbe7da6a661585a1900971e223c3"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -413,21 +413,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </ul>
 </li>
 <li>If changes are made to zone database files, execute the following:
-<div class="tab-panel" data-tab-group="R-tabs-65e8cf17d85a2b6c3251c9efd5d1e255">
+<div class="tab-panel" data-tab-group="R-tabs-bce288abf9523c3ff5fbd82b351c561f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-33c07e72e8e9ce2f2e37d83bee28e6af" aria-expanded="true"
+      aria-controls="R-tab-id-85176f16230a0fce6063edb264b45e65" aria-expanded="true"
       data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-65e8cf17d85a2b6c3251c9efd5d1e255','R-tab-8a27f5a50042a2637bbf068f68109a29')"
+      onclick="switchTab('R-tabs-bce288abf9523c3ff5fbd82b351c561f','R-tab-8a27f5a50042a2637bbf068f68109a29')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/coredns</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-33c07e72e8e9ce2f2e37d83bee28e6af"
+      id="R-tab-id-85176f16230a0fce6063edb264b45e65"
       data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -436,21 +436,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-a8623737903e4e9f015e5d02dab3ebaa">
+<div class="tab-panel" data-tab-group="R-tabs-af893e28bd08c6c084d41d8f1ed788b2">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3f437ce6c1968e9fb2cd25534e6c7a9d" aria-expanded="true"
+      aria-controls="R-tab-id-fe74805082fc184355a6cbcc12ae2972" aria-expanded="true"
       data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-a8623737903e4e9f015e5d02dab3ebaa','R-tab-8a27f5a50042a2637bbf068f68109a29')"
+      onclick="switchTab('R-tabs-af893e28bd08c6c084d41d8f1ed788b2','R-tab-8a27f5a50042a2637bbf068f68109a29')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/coredns</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3f437ce6c1968e9fb2cd25534e6c7a9d"
+      id="R-tab-id-fe74805082fc184355a6cbcc12ae2972"
       data-tab-item="R-tab-8a27f5a50042a2637bbf068f68109a29"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -482,8 +482,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <ul>
 <li>Click on Create button</li>
 <li>Name:	<code>Homepage-readonly-users</code>
-<a href="#R-image-28b167b0ee8886fd1f2bcedce7acd5da" class="lightbox-link"><img alt="Homepage_API_1" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-28b167b0ee8886fd1f2bcedce7acd5da"><img alt="Homepage_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_1.png"></a><br /></li>
+<a href="#R-image-b78c3a1260828f7f2dbb5a514c690ad9" class="lightbox-link"><img alt="Homepage_API_1" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b78c3a1260828f7f2dbb5a514c690ad9"><img alt="Homepage_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_1.png"></a><br /></li>
 </ul>
 </li>
 <li>Click on: Datacenter/Permissions
@@ -494,8 +494,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <li>Group:	Homepage-readonly-users</li>
 <li>Role: 	PVEAuditor</li>
 <li>Propagate: 	Checked
-<a href="#R-image-643c2aa5ce5fde0f9b9372160180e558" class="lightbox-link"><img alt="Homepage_API_2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-643c2aa5ce5fde0f9b9372160180e558"><img alt="Homepage_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_2.png"></a><br /></li>
+<a href="#R-image-66d78418abc0d3a2e44633854c16e0ca" class="lightbox-link"><img alt="Homepage_API_2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-66d78418abc0d3a2e44633854c16e0ca"><img alt="Homepage_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_2.png"></a><br /></li>
 </ul>
 </li>
 </ul>
@@ -509,8 +509,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <li>Group:	Homepage-readonly-users</li>
 <li>Expires:	never</li>
 <li>Enabled:	checked
-<a href="#R-image-c08306fab7615c0945cd54ed90bd3b18" class="lightbox-link"><img alt="Homepage_API_3" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c08306fab7615c0945cd54ed90bd3b18"><img alt="Homepage_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_3.png"></a><br /></li>
+<a href="#R-image-deb15a9a71d01727d39c261db51bbedd" class="lightbox-link"><img alt="Homepage_API_3" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-deb15a9a71d01727d39c261db51bbedd"><img alt="Homepage_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_3.png"></a><br /></li>
 </ul>
 </li>
 </ul>
@@ -522,8 +522,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <li>User: Homepage@pam</li>
 <li>Token ID: <code>api-readonly</code></li>
 <li>Privilege Separation: Unchecked
-<a href="#R-image-619e7a7253ac4104ca7bc9e500d7afd6" class="lightbox-link"><img alt="Homepage_API_4" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-619e7a7253ac4104ca7bc9e500d7afd6"><img alt="Homepage_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_4.png"></a><br /></li>
+<a href="#R-image-275060fba0a3392801ee97a5c307fbe2" class="lightbox-link"><img alt="Homepage_API_4" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-275060fba0a3392801ee97a5c307fbe2"><img alt="Homepage_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_4.png"></a><br /></li>
 </ul>
 </li>
 </ul>
@@ -531,8 +531,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <li>Copy the Token ID and Secret generated
 <ul>
 <li><strong>Note:</strong> Secret value is only displayed once when token generated
-<a href="#R-image-7f29ec4df9eb11f0f1bd4c700cfe4aaf" class="lightbox-link"><img alt="Homepage_API_5" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f29ec4df9eb11f0f1bd4c700cfe4aaf"><img alt="Homepage_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_5.png"></a><br /></li>
+<a href="#R-image-6a14ca8a498220577711e3558eae428a" class="lightbox-link"><img alt="Homepage_API_5" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6a14ca8a498220577711e3558eae428a"><img alt="Homepage_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Homepage_API_5.png"></a><br /></li>
 </ul>
 </li>
 </ul>
@@ -541,8 +541,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <ul>
 <li>Edit <strong>services.yaml</strong> located in <strong>/home/fortinet/c_data/homepage/config</strong></li>
 <li>Update PVE Server Name, PVE Server IP address, and API Secret/password as shown below
-<a href="#R-image-4112f4d1c8ae2ddce6a17439d73e5b02" class="lightbox-link"><img alt="Widgets_API" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Widgets_API.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4112f4d1c8ae2ddce6a17439d73e5b02"><img alt="Widgets_API" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Widgets_API.png"></a><br /></li>
+<a href="#R-image-3a4913cb50b0bc6cc6992f4fa0c1c502" class="lightbox-link"><img alt="Widgets_API" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Widgets_API.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a4913cb50b0bc6cc6992f4fa0c1c502"><img alt="Widgets_API" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/oob/Widgets_API.png"></a><br /></li>
 </ul>
 </li>
 </ul>
@@ -556,21 +556,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-af02a686338b3cb9e2348eecefd1ad06">
+<div class="tab-panel" data-tab-group="R-tabs-e7d1754ae7cd8275089b77742a51a364">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-fee8997ef49829c271244a65848da676" aria-expanded="true"
+      aria-controls="R-tab-id-91203294514dce49012752decabf543f" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-af02a686338b3cb9e2348eecefd1ad06','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-e7d1754ae7cd8275089b77742a51a364','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-fee8997ef49829c271244a65848da676"
+      id="R-tab-id-91203294514dce49012752decabf543f"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -579,21 +579,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<p><div class="tab-panel" data-tab-group="R-tabs-e411a2e76cb459c544dbc06834838971">
+<p><div class="tab-panel" data-tab-group="R-tabs-8afc46dc31c4ee94568397fa5c81fa78">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-240b2d9a1e43d4dc003e5cd9f27ce9a4" aria-expanded="true"
+      aria-controls="R-tab-id-2c25a640e1b5587bb3f66b534e3239f2" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e411a2e76cb459c544dbc06834838971','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-8afc46dc31c4ee94568397fa5c81fa78','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-240b2d9a1e43d4dc003e5cd9f27ce9a4"
+      id="R-tab-id-2c25a640e1b5587bb3f66b534e3239f2"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -602,21 +602,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-e874a0051547e6bd84f55f7381df79eb">
+<div class="tab-panel" data-tab-group="R-tabs-7fd130db4e4005480bdd376a5ab22e99">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8f3e8e97f771030834ca0465a00910b8" aria-expanded="true"
+      aria-controls="R-tab-id-5c8bfd0ea7a229f4858826b337726b78" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-e874a0051547e6bd84f55f7381df79eb','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-7fd130db4e4005480bdd376a5ab22e99','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8f3e8e97f771030834ca0465a00910b8"
+      id="R-tab-id-5c8bfd0ea7a229f4858826b337726b78"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -625,21 +625,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-62e2c67c8920d8c3f593c88b8e286b53">
+<div class="tab-panel" data-tab-group="R-tabs-b1f860d38b71e22c1f01eba62e71c9a4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-ca6de46687e19c243e3e6af8d6f69972" aria-expanded="true"
+      aria-controls="R-tab-id-501050122622857d47641eb0c465ca98" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-62e2c67c8920d8c3f593c88b8e286b53','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-b1f860d38b71e22c1f01eba62e71c9a4','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-ca6de46687e19c243e3e6af8d6f69972"
+      id="R-tab-id-501050122622857d47641eb0c465ca98"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -648,21 +648,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-bdd2b252e7fa82b02ccef3a41390ced9">
+<div class="tab-panel" data-tab-group="R-tabs-19b2a5199efb71048da8f22aeb4dd0be">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-590a3047a60c67c7236f6c27b5a517be" aria-expanded="true"
+      aria-controls="R-tab-id-fe5595a4e139ad36fece68af364672ae" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bdd2b252e7fa82b02ccef3a41390ced9','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-19b2a5199efb71048da8f22aeb4dd0be','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-590a3047a60c67c7236f6c27b5a517be"
+      id="R-tab-id-fe5595a4e139ad36fece68af364672ae"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -671,21 +671,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-4c70ccf7b4d0591d63f2c416fe2de085">
+<div class="tab-panel" data-tab-group="R-tabs-5bfd66cfe6e8585fe8b32d38a2086970">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-00f23b8d8c41f8b06b31737191aa5ccf" aria-expanded="true"
+      aria-controls="R-tab-id-f6435b3244383540328e761fe4a7f944" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4c70ccf7b4d0591d63f2c416fe2de085','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-5bfd66cfe6e8585fe8b32d38a2086970','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-00f23b8d8c41f8b06b31737191aa5ccf"
+      id="R-tab-id-f6435b3244383540328e761fe4a7f944"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -694,21 +694,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-2040d7f46f70343d55c37e302420dc18">
+<div class="tab-panel" data-tab-group="R-tabs-3f05d45d4fd62d6fed1de0bf1375c8f8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8bbf4e8034689df2b5b9635543642097" aria-expanded="true"
+      aria-controls="R-tab-id-28fa119e066eed6b26a953016ffc2682" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2040d7f46f70343d55c37e302420dc18','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-3f05d45d4fd62d6fed1de0bf1375c8f8','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8bbf4e8034689df2b5b9635543642097"
+      id="R-tab-id-28fa119e066eed6b26a953016ffc2682"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -717,21 +717,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-662bfaaaef2d8b1b66a9ae85c52b2024">
+<div class="tab-panel" data-tab-group="R-tabs-cdefe7937d52ecd3bfec20bde1c1a0da">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-03ed22ad110436db5f3a1bc54102891e" aria-expanded="true"
+      aria-controls="R-tab-id-16c67c4e18ecb81fccd111ebb79fcc2b" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-662bfaaaef2d8b1b66a9ae85c52b2024','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-cdefe7937d52ecd3bfec20bde1c1a0da','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-03ed22ad110436db5f3a1bc54102891e"
+      id="R-tab-id-16c67c4e18ecb81fccd111ebb79fcc2b"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -740,21 +740,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-cb8344baeda1331737953715261dc6ad">
+<div class="tab-panel" data-tab-group="R-tabs-cea33ce11cc3cd3651748dd80b3e7138">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c6381a6269484def846472401f8ccb06" aria-expanded="true"
+      aria-controls="R-tab-id-4c9d0d80a6c4965df6c60d41336e579c" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-cb8344baeda1331737953715261dc6ad','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-cea33ce11cc3cd3651748dd80b3e7138','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c6381a6269484def846472401f8ccb06"
+      id="R-tab-id-4c9d0d80a6c4965df6c60d41336e579c"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -783,21 +783,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 </ul>
 </li>
 <li>DNS is working
-<div class="tab-panel" data-tab-group="R-tabs-2f78e5434ff507063139093c77c86624">
+<div class="tab-panel" data-tab-group="R-tabs-135539dbf918e2cb913893cfb1e12545">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-864ebb5f9f8cd7fd67e0a784ad1beeb5" aria-expanded="true"
+      aria-controls="R-tab-id-a528b85c8c0eabf08d49c11bee451091" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2f78e5434ff507063139093c77c86624','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-135539dbf918e2cb913893cfb1e12545','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-864ebb5f9f8cd7fd67e0a784ad1beeb5"
+      id="R-tab-id-a528b85c8c0eabf08d49c11bee451091"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -806,21 +806,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-a6fa6c6cc30d8eb7411d2fa5d81f11ea">
+<div class="tab-panel" data-tab-group="R-tabs-513a88306e9b69934e9100f4dad42041">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-2d2b5413293e1f93fc06c1b28e3ea373" aria-expanded="true"
+      aria-controls="R-tab-id-f8c6c6b5144bd763df16fc327a71eaa0" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-a6fa6c6cc30d8eb7411d2fa5d81f11ea','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-513a88306e9b69934e9100f4dad42041','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-2d2b5413293e1f93fc06c1b28e3ea373"
+      id="R-tab-id-f8c6c6b5144bd763df16fc327a71eaa0"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -829,21 +829,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-1824cbb2fa74b70000aa616e22403266">
+<div class="tab-panel" data-tab-group="R-tabs-711c7684fa2daaf4c720aa3f213c9081">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b212439659ce95fcb362145c26ca1c6a" aria-expanded="true"
+      aria-controls="R-tab-id-5bc41de41109702bcb8597a953620d4d" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1824cbb2fa74b70000aa616e22403266','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-711c7684fa2daaf4c720aa3f213c9081','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b212439659ce95fcb362145c26ca1c6a"
+      id="R-tab-id-5bc41de41109702bcb8597a953620d4d"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -855,21 +855,21 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <li>NAT/Forwarding working
 <ul>
 <li>Should see multiple: <strong><em>PREROUTING 172.16.3.X (or your subnet if not-default) addresses</em></strong> and <strong><em>POSTROUTING MASQUERADE</em></strong>
-<div class="tab-panel" data-tab-group="R-tabs-9df26313f0066a71047d52ec36e69f18">
+<div class="tab-panel" data-tab-group="R-tabs-7be850504ac96c38450a4156d0828131">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-2a08d949d2fa91bd2b0f722e2a41bbbd" aria-expanded="true"
+      aria-controls="R-tab-id-645306bbbc97e62ba66d73aefdb7a23f" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-9df26313f0066a71047d52ec36e69f18','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-7be850504ac96c38450a4156d0828131','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-2a08d949d2fa91bd2b0f722e2a41bbbd"
+      id="R-tab-id-645306bbbc97e62ba66d73aefdb7a23f"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -958,8 +958,8 @@ NET0 The 4th Octet for this VM MUST be x.y.z.80 If not using the default 172.16.
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784005540" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784005540" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784167222" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
