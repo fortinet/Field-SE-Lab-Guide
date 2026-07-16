@@ -4,7 +4,7 @@ type = "default"
 weight = 30
 +++
 
-### Create FortiFlex API User and Tokens
+### Create FortiFlex API Profile and User
 
 **Create API User and Download Credentials**
 - Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
@@ -28,7 +28,7 @@ weight = 30
 ![FortiFlex_API_User_Credentials](FortiFlex_API_User_Credentials.png)
 
 
-**Create VM Configuration**
+### Create VM Configuration
 - Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
 - Open the Admin Guide and click on section "**Creating a VM configuration**
 ![Admin_Guide_Configuration](Admin_Guide_Configuration.png)
@@ -36,7 +36,7 @@ weight = 30
 - {{% badge style="info" %}}Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services{{% /badge %}}
 ![FortiFlex_Configuration](FortiFlex_Configurations.png)
 
-**Create VM entitlements**
+### Create VM entitlements
 - Go to the latest FortiFlex documentation on [Docs Fortinet](https://docs.fortinet.com/product/flex-vm/26.2)
 - Open the Admin Guide and click on section "**Creating VM entitlements**
 ![Admin_Guide_Entitlements](Admin_Guide_Entitlements.png)

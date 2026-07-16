@@ -40,7 +40,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html</guid>
-      <description>Create FortiFlex API User and Tokens&#xD;Create API User and Download Credentials&#xA;Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”</description>
+      <description>Create FortiFlex API Profile and User&#xD;Create API User and Download Credentials&#xA;Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”</description>
     </item>
     <item>
       <title>Create TCGUI VM</title>
@@ -54,7 +54,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/steps/fortigate/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/fortigate/index.html</guid>
-      <description>If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Copy Bootstrap ISO’s, Create VM’s, Start VM’s&#xD;from Terminal in OOB ​&#xD;RDP to OOB&#xD;cd /home/fortinet/automation/ansible/fortinet&#xD;Copy bootstrap ISO’s to Proxmox server ​&#xD;RDP to OOB&#xD;./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;PVE server name&gt;&#xD;Create the FGT VM’s on Proxmox ​&#xD;RDP to OOB&#xD;./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan v7.6.6.M&#xD;Start the VM’s just created ​&#xD;RDP to OOB&#xD;./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan started&#xD;Pull FortiFlex Tokens&#xD;Pull FortiFlex tokens from FortiCare and place them in .lic files ​&#xD;Continuing from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortiflex&#xD;​&#xD;Continuing from Terminal in OOB&#xD;./flex-entitlements.sh Verify /home/fortinet/automation/ansible/fortinet/license has *.lic files with the content of your FortiFlex tokens Install FortiFlex Tokens&#xD;Note: This next script will “fail”, but is successful if VM’s reboot</description>
+      <description>If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps Copy Bootstrap ISO’s, Create VM’s, Start VM’s&#xD;from Terminal in OOB ​&#xD;RDP to OOB&#xD;cd /home/fortinet/automation/ansible/fortinet&#xD;Copy bootstrap ISO’s to Proxmox server ​&#xD;RDP to OOB&#xD;./copy_fgt_bootstrap_iso.sh ../vars/all-hosts.yml &lt;PVE server name&gt;&#xD;Create the FGT VM’s on Proxmox ​&#xD;RDP to OOB&#xD;./create-vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan v7.6.6.M&#xD;Start the VM’s just created ​&#xD;RDP to OOB&#xD;./start_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; fortigate_sdwan started&#xD;List FortiFlex Config IDs&#xD;List the Config IDs for each configuration created in the Ansible Prerequisites step Create VM Configuraion ​&#xD;Continuing from Terminal in OOB&#xD;cd /home/fortinet/automation/ansible/fortiflex&#xD;​&#xD;Continuing from Terminal in OOB&#xD;./flex-configs-list.sh ​&#xD;Example Output</description>
     </item>
     <item>
       <title>Create FortiManager VM</title>

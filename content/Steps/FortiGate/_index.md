@@ -32,8 +32,8 @@ cd /home/fortinet/automation/ansible/fortinet
 ````
 {{% /tab %}}
 
-### Pull FortiFlex Tokens
-- Pull FortiFlex tokens from FortiCare and place them in **.lic** files
+### List FortiFlex Config IDs
+- List the Config IDs for each configuration created in the **Ansible Prerequisites** step [Create VM Configuraion](steps/ansible/#create-vm-configuration) 
 {{% tab title="Continuing from Terminal in OOB" %}}
 ````bash
 cd /home/fortinet/automation/ansible/fortiflex
@@ -41,10 +41,32 @@ cd /home/fortinet/automation/ansible/fortiflex
 {{% /tab %}}
 {{% tab title="Continuing from Terminal in OOB" %}}
 ````bash
-./flex-entitlements.sh 
+./flex-configs-list.sh 
 ````
 {{% /tab %}}
-- Verify `/home/fortinet/automation/ansible/fortinet/license` has ***.lic files** with the content of your FortiFlex tokens  
+{{% tab title="Example Output" %}}
+
+![Config_IDs](Config_IDs.png)
+
+{{% /tab %}}
+
+### Pull FortiFlex Tokens
+
+{{% tab title="Continuing from Terminal in OOB" %}}
+````bash
+cd /home/fortinet/automation/ansible/fortiflex
+````
+{{% /tab %}}
+{{% tab title="Continuing from Terminal in OOB" %}}
+- Use the three Config IDs (FGT, FMG and FAZ) from the output received from the previous section to pull the FortiFlex tokens 
+- Do the following command 3 times (for each configID)
+````bash
+./flex-entitlements.sh <configId from previous section> 
+````
+- Verify **.lic** files and contents 
+    - Located here: `/home/fortinet/automation/ansible/fortinet/license`
+{{% /tab %}}
+
 
 ### Install FortiFlex Tokens
 **Note:** This next script will "fail", but is successful if VM’s reboot 

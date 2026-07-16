@@ -5,46 +5,46 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Create FortiFlex API User and TokensCreate API User and Download Credentials
+    <meta name="description" content="Create FortiFlex API Profile and UserCreate API User and Download Credentials
 Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ansible Prerequisites :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Create FortiFlex API User and TokensCreate API User and Download Credentials
+    <meta name="twitter:description" content="Create FortiFlex API Profile and UserCreate API User and Download Credentials
 Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Ansible Prerequisites :: SE How-To Build Lab">
-    <meta property="og:description" content="Create FortiFlex API User and TokensCreate API User and Download Credentials
+    <meta property="og:description" content="Create FortiFlex API Profile and UserCreate API User and Download Credentials
 Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Ansible Prerequisites :: SE How-To Build Lab">
-    <meta itemprop="description" content="Create FortiFlex API User and TokensCreate API User and Download Credentials
+    <meta itemprop="description" content="Create FortiFlex API Profile and UserCreate API User and Download Credentials
 Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”">
     <meta itemprop="wordCount" content="794">
     <title>Ansible Prerequisites :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/steps/ansible/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Prerequisites :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784167222" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784167222" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784174645" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784174645" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784167222";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784174645";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784174645" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784167222" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784167222" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784167222" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784167222" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784174645" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784174645" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784174645" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784174645" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784174645" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784167222" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784174645" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -122,7 +122,9 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
   <ul>
     <li>
       <ul>
-        <li><a href="#create-fortiflex-api-user-and-tokens">Create FortiFlex API User and Tokens</a></li>
+        <li><a href="#create-fortiflex-api-profile-and-user">Create FortiFlex API Profile and User</a></li>
+        <li><a href="#create-vm-configuration">Create VM Configuration</a></li>
+        <li><a href="#create-vm-entitlements">Create VM entitlements</a></li>
         <li><a href="#create-ssh-key-on-oob">Create SSH Key on OOB</a></li>
         <li><a href="#create-ansible-api-token-on-proxmox-server">Create Ansible API Token on Proxmox Server</a></li>
         <li><a href="#update-global-vars-file-on-ubuntu-oob">Update Global VARS File on Ubuntu-OOB</a></li>
@@ -167,51 +169,51 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 
 <h1 id="ansible-prerequisites">Ansible Prerequisites</h1>
 
-<h3 id="create-fortiflex-api-user-and-tokens">Create FortiFlex API User and Tokens<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h3 id="create-fortiflex-api-profile-and-user">Create FortiFlex API Profile and User<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p><strong>Create API User and Download Credentials</strong></p>
 <ul>
 <li>Go to the latest FortiFlex documentation on <a href="https://docs.fortinet.com/product/flex-vm/26.2" rel="external" target="_blank">Docs Fortinet</a></li>
 <li>Open the Admin Guide and click on section &ldquo;<strong>Automation/FortiFlex API</strong>
-<a href="#R-image-1d642ff073820f4c1287a9e5d5a7124d" class="lightbox-link"><img alt="Admin_Guide" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d642ff073820f4c1287a9e5d5a7124d"><img alt="Admin_Guide" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide.png"></a></li>
+<a href="#R-image-a4e6234920ca5e4630354348c04c2f90" class="lightbox-link"><img alt="Admin_Guide" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4e6234920ca5e4630354348c04c2f90"><img alt="Admin_Guide" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide.png"></a></li>
 <li>Follow the steps in the section: <strong>&ldquo;To create an API User&rdquo;</strong>
-<a href="#R-image-2dc775c9f2fbbe0ed73860df83b7afb9" class="lightbox-link"><img alt="FortiFlex_Services_IAM" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Services_IAM.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2dc775c9f2fbbe0ed73860df83b7afb9"><img alt="FortiFlex_Services_IAM" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Services_IAM.png"></a></li>
+<a href="#R-image-54b704b840a062df4c692dfdf71b7a05" class="lightbox-link"><img alt="FortiFlex_Services_IAM" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Services_IAM.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-54b704b840a062df4c692dfdf71b7a05"><img alt="FortiFlex_Services_IAM" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Services_IAM.png"></a></li>
 </ul>
-<p><a href="#R-image-917d9b1c651902a21bfc2a81153d982d" class="lightbox-link"><img alt="FortiFlex_Profile_Add" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Profile_Add.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-917d9b1c651902a21bfc2a81153d982d"><img alt="FortiFlex_Profile_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Profile_Add.png"></a></p>
-<p><a href="#R-image-b4c5cdb3488877b0e248e7caff595027" class="lightbox-link"><img alt="FortiFlex_Portal_Add" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_Add.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4c5cdb3488877b0e248e7caff595027"><img alt="FortiFlex_Portal_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_Add.png"></a></p>
-<p><a href="#R-image-bfc73b352e6ae95f2fa184d3eb034a1c" class="lightbox-link"><img alt="FortiFlex_Portal_FortiFlex" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_FortiFlex.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bfc73b352e6ae95f2fa184d3eb034a1c"><img alt="FortiFlex_Portal_FortiFlex" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_FortiFlex.png"></a></p>
-<p><a href="#R-image-acf3565f8969cd838660716e01620f49" class="lightbox-link"><img alt="FortiFlex_API_User_Portal_Profile" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Portal_Profile.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-acf3565f8969cd838660716e01620f49"><img alt="FortiFlex_API_User_Portal_Profile" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Portal_Profile.png"></a></p>
-<p><a href="#R-image-171724667d5b3f40d5e63cbcaf301d3d" class="lightbox-link"><img alt="FortiFlex_User_Create" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_User_Create.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-171724667d5b3f40d5e63cbcaf301d3d"><img alt="FortiFlex_User_Create" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_User_Create.png"></a></p>
-<p><a href="#R-image-8a0d3e3450c797e57b4eeecf834ce4ff" class="lightbox-link"><img alt="FortiFlex_API_User_Create" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Create.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a0d3e3450c797e57b4eeecf834ce4ff"><img alt="FortiFlex_API_User_Create" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Create.png"></a></p>
-<p><a href="#R-image-1ac56084f41680931a7a3aee38a36203" class="lightbox-link"><img alt="FortiFlex_API_User_Credentials" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Credentials.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ac56084f41680931a7a3aee38a36203"><img alt="FortiFlex_API_User_Credentials" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Credentials.png"></a></p>
-<p><strong>Create VM Configuration</strong></p>
+<p><a href="#R-image-b77753d57395596a7ff20ecca1f8ee9f" class="lightbox-link"><img alt="FortiFlex_Profile_Add" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Profile_Add.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b77753d57395596a7ff20ecca1f8ee9f"><img alt="FortiFlex_Profile_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Profile_Add.png"></a></p>
+<p><a href="#R-image-bcf5201cf62ae99b728b5665457072ac" class="lightbox-link"><img alt="FortiFlex_Portal_Add" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_Add.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bcf5201cf62ae99b728b5665457072ac"><img alt="FortiFlex_Portal_Add" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_Add.png"></a></p>
+<p><a href="#R-image-938575c8a5d1d550672fcb245d834220" class="lightbox-link"><img alt="FortiFlex_Portal_FortiFlex" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_FortiFlex.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-938575c8a5d1d550672fcb245d834220"><img alt="FortiFlex_Portal_FortiFlex" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Portal_FortiFlex.png"></a></p>
+<p><a href="#R-image-05d3b7af2f1c9d08094db62ccda8e865" class="lightbox-link"><img alt="FortiFlex_API_User_Portal_Profile" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Portal_Profile.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05d3b7af2f1c9d08094db62ccda8e865"><img alt="FortiFlex_API_User_Portal_Profile" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Portal_Profile.png"></a></p>
+<p><a href="#R-image-65cc640442540ed34c247301cf6de80d" class="lightbox-link"><img alt="FortiFlex_User_Create" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_User_Create.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-65cc640442540ed34c247301cf6de80d"><img alt="FortiFlex_User_Create" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_User_Create.png"></a></p>
+<p><a href="#R-image-ff4bd716eb54e5dd471982b032b0043b" class="lightbox-link"><img alt="FortiFlex_API_User_Create" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Create.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ff4bd716eb54e5dd471982b032b0043b"><img alt="FortiFlex_API_User_Create" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Create.png"></a></p>
+<p><a href="#R-image-17aad6ec72e160434f33679351c11155" class="lightbox-link"><img alt="FortiFlex_API_User_Credentials" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Credentials.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-17aad6ec72e160434f33679351c11155"><img alt="FortiFlex_API_User_Credentials" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_API_User_Credentials.png"></a></p>
+<h3 id="create-vm-configuration">Create VM Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Go to the latest FortiFlex documentation on <a href="https://docs.fortinet.com/product/flex-vm/26.2" rel="external" target="_blank">Docs Fortinet</a></li>
 <li>Open the Admin Guide and click on section &ldquo;<strong>Creating a VM configuration</strong>
-<a href="#R-image-a8cdebdbb41dc84a907a7750d2b72ae2" class="lightbox-link"><img alt="Admin_Guide_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Configuration.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a8cdebdbb41dc84a907a7750d2b72ae2"><img alt="Admin_Guide_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Configuration.png"></a></li>
+<a href="#R-image-4d27d688532f9b433ccc1217e9b892d8" class="lightbox-link"><img alt="Admin_Guide_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Configuration.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d27d688532f9b433ccc1217e9b892d8"><img alt="Admin_Guide_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Configuration.png"></a></li>
 <li><span class="badge cstyle tip badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-lightbulb"></i> Tip</span><span class="badge-content">Use a consistent naming convention, especially when running multiple lab environments</span></span></li>
 <li><span class="badge cstyle info badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-info-circle"></i> Info</span><span class="badge-content">Example below shows Enterprise bundle, but your lab could use UTP or ATP in addition to possibly having OT security services</span></span>
-<a href="#R-image-950c14f9bb8cfa78f609e24a689c7dc8" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-950c14f9bb8cfa78f609e24a689c7dc8"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Configurations.png"></a></li>
+<a href="#R-image-2afc11bd1796b4d29cfdd0e34566c953" class="lightbox-link"><img alt="FortiFlex_Configuration" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Configurations.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2afc11bd1796b4d29cfdd0e34566c953"><img alt="FortiFlex_Configuration" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Configurations.png"></a></li>
 </ul>
-<p><strong>Create VM entitlements</strong></p>
+<h3 id="create-vm-entitlements">Create VM entitlements<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>
 <p>Go to the latest FortiFlex documentation on <a href="https://docs.fortinet.com/product/flex-vm/26.2" rel="external" target="_blank">Docs Fortinet</a></p>
 </li>
 <li>
 <p>Open the Admin Guide and click on section &ldquo;<strong>Creating VM entitlements</strong>
-<a href="#R-image-764bf88a96e1bc9cafeb0af1212734e1" class="lightbox-link"><img alt="Admin_Guide_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Entitlements.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-764bf88a96e1bc9cafeb0af1212734e1"><img alt="Admin_Guide_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Entitlements.png"></a></p>
+<a href="#R-image-f12d8ee8a62accdaa85c9814a1f08fc4" class="lightbox-link"><img alt="Admin_Guide_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Entitlements.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f12d8ee8a62accdaa85c9814a1f08fc4"><img alt="Admin_Guide_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Admin_Guide_Entitlements.png"></a></p>
 </li>
 <li>
 <span class="badge cstyle tip badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-lightbulb"></i> Tip</span><span class="badge-content">Description <strong>MUST match exactly</strong> (upper/lower case and dashes) as outlined in red in the example below as the automation scrips key off the exact names listed below</span></span>
@@ -220,27 +222,27 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <span class="badge cstyle info badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-info-circle"></i> Info</span><span class="badge-content">While possible to use a pool of entitlements and have Ansible return the first available (i.e. unassigned) token by configuration id.  However, that is beyond the scope of this how-to build document and left to the reader to investigate and implement.</span></span>
 </li>
 </ul>
-<p><a href="#R-image-603faef3a550f5d0d255374cd779d1ba" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-603faef3a550f5d0d255374cd779d1ba"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Entitlements.png"></a></p>
+<p><a href="#R-image-18fb6f2031398a51fc7dd33ae63eddcc" class="lightbox-link"><img alt="FortiFlex_Entitlements" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Entitlements.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18fb6f2031398a51fc7dd33ae63eddcc"><img alt="FortiFlex_Entitlements" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/FortiFlex_Entitlements.png"></a></p>
 <h3 id="create-ssh-key-on-oob">Create SSH Key on OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Generate SSH Key on Ubuntu-OOB</li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-798007604540582341e243918f65b3c8">
+<div class="tab-panel" data-tab-group="R-tabs-526213a7cd53a5e45ac92ca43f2d6d6b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c85d1877ca721c3d4dae9ec59362a392" aria-expanded="true"
+      aria-controls="R-tab-id-54069e6fafa0d333c69e0c0b156e1d27" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-798007604540582341e243918f65b3c8','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-526213a7cd53a5e45ac92ca43f2d6d6b','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c85d1877ca721c3d4dae9ec59362a392"
+      id="R-tab-id-54069e6fafa0d333c69e0c0b156e1d27"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -250,21 +252,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
   </div>
 </div>
 <!-- ssh-keygen -t rsa -b 4096 -C se_lab@fortinet.internal -->
-<div class="tab-panel" data-tab-group="R-tabs-56095d05c54603285359d43f1419e83b">
+<div class="tab-panel" data-tab-group="R-tabs-d59dfb22cad18c8fb7ebac59bd628391">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-003cb468416ab8bea488cd2a0a6c438e" aria-expanded="true"
+      aria-controls="R-tab-id-0af85c44befcb257717c63e8a5baa669" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-56095d05c54603285359d43f1419e83b','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-d59dfb22cad18c8fb7ebac59bd628391','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-003cb468416ab8bea488cd2a0a6c438e"
+      id="R-tab-id-0af85c44befcb257717c63e8a5baa669"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -280,21 +282,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <ul>
 <li>Place public key on Proxmox</li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-78b96dd7e2d1188c0df375747860a1a6">
+<div class="tab-panel" data-tab-group="R-tabs-2c65afaaacdb9570a36fa5ac02881c2d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-aad7997d90fa95cc80638f95e65e971b" aria-expanded="true"
+      aria-controls="R-tab-id-981a4743f0a479e25a4e12d169b583b4" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-78b96dd7e2d1188c0df375747860a1a6','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-2c65afaaacdb9570a36fa5ac02881c2d','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-aad7997d90fa95cc80638f95e65e971b"
+      id="R-tab-id-981a4743f0a479e25a4e12d169b583b4"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -321,21 +323,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-38d558b163c7dfcc90dd9f32daf5e5f5">
+<div class="tab-panel" data-tab-group="R-tabs-65635283528db3983dc5745093a1a3a9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a7330ccce1eaac85db9dbb4d542a5775" aria-expanded="true"
+      aria-controls="R-tab-id-d603a32f3967a7bdf9f4e70972d6d1f0" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-38d558b163c7dfcc90dd9f32daf5e5f5','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-65635283528db3983dc5745093a1a3a9','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a7330ccce1eaac85db9dbb4d542a5775"
+      id="R-tab-id-d603a32f3967a7bdf9f4e70972d6d1f0"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -344,21 +346,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-19dc4e1f837507d45338ead8882325f2">
+<div class="tab-panel" data-tab-group="R-tabs-165916baf8dfa4dda65f2ce65b942fbc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-2ae792ad610857c53c8ecf9b4ce82dcd" aria-expanded="true"
+      aria-controls="R-tab-id-979ded90b8c47a002220988695636209" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-19dc4e1f837507d45338ead8882325f2','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-165916baf8dfa4dda65f2ce65b942fbc','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-2ae792ad610857c53c8ecf9b4ce82dcd"
+      id="R-tab-id-979ded90b8c47a002220988695636209"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -369,21 +371,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </div>
 <ul>
 <li>Update Ansible global.vars file
-<div class="tab-panel" data-tab-group="R-tabs-d8b5783cbface74d039d3dd7edf83a76">
+<div class="tab-panel" data-tab-group="R-tabs-b501e59255915952f5aa64b0fb67dc84">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-846223a58f707a7914f1846ccaabbda0" aria-expanded="true"
+      aria-controls="R-tab-id-17b5bb84d95a6fc6b0962d0311a000ba" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-d8b5783cbface74d039d3dd7edf83a76','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-b501e59255915952f5aa64b0fb67dc84','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-846223a58f707a7914f1846ccaabbda0"
+      id="R-tab-id-17b5bb84d95a6fc6b0962d0311a000ba"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -394,23 +396,23 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </div>
 <ul>
 <li>Highlight, Right Click and Copy ansible_key.pub contents
-<a href="#R-image-e49206a4df06155f2f3184cc47be9022" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e49206a4df06155f2f3184cc47be9022"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-bc5ee5903db9be4c2cf446ecc60c295c">
+<a href="#R-image-be3c312d52c31d37f56752b752d53adc" class="lightbox-link"><img alt="ansible_key_pub" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-be3c312d52c31d37f56752b752d53adc"><img alt="ansible_key_pub" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-b46ef313c3a1a779e173029349734081">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-92b5d49f6cf1d22e0fe85353cda63a5b" aria-expanded="true"
+      aria-controls="R-tab-id-55ab589a04a4ff4419f58301f9f7995b" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bc5ee5903db9be4c2cf446ecc60c295c','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-b46ef313c3a1a779e173029349734081','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-92b5d49f6cf1d22e0fe85353cda63a5b"
+      id="R-tab-id-55ab589a04a4ff4419f58301f9f7995b"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -419,21 +421,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-7c2b5b5014a835a1b20509a79b740af3">
+<div class="tab-panel" data-tab-group="R-tabs-cfc3fcc2ac0b832dd56373ba7c801c50">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6d3ac07d4f7b0c566819c4064828c855" aria-expanded="true"
+      aria-controls="R-tab-id-023d8da518cb82f2aebc1f9073876fc2" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-7c2b5b5014a835a1b20509a79b740af3','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-cfc3fcc2ac0b832dd56373ba7c801c50','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6d3ac07d4f7b0c566819c4064828c855"
+      id="R-tab-id-023d8da518cb82f2aebc1f9073876fc2"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -442,8 +444,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<a href="#R-image-121587b803b8aeee82773c97a9681d0d" class="lightbox-link"><img alt="ansible_key_pub_global_vars" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub_global_vars.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-121587b803b8aeee82773c97a9681d0d"><img alt="ansible_key_pub_global_vars" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub_global_vars.png"></a></li>
+<a href="#R-image-35492edc452a311ff0418fc46a06106f" class="lightbox-link"><img alt="ansible_key_pub_global_vars" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub_global_vars.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-35492edc452a311ff0418fc46a06106f"><img alt="ansible_key_pub_global_vars" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/ansible_key_pub_global_vars.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -455,8 +457,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <ul>
 <li>Click on Create button</li>
 <li>Name:	<code>IaC-admin-users</code>
-<a href="#R-image-c78afc8582df7ce9d66542c802013875" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c78afc8582df7ce9d66542c802013875"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_1.png"></a></li>
+<a href="#R-image-b041069966b720bca4294f6572dfd009" class="lightbox-link"><img alt="Ansible_API_1" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b041069966b720bca4294f6572dfd009"><img alt="Ansible_API_1" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_1.png"></a></li>
 </ul>
 </li>
 <li>Click on: Datacenter/Permissions
@@ -467,8 +469,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <li>Group:	IaC-admin-users</li>
 <li>Role: 	Administrator</li>
 <li>Propagate: 	Checked
-<a href="#R-image-4185186dd3dcce6fb0ac4daf71fbf3cf" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4185186dd3dcce6fb0ac4daf71fbf3cf"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_2.png"></a></li>
+<a href="#R-image-dce8b01a87b47ad0bbc2068385467952" class="lightbox-link"><img alt="Ansible_API_2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dce8b01a87b47ad0bbc2068385467952"><img alt="Ansible_API_2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_2.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -482,8 +484,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <li>Group:	IaC-admin-users</li>
 <li>Expires:	never</li>
 <li>Enabled:	checked
-<a href="#R-image-5dd389baf31710073c91d47cc9ec43e1" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5dd389baf31710073c91d47cc9ec43e1"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_3.png"></a></li>
+<a href="#R-image-f2c2f8ad514398b75ebea86c29acaa88" class="lightbox-link"><img alt="Ansible_API_3" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2c2f8ad514398b75ebea86c29acaa88"><img alt="Ansible_API_3" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_3.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -495,8 +497,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <li>User: IaC</li>
 <li>Token ID: <code>Automation</code></li>
 <li>Privilege Separation: Unchecked
-<a href="#R-image-3d4f0a486376beb10215751f9a3d767d" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3d4f0a486376beb10215751f9a3d767d"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_4.png"></a></li>
+<a href="#R-image-4d163542b370d8a07c84fd3c966bd370" class="lightbox-link"><img alt="Ansible_API_4" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d163542b370d8a07c84fd3c966bd370"><img alt="Ansible_API_4" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_4.png"></a></li>
 </ul>
 </li>
 </ul>
@@ -504,29 +506,29 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <li>Copy the Token ID and Secret generated
 <ul>
 <li><strong>Note:</strong> Secret value is only displayed once when token generated
-<a href="#R-image-9898fc847fad3f1c39118938e0675c6e" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9898fc847fad3f1c39118938e0675c6e"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_5.png"></a></li>
+<a href="#R-image-cb690e2bf64998a94f6047a411cb0d20" class="lightbox-link"><img alt="Ansible_API_5" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb690e2bf64998a94f6047a411cb0d20"><img alt="Ansible_API_5" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Ansible_API_5.png"></a></li>
 </ul>
 </li>
 <li>Update <strong>proxmox_api_token_secret:</strong></li>
 </ul>
 </li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-1670f52328346026c0e9f053df048d08">
+<div class="tab-panel" data-tab-group="R-tabs-fc5614626f6d0f07209fe181117a7efb">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-cfebb6554986ff5b5b36491a823318c4" aria-expanded="true"
+      aria-controls="R-tab-id-2159d7b13e9a2c5de25718deb449fcfc" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1670f52328346026c0e9f053df048d08','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-fc5614626f6d0f07209fe181117a7efb','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-cfebb6554986ff5b5b36491a823318c4"
+      id="R-tab-id-2159d7b13e9a2c5de25718deb449fcfc"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -535,21 +537,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-fad60da00498eff3a040bdcb04089430">
+<div class="tab-panel" data-tab-group="R-tabs-2f9059b6fb44e19572ecf9c68a4cf64d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-85bb34d141b039dc4e7d02d5d78502c7" aria-expanded="true"
+      aria-controls="R-tab-id-2902e1e38d29420e893c854cd2f43253" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fad60da00498eff3a040bdcb04089430','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-2f9059b6fb44e19572ecf9c68a4cf64d','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-85bb34d141b039dc4e7d02d5d78502c7"
+      id="R-tab-id-2902e1e38d29420e893c854cd2f43253"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -561,21 +563,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <h3 id="update-global-vars-file-on-ubuntu-oob">Update Global VARS File on Ubuntu-OOB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Update <strong>global.yml</strong> file located in <strong>/home/fortinet/automation/ansible/vars/</strong>
-<div class="tab-panel" data-tab-group="R-tabs-6e1899ba5ac084a0eb64acd0436bec88">
+<div class="tab-panel" data-tab-group="R-tabs-d87e0bc3f716ca0e860be810fa13a2dc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3f1cec019529cd5531f540642227186c" aria-expanded="true"
+      aria-controls="R-tab-id-1b314118ef8053f7254f8adb5fba0215" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-6e1899ba5ac084a0eb64acd0436bec88','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-d87e0bc3f716ca0e860be810fa13a2dc','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3f1cec019529cd5531f540642227186c"
+      id="R-tab-id-1b314118ef8053f7254f8adb5fba0215"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -591,21 +593,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>It is the API&rsquo;s credentials that were downloaded at the beginning of this Build Step (see top of page)
-<div class="tab-panel" data-tab-group="R-tabs-66f76ca3e7da2bad1ed563fd4af00206">
+<div class="tab-panel" data-tab-group="R-tabs-def15631f7dd93597ce2b092684f15cd">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-25c0129abe607fe41eda342a4c3ca32d" aria-expanded="true"
+      aria-controls="R-tab-id-edebdefd0105b4adf9856427558c2912" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-66f76ca3e7da2bad1ed563fd4af00206','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-def15631f7dd93597ce2b092684f15cd','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-25c0129abe607fe41eda342a4c3ca32d"
+      id="R-tab-id-edebdefd0105b4adf9856427558c2912"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -614,21 +616,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-2fa1b1a2ae0ef9c752c6be450ca853c6">
+<div class="tab-panel" data-tab-group="R-tabs-af23479607c6bfb4e7770ce1a52c17a5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-d8078804f88b993380cdbb1d50cbae00" aria-expanded="true"
+      aria-controls="R-tab-id-1ffa2529e898c6aa0f7f0f739a2d8a95" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2fa1b1a2ae0ef9c752c6be450ca853c6','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-af23479607c6bfb4e7770ce1a52c17a5','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-d8078804f88b993380cdbb1d50cbae00"
+      id="R-tab-id-1ffa2529e898c6aa0f7f0f739a2d8a95"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -637,23 +639,23 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<a href="#R-image-b312a40cd6fed3c77b5709063ab30bea" class="lightbox-link"><img alt="Account_ID_FortiFlex_SN" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Account_ID_FortiFlex_SN.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b312a40cd6fed3c77b5709063ab30bea"><img alt="Account_ID_FortiFlex_SN" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Account_ID_FortiFlex_SN.png"></a>
-<div class="tab-panel" data-tab-group="R-tabs-aecfd6272ec31663e1cdca498750be81">
+<a href="#R-image-7c871ae188e638bd1f5ef8b0842dbb48" class="lightbox-link"><img alt="Account_ID_FortiFlex_SN" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Account_ID_FortiFlex_SN.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c871ae188e638bd1f5ef8b0842dbb48"><img alt="Account_ID_FortiFlex_SN" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/Account_ID_FortiFlex_SN.png"></a>
+<div class="tab-panel" data-tab-group="R-tabs-69ff4de3a5e3cfaa6eed8e68b50d8bf0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-618909775a8f58abadb15968f4b62598" aria-expanded="true"
+      aria-controls="R-tab-id-85ecb5e437032bdb98f21884d42c0a30" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-aecfd6272ec31663e1cdca498750be81','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-69ff4de3a5e3cfaa6eed8e68b50d8bf0','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-618909775a8f58abadb15968f4b62598"
+      id="R-tab-id-85ecb5e437032bdb98f21884d42c0a30"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -662,21 +664,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-d5f71f7d871f890983b859f2141aca5c">
+<div class="tab-panel" data-tab-group="R-tabs-7d88279020bb1c7e70745af97f43a768">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-10c27f383b2d064de9dbf493076ba2f8" aria-expanded="true"
+      aria-controls="R-tab-id-fe24bc4dae459c915a27df22d2f8bb8f" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-d5f71f7d871f890983b859f2141aca5c','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-7d88279020bb1c7e70745af97f43a768','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-10c27f383b2d064de9dbf493076ba2f8"
+      id="R-tab-id-fe24bc4dae459c915a27df22d2f8bb8f"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -688,21 +690,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>fortinet_timezone:</strong> US/Central &lt;= Default Timzone <strong>(no change needed if this is your timezone)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-0bce0ef7d973a5dd93a732eef2fa6ee9">
+<div class="tab-panel" data-tab-group="R-tabs-93f2fb78c35175b7b87743ec9bff3abb">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7e89edfc8617f8279a5f226a39f7998b" aria-expanded="true"
+      aria-controls="R-tab-id-e3d1ae8e612eea000d4d3c16dbfae42d" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-0bce0ef7d973a5dd93a732eef2fa6ee9','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-93f2fb78c35175b7b87743ec9bff3abb','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7e89edfc8617f8279a5f226a39f7998b"
+      id="R-tab-id-e3d1ae8e612eea000d4d3c16dbfae42d"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -714,21 +716,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>proxmox_api_host:</strong> pve01		&lt;= Default PVE Server name <strong>(Following changes NOT needed if == pve01)</strong>
-<div class="tab-panel" data-tab-group="R-tabs-2137a6533541d35279e4b0e0c5f3cb02">
+<div class="tab-panel" data-tab-group="R-tabs-aac82e518c04bf0c2394a4cc762ccde9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-aff72153dad2e344d206df59977eed5d" aria-expanded="true"
+      aria-controls="R-tab-id-db3d139cf9931d8b85c799e48e1dd732" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-2137a6533541d35279e4b0e0c5f3cb02','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-aac82e518c04bf0c2394a4cc762ccde9','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-aff72153dad2e344d206df59977eed5d"
+      id="R-tab-id-db3d139cf9931d8b85c799e48e1dd732"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -748,21 +750,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>proxmox_storage_name:</strong> local-lvm	&lt;= if storage on PVE, or NAS name if not
-<div class="tab-panel" data-tab-group="R-tabs-ce7f7665b0a3a187f2081cc4374f8be9">
+<div class="tab-panel" data-tab-group="R-tabs-7d3885c9df388e8c063e54481edfb6f9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-34580dc640a78c6901db32f25a22d65f" aria-expanded="true"
+      aria-controls="R-tab-id-7aab28c5604eaa27a624a1c1b1ac8bab" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-ce7f7665b0a3a187f2081cc4374f8be9','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-7d3885c9df388e8c063e54481edfb6f9','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-34580dc640a78c6901db32f25a22d65f"
+      id="R-tab-id-7aab28c5604eaa27a624a1c1b1ac8bab"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -774,21 +776,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>proxmox_storage:</strong> /var/lib/vz	&lt;= if storage on PVE, or /mnt/pve/<strong><em>&lt; NFS name &gt;</em></strong> if using NAS
-<div class="tab-panel" data-tab-group="R-tabs-714f5c990cfe9cf0cabf67f6e35e4135">
+<div class="tab-panel" data-tab-group="R-tabs-99908fa2c86e50ad698e83738df670b4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6523b4c2e411b1aa76f46d64110c534d" aria-expanded="true"
+      aria-controls="R-tab-id-dc9ae3c84360fe808b3733593edbc435" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-714f5c990cfe9cf0cabf67f6e35e4135','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-99908fa2c86e50ad698e83738df670b4','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6523b4c2e411b1aa76f46d64110c534d"
+      id="R-tab-id-dc9ae3c84360fe808b3733593edbc435"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -800,21 +802,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_name:</strong> Ubuntu-Template &lt;= Name of Ubuntu template
-<div class="tab-panel" data-tab-group="R-tabs-af07d7ce2f13917259f67b058b264878">
+<div class="tab-panel" data-tab-group="R-tabs-912d34e933192cff8cbb1503a734a96c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-aa35209c785cfa87081549220eded9d9" aria-expanded="true"
+      aria-controls="R-tab-id-dce1dfbf24b3b48f8f6ac21103bb297d" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-af07d7ce2f13917259f67b058b264878','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-912d34e933192cff8cbb1503a734a96c','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-aa35209c785cfa87081549220eded9d9"
+      id="R-tab-id-dce1dfbf24b3b48f8f6ac21103bb297d"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -826,21 +828,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p>Update <strong>proxmox_ubuntu_template_vmid:</strong> 491 &lt;= VMID of Ubuntu VM Template
-<div class="tab-panel" data-tab-group="R-tabs-215ab06a5407b4177cf6505bf6cf44ba">
+<div class="tab-panel" data-tab-group="R-tabs-0b3bb2be8571e1fb8bfa5de5803621b7">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-69701888d16e48381390648bd90de537" aria-expanded="true"
+      aria-controls="R-tab-id-808b54d70c33e31defab564f7a796ab3" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-215ab06a5407b4177cf6505bf6cf44ba','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-0b3bb2be8571e1fb8bfa5de5803621b7','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-69701888d16e48381390648bd90de537"
+      id="R-tab-id-808b54d70c33e31defab564f7a796ab3"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -852,21 +854,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 </li>
 <li>
 <p><strong>Verify</strong>
-<div class="tab-panel" data-tab-group="R-tabs-bb24b4b0c16ada7e52119d6a9aabfc75">
+<div class="tab-panel" data-tab-group="R-tabs-775b71194d53c543687668bf2fbfecea">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-46859408305af5a1f694f192f6c7dd44" aria-expanded="true"
+      aria-controls="R-tab-id-9418d1d1c97656aadee95ebc041f0d61" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bb24b4b0c16ada7e52119d6a9aabfc75','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-775b71194d53c543687668bf2fbfecea','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-46859408305af5a1f694f192f6c7dd44"
+      id="R-tab-id-9418d1d1c97656aadee95ebc041f0d61"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -875,29 +877,29 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<a href="#R-image-10a85f073b140e1cae8d101ffcc781ad" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-10a85f073b140e1cae8d101ffcc781ad"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-global_yml.png"></a></p>
+<a href="#R-image-6c7e86da701ac6c70318b49e6bb89d99" class="lightbox-link"><img alt="global_yml" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-global_yml.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c7e86da701ac6c70318b49e6bb89d99"><img alt="global_yml" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-global_yml.png"></a></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="dns">DNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All hosts and VMs can be resolved by name.
-<div class="tab-panel" data-tab-group="R-tabs-70a0f5166cdee98431733ba92adbcad4">
+<div class="tab-panel" data-tab-group="R-tabs-565817499e1aea7d5e8a79690a81ad82">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-31a0a4d459f495d6f498924a80d188bf" aria-expanded="true"
+      aria-controls="R-tab-id-83b5379378df646c9473aab9d9721f89" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-70a0f5166cdee98431733ba92adbcad4','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-565817499e1aea7d5e8a79690a81ad82','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-31a0a4d459f495d6f498924a80d188bf"
+      id="R-tab-id-83b5379378df646c9473aab9d9721f89"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -906,21 +908,21 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-5859fcea368fac5bc1bb8e9fe8051fb7">
+<div class="tab-panel" data-tab-group="R-tabs-f373a80ef10502c1e9249b1e25f7585f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-037a6deedd76dbd27065f47ca859cf94" aria-expanded="true"
+      aria-controls="R-tab-id-41415c98b589a64466c55a6d042d8b83" aria-expanded="true"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-5859fcea368fac5bc1bb8e9fe8051fb7','R-tab-e1d299586400621799b2d1a10d35e556')"
+      onclick="switchTab('R-tabs-f373a80ef10502c1e9249b1e25f7585f','R-tab-e1d299586400621799b2d1a10d35e556')"
     >
       <span class="tab-nav-text">from Ubuntu-OOB Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-037a6deedd76dbd27065f47ca859cf94"
+      id="R-tab-id-41415c98b589a64466c55a6d042d8b83"
       data-tab-item="R-tab-e1d299586400621799b2d1a10d35e556"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -937,8 +939,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <li>FMG-v7.6.6.M.qcow2</li>
 <li>FAZ-v7.6.6.M.qcow2</li>
 </ul>
-<p><a href="#R-image-c618335b90e9cd091f0db09558dc9408" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c618335b90e9cd091f0db09558dc9408"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-import_qcow2.png"></a></p>
+<p><a href="#R-image-b9c29c9e8df5efbacd4f39664cd3ef62" class="lightbox-link"><img alt="import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9c29c9e8df5efbacd4f39664cd3ef62"><img alt="import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/steps/ansible/pic-import_qcow2.png"></a></p>
 <h3 id="complete">Complete<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 
   <footer class="footline">
@@ -1016,8 +1018,8 @@ Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide a
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784167222" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784167222" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784174645" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784174645" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

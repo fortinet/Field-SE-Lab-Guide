@@ -3,7 +3,7 @@
   <channel>
     <title>Ansible Prerequisites :: SE How-To Build Lab</title>
     <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html</link>
-    <description>Create FortiFlex API User and Tokens&#xD;Create API User and Download Credentials&#xA;Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”</description>
+    <description>Create FortiFlex API Profile and User&#xD;Create API User and Download Credentials&#xA;Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.xml" rel="self" type="application/rss+xml" />
