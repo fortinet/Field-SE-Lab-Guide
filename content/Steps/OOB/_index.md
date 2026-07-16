@@ -28,21 +28,17 @@ weight = 20
 - If you see the following dialog, click on *"Remind Me Later"*
 ![Remind_Me_Later](Remind_Me_Later.png)
 {{% tab title="from Terminal in OOB" %}}
-````bash
-git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloads
-````
-{{% /tab %}}
-{{% tab title="from Terminal in OOB" %}}
+- Pull the latest OOB install scripts from github repository
 ````bash
 cd /home/fortinet/Downloads/
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in OOB" %}}
+````bash
+git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloads
+````
 ````bash
 chmod 744 *.sh
 ````
 {{% /tab %}}
-
 {{% tab title="from Terminal in OOB" %}}
 - Run the following script _**ONLY IF**_ changing the external default subnet from 172.16.3.x **(provide ONLY the first 3 octets)**
 - Example: ./update_subnet.sh 192.168.10
@@ -50,19 +46,18 @@ chmod 744 *.sh
 ./update_subnet.sh <external subnet to SE Lab> 
 ````
 {{% /tab %}}
-- Next start the install script
 {{% tab title="from Terminal in OOB" %}}
+- Next start the install script
 ````bash
 ./OOB_Install.sh
 ````
-{{% /tab %}}
 -	**Note:** VM will auto reboot after “OOB_Install.sh” script runs
+{{% /tab %}}
 {{% tab title="from Terminal in OOB" %}}
+- Install Containers
 ````bash
 cd /home/fortinet/Downloads/
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in OOB" %}}
 ````bash
 ./OOB_Containers.sh
 ````
@@ -80,19 +75,17 @@ cd /home/fortinet/Downloads/
         - **/home/Fortinet/c_data/coredns/conf/zones**
             - **db.fortinet.internal**	<= intended for endpoints “internal” to  proxmox
             - **db.home.internal**		<= intended for endpoints “external” to proxmox
-    - If changes are made to zone database files, execute the following:
-{{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
+    {{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
+- If changes are made to zone database files, execute the following:
 ````bash
 docker compose down
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
 ````bash
 docker compose up -d  
 ````
 {{% /tab %}}
 
-- **"homepage"**
+- **homepage**
     - homepage available via browswer via OOB's IP **_< 172.16.3.80 >_** *or via the subnet you changed to from the default*
     - [homepage](https://gethomepage.dev/) is a customizable application dashboard
     -  YAML files located here: **/home/fortinet/c_data/homepage/config**
@@ -135,50 +128,32 @@ docker compose up -d
             - Update PVE Server Name, PVE Server IP address, and API Secret/password as shown below
                 ![Widgets_API](Widgets_API.png)<br />
 - **Guacamole**
-    - Following steps need executed
-
-{{% tab title="from Terminal" %}}
+{{% tab title="from Terminal in OOB" %}}
+- Load a preconfigured Guacamole database
 ````bash
 cd  /home/fortinet/c_data/guacamole
 ````
-{{% /tab %}}
-
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose ps
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose cp ./dump.sql guacamole-sql:/dump.sql
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose exec guacamole-sql /bin/sh
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 sh-5.1# mysql -u root -p <  ./dump.sql
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 Enter password: password
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 sh-5.1# exit
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose down
 ````
-{{% /tab %}}
-{{% tab title="from Terminal in /home/Fortinet/c_data/guacamole" %}}
 ````bash
 docker compose up –d
 ````
@@ -193,25 +168,23 @@ docker compose up –d
     - via Work Laptop browser: [http://172.16.3.80:8080/guacamole](http://172.16.3.80:8080/guacamole) **(URL should reflect your subnet if not-default)**
         - **User:** 		*guacadmin*
         - **Password:** 	*guacadmin*
-- DNS is working
+
 {{% tab title="from Terminal" %}}
+- DNS is working
 ````bash
 ping oob
 ````
-{{% /tab %}}
-{{% tab title="from Terminal" %}}
 ````bash
 ping oob.home.internal
 ````
-{{% /tab %}}
-{{% tab title="from Terminal" %}}
 ````bash
 ping oob.fortinet.internal
 ````
 {{% /tab %}}
-- NAT/Forwarding working
-    - Should see multiple: **_PREROUTING 172.16.3.X (or your subnet if not-default) addresses_** and **_POSTROUTING MASQUERADE_** 
+ 
 {{% tab title="from Terminal" %}}
+- NAT/Forwarding working
+    - Should see multiple: **_PREROUTING 172.16.3.X (or your subnet if not-default) addresses_** and **_POSTROUTING MASQUERADE_**
 ````bash
 sudo iptables -t nat -L -n -v
 ````

@@ -6,45 +6,45 @@
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
     <meta name="description" content="Why would do this?
-Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole ​from Terminal in /home/Fortinet/c_data/guacamoledocker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy off the VM )">
+Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole​from Terminal in /home/Fortinet/c_data/guacamolecd /home/fortinet/c_data/guacamoledocker compose psdocker compose exec guacamole-sql /bin/shsh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sqlEnter password: passwordsh-5.1# exitdocker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy not on the VM ) Ansible, Homepage, CoreDNS​from Terminal in /home/Fortinetcd /home/fortinetThe following is a single command all on one line zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pubOptional: SCP backup_config.zip to your laptop ( always good to have a copy off the VM ) Start Upgrade​from Terminal in OOBPull the latest OOB install scripts from github repository cd /home/fortinet/Downloads/git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloadschmod 744 *.sh​from Terminal in OOBRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) Example: ./update_subnet.sh 192.168.10 ./update_subnet.sh &lt;external subnet to SE Lab&gt; ​from Terminal in OOBNext start the install script ./OOB_Install.shWhen you see the following message File ‘/usr/share/keyrings/docker-archive-keyring.gpg’ exists. Overwrite? (y/N) Type y and hit &lt; enter &gt; Note: VM will auto reboot after “OOB_Install.sh” script runs">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Upgrade Existing OOB :: SE How-To Build Lab">
     <meta name="twitter:description" content="Why would do this?
-Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole ​from Terminal in /home/Fortinet/c_data/guacamoledocker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy off the VM )">
+Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole​from Terminal in /home/Fortinet/c_data/guacamolecd /home/fortinet/c_data/guacamoledocker compose psdocker compose exec guacamole-sql /bin/shsh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sqlEnter password: passwordsh-5.1# exitdocker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy not on the VM ) Ansible, Homepage, CoreDNS​from Terminal in /home/Fortinetcd /home/fortinetThe following is a single command all on one line zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pubOptional: SCP backup_config.zip to your laptop ( always good to have a copy off the VM ) Start Upgrade​from Terminal in OOBPull the latest OOB install scripts from github repository cd /home/fortinet/Downloads/git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloadschmod 744 *.sh​from Terminal in OOBRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) Example: ./update_subnet.sh 192.168.10 ./update_subnet.sh &lt;external subnet to SE Lab&gt; ​from Terminal in OOBNext start the install script ./OOB_Install.shWhen you see the following message File ‘/usr/share/keyrings/docker-archive-keyring.gpg’ exists. Overwrite? (y/N) Type y and hit &lt; enter &gt; Note: VM will auto reboot after “OOB_Install.sh” script runs">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Upgrade Existing OOB :: SE How-To Build Lab">
     <meta property="og:description" content="Why would do this?
-Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole ​from Terminal in /home/Fortinet/c_data/guacamoledocker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy off the VM )">
+Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole​from Terminal in /home/Fortinet/c_data/guacamolecd /home/fortinet/c_data/guacamoledocker compose psdocker compose exec guacamole-sql /bin/shsh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sqlEnter password: passwordsh-5.1# exitdocker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy not on the VM ) Ansible, Homepage, CoreDNS​from Terminal in /home/Fortinetcd /home/fortinetThe following is a single command all on one line zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pubOptional: SCP backup_config.zip to your laptop ( always good to have a copy off the VM ) Start Upgrade​from Terminal in OOBPull the latest OOB install scripts from github repository cd /home/fortinet/Downloads/git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloadschmod 744 *.sh​from Terminal in OOBRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) Example: ./update_subnet.sh 192.168.10 ./update_subnet.sh &lt;external subnet to SE Lab&gt; ​from Terminal in OOBNext start the install script ./OOB_Install.shWhen you see the following message File ‘/usr/share/keyrings/docker-archive-keyring.gpg’ exists. Overwrite? (y/N) Type y and hit &lt; enter &gt; Note: VM will auto reboot after “OOB_Install.sh” script runs">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Upgrade Existing OOB :: SE How-To Build Lab">
     <meta itemprop="description" content="Why would do this?
-Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole ​from Terminal in /home/Fortinet/c_data/guacamoledocker compose ps docker compose exec guacamole-sql /bin/sh sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sql Enter password: password sh-5.1# exit docker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy off the VM )">
-    <meta itemprop="wordCount" content="356">
+Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole​from Terminal in /home/Fortinet/c_data/guacamolecd /home/fortinet/c_data/guacamoledocker compose psdocker compose exec guacamole-sql /bin/shsh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sqlEnter password: passwordsh-5.1# exitdocker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy not on the VM ) Ansible, Homepage, CoreDNS​from Terminal in /home/Fortinetcd /home/fortinetThe following is a single command all on one line zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pubOptional: SCP backup_config.zip to your laptop ( always good to have a copy off the VM ) Start Upgrade​from Terminal in OOBPull the latest OOB install scripts from github repository cd /home/fortinet/Downloads/git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloadschmod 744 *.sh​from Terminal in OOBRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) Example: ./update_subnet.sh 192.168.10 ./update_subnet.sh &lt;external subnet to SE Lab&gt; ​from Terminal in OOBNext start the install script ./OOB_Install.shWhen you see the following message File ‘/usr/share/keyrings/docker-archive-keyring.gpg’ exists. Overwrite? (y/N) Type y and hit &lt; enter &gt; Note: VM will auto reboot after “OOB_Install.sh” script runs">
+    <meta itemprop="wordCount" content="385">
     <title>Upgrade Existing OOB :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.xml" rel="alternate" type="application/rss+xml" title="Upgrade Existing OOB :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784213312" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784213312" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784231601" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784231601" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784213312";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784231601";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784213312" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784231601" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213312" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213312" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784213312" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784213312" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784213312" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784231601" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784231601" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784231601" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784231601" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784231601" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784213312" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784231601" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -122,9 +122,13 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
   <ul>
     <li>
       <ul>
-        <li><a href="#backup-configs">Backup Configs</a></li>
+        <li><a href="#backup-configs"><strong>Backup Configs</strong></a></li>
+        <li><a href="#guacamole">Guacamole</a></li>
+        <li><a href="#ansible-homepage-coredns">Ansible, Homepage, CoreDNS</a></li>
         <li><a href="#start-upgrade">Start Upgrade</a></li>
-        <li><a href="#restore-config">Restore Config</a></li>
+        <li><a href="#restore-config"><strong>Restore Config</strong></a></li>
+        <li><a href="#guacamole-1">Guacamole</a></li>
+        <li><a href="#ansible-homepage-coredns-1">Ansible, Homepage, CoreDNS</a></li>
         <li><a href="#verification">Verification</a></li>
         <li><a href="#upgrade-complete">Upgrade Complete</a></li>
       </ul>
@@ -174,66 +178,60 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </ul>
 </li>
 </ul>
-<h3 id="backup-configs">Backup Configs<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li>
-<p><strong>Guacamole</strong>
-<div class="tab-panel" data-tab-group="R-tabs-1647ee17855e7fa9f02a9f7d57189f16">
+<h3 id="backup-configs"><strong>Backup Configs</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h3 id="guacamole">Guacamole<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-d983a19e640502c8cf8db6c0b16f174f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b6c5f4bcce60748a2644b3711c2b9cf9" aria-expanded="true"
+      aria-controls="R-tab-id-3186e5a0aa64c96d0c55ff39e0df54ec" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1647ee17855e7fa9f02a9f7d57189f16','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-d983a19e640502c8cf8db6c0b16f174f','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b6c5f4bcce60748a2644b3711c2b9cf9"
+      id="R-tab-id-3186e5a0aa64c96d0c55ff39e0df54ec"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose ps
-</span></span><span style="display:flex;"><span>	 
-</span></span><span style="display:flex;"><span>docker compose exec guacamole-sql /bin/sh
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged<span style="color:#f92672">=</span>OFF &gt; backup.sql
-</span></span><span style="display:flex;"><span>Enter password: password
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sh-5.1# exit
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker compose cp guacamole-sql:/backup.sql ./backup.sql</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd  /home/fortinet/c_data/guacamole</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose ps</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose exec guacamole-sql /bin/sh</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged<span style="color:#f92672">=</span>OFF &gt; backup.sql</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Enter password: password</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.1# exit</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose cp guacamole-sql:/backup.sql ./backup.sql</span></span></code></pre></div>
 <ul>
-<li><strong>Optional:</strong> SCP <em>backup.sql</em> to your laptop ( always good to have a copy off the VM )</li>
+<li><strong>Optional:</strong> SCP <em>backup.sql</em> to your laptop ( always good to have a copy not on the VM )</li>
 </ul>
       </div>
     </div>
   </div>
-</div></p>
-</li>
-<li>
-<p><strong>Ansible, Homepage, CoreDNS</strong>
-<div class="tab-panel" data-tab-group="R-tabs-4985ee9db4bf13aa08edf3f6dc99bd3d">
+</div>
+<h3 id="ansible-homepage-coredns">Ansible, Homepage, CoreDNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-41912b68d8615a715430b4c54ffcff94">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6ed4b316ab7defcfba154f0ab58d83ef" aria-expanded="true"
+      aria-controls="R-tab-id-eecb6a80e15609f3f69c648f164c8d97" aria-expanded="true"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4985ee9db4bf13aa08edf3f6dc99bd3d','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
+      onclick="switchTab('R-tabs-41912b68d8615a715430b4c54ffcff94','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6ed4b316ab7defcfba154f0ab58d83ef"
+      id="R-tab-id-eecb6a80e15609f3f69c648f164c8d97"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet</span></span></code></pre></div>
 <ul>
 <li>The following is a single command all on one line</li>
 </ul>
@@ -244,80 +242,78 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
       </div>
     </div>
   </div>
-</div></p>
-</li>
-</ul>
+</div>
 <h3 id="start-upgrade">Start Upgrade<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-9e009c7155a81e51b4c9ac97c6d07380">
+<div class="tab-panel" data-tab-group="R-tabs-db926fbba9f69a164448608d53c3a6ab">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-1ff5f150e91510f7821e7101c9506949" aria-expanded="true"
+      aria-controls="R-tab-id-822ab60ce477d54c5ee0a63fd2c8e5a4" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-9e009c7155a81e51b4c9ac97c6d07380','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-db926fbba9f69a164448608d53c3a6ab','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-1ff5f150e91510f7821e7101c9506949"
+      id="R-tab-id-822ab60ce477d54c5ee0a63fd2c8e5a4"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/stevesweeneywisc/SE-Lab-OOB /home/fortinet/Downloads
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cd /home/fortinet/Downloads/
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">755</span> *.sh</span></span></code></pre></div>
+<ul>
+<li>Pull the latest OOB install scripts from github repository</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/Downloads/</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloads</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">744</span> *.sh</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<p><div class="tab-panel" data-tab-group="R-tabs-89fb05c8e04036db993982fd02280271">
+<p><div class="tab-panel" data-tab-group="R-tabs-2933ff0cbe0221da0046f5188a598e6d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-b5b57f21819cc4be588b2745f32371ed" aria-expanded="true"
+      aria-controls="R-tab-id-a573d2f541eb6200fa0deaf53a2e8d0a" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-89fb05c8e04036db993982fd02280271','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-2933ff0cbe0221da0046f5188a598e6d','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-b5b57f21819cc4be588b2745f32371ed"
+      id="R-tab-id-a573d2f541eb6200fa0deaf53a2e8d0a"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
 <li>Run the following script <em><strong>ONLY IF</strong></em> changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets)</li>
+<li>Example: ./update_subnet.sh 192.168.10</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_subnet.sh &lt;external subnet to SE Lab&gt; 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Example: ./update_subnet.sh 192.168.10</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./update_subnet.sh &lt;external subnet to SE Lab&gt; </span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-69384610347713496e3fb1700d617670">
+<div class="tab-panel" data-tab-group="R-tabs-3e4b4490b61d56d5e5582f708c86f3c4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-572fd235613ff7adcf7d38b2450c4714" aria-expanded="true"
+      aria-controls="R-tab-id-f0ebbbad1566d6e1ff6d375d2f9a49cd" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-69384610347713496e3fb1700d617670','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-3e4b4490b61d56d5e5582f708c86f3c4','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-572fd235613ff7adcf7d38b2450c4714"
+      id="R-tab-id-f0ebbbad1566d6e1ff6d375d2f9a49cd"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -338,103 +334,94 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div></p>
-<h3 id="restore-config">Restore Config<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ul>
-<li><strong>Guacamole</strong></li>
-</ul>
-<div class="tab-panel" data-tab-group="R-tabs-99f36f99143a9b51e22deeb41eb4c180">
+<h3 id="restore-config"><strong>Restore Config</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h3 id="guacamole-1">Guacamole<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-717a5bbbbbf3d97cfba2f68b1430cd90">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-699ebd7a83493cf4281dbe46be439e01" aria-expanded="true"
+      aria-controls="R-tab-id-8d6d265facfa485241cb04ff9fe615c6" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-99f36f99143a9b51e22deeb41eb4c180','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-717a5bbbbbf3d97cfba2f68b1430cd90','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-699ebd7a83493cf4281dbe46be439e01"
+      id="R-tab-id-8d6d265facfa485241cb04ff9fe615c6"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
 <li><em><strong>backup.sql</strong></em> should be in the <em><strong>/home/Fortinet/c_data/guacamole</strong></em> directory.  If not, SCP from laptop.</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose ps
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker compose cp ./backup.sql guacamole-sql:/backup.sql
-</span></span><span style="display:flex;"><span>	 
-</span></span><span style="display:flex;"><span>docker compose exec guacamole-sql /bin/sh
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sh-5.1# mysql -u root -p &lt;  ./backup.sql
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Enter password: password
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sh-5.1# exit
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker compose down
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker compose up –d</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd  /home/fortinet/c_data/guacamole</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose ps</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose cp ./dump.sql guacamole-sql:/backup.sql</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose exec guacamole-sql /bin/sh</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.1# mysql -u root -p &lt;  ./dump.sql</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Enter password: password</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.1# exit</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose down</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose up –d</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<ul>
-<li><strong>Ansible, Homepage, CoreDNS</strong></li>
-</ul>
-<p><div class="tab-panel" data-tab-group="R-tabs-982c43bc2c17094bf2475a70df501b38">
+<h3 id="ansible-homepage-coredns-1">Ansible, Homepage, CoreDNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><div class="tab-panel" data-tab-group="R-tabs-b895b9cd9a9c7248cf6a1ddef7a6cefa">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-6d697da53f7e68f62286ffdb49e0fcc9" aria-expanded="true"
+      aria-controls="R-tab-id-47bfc80711fc29aba5c33427f4a93e91" aria-expanded="true"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-982c43bc2c17094bf2475a70df501b38','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
+      onclick="switchTab('R-tabs-b895b9cd9a9c7248cf6a1ddef7a6cefa','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-6d697da53f7e68f62286ffdb49e0fcc9"
+      id="R-tab-id-47bfc80711fc29aba5c33427f4a93e91"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
 <li><em><strong>backup_config.zip</strong></em> should be in the <em><strong>/home/Fortinet</strong></em> directory.  If not, SCP from laptop.</li>
 </ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet</span></span></code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unzip backup_config.zip</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-bb574efa7ec4bb133c28a81b1f06adad">
+<div class="tab-panel" data-tab-group="R-tabs-7524a9e83d39e287ba283db7dac3b95a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f6c3f170de61426fd659820fed5f6f76" aria-expanded="true"
+      aria-controls="R-tab-id-b0d825cf78f1e8b10079ee154bc8ec65" aria-expanded="true"
       data-tab-item="R-tab-8eed841003411f9b9abc2f9a705dd11c"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bb574efa7ec4bb133c28a81b1f06adad','R-tab-8eed841003411f9b9abc2f9a705dd11c')"
+      onclick="switchTab('R-tabs-7524a9e83d39e287ba283db7dac3b95a','R-tab-8eed841003411f9b9abc2f9a705dd11c')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/coredns</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f6c3f170de61426fd659820fed5f6f76"
+      id="R-tab-id-b0d825cf78f1e8b10079ee154bc8ec65"
       data-tab-item="R-tab-8eed841003411f9b9abc2f9a705dd11c"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
 <li>Restart CoreDNS</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose down
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker compose up –d</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/coredns</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose down</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose up –d</span></span></code></pre></div>
       </div>
     </div>
   </div>
@@ -457,28 +444,94 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </ul>
 </li>
 <li>DNS is working
-<div class="tab-panel" data-tab-group="R-tabs-8eb3f2c67f9e98bd065eb06d764b513d">
+<div class="tab-panel" data-tab-group="R-tabs-6205744fa2073220583c388d334751ea">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-c93cdbc0948048c614c66d6451b60e03" aria-expanded="true"
+      aria-controls="R-tab-id-d16cb55c0279576923b62b8f2c3ebef6" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-8eb3f2c67f9e98bd065eb06d764b513d','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-6205744fa2073220583c388d334751ea','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-c93cdbc0948048c614c66d6451b60e03"
+      id="R-tab-id-d16cb55c0279576923b62b8f2c3ebef6"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping oob
-</span></span><span style="display:flex;"><span>ping oob.home.internal
-</span></span><span style="display:flex;"><span>ping oob.fortinet.internal
-</span></span><span style="display:flex;"><span>ping &lt;pve server name&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping oob</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-c06831caf075f37ab74f72bfee304fdc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-780d3245533b819b599be869c2bf4eef" aria-expanded="true"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c06831caf075f37ab74f72bfee304fdc','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+    >
+      <span class="tab-nav-text">from Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-780d3245533b819b599be869c2bf4eef"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping oob.home.internal</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-0703d21f8e04e08169096291eecffc4c">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-18a4e675b076720d4467921ddd7db1cf" aria-expanded="true"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-0703d21f8e04e08169096291eecffc4c','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+    >
+      <span class="tab-nav-text">from Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-18a4e675b076720d4467921ddd7db1cf"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping oob.fortinet.internal</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-7b3718746c71112402df927ad0c39c0b">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-078197e6125597cba1674cfac483abd9" aria-expanded="true"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-7b3718746c71112402df927ad0c39c0b','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+    >
+      <span class="tab-nav-text">from Terminal</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-078197e6125597cba1674cfac483abd9"
+      data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping &lt;pve server name&gt;</span></span></code></pre></div>
       </div>
     </div>
   </div>
@@ -558,8 +611,8 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784213312" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784231601" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784231601" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
