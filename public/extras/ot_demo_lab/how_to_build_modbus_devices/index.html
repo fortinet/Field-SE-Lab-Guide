@@ -5,50 +5,46 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Arduino Modbus Sketches:
-Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:
+    <meta name="description" content="3D Printed Parts 3mf File:
 Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="How-To Build Modbus Devices :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Arduino Modbus Sketches:
-Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:
+    <meta name="twitter:description" content="3D Printed Parts 3mf File:
 Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="How-To Build Modbus Devices :: SE How-To Build Lab">
-    <meta property="og:description" content="Arduino Modbus Sketches:
-Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:
+    <meta property="og:description" content="3D Printed Parts 3mf File:
 Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="How-To Build Modbus Devices :: SE How-To Build Lab">
-    <meta itemprop="description" content="Arduino Modbus Sketches:
-Ethernet_Modbus_TCP_Server_LED.ino Ethernet_Modbus_TCP_Client_Toggle.ino 3D Printed Parts 3mf File:
+    <meta itemprop="description" content="3D Printed Parts 3mf File:
 Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver on bolts (Don’t Over Tighten) Attach DIN Rail Mount">
-    <meta itemprop="wordCount" content="159">
+    <meta itemprop="wordCount" content="154">
     <title>How-To Build Modbus Devices :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/index.xml" rel="alternate" type="application/rss+xml" title="How-To Build Modbus Devices :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784213537" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784213537" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784213720" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784213720" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784213537";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784213720";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784213720" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213537" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213537" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784213537" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784213537" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784213537" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213720" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213720" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784213720" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784213720" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784213720" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -101,7 +97,7 @@ Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver o
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784213537" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784213720" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -169,50 +165,47 @@ Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver o
 
 <h1 id="how-to-build-modbus-devices">How-To Build Modbus Devices</h1>
 
-<p><strong>Arduino Modbus Sketches:</strong></p>
-<span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Server_LED.ino" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">Ethernet_Modbus_TCP_Server_LED.ino</span></a></span>
-<span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Client_Toggle.ino" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">Ethernet_Modbus_TCP_Client_Toggle.ino</span></a></span>
 <p><strong>3D Printed Parts 3mf File:</strong></p>
 <span class="btn cstyle button tip interactive"><a href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Uno_Ethernet_Enclosure-Box.3mf" rel="external" target="_blank"><i class="fa-fw fas fa-angle-down"></i> <span class="title">Uno_Ethernet_Enclosure-Box.3mf</span></a></span>
 <h3 id="3d-printed-parts"><strong>3D Printed Parts</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-778da8f3a95dfeb58504f039c79f96df" class="lightbox-link"><img alt="Arduino_Case_3D_Print_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_01.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-778da8f3a95dfeb58504f039c79f96df"><img alt="Arduino_Case_3D_Print_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_01.jpg"></a></p>
+<p><a href="#R-image-67477c69f8b3cace96145803809a4b76" class="lightbox-link"><img alt="Arduino_Case_3D_Print_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_01.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-67477c69f8b3cace96145803809a4b76"><img alt="Arduino_Case_3D_Print_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_01.jpg"></a></p>
 <ul>
 <li>Use ONLY small pen screwdriver on bolts (Don&rsquo;t Over Tighten)
-<a href="#R-image-1d170bdf837001be5862ef87dde51dc1" class="lightbox-link"><img alt="Arduino_Case_3D_Print_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_03.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d170bdf837001be5862ef87dde51dc1"><img alt="Arduino_Case_3D_Print_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_03.jpg"></a></li>
+<a href="#R-image-1660994e68c796576d8ae4a3a78a5b2c" class="lightbox-link"><img alt="Arduino_Case_3D_Print_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_03.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1660994e68c796576d8ae4a3a78a5b2c"><img alt="Arduino_Case_3D_Print_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_3D_Print_03.jpg"></a></li>
 </ul>
 <h3 id="attach-din-rail-mount"><strong>Attach DIN Rail Mount</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-0b0a096dbfb9345cf6f014a670d284b8" class="lightbox-link"><img alt="Arduino_Case_DIN_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_01.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b0a096dbfb9345cf6f014a670d284b8"><img alt="Arduino_Case_DIN_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_01.jpg"></a></p>
+<p><a href="#R-image-0401ef0184951ebc80f8570bf34a8414" class="lightbox-link"><img alt="Arduino_Case_DIN_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_01.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0401ef0184951ebc80f8570bf34a8414"><img alt="Arduino_Case_DIN_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_01.jpg"></a></p>
 <ul>
 <li>Attach with nuts on back side (Don&rsquo;t Over Tighten)
-<a href="#R-image-345c9a25a4a54fb0bbdd717464f828a7" class="lightbox-link"><img alt="Arduino_Case_DIN_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_02.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-345c9a25a4a54fb0bbdd717464f828a7"><img alt="Arduino_Case_DIN_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_02.jpg"></a></li>
+<a href="#R-image-ce9975a988e13995b03b5086b0398b25" class="lightbox-link"><img alt="Arduino_Case_DIN_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_02.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce9975a988e13995b03b5086b0398b25"><img alt="Arduino_Case_DIN_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_DIN_02.jpg"></a></li>
 </ul>
 <h3 id="attach-ethernet-hat-to-arduino-uno"><strong>Attach Ethernet Hat to Arduino UNO</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><a href="#R-image-16d6a5c79ce2183e69b39623be3de68c" class="lightbox-link"><img alt="Arduino_Hat_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_01.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-16d6a5c79ce2183e69b39623be3de68c"><img alt="Arduino_Hat_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_01.jpg"></a></p>
+<p><a href="#R-image-4752b934b21445a8c579fbf4600056c0" class="lightbox-link"><img alt="Arduino_Hat_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_01.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4752b934b21445a8c579fbf4600056c0"><img alt="Arduino_Hat_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_01.jpg"></a></p>
 <ul>
 <li>
 <p>Place Hat on UNO (align via pins on back of UNO)
-<a href="#R-image-b2c90846061c4bddaccf5142af5691e9" class="lightbox-link"><img alt="Arduino_Hat_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_02.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b2c90846061c4bddaccf5142af5691e9"><img alt="Arduino_Hat_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_02.jpg"></a></p>
+<a href="#R-image-70499791019d7c6aa8d2f834e9b92352" class="lightbox-link"><img alt="Arduino_Hat_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_02.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-70499791019d7c6aa8d2f834e9b92352"><img alt="Arduino_Hat_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_02.jpg"></a></p>
 </li>
 <li>
 <p>Final assembly looks like this
-<a href="#R-image-d66b5ad05475e8ca19459cf3d4fa3869" class="lightbox-link"><img alt="Arduino_Hat_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_03.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d66b5ad05475e8ca19459cf3d4fa3869"><img alt="Arduino_Hat_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_03.jpg"></a></p>
+<a href="#R-image-c98dc8605677bc88de36fd6885fe9340" class="lightbox-link"><img alt="Arduino_Hat_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_03.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c98dc8605677bc88de36fd6885fe9340"><img alt="Arduino_Hat_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Hat_03.jpg"></a></p>
 </li>
 </ul>
 <h3 id="insert-arduino-uno-with-ethernet-hat"><strong>Insert Arduino UNO with Ethernet Hat</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>Use a single M3 Bolt to affix Arduino to case
-<a href="#R-image-83e950eaeab3339274c3e745e01941e0" class="lightbox-link"><img alt="Arduino_Case_Board_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_02.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-83e950eaeab3339274c3e745e01941e0"><img alt="Arduino_Case_Board_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_02.jpg"></a></li>
+<a href="#R-image-bdd2cfede5480869c0a52a14c0e9db54" class="lightbox-link"><img alt="Arduino_Case_Board_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_02.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bdd2cfede5480869c0a52a14c0e9db54"><img alt="Arduino_Case_Board_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_02.jpg"></a></li>
 </ul>
-<p><a href="#R-image-564e07a140d31065c2e83f44d37472e1" class="lightbox-link"><img alt="Arduino_Case_Board_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_01.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-564e07a140d31065c2e83f44d37472e1"><img alt="Arduino_Case_Board_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_01.jpg"></a></p>
+<p><a href="#R-image-292303ceda937269775ee00d1541f068" class="lightbox-link"><img alt="Arduino_Case_Board_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_01.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-292303ceda937269775ee00d1541f068"><img alt="Arduino_Case_Board_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Board_01.jpg"></a></p>
 <h3 id="wire-push-button-and-led"><strong>Wire Push Button and LED</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>
@@ -222,8 +215,8 @@ Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver o
 <li>Pin 7 - wire closest to resistor on side with single wire</li>
 <li>Pin 6 - wire closest to resistor on side with two wires</li>
 <li>Pin 5 - wire fartherest away from resistor on side with two wires
-<a href="#R-image-8560e3a99e3a620cb9e34356e5cd44e0" class="lightbox-link"><img alt="Arduino_Case_Wire_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_01.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8560e3a99e3a620cb9e34356e5cd44e0"><img alt="Arduino_Case_Wire_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_01.jpg"></a></li>
+<a href="#R-image-eb27cb33446cb884fa9f11ef0146f61e" class="lightbox-link"><img alt="Arduino_Case_Wire_01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_01.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eb27cb33446cb884fa9f11ef0146f61e"><img alt="Arduino_Case_Wire_01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_01.jpg"></a></li>
 </ul>
 </li>
 <li>
@@ -231,14 +224,14 @@ Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver o
 <ul>
 <li>Ground - either of the two wires</li>
 <li>Reset - either of the two wires
-<a href="#R-image-3abe82895e3e60ce11d82bc62ccb85ad" class="lightbox-link"><img alt="Arduino_Case_Wire_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_02.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3abe82895e3e60ce11d82bc62ccb85ad"><img alt="Arduino_Case_Wire_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_02.jpg"></a></li>
+<a href="#R-image-58fe3efc99f56a2af31358b52fddd8f7" class="lightbox-link"><img alt="Arduino_Case_Wire_02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_02.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-58fe3efc99f56a2af31358b52fddd8f7"><img alt="Arduino_Case_Wire_02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_02.jpg"></a></li>
 </ul>
 </li>
 <li>
 <p>Final assembly looks like this
-<a href="#R-image-0d69154c5f6d7fac030fe9948103fdba" class="lightbox-link"><img alt="Arduino_Case_Wire_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_03.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d69154c5f6d7fac030fe9948103fdba"><img alt="Arduino_Case_Wire_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_03.jpg"></a></p>
+<a href="#R-image-21b6c26abc7bbf983f4bd454e3a165a1" class="lightbox-link"><img alt="Arduino_Case_Wire_03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_03.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21b6c26abc7bbf983f4bd454e3a165a1"><img alt="Arduino_Case_Wire_03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/ot_demo_lab/how_to_build_modbus_devices/Arduino_Case_Wire_03.jpg"></a></p>
 </li>
 <li>
 <p>Attach lid with two bolts (Don&rsquo;t Over Tighten)</p>
@@ -323,8 +316,8 @@ Uno_Ethernet_Enclosure-Box.3mf 3D Printed PartsUse ONLY small pen screwdriver o
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784213537" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784213537" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784213720" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784213720" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

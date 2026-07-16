@@ -4,11 +4,6 @@ type = "default"
 weight = 40
 +++
 
-**Arduino Modbus Sketches:**
-
-{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Server_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_LED.ino{{% /button %}} 
- 
-{{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/How_To_Build_Modbus_Devices/Ethernet_Modbus_TCP_Client_Toggle.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Client_Toggle.ino{{% /button %}}  
 
 **3D Printed Parts 3mf File:**
 

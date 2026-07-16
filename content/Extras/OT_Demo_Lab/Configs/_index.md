@@ -154,7 +154,7 @@ Verify all steps are complete before beginning the lab exercise:
 
 ---
 
-### **Troubleshooting Using the Serial Monitor**
+### **Arduino Troubleshooting Using the Serial Monitor**
 
 The Serial Monitor provides real-time terminal output from the connected Arduino, making it the primary tool for diagnosing connection and communication issues at runtime.
 {{% notice warning %}}
