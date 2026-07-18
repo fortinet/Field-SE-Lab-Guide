@@ -5,42 +5,42 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta name="description" content="Verify Nested Virtualization is Enabled​From PVE Shellcat /sys/module/kvm_intel/parameters/nestedIf it returns “Y”, proceed to GNS3 VM Creation step If it returns “N”, follow steps in URL below to enable https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ Create GNS3 VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3 startedConfigure GNS3 VM​RDP to OOBMake sure GNS3 VM has fully started (GUI is up and running) before exeucting the following. Suggest opening GNS3’s console window on PVE to verify before continuing. ./wallpaper_update.sh gns3./configure_gns3.sh gns3​RDP to GNS3From the GNS3 VM’s terminal execute the script below When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times cd /home/fortinet/DownloadsGNS3_Install.shVM will reboot when finished Install GNS3 GUI on Laptop​Login and Download GNS3Login to GNS3 https://www.gns3.com/account/login Download GNS3 https://www.gns3.com/software/download ​Options During InstallUncheck all options but MSVC Runtime 2017 and GNS3 Desktop “No” to Solarwinds Engineer’s Toolset ​Configure Latop SoftwareSelect “Edit/Preferences” Select “Server”/“Main server”">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="GNS3 :: SE How-To Build Lab">
-    <meta name="twitter:description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta name="twitter:description" content="Verify Nested Virtualization is Enabled​From PVE Shellcat /sys/module/kvm_intel/parameters/nestedIf it returns “Y”, proceed to GNS3 VM Creation step If it returns “N”, follow steps in URL below to enable https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ Create GNS3 VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3 startedConfigure GNS3 VM​RDP to OOBMake sure GNS3 VM has fully started (GUI is up and running) before exeucting the following. Suggest opening GNS3’s console window on PVE to verify before continuing. ./wallpaper_update.sh gns3./configure_gns3.sh gns3​RDP to GNS3From the GNS3 VM’s terminal execute the script below When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times cd /home/fortinet/DownloadsGNS3_Install.shVM will reboot when finished Install GNS3 GUI on Laptop​Login and Download GNS3Login to GNS3 https://www.gns3.com/account/login Download GNS3 https://www.gns3.com/software/download ​Options During InstallUncheck all options but MSVC Runtime 2017 and GNS3 Desktop “No” to Solarwinds Engineer’s Toolset ​Configure Latop SoftwareSelect “Edit/Preferences” Select “Server”/“Main server”">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="GNS3 :: SE How-To Build Lab">
-    <meta property="og:description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
+    <meta property="og:description" content="Verify Nested Virtualization is Enabled​From PVE Shellcat /sys/module/kvm_intel/parameters/nestedIf it returns “Y”, proceed to GNS3 VM Creation step If it returns “N”, follow steps in URL below to enable https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ Create GNS3 VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3 startedConfigure GNS3 VM​RDP to OOBMake sure GNS3 VM has fully started (GUI is up and running) before exeucting the following. Suggest opening GNS3’s console window on PVE to verify before continuing. ./wallpaper_update.sh gns3./configure_gns3.sh gns3​RDP to GNS3From the GNS3 VM’s terminal execute the script below When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times cd /home/fortinet/DownloadsGNS3_Install.shVM will reboot when finished Install GNS3 GUI on Laptop​Login and Download GNS3Login to GNS3 https://www.gns3.com/account/login Download GNS3 https://www.gns3.com/software/download ​Options During InstallUncheck all options but MSVC Runtime 2017 and GNS3 Desktop “No” to Solarwinds Engineer’s Toolset ​Configure Latop SoftwareSelect “Edit/Preferences” Select “Server”/“Main server”">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="GNS3 :: SE How-To Build Lab">
-    <meta itemprop="description" content="Verify Nested Virtualization is Enabledhttps://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ At CLI:	cat /sys/module/kvm_intel/parameters/nested If it returns “Y”, proceed to Creation Step If it returns “N”, follow steps in URL above to enable GNS3 VM Creation​from Proxmox CLI (use shell in GUI)Download GNS3 VMware ESXi VM OVA sudo apt install unzip -y mkdir GNS3 &lt;= (make directory to unzip OVA) cd GNS3 curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip unzip *.zip tar -xvf *.ovaIn PVE GUI &gt; Click “Create VM” General Choose Node Choose VM_id (or use the default) Type VM Name OS Do not use any media System Accept Defaults Graphic card: Default Machine: Default BIOS: Default SCSI Controller: VirtIO SCSI Disks Click on Trashcan Icon and delete disk CPU Cores: 4 Type: host Memory 16GB is minimum Network Bridge vmbr0 Untick Firewall Confirm Click Finish Wait for the VM Create process to complete (i.e. Status OK)">
-    <meta itemprop="wordCount" content="229">
+    <meta itemprop="description" content="Verify Nested Virtualization is Enabled​From PVE Shellcat /sys/module/kvm_intel/parameters/nestedIf it returns “Y”, proceed to GNS3 VM Creation step If it returns “N”, follow steps in URL below to enable https://pve.proxmox.com/wiki/Nested_Virtualization https://devopstales.github.io/virtualization/install-vmware-in-proxmox/ Create GNS3 VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_ubuntu_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; gns3 startedConfigure GNS3 VM​RDP to OOBMake sure GNS3 VM has fully started (GUI is up and running) before exeucting the following. Suggest opening GNS3’s console window on PVE to verify before continuing. ./wallpaper_update.sh gns3./configure_gns3.sh gns3​RDP to GNS3From the GNS3 VM’s terminal execute the script below When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times cd /home/fortinet/DownloadsGNS3_Install.shVM will reboot when finished Install GNS3 GUI on Laptop​Login and Download GNS3Login to GNS3 https://www.gns3.com/account/login Download GNS3 https://www.gns3.com/software/download ​Options During InstallUncheck all options but MSVC Runtime 2017 and GNS3 Desktop “No” to Solarwinds Engineer’s Toolset ​Configure Latop SoftwareSelect “Edit/Preferences” Select “Server”/“Main server”">
+    <meta itemprop="wordCount" content="201">
     <title>GNS3 :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/gns3/index.xml" rel="alternate" type="application/rss+xml" title="GNS3 :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784213312" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784213312" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784341519" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784341519" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784213312";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784341519";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784213312" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784341519" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213312" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784213312" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784213312" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784213312" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784213312" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784341519" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784341519" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784341519" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784341519" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784341519" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,7 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784213312" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784341519" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -119,7 +119,9 @@
     <li>
       <ul>
         <li><a href="#verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong></a></li>
-        <li><a href="#gns3-vm-creation"><strong>GNS3 VM Creation</strong></a></li>
+        <li><a href="#create-gns3-vm"><strong>Create GNS3 VM</strong></a></li>
+        <li><a href="#configure-gns3-vm"><strong>Configure GNS3 VM</strong></a></li>
+        <li><a href="#install-gns3-gui-on-laptop"><strong>Install GNS3 GUI on Laptop</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -159,152 +161,230 @@
 <h1 id="gns3">GNS3</h1>
 
 <h3 id="verify-nested-virtualization-is-enabled"><strong>Verify Nested Virtualization is Enabled</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-7c595e0530de93ae7b5ce1f3c13bc161">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-f3640fad2f62cc57c906fe8533a25030" aria-expanded="true"
+      data-tab-item="R-tab-c760bcc3d9cb364148f3c326f47e42bb"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-7c595e0530de93ae7b5ce1f3c13bc161','R-tab-c760bcc3d9cb364148f3c326f47e42bb')"
+    >
+      <span class="tab-nav-text">From PVE Shell</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-f3640fad2f62cc57c906fe8533a25030"
+      data-tab-item="R-tab-c760bcc3d9cb364148f3c326f47e42bb"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /sys/module/kvm_intel/parameters/nested</span></span></code></pre></div>
+<ul>
+<li>If it returns “Y”, proceed to <a href="/Field-SE-Lab-Guide/extras/gns3/index.html#gns3-vm-creation"><strong>GNS3 VM Creation</strong></a> step</li>
+<li>If it returns “N”, follow steps in URL below to enable
 <ul>
 <li><a href="https://pve.proxmox.com/wiki/Nested_Virtualization" rel="external" target="_blank">https://pve.proxmox.com/wiki/Nested_Virtualization</a></li>
-<li><a href="https://devopstales.github.io/virtualization/install-vmware-in-proxmox/" rel="external" target="_blank">https://devopstales.github.io/virtualization/install-vmware-in-proxmox/</a>
-<ul>
-<li>At CLI:	cat /sys/module/kvm_intel/parameters/nested
-<ul>
-<li>If it returns “Y”, proceed to Creation Step</li>
-<li>If it returns “N”, follow steps in URL above to enable</li>
+<li><a href="https://devopstales.github.io/virtualization/install-vmware-in-proxmox/" rel="external" target="_blank">https://devopstales.github.io/virtualization/install-vmware-in-proxmox/</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="gns3-vm-creation"><strong>GNS3 VM Creation</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="create-gns3-vm"><strong>Create GNS3 VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li><div class="tab-panel" data-tab-group="R-tabs-1e078b2c15d26253cb2890c547c1a508">
+<li>If you get the error <span class="badge cstyle default"><span class="badge-content">No route to host</span></span> with any of the following steps, use the <strong><a href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></strong> steps</li>
+</ul>
+<div class="tab-panel" data-tab-group="R-tabs-39027abd9e3dc0cd5036feef59d991cd">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-47c8bb1f09af473b71e51084c93a4d1e" aria-expanded="true"
-      data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
+      aria-controls="R-tab-id-19e8cf8ac680754025615eb6d091672c" aria-expanded="true"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1e078b2c15d26253cb2890c547c1a508','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
+      onclick="switchTab('R-tabs-39027abd9e3dc0cd5036feef59d991cd','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
-      <span class="tab-nav-text">from Proxmox CLI (use shell in GUI)</span>
+      <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-47c8bb1f09af473b71e51084c93a4d1e"
-      data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
+      id="R-tab-id-19e8cf8ac680754025615eb6d091672c"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
-<li>Download <a href="https://gns3.com/software/download-vm" rel="external" target="_blank">GNS3 VMware ESXi VM OVA</a></li>
+<li>from Terminal in OOB</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install unzip -y
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>mkdir GNS3          &lt;<span style="color:#f92672">=</span> <span style="color:#f92672">(</span>make directory to unzip OVA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cd GNS3
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>unzip *.zip
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>tar -xvf *.ova</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/ubuntu</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./create_ubuntu_vm.sh      ../vars/all-hosts.yml  &lt;PVE server name&gt;  gns3</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./start_stop_remove_vm.sh  ../vars/all-hosts.yml  &lt;PVE server name&gt;  gns3 started</span></span></code></pre></div>
       </div>
     </div>
   </div>
-</div></li>
-<li>In PVE GUI  &gt; Click &ldquo;Create VM&rdquo;
-<ul>
-<li><strong>General</strong>
-<ul>
-<li>Choose Node</li>
-<li>Choose VM_id (or use the default)</li>
-<li>Type VM Name</li>
-</ul>
-</li>
-<li><strong>OS</strong>
-<ul>
-<li>Do not use any media
-<a href="#R-image-ee6a931572dacbd0e189c43bc8743215" class="lightbox-link"><img alt="No Media" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee6a931572dacbd0e189c43bc8743215"><img alt="No Media" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_media.png"></a></li>
-</ul>
-</li>
-<li><strong>System</strong>
-<ul>
-<li>Accept Defaults</li>
-<li><strong>Graphic card:</strong> Default</li>
-<li><strong>Machine:</strong> Default</li>
-<li><strong>BIOS:</strong> Default</li>
-<li><strong>SCSI Controller:</strong> VirtIO SCSI</li>
-</ul>
-</li>
-<li><strong>Disks</strong>
-<ul>
-<li>Click on Trashcan Icon and delete disk
-<a href="#R-image-23b2de28f9e2f7566ddc36e0b81413ea" class="lightbox-link"><img alt="No Disks" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-23b2de28f9e2f7566ddc36e0b81413ea"><img alt="No Disks" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/no_disks.png"></a></li>
-</ul>
-</li>
-<li><strong>CPU</strong>
-<ul>
-<li><strong>Cores:</strong> 4</li>
-<li><strong>Type:</strong> host</li>
-</ul>
-</li>
-<li><strong>Memory</strong>
-<ul>
-<li>16GB is minimum</li>
-</ul>
-</li>
-<li><strong>Network</strong>
-<ul>
-<li><strong>Bridge</strong> vmbr0</li>
-<li>Untick Firewall
-<a href="#R-image-af289de1b075e6a0bdb094570795bd7d" class="lightbox-link"><img alt="NIC" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-af289de1b075e6a0bdb094570795bd7d"><img alt="NIC" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/NIC.png"></a></li>
-</ul>
-</li>
-<li><strong>Confirm</strong>
-<ul>
-<li>Click <strong>Finish</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Wait for the VM Create process to complete (i.e. Status OK)</p>
-<ul>
-<li><div class="tab-panel" data-tab-group="R-tabs-bf469336641f277973d49d9b5870002d">
+</div>
+<h3 id="configure-gns3-vm"><strong>Configure GNS3 VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-384165b120686258971ec1cb7541f9af">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-aa35ab80f8369d857cac5ce71b0e65b3" aria-expanded="true"
-      data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
+      aria-controls="R-tab-id-56f60a13dd1b7f77d488367ba241e9e5" aria-expanded="true"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-bf469336641f277973d49d9b5870002d','R-tab-03882781a0c26c7e5803a211cdde4ca3')"
+      onclick="switchTab('R-tabs-384165b120686258971ec1cb7541f9af','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
-      <span class="tab-nav-text">from Proxmox CLI (use shell in GUI)</span>
+      <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-aa35ab80f8369d857cac5ce71b0e65b3"
-      data-tab-item="R-tab-03882781a0c26c7e5803a211cdde4ca3"
+      id="R-tab-id-56f60a13dd1b7f77d488367ba241e9e5"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 <ul>
-<li>Import the VMDK disks into VM just created
+<li>Make sure GNS3 VM has fully started (GUI is up and running) before exeucting the following.
 <ul>
-<li>Make sure machine ID (511 is my GNS3 VM) and VMDK file name matches VM name before running the commands below.</li>
-<li><strong>Note</strong> - These commands take time to run as they are converting from VMDK formate to qcow2</li>
+<li>Suggest opening GNS3&rsquo;s console window on PVE to verify before continuing.</li>
 </ul>
 </li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm importdisk &lt;VMid you choose&gt; &lt;VM name you choose&gt;_VM-disk1.vmdk &lt;your Proxmox image storage&gt; -format qcow2
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>qm importdisk &lt;VMid you choose&gt; &lt;VM name you choose&gt;_VM-disk2.vmdk &lt;your Proxmox image storage&gt; -format qcow2</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./wallpaper_update.sh  gns3</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./configure_gns3.sh   gns3</span></span></code></pre></div>
       </div>
     </div>
   </div>
-</div></li>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-8287f1896904aaeb63af286ab479fd3f">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-cb1224a604e31570e3d74d57dcfb1c9f" aria-expanded="true"
+      data-tab-item="R-tab-12ed17168e7cc5bdc83021aa47bffce0"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-8287f1896904aaeb63af286ab479fd3f','R-tab-12ed17168e7cc5bdc83021aa47bffce0')"
+    >
+      <span class="tab-nav-text">RDP to GNS3</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-cb1224a604e31570e3d74d57dcfb1c9f"
+      data-tab-item="R-tab-12ed17168e7cc5bdc83021aa47bffce0"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>From the GNS3 VM&rsquo;s terminal execute the script below</li>
+<li>When prompted whether non-root users should be allowed to use wireshark and ubridge, select <strong>‘Yes’</strong> both times</li>
 </ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/Downloads</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GNS3_Install.sh</span></span></code></pre></div>
+<ul>
+<li>VM will reboot when finished</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="install-gns3-gui-on-laptop"><strong>Install GNS3 GUI on Laptop</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><div class="tab-panel" data-tab-group="R-tabs-b0be780ada960b9c18349b8a95a79c48">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-0c9d23fdf6e68012f197b62e8b9da29b" aria-expanded="true"
+      data-tab-item="R-tab-1da570b949289ceb9fdf14f73ce66110"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-b0be780ada960b9c18349b8a95a79c48','R-tab-1da570b949289ceb9fdf14f73ce66110')"
+    >
+      <span class="tab-nav-text">Login and Download GNS3</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-0c9d23fdf6e68012f197b62e8b9da29b"
+      data-tab-item="R-tab-1da570b949289ceb9fdf14f73ce66110"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Login to GNS3
+<ul>
+<li><a href="https://www.gns3.com/account/login" rel="external" target="_blank">https://www.gns3.com/account/login</a></li>
+</ul>
+</li>
+<li>Download GNS3
+<ul>
+<li><a href="https://www.gns3.com/software/download" rel="external" target="_blank">https://www.gns3.com/software/download</a>
+<a href="#R-image-fc247f1152ef144768f1fb417e5a2619" class="lightbox-link"><img alt="Laptop_Install_1" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fc247f1152ef144768f1fb417e5a2619"><img alt="Laptop_Install_1" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_1.png"></a></li>
+</ul>
+</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-c8d80cd721d8f5f66552bf315fa2eedb">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ca921f4d059a8cb814f0f33530aa5dc2" aria-expanded="true"
+      data-tab-item="R-tab-16b52a841c7fc386d07ef9b95a37f01a"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c8d80cd721d8f5f66552bf315fa2eedb','R-tab-16b52a841c7fc386d07ef9b95a37f01a')"
+    >
+      <span class="tab-nav-text">Options During Install</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ca921f4d059a8cb814f0f33530aa5dc2"
+      data-tab-item="R-tab-16b52a841c7fc386d07ef9b95a37f01a"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Uncheck all options but <strong>MSVC Runtime 2017</strong> and <strong>GNS3 Desktop</strong>
+<a href="#R-image-5fcad058709eeb9080fc46b1dc8745d6" class="lightbox-link"><img alt="Laptop_Install_2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5fcad058709eeb9080fc46b1dc8745d6"><img alt="Laptop_Install_2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_2.png"></a></li>
+<li>&ldquo;No&rdquo; to Solarwinds Engineer&rsquo;s Toolset
+<a href="#R-image-73d94b56daffc464038ffe1d742af098" class="lightbox-link"><img alt="Laptop_Install_3" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-73d94b56daffc464038ffe1d742af098"><img alt="Laptop_Install_3" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_3.png"></a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-1c66f6e3c9285ce73f589e86095851e0">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-99edf789fb44bb48063d22e69ec5046a" aria-expanded="true"
+      data-tab-item="R-tab-83746e3569d005a0271c84d84fc3b01f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-1c66f6e3c9285ce73f589e86095851e0','R-tab-83746e3569d005a0271c84d84fc3b01f')"
+    >
+      <span class="tab-nav-text">Configure Latop Software</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-99edf789fb44bb48063d22e69ec5046a"
+      data-tab-item="R-tab-83746e3569d005a0271c84d84fc3b01f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Select &ldquo;Edit/Preferences&rdquo;
+<a href="#R-image-28ddbf6b05988bc5808f5adbe7b7c4c2" class="lightbox-link"><img alt="Laptop_Install_4" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-28ddbf6b05988bc5808f5adbe7b7c4c2"><img alt="Laptop_Install_4" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_4.png"></a></li>
+<li>Select &ldquo;Server&rdquo;/&ldquo;Main server&rdquo;
+<a href="#R-image-eaf69dbaeacc7c897fe2e08ffa798bb2" class="lightbox-link"><img alt="Laptop_Install_5" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eaf69dbaeacc7c897fe2e08ffa798bb2"><img alt="Laptop_Install_5" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/gns3/Laptop_Install_5.png"></a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div></p>
 
   <footer class="footline">
   </footer>
@@ -378,8 +458,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784213312" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784213312" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784341519" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

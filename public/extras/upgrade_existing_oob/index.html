@@ -22,29 +22,29 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     <meta itemprop="name" content="Upgrade Existing OOB :: SE How-To Build Lab">
     <meta itemprop="description" content="Why would do this?
 Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs Want OOB built off a newer Ubuntu Template VM Want latest Ansible Scripts Backup ConfigsGuacamole​from Terminal in /home/Fortinet/c_data/guacamolecd /home/fortinet/c_data/guacamoledocker compose psdocker compose exec guacamole-sql /bin/shsh-5.1# mysqldump -u root -p --all-databases --set-gtid-purged=OFF &gt; backup.sqlEnter password: passwordsh-5.1# exitdocker compose cp guacamole-sql:/backup.sql ./backup.sqlOptional: SCP backup.sql to your laptop ( always good to have a copy not on the VM ) Ansible, Homepage, CoreDNS​from Terminal in /home/Fortinetcd /home/fortinetThe following is a single command all on one line zip backup_config.zip automation/ansible/inventory/inventory.yml automation/ansible/vars/all-hosts.yml automation/ansible/vars/flex-serial-numbers.yml automation/ansible/vars/global.yml c_data/coredns/conf/zones/db.fortinet.internal c_data/coredns/conf/zones/db.home.internal c_data/homepage/config/bookmarks.yaml c_data/homepage/config/services.yaml c_data/homepage/config/settings.yaml c_data/homepage/config/widgets.yaml .ssh/ansible_key .ssh/ansible_key.pubOptional: SCP backup_config.zip to your laptop ( always good to have a copy off the VM ) Start Upgrade​from Terminal in OOBPull the latest OOB install scripts from github repository cd /home/fortinet/Downloads/git clone https://github.com/fortinet/Field-SE-Lab-OOB /home/fortinet/Downloadschmod 744 *.sh​from Terminal in OOBRun the following script ONLY IF changing the external default subnet from 172.16.3.x (provide ONLY the first 3 octets) Example: ./update_subnet.sh 192.168.10 ./update_subnet.sh &lt;external subnet to SE Lab&gt; ​from Terminal in OOBNext start the install script ./OOB_Install.shWhen you see the following message File ‘/usr/share/keyrings/docker-archive-keyring.gpg’ exists. Overwrite? (y/N) Type y and hit &lt; enter &gt; Note: VM will auto reboot after “OOB_Install.sh” script runs">
-    <meta itemprop="wordCount" content="385">
+    <meta itemprop="wordCount" content="395">
     <title>Upgrade Existing OOB :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.xml" rel="alternate" type="application/rss+xml" title="Upgrade Existing OOB :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784237218" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1784237218" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1784341519" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1784341519" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784237218";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1784341519";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784237218" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1784341519" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784237218" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784237218" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784237218" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1784237218" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784237218" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784341519" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1784341519" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1784341519" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1784341519" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1784341519" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -97,7 +97,7 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1784237218" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1784341519" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -180,21 +180,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </ul>
 <h3 id="backup-configs"><strong>Backup Configs</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <h3 id="guacamole">Guacamole<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-c1a55b48035db2fea11ec1e06e5d4f22">
+<div class="tab-panel" data-tab-group="R-tabs-cbf5cc6409341455a29d3ea674c79a1b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-bbc899d90a9af098147ca9958ad95485" aria-expanded="true"
+      aria-controls="R-tab-id-e6bc58ebda30b9881364bf3ae94de757" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-c1a55b48035db2fea11ec1e06e5d4f22','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-cbf5cc6409341455a29d3ea674c79a1b','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-bbc899d90a9af098147ca9958ad95485"
+      id="R-tab-id-e6bc58ebda30b9881364bf3ae94de757"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -213,21 +213,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
   </div>
 </div>
 <h3 id="ansible-homepage-coredns">Ansible, Homepage, CoreDNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-23bee27241de6808fad326bbfadca587">
+<div class="tab-panel" data-tab-group="R-tabs-e6f44a407ed3b4587c413df043f1de82">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7f17017b4bf9a03ff595b93c932cb1cc" aria-expanded="true"
+      aria-controls="R-tab-id-b9e8ad4d5e73c41362f8962a6346cff3" aria-expanded="true"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-23bee27241de6808fad326bbfadca587','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
+      onclick="switchTab('R-tabs-e6f44a407ed3b4587c413df043f1de82','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7f17017b4bf9a03ff595b93c932cb1cc"
+      id="R-tab-id-b9e8ad4d5e73c41362f8962a6346cff3"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -244,21 +244,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
   </div>
 </div>
 <h3 id="start-upgrade">Start Upgrade<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-24cd9aaf0c48e331ce4f45273cf1a158">
+<div class="tab-panel" data-tab-group="R-tabs-bbfaf909ac746b207901cd125743817f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f4ee440493dd468959bc2e0a3e750581" aria-expanded="true"
+      aria-controls="R-tab-id-2fe5897b8de9ce55e54ac6efd6729ad0" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-24cd9aaf0c48e331ce4f45273cf1a158','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-bbfaf909ac746b207901cd125743817f','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f4ee440493dd468959bc2e0a3e750581"
+      id="R-tab-id-2fe5897b8de9ce55e54ac6efd6729ad0"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -272,21 +272,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div>
-<p><div class="tab-panel" data-tab-group="R-tabs-716c3288b2f0ff09bfa1055f4c11d2f7">
+<p><div class="tab-panel" data-tab-group="R-tabs-e548537377e0927d26b75a44122ffb40">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-9ac11d747adfe6579faa06af0833b900" aria-expanded="true"
+      aria-controls="R-tab-id-7b3eb7ede4e96ff6aa280832b8e66a48" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-716c3288b2f0ff09bfa1055f4c11d2f7','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-e548537377e0927d26b75a44122ffb40','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-9ac11d747adfe6579faa06af0833b900"
+      id="R-tab-id-7b3eb7ede4e96ff6aa280832b8e66a48"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -299,21 +299,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-caf7e0edc12c59eb2e71baba2f40b3a1">
+<div class="tab-panel" data-tab-group="R-tabs-da9a122e1fe5a0138f0dd6a2e329772f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-12f282acf6b5b1aa8fb4b070a6bfcc55" aria-expanded="true"
+      aria-controls="R-tab-id-ce36a7ee8e6f41d8a8afbc0961466ff2" aria-expanded="true"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-caf7e0edc12c59eb2e71baba2f40b3a1','R-tab-327b87e4a8d9b1ea140387c572678b01')"
+      onclick="switchTab('R-tabs-da9a122e1fe5a0138f0dd6a2e329772f','R-tab-327b87e4a8d9b1ea140387c572678b01')"
     >
       <span class="tab-nav-text">from Terminal in OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-12f282acf6b5b1aa8fb4b070a6bfcc55"
+      id="R-tab-id-ce36a7ee8e6f41d8a8afbc0961466ff2"
       data-tab-item="R-tab-327b87e4a8d9b1ea140387c572678b01"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -336,21 +336,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </div></p>
 <h3 id="restore-config"><strong>Restore Config</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <h3 id="guacamole-1">Guacamole<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-9bfc90e08a4ca2faa2018b969498fb53">
+<div class="tab-panel" data-tab-group="R-tabs-a49e1851979124553a7cf12746ae0539">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-90bbc468be5cc24180229e8abf955f8f" aria-expanded="true"
+      aria-controls="R-tab-id-932f0d7f0b6d0085e9626ea51ec9b818" aria-expanded="true"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-9bfc90e08a4ca2faa2018b969498fb53','R-tab-3a01e3f50101539069f2eb58a7a54896')"
+      onclick="switchTab('R-tabs-a49e1851979124553a7cf12746ae0539','R-tab-3a01e3f50101539069f2eb58a7a54896')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/c_data/guacamole</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-90bbc468be5cc24180229e8abf955f8f"
+      id="R-tab-id-932f0d7f0b6d0085e9626ea51ec9b818"
       data-tab-item="R-tab-3a01e3f50101539069f2eb58a7a54896"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -371,21 +371,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
   </div>
 </div>
 <h3 id="ansible-homepage-coredns-1">Ansible, Homepage, CoreDNS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><div class="tab-panel" data-tab-group="R-tabs-1c4f6c993d8319606262ac952567f42d">
+<p><div class="tab-panel" data-tab-group="R-tabs-ad01ce5772bb0fd63165885d4c43afa1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5678c9262958b15cd40c32f632bcfcfb" aria-expanded="true"
+      aria-controls="R-tab-id-50c16c083321c3d4e5cba460e345593b" aria-expanded="true"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-1c4f6c993d8319606262ac952567f42d','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
+      onclick="switchTab('R-tabs-ad01ce5772bb0fd63165885d4c43afa1','R-tab-f3530b9b6f43df9bb4be6352fc0d21de')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5678c9262958b15cd40c32f632bcfcfb"
+      id="R-tab-id-50c16c083321c3d4e5cba460e345593b"
       data-tab-item="R-tab-f3530b9b6f43df9bb4be6352fc0d21de"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -394,25 +394,29 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </ul>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet</span></span></code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unzip backup_config.zip</span></span></code></pre></div>
+<ul>
+<li>Choose [A]ll</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>replace automation/ansible/inventory/inventory.yml? <span style="color:#f92672">[</span>y<span style="color:#f92672">]</span>es, <span style="color:#f92672">[</span>n<span style="color:#f92672">]</span>o, <span style="color:#f92672">[</span>A<span style="color:#f92672">]</span>ll, <span style="color:#f92672">[</span>N<span style="color:#f92672">]</span>one, <span style="color:#f92672">[</span>r<span style="color:#f92672">]</span>ename: A</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-f65aaeb477c5f4e9cd0f324c630d658b">
+<div class="tab-panel" data-tab-group="R-tabs-fe0e87233a40ad2261b9ad0f32410539">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-0c0f867046f5e0266b6f42dd0e1eee23" aria-expanded="true"
+      aria-controls="R-tab-id-fc1428b90895a27d3ac53d725a7bec47" aria-expanded="true"
       data-tab-item="R-tab-8eed841003411f9b9abc2f9a705dd11c"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-f65aaeb477c5f4e9cd0f324c630d658b','R-tab-8eed841003411f9b9abc2f9a705dd11c')"
+      onclick="switchTab('R-tabs-fe0e87233a40ad2261b9ad0f32410539','R-tab-8eed841003411f9b9abc2f9a705dd11c')"
     >
       <span class="tab-nav-text">from Terminal in /home/Fortinet/coredns</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-0c0f867046f5e0266b6f42dd0e1eee23"
+      id="R-tab-id-fc1428b90895a27d3ac53d725a7bec47"
       data-tab-item="R-tab-8eed841003411f9b9abc2f9a705dd11c"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -444,21 +448,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 </ul>
 </li>
 <li>DNS is working
-<div class="tab-panel" data-tab-group="R-tabs-635af0f6ea086d260e411b581a4c19fb">
+<div class="tab-panel" data-tab-group="R-tabs-5a2238567b07a4b87c2546e6e04215a8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5f085992e450f8543c25179e48c19133" aria-expanded="true"
+      aria-controls="R-tab-id-5ae37940bcdc4483bad71de65296f6fe" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-635af0f6ea086d260e411b581a4c19fb','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-5a2238567b07a4b87c2546e6e04215a8','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5f085992e450f8543c25179e48c19133"
+      id="R-tab-id-5ae37940bcdc4483bad71de65296f6fe"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -467,21 +471,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-a00f86eeadd90aca09572edbe628e0cd">
+<div class="tab-panel" data-tab-group="R-tabs-f7f3907191c1ffc07638b6273889faba">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-9fd0712767d3c4f9af9292241714ba7e" aria-expanded="true"
+      aria-controls="R-tab-id-92edf6b6d7a5aa9c1ff84feee9a15e01" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-a00f86eeadd90aca09572edbe628e0cd','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-f7f3907191c1ffc07638b6273889faba','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-9fd0712767d3c4f9af9292241714ba7e"
+      id="R-tab-id-92edf6b6d7a5aa9c1ff84feee9a15e01"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -490,21 +494,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-dbe9953a4a7319f07ec7d04d9550faaa">
+<div class="tab-panel" data-tab-group="R-tabs-b952a6f9df3bbc84823aaddc28e5edea">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a585bf7fd1a76be6779de4b8433c33ac" aria-expanded="true"
+      aria-controls="R-tab-id-3e46493bf2fc998c23d1c1300dddc82b" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-dbe9953a4a7319f07ec7d04d9550faaa','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-b952a6f9df3bbc84823aaddc28e5edea','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a585bf7fd1a76be6779de4b8433c33ac"
+      id="R-tab-id-3e46493bf2fc998c23d1c1300dddc82b"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -513,21 +517,21 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-27ddfb98ed29215b6773f95000943f72">
+<div class="tab-panel" data-tab-group="R-tabs-65860153be16cb149831dff80a6de5d8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-2232d54176b03ebabe1155dc0f481a34" aria-expanded="true"
+      aria-controls="R-tab-id-cd8ffaa3499ab50f1af0bc85954d2672" aria-expanded="true"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-27ddfb98ed29215b6773f95000943f72','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
+      onclick="switchTab('R-tabs-65860153be16cb149831dff80a6de5d8','R-tab-9b9a86fe6813871baf04a3a103cb4705')"
     >
       <span class="tab-nav-text">from Terminal</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-2232d54176b03ebabe1155dc0f481a34"
+      id="R-tab-id-cd8ffaa3499ab50f1af0bc85954d2672"
       data-tab-item="R-tab-9b9a86fe6813871baf04a3a103cb4705"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -611,8 +615,8 @@ Rebuild OOB completely without losing Homepage, Guacamole, and Ansible configs W
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784237218" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1784237218" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1784341519" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1784341519" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

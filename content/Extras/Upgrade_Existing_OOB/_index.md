@@ -135,6 +135,10 @@ cd /home/fortinet
 ````bash
 unzip backup_config.zip
 ````
+- Choose [A]ll
+````bash
+replace automation/ansible/inventory/inventory.yml? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
+````
 {{% /tab %}}
 {{% tab title="from Terminal in /home/Fortinet/coredns" %}}
 - Restart CoreDNS

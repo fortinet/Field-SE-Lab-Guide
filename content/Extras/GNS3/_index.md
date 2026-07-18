@@ -5,67 +5,76 @@ weight = 60
 +++
 
 ### **Verify Nested Virtualization is Enabled** 
-- https://pve.proxmox.com/wiki/Nested_Virtualization
-- https://devopstales.github.io/virtualization/install-vmware-in-proxmox/
-    - At CLI:	cat /sys/module/kvm_intel/parameters/nested
-        - If it returns “Y”, proceed to Creation Step
-        - If it returns “N”, follow steps in URL above to enable
-
-### **GNS3 VM Creation**
-- {{% tab title="from Proxmox CLI (use shell in GUI)" %}}
-- Download [GNS3 VMware ESXi VM OVA](https://gns3.com/software/download-vm)
-
+{{% tab title="From PVE Shell" %}}
 ````bash
-sudo apt install unzip -y
+cat /sys/module/kvm_intel/parameters/nested
+````
+- If it returns “Y”, proceed to [**GNS3 VM Creation**](/extras/gns3/#gns3-vm-creation) step
+- If it returns “N”, follow steps in URL below to enable
+    - https://pve.proxmox.com/wiki/Nested_Virtualization
+    - https://devopstales.github.io/virtualization/install-vmware-in-proxmox/
 
-mkdir GNS3          <= (make directory to unzip OVA)
+{{% /tab %}}
 
-cd GNS3
 
-curl -O https://github.com/GNS3/gns3-gui/releases/download/v2.2.57/GNS3.VM.VMware.ESXI.2.2.57.zip
+### **Create GNS3 VM**
+- If you get the error {{% badge %}}No route to host{{% /badge %}} with any of the following steps, use the **[Troubleshoot Ansible](/Extras/Troubleshoot_Ansible)** steps
 
-unzip *.zip
-
-tar -xvf *.ova
+{{% tab title="RDP to OOB" %}}
+- from Terminal in OOB
+````bash
+cd /home/fortinet/automation/ansible/ubuntu
+````
+````bash
+./create_ubuntu_vm.sh      ../vars/all-hosts.yml  <PVE server name>  gns3
+````
+````bash
+./start_stop_remove_vm.sh  ../vars/all-hosts.yml  <PVE server name>  gns3 started
 ````
 {{% /tab %}}
-- In PVE GUI  > Click "Create VM"
-    - __General__
-        -	Choose Node
-        -	Choose VM_id (or use the default)
-        -	Type VM Name
-    - __OS__
-        -	Do not use any media
-        ![No Media](no_media.png)
-    - __System__
-        -	Accept Defaults
-        -   **Graphic card:** Default
-        -	**Machine:** Default
-        -	**BIOS:** Default
-        -	**SCSI Controller:** VirtIO SCSI                
-    - __Disks__
-        -	Click on Trashcan Icon and delete disk
-        ![No Disks](no_disks.png)
-    - __CPU__
-        -	**Cores:** 4
-        -	**Type:** host
-    -  __Memory__
-        -	16GB is minimum
-    - __Network__
-        -	**Bridge** vmbr0
-        -   Untick Firewall
-        ![NIC](NIC.png)
-    - __Confirm__
-        -	Click **Finish**
 
-Wait for the VM Create process to complete (i.e. Status OK)
-- {{% tab title="from Proxmox CLI (use shell in GUI)" %}}
-- Import the VMDK disks into VM just created
-    - Make sure machine ID (511 is my GNS3 VM) and VMDK file name matches VM name before running the commands below.
-    - **Note** - These commands take time to run as they are converting from VMDK formate to qcow2
+### **Configure GNS3 VM**
+{{% tab title="RDP to OOB" %}}
+- Make sure GNS3 VM has fully started (GUI is up and running) before exeucting the following.
+    - Suggest opening GNS3's console window on PVE to verify before continuing.
 ````bash
-qm importdisk <VMid you choose> <VM name you choose>_VM-disk1.vmdk <your Proxmox image storage> -format qcow2
-
-qm importdisk <VMid you choose> <VM name you choose>_VM-disk2.vmdk <your Proxmox image storage> -format qcow2
+./wallpaper_update.sh  gns3
+````
+````bash
+./configure_gns3.sh   gns3
 ````
 {{% /tab %}}
+
+{{% tab title="RDP to GNS3" %}}
+- From the GNS3 VM's terminal execute the script below
+- When prompted whether non-root users should be allowed to use wireshark and ubridge, select **‘Yes’** both times
+````bash
+cd /home/fortinet/Downloads
+````
+````bash
+GNS3_Install.sh
+````
+- VM will reboot when finished
+{{% /tab %}}
+
+### **Install GNS3 GUI on Laptop**
+{{% tab title="Login and Download GNS3" %}}
+- Login to GNS3
+    - https://www.gns3.com/account/login
+- Download GNS3
+    - [https://www.gns3.com/software/download](https://www.gns3.com/software/download)
+    ![Laptop_Install_1](Laptop_Install_1.png)
+{{% /tab %}}
+{{% tab title="Options During Install" %}}
+- Uncheck all options but **MSVC Runtime 2017** and **GNS3 Desktop**
+    ![Laptop_Install_2](Laptop_Install_2.png)
+- "No" to Solarwinds Engineer's Toolset
+    ![Laptop_Install_3](Laptop_Install_3.png)
+{{% /tab %}}
+{{% tab title="Configure Latop Software" %}}
+- Select "Edit/Preferences"
+    ![Laptop_Install_4](Laptop_Install_4.png)
+- Select "Server"/"Main server"
+    ![Laptop_Install_5](Laptop_Install_5.png)
+{{% /tab %}}
+

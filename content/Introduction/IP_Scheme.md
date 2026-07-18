@@ -41,8 +41,15 @@ Download following as {{% button href="https://github.com/fortinet/Field-SE-Lab-
 | **Ubuntu-21** | *eth1* **10.100.55.91** /24 | | | | | | *eth0* &nbsp;&nbsp; **10.100.99.10** /24 |
 
 ### **OOB & TCGUI**
-| VNET| FTNTMGT | vmbr0 | BRCHWAN1 BRCHWAN2| BRCHWAN3 BRCHWAN4| BRCHWAN5 BRCHWAN6| COREWAN1 COREWAN2| COREWAN3 COREWAN4| OFFNET |
+| VNET| vmbr0 | FTNTMGT | BRCHWAN1 BRCHWAN2| BRCHWAN3 BRCHWAN4| BRCHWAN5 BRCHWAN6| COREWAN1 COREWAN2| COREWAN3 COREWAN4| OFFNET |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Device** |  |   |  |  |  |  |   |  |
-| **_Ubuntu-OOB_** | *eth0* **10.100.55.80** /24 | **_eth1_** &nbsp;**172.16.3.80** /24 | | | | | | |
-| **_Ubuntu-TCGUI_** | **_eth0_** &nbsp; **172.16.3.90** /24 |  | *eth1* **10.198.1.1** *eth2* **10.198.2.1** /29 | *eth3* **10.198.3.1** *eth4* **10.198.4.1** /29 | *eth5* **10.198.5.1** *eth6* **10.198.6.1** /29 | *eth7* **10.198.7.1** *eth8* **10.198.8.1** /29 | *eth9* **10.198.9.1** *eth10* **10.198.10.1** /29 | *eth11* **10.100.66.1** /24 |
+| **_Ubuntu-OOB_** | *_eth0_* &nbsp;**172.16.3.80** /24  | *eth1* **10.100.55.80** /24| | | | | | |
+| **_Ubuntu-TCGUI_** | *_eth0_* &nbsp; **172.16.3.90** /24 |  | *eth1* **10.198.1.1** *eth2* **10.198.2.1** /29 | *eth3* **10.198.3.1** *eth4* **10.198.4.1** /29 | *eth5* **10.198.5.1** *eth6* **10.198.6.1** /29 | *eth7* **10.198.7.1** *eth8* **10.198.8.1** /29 | *eth9* **10.198.9.1** *eth10* **10.198.10.1** /29 | *eth11* **10.100.66.1** /24 |
+
+
+### **Other Demo "Tools"**
+| VNET| vmbr0 | FTNTMGT |
+| :---: | :---: | :---: |
+| **Device** |  |  |
+| **_Ubuntu-GNS3_** | *_eth0_* &nbsp; **172.16.3.86** /24 | *eth1* &nbsp; **10.100.55.86** /24 |
