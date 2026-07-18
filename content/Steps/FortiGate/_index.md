@@ -68,7 +68,7 @@ cd /home/fortinet/automation/ansible/fortiflex
 ### Install FortiFlex Tokens
 {{% tab title="Continuing from Terminal in OOB" %}}
 ````bash
-cd /home/fortinet/automation/ansible/fortiflex
+cd /home/fortinet/automation/ansible/fortinet
 ````
 {{% /tab %}}
 {{% tab title="Continuing from Terminal in OOB" %}}
