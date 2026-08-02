@@ -72,10 +72,10 @@ cd /home/fortinet/Downloads/
     - DNS is critical for Ansible automation 
     - [CoreDNS](https://di-marco.net/blog/it/2024-05-09-Intall_and_configure_coredns/) has been preconfigured for this [topology](/Introduction#se-lab-topology)
     - Two [RFC 1035-style](https://www.rfc-editor.org/rfc/rfc1035) zone database files have been preconfigured here:
-        - **/home/Fortinet/c_data/coredns/conf/zones**
+        - **/home/fortinet/c_data/coredns/conf/zones**
             - **db.fortinet.internal**	<= intended for endpoints “internal” to  proxmox
             - **db.home.internal**		<= intended for endpoints “external” to proxmox
-    {{% tab title="from Terminal in /home/Fortinet/c_data/coredns" %}}
+    {{% tab title="from Terminal in /home/fortinet/c_data/coredns" %}}
 - If changes are made to zone database files, execute the following:
 ````bash
 docker compose down

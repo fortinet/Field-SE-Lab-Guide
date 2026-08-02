@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kali :: SE How-To Build Lab</title>
+    <link>http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.html</link>
+    <description>IMPORTANT:This page is a work in progress Download Kali ISO&#xD;Kali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VM&#xD;If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​&#xD;RDP to OOB&#xD;from Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu&#xD;./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;&#xD;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali started&#xD;Configure Kali NICs&#xD;​&#xD;via console tab in Proxmox&#xD;Login - Default Username/Password : kali/kali</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

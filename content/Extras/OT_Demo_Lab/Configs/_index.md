@@ -39,10 +39,6 @@ Before starting, ensure you have the following:
 - A USB Type-A to Type-B cable
 - Access to the lab network (Ethernet switch with available port)
 
-{{% notice warning %}}
-Do not power the Arduino via both Power-over-Ethernet (PoE) and USB simultaneously. Use one power source at a time to avoid hardware damage.
-{{% /notice %}}
-
 ---
 
 ### Install the Arduino IDE
@@ -94,10 +90,6 @@ Plug the Arduino into your workstation via USB. The IDE should auto-detect the b
 - If not detected automatically, click **Select Board** in the toolbar and choose **Arduino Uno WiFi Rev2**
 
 [![Board selection dropdown showing Arduino Uno WiFi Rev2 auto-detected](board-select.png)](board-select.png)
-
-{{% notice warning %}}
-Do not connect PoE and USB power simultaneously — use only one power source at a time.
-{{% /notice %}}
 
 ---
 
@@ -157,9 +149,6 @@ Verify all steps are complete before beginning the lab exercise:
 ### **Arduino Troubleshooting Using the Serial Monitor**
 
 The Serial Monitor provides real-time terminal output from the connected Arduino, making it the primary tool for diagnosing connection and communication issues at runtime.
-{{% notice warning %}}
-Do not power the Arduino via both Power-over-Ethernet (PoE) and USB simultaneously. Use one power source at a time to avoid hardware damage.
-{{% /notice %}}
 
 ### Opening the Serial Monitor
 

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/Field-SE-Lab-Guide/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Field-SE-Lab-Guide/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
+    <meta name="description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kali :: SE How-To Build Lab">
+    <meta name="twitter:description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.html">
+    <meta property="og:site_name" content="SE How-To Build Lab">
+    <meta property="og:title" content="Kali :: SE How-To Build Lab">
+    <meta property="og:description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Kali :: SE How-To Build Lab">
+    <meta itemprop="description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta itemprop="wordCount" content="190">
+    <title>Kali :: SE How-To Build Lab</title>
+    <link href="/Field-SE-Lab-Guide/extras/kali/index.xml" rel="alternate" type="application/rss+xml" title="Kali :: SE How-To Build Lab">
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1785694713" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1785694713" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1785694713";
+    </script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1785694713" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785694713" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785694713" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1785694713" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1785694713" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1785694713" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/extras\/kali\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Field-SE-Lab-Guide';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1785694713" rel="stylesheet">
+<style>
+:root {
+    --MAIN-WIDTH-MAX: 1000rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-url="/Field-SE-Lab-Guide/extras/kali/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#download-kali-iso"><strong>Download Kali ISO</strong></a></li>
+        <li><a href="#create-kali-vm"><strong>Create Kali VM</strong></a></li>
+        <li><a href="#configure-kali-nics"><strong>Configure Kali NICs</strong></a></li>
+        <li><a href="#configure-kali-rdp"><strong>Configure Kali RDP</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/index.html"><span itemprop="name">SE How-To Build Lab</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Field-SE-Lab-Guide/extras/index.html"><span itemprop="name">Extras</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Kali</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html" title="Troubleshoot Ansible (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/Field-SE-Lab-Guide/extras/gns3/index.html" title="GNS3 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="kali">Kali</h1>
+
+<ul>
+<li><span class="badge cstyle red badge-with-title"><span class="badge-title">IMPORTANT:</span><span class="badge-content">This page is a work in progress</span></span></li>
+</ul>
+<h3 id="download-kali-iso"><strong>Download Kali ISO</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Kali Pre-Built VMs - <a href="https://www.kali.org/get-kali/#kali-virtual-machines" rel="external" target="_blank">QEMU</a></li>
+<li>Download and unzip</li>
+<li>Import the Kali qcow2 file
+<a href="#R-image-4a1375b79fb78442eb38b3a2e7cb427d" class="lightbox-link"><img alt="pic-import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a1375b79fb78442eb38b3a2e7cb427d"><img alt="pic-import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_qcow2.png"></a></li>
+</ul>
+<h3 id="create-kali-vm"><strong>Create Kali VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>If you get the error <span class="badge cstyle default"><span class="badge-content">No route to host</span></span> with any of the following steps, use the <strong><a href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></strong> steps</li>
+</ul>
+<div class="tab-panel" data-tab-group="R-tabs-91b0e7556d9f48f7a2956b5cd8ecdca7">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-fc17d7825e1ae932ad066b87d5ac623b" aria-expanded="true"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-91b0e7556d9f48f7a2956b5cd8ecdca7','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+    >
+      <span class="tab-nav-text">RDP to OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-fc17d7825e1ae932ad066b87d5ac623b"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>from Terminal in OOB</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/ubuntu</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./create_kali.sh      ../vars/all-hosts.yml  &lt;PVE server name&gt;  kali  &lt;qcow2 file name&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./start_stop_remove_vm.sh  ../vars/all-hosts.yml  &lt;PVE server name&gt;  kali started</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="configure-kali-nics"><strong>Configure Kali NICs</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-94880cc30b96cc9f53808bf7f83b80af">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-2e768d150001c1745fa1ed4c85fd4a4d" aria-expanded="true"
+      data-tab-item="R-tab-d0ff9d5abd333a14625f26a74640551f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-94880cc30b96cc9f53808bf7f83b80af','R-tab-d0ff9d5abd333a14625f26a74640551f')"
+    >
+      <span class="tab-nav-text">via console tab in Proxmox</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-2e768d150001c1745fa1ed4c85fd4a4d"
+      data-tab-item="R-tab-d0ff9d5abd333a14625f26a74640551f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>Login
+- Default Username/Password : kali/kali</p>
+<ul>
+<li>In upper right corner of desktop, right-click on Network Settings and Edit Connections
+<a href="#R-image-dc0aef6be3655d89b5cd70870077998e" class="lightbox-link"><img alt="Edit_Network01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc0aef6be3655d89b5cd70870077998e"><img alt="Edit_Network01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png"></a></li>
+<li>Double Click into each Wired connection
+<a href="#R-image-05b5c48fd2cfa3ab491ebd89c78ee9c8" class="lightbox-link"><img alt="Edit_Network02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05b5c48fd2cfa3ab491ebd89c78ee9c8"><img alt="Edit_Network02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png"></a></li>
+<li>Configure Wired connection 1
+<ul>
+<li>IPv4/Manual/Address/Netmask/Gateway/DNS/Domain
+<a href="#R-image-932d98c51fa13945d2e7316be0c19bed" class="lightbox-link"><img alt="Edit_Network03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-932d98c51fa13945d2e7316be0c19bed"><img alt="Edit_Network03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png"></a></li>
+</ul>
+</li>
+<li>Configure Wired connection 2
+<ul>
+<li>IPv4/Manual/Address/Netmask
+<a href="#R-image-66b61a56983d9f098df9226e572d50e4" class="lightbox-link"><img alt="Edit_Network04" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-66b61a56983d9f098df9226e572d50e4"><img alt="Edit_Network04" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png"></a></li>
+</ul>
+</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="configure-kali-rdp"><strong>Configure Kali RDP</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-e3d4b85ff49478a2240bfb3b54ad515e">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ec7cf2f4185e308321e8f42deb7ad239" aria-expanded="true"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-e3d4b85ff49478a2240bfb3b54ad515e','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+    >
+      <span class="tab-nav-text">RDP to OOB</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ec7cf2f4185e308321e8f42deb7ad239"
+      data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Update package list:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y</span></span></code></pre></div>
+<ul>
+<li>Install Xfce and XRDP:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install -y xfce4 xfce4-goodies xrdp</span></span></code></pre></div>
+<ul>
+<li>Set Xfce as your default session:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo xfce4-session &gt; ~/.xsession</span></span></code></pre></div>
+<p>Service configuration</p>
+<ul>
+<li>Enable and start the XRDP service:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable --now xrdp</span></span></code></pre></div>
+<ul>
+<li>Restart the service to apply changes:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart xrdp</span></span></code></pre></div>
+<ul>
+<li>Check the service status to verify it is running:</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/Field-SE-Lab-Guide/index.html">
+          <span class="logo-title default-animation">SE How-To Build Lab</span>
+        </a>
+        <search><form action="/Field-SE-Lab-Guide/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/index.html"><a class="padding" href="/Field-SE-Lab-Guide/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/introduction/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/introduction/index.html">Introduction</a><ul id="R-subsections-e1ed3a04f1f57a27be4a8d0eb274be18" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/prerequisites/index.html"><a class="padding" href="/Field-SE-Lab-Guide/prerequisites/index.html">Prerequisites</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/steps/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/steps/index.html">Steps To Build This Lab</a><ul id="R-subsections-cd4d0390891227d7eeeb9371cde7cdb1" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-url="/Field-SE-Lab-Guide/extras/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/index.html">Extras</a><ul id="R-subsections-1e6add150fa42ebd470891f1547d31f0" class="collapsible-menu">
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/guacamole/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/guacamole/index.html">Guacamole</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></li>
+            <li class="active " data-nav-url="/Field-SE-Lab-Guide/extras/kali/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/kali/index.html">Kali</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/gns3/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/gns3/index.html">GNS3</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/nesting_esxi/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/nesting_esxi/index.html">Nesting ESXi</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/windows_persistant_route/index.html">Windows Persistant Route</a></li>
+            <li class="" data-nav-url="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html"><a class="padding" href="/Field-SE-Lab-Guide/extras/upgrade_existing_oob/index.html">Upgrade Existing OOB</a></li>
+            <li class="alwaysopen " data-nav-url="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html"><a class="padding default-animation" href="/Field-SE-Lab-Guide/extras/ot_demo_lab/index.html">OT Lab</a><ul id="R-subsections-23a505f6c78cf059e8f9f879df8b667f" class="collapsible-menu"></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1785694713" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1785694713" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

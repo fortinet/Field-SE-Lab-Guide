@@ -40,7 +40,7 @@
       <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.html</guid>
-      <description>Create FortiFlex API Profile and User&#xD;Create API User and Download Credentials&#xA;Go to the latest FortiFlex documentation on Docs Fortinet Open the Admin Guide and click on section “Automation/FortiFlex API Follow the steps in the section: “To create an API User”</description>
+      <description>Create FortiFlex API Profile and User&#xD;​&#xD;Use Fortinet Support Portal&#xD;Create API User and Download Credentials&#xA;The screenshots in this section, follow the latest FortiFlex documentation found here:&#xA;Docs Fortinet Admin Guide main section “Automation/FortiFlex API sub section: “To create an API User” From your FortiCloud support account:</description>
     </item>
     <item>
       <title>Create TCGUI VM</title>

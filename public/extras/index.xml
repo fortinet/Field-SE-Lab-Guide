@@ -22,6 +22,13 @@
       <description>Below are common Ansible issues that require troubleshooting&#xA;No Route to Host&#xD;Network Connectivity Host reachable via ping (using IP address and hostname) DNS Resolution using hostname, resolves to correct IP address SSH Connection Via CLI: ssh @&lt;target_ip_address&gt; Via CLI: ssh @&lt;target_hostname&gt; If target is Proxmox server (i.e. deploying a new VM on Proxmox ) Check Firewall Rules (In this lab, Proxmox should have Firewall turned off) Check IP addresses match in the following files /etc/network/interfaces /etc/hosts If not, after making these the same, reboot Proxmox Check Self-Signed Certificate The self-signed certificate connection details (IP or hostname in its Subject Alternative Names list) must match IP address from previous step. If it doesn’t, execute the next two steps ​&#xD;from PVE Shell&#xD;Force regeneration of self-cert pvecm updatecerts --force&#xD;​&#xD;from PVE Shell&#xD;Restart the web interface services systemctl restart pvedaemon pveproxy</description>
     </item>
     <item>
+      <title>Kali</title>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.html</guid>
+      <description>IMPORTANT:This page is a work in progress Download Kali ISO&#xD;Kali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VM&#xD;If you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​&#xD;RDP to OOB&#xD;from Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu&#xD;./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;&#xD;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali started&#xD;Configure Kali NICs&#xD;​&#xD;via console tab in Proxmox&#xD;Login - Default Username/Password : kali/kali</description>
+    </item>
+    <item>
       <title>GNS3</title>
       <link>http://localhost:1313/Field-SE-Lab-Guide/extras/gns3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
