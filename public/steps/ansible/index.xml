@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>List of All Ansible Scripts</title>
+      <link>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/script_summary/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Field-SE-Lab-Guide/steps/ansible/script_summary/index.html</guid>
+      <description>Ubuntu VM’s&#xD;create_ubuntu_vm.sh [host vars file name] [pve node] [group] create_tcgui.sh [host vars file name] [pve node] [group] configure_tcgui.sh [group] configure_gns3.sh [group] wallpaper_update.sh [group] start_stop_remove_vm.sh [vars host file name] [pve node] [group] [started stopped absent ] update.sh [group] FortiFlex Tokens&#xD;flex-configs-list.sh flex-entitlements.sh [ConfigID] flex-regenerate-token.sh [vars serial number file] [group name] Fortinet VM’s&#xD;copy_fgt_bootstrap_iso.sh [vars host file name] [pve node] create-vm.sh [host vars file name] [pve node] [group] [image name] configure_fgt.sh [hosts group] configure_faz.sh [hosts group] configure_fmg.sh [hosts group] install_flex_token.sh [hosts group] make_ha.sh [hosts group] start_remove_vm.sh [vars host file] [pve node][group] [started absent ] shutdown.sh [hosts group]</description>
+    </item>
   </channel>
 </rss>

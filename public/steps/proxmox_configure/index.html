@@ -21,26 +21,26 @@
     <meta itemprop="wordCount" content="172">
     <title>Proxmox Configure :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/steps/proxmox_configure/index.xml" rel="alternate" type="application/rss+xml" title="Proxmox Configure :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1785691854" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1785691854" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1785896073" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1785896073" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1785691854";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1785896073";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1785691854" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1785896073" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785691854" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785691854" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1785691854" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1785691854" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1785691854" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785896073" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785896073" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1785896073" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1785896073" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1785896073" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,7 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1785691854" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1785896073" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -160,21 +160,21 @@
 <h1 id="proxmox-configure">Proxmox Configure</h1>
 
 <h3 id="create-vnets">Create VNETs<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p><div class="tab-panel" data-tab-group="R-tabs-4a7af814dc98c739117eb3c10ad87312">
+<p><div class="tab-panel" data-tab-group="R-tabs-ce3fbc121c146fd3926c643ade71131f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8fcdcb80a6267eb90595eaac62bf28f5" aria-expanded="true"
+      aria-controls="R-tab-id-78f783c6489d2082489b37213a5009ab" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-4a7af814dc98c739117eb3c10ad87312','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-ce3fbc121c146fd3926c643ade71131f','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8fcdcb80a6267eb90595eaac62bf28f5"
+      id="R-tab-id-78f783c6489d2082489b37213a5009ab"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -183,21 +183,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-15d27f9c587e0f62d8177ba624879ca5">
+<div class="tab-panel" data-tab-group="R-tabs-4341a6eb8f1b58182babbfd88013197d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-e1f50fe288cfa46cf442d2a3508d877b" aria-expanded="true"
+      aria-controls="R-tab-id-e4e1f708727606ce3afdf97f28ef4cbb" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-15d27f9c587e0f62d8177ba624879ca5','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-4341a6eb8f1b58182babbfd88013197d','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-e1f50fe288cfa46cf442d2a3508d877b"
+      id="R-tab-id-e4e1f708727606ce3afdf97f28ef4cbb"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -206,21 +206,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-950528c686f0d9fb7fbfd3cfb68b1523">
+<div class="tab-panel" data-tab-group="R-tabs-d5d271cec8a175076f02bddf369e2069">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-a3c451d66f541ae800036bc9626cb831" aria-expanded="true"
+      aria-controls="R-tab-id-e0ce8e43c595ac6376387da10f255a00" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-950528c686f0d9fb7fbfd3cfb68b1523','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-d5d271cec8a175076f02bddf369e2069','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-a3c451d66f541ae800036bc9626cb831"
+      id="R-tab-id-e0ce8e43c595ac6376387da10f255a00"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -229,21 +229,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-d5eee13a37812ac99db0c071b94d6f04">
+<div class="tab-panel" data-tab-group="R-tabs-29d7f8a9cbf456cd959aa4e64807b21b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-168b4be4e081fda57c6143606f2936e4" aria-expanded="true"
+      aria-controls="R-tab-id-8f4604e2f8c21bdd81a1f432e55e5817" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-d5eee13a37812ac99db0c071b94d6f04','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-29d7f8a9cbf456cd959aa4e64807b21b','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-168b4be4e081fda57c6143606f2936e4"
+      id="R-tab-id-8f4604e2f8c21bdd81a1f432e55e5817"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -267,21 +267,21 @@
 </ul>
 </li>
 </ul>
-<p><div class="tab-panel" data-tab-group="R-tabs-53eda4ce76662ea82b777aa4a3211d07">
+<p><div class="tab-panel" data-tab-group="R-tabs-18a4e67eb657d88fb66b4a974cfdacf4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-dc9d41d5ad2d8484292fcc9a9d074e38" aria-expanded="true"
+      aria-controls="R-tab-id-a3c76996dc525fa80048c78834b81012" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-53eda4ce76662ea82b777aa4a3211d07','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-18a4e67eb657d88fb66b4a974cfdacf4','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-dc9d41d5ad2d8484292fcc9a9d074e38"
+      id="R-tab-id-a3c76996dc525fa80048c78834b81012"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -290,21 +290,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-0e94bbbcb623203aa34c13ff4b3cc647">
+<div class="tab-panel" data-tab-group="R-tabs-071aff9650e965c0dd71054a69f735be">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-3dd9578cd613fa77ba737e3a409d7165" aria-expanded="true"
+      aria-controls="R-tab-id-0a9bf712077cb059cb68cb58823344d4" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-0e94bbbcb623203aa34c13ff4b3cc647','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-071aff9650e965c0dd71054a69f735be','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-3dd9578cd613fa77ba737e3a409d7165"
+      id="R-tab-id-0a9bf712077cb059cb68cb58823344d4"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -313,21 +313,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-dd148b7a1d1480d3ea1e62d5e897181e">
+<div class="tab-panel" data-tab-group="R-tabs-f3729f353ffe649b1cea5055bb538da6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-8155b6f268275ad38577d46954983ab9" aria-expanded="true"
+      aria-controls="R-tab-id-acec97f833bd95500a97debbe5da45d5" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-dd148b7a1d1480d3ea1e62d5e897181e','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-f3729f353ffe649b1cea5055bb538da6','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-8155b6f268275ad38577d46954983ab9"
+      id="R-tab-id-acec97f833bd95500a97debbe5da45d5"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -336,21 +336,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-56f58649ca96b3f85d6b6f69c0905789">
+<div class="tab-panel" data-tab-group="R-tabs-3a4ca608e1f7296bfed89bf99406df9a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-f36a6313cb39c7e2df46d5c2899aa546" aria-expanded="true"
+      aria-controls="R-tab-id-b3b58458168bc8f42e3564452de099c1" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-56f58649ca96b3f85d6b6f69c0905789','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-3a4ca608e1f7296bfed89bf99406df9a','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-f36a6313cb39c7e2df46d5c2899aa546"
+      id="R-tab-id-b3b58458168bc8f42e3564452de099c1"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -359,21 +359,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-7f3a10bb8f2cf20ddf5c57321ca6f202">
+<div class="tab-panel" data-tab-group="R-tabs-a6e5fabed26016a9e13c0df27cf2acd0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-7c82f7450c1b3248155247e1476de62b" aria-expanded="true"
+      aria-controls="R-tab-id-8551c9f1c6935c29128346686d625afa" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-7f3a10bb8f2cf20ddf5c57321ca6f202','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-a6e5fabed26016a9e13c0df27cf2acd0','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-7c82f7450c1b3248155247e1476de62b"
+      id="R-tab-id-8551c9f1c6935c29128346686d625afa"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -382,21 +382,21 @@
     </div>
   </div>
 </div>
-<div class="tab-panel" data-tab-group="R-tabs-da631aab32897514105039a953ec9ca2">
+<div class="tab-panel" data-tab-group="R-tabs-893d6d7015b79cd06852eeca21ea3b1a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-643d6cc0d3a23892e586a731ebae584a" aria-expanded="true"
+      aria-controls="R-tab-id-be34dba6e0847b1f813c08de430cb3ed" aria-expanded="true"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-da631aab32897514105039a953ec9ca2','R-tab-9e406c683825368f9bc5a34897773e7d')"
+      onclick="switchTab('R-tabs-893d6d7015b79cd06852eeca21ea3b1a','R-tab-9e406c683825368f9bc5a34897773e7d')"
     >
       <span class="tab-nav-text">from PVE Shell</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-643d6cc0d3a23892e586a731ebae584a"
+      id="R-tab-id-be34dba6e0847b1f813c08de430cb3ed"
       data-tab-item="R-tab-9e406c683825368f9bc5a34897773e7d"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -485,8 +485,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1785691854" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1785691854" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1785896073" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
