@@ -5,42 +5,42 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.3.0+4c32e640f51f94e695b134319f91e444f51fa9f6">
-    <meta name="description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta name="description" content="AssumptionsTCGUI is built and running Kali Lab Topology Location The installation steps below, creates a Kali VM in the following location in the lab NIC VNET IP Address eth0 OFFNET 10.100.66.88 eth1 FTNTMGMT 10.100.55.88 Download and Import ISOKali Installer Image - ISO Import the Kali ISO file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;ISO file name (no extension..just file name)&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedKali Installer​via Kali VM console in ProxmoxKali Linux installer menu Choose Graphical install Select Language, Location, Keyboard Primary NIC used for installation eth0 Not using DHCP Continue Do not configure the network at this time Hostname kali Username kali Password kali (not recommended for production, this is for non-internet facing lab) Choose Time zone Partition disks Guided - use entire disk sda All files in one partition Finish partitioning and write changes to disk Write the changes to disks? Yes Software selection Desktop environment: Xfce Collection of tools: top10 and default Install the GRUB boot loader: Yes Device for boot loader location: /dev/sda Installation complete Continue VM reboots NIC Configuration​via Kali VM console in ProxmoxLogin Username/Password : kali/kali In upper right corner of desktop, right-click on Network Settings and Edit Connections Double Click on Wired connection 1 Configure Wired connection 1 Ethernet / eth0 IPv4 Settings/Manual/Address/Netmask/Gateway/DNS/Search domains Click Save Click on &#43; Choose a Connection Type Ethernet and Click on Create Configure Wired connection 2 Ethernet / eth1 IPv4 Settings/Manual/Address/Netmask (Leave Gateway Blank) Click Save In upper right corner of desktop, right-click on Network Settings and see the following Configure RDP​RDP to OOBUpdate package list: sudo apt update &amp;&amp; sudo apt upgrade -yInstall XRDP: sudo apt install -y xrdpEnable XRDP service: sudo systemctl enable xrdpStart the service sudo systemctl start xrdpCheck the service status to verify it is running: sudo systemctl status xrdpLogout and RDP to Kali VM (10.100.55.88) IMPORTANT:You must be logged out of the xfce desktop to successfully RDP to Kali Complete">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Kali :: SE How-To Build Lab">
-    <meta name="twitter:description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta name="twitter:description" content="AssumptionsTCGUI is built and running Kali Lab Topology Location The installation steps below, creates a Kali VM in the following location in the lab NIC VNET IP Address eth0 OFFNET 10.100.66.88 eth1 FTNTMGMT 10.100.55.88 Download and Import ISOKali Installer Image - ISO Import the Kali ISO file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;ISO file name (no extension..just file name)&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedKali Installer​via Kali VM console in ProxmoxKali Linux installer menu Choose Graphical install Select Language, Location, Keyboard Primary NIC used for installation eth0 Not using DHCP Continue Do not configure the network at this time Hostname kali Username kali Password kali (not recommended for production, this is for non-internet facing lab) Choose Time zone Partition disks Guided - use entire disk sda All files in one partition Finish partitioning and write changes to disk Write the changes to disks? Yes Software selection Desktop environment: Xfce Collection of tools: top10 and default Install the GRUB boot loader: Yes Device for boot loader location: /dev/sda Installation complete Continue VM reboots NIC Configuration​via Kali VM console in ProxmoxLogin Username/Password : kali/kali In upper right corner of desktop, right-click on Network Settings and Edit Connections Double Click on Wired connection 1 Configure Wired connection 1 Ethernet / eth0 IPv4 Settings/Manual/Address/Netmask/Gateway/DNS/Search domains Click Save Click on &#43; Choose a Connection Type Ethernet and Click on Create Configure Wired connection 2 Ethernet / eth1 IPv4 Settings/Manual/Address/Netmask (Leave Gateway Blank) Click Save In upper right corner of desktop, right-click on Network Settings and see the following Configure RDP​RDP to OOBUpdate package list: sudo apt update &amp;&amp; sudo apt upgrade -yInstall XRDP: sudo apt install -y xrdpEnable XRDP service: sudo systemctl enable xrdpStart the service sudo systemctl start xrdpCheck the service status to verify it is running: sudo systemctl status xrdpLogout and RDP to Kali VM (10.100.55.88) IMPORTANT:You must be logged out of the xfce desktop to successfully RDP to Kali Complete">
     <meta property="og:url" content="http://localhost:1313/Field-SE-Lab-Guide/extras/kali/index.html">
     <meta property="og:site_name" content="SE How-To Build Lab">
     <meta property="og:title" content="Kali :: SE How-To Build Lab">
-    <meta property="og:description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
+    <meta property="og:description" content="AssumptionsTCGUI is built and running Kali Lab Topology Location The installation steps below, creates a Kali VM in the following location in the lab NIC VNET IP Address eth0 OFFNET 10.100.66.88 eth1 FTNTMGMT 10.100.55.88 Download and Import ISOKali Installer Image - ISO Import the Kali ISO file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;ISO file name (no extension..just file name)&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedKali Installer​via Kali VM console in ProxmoxKali Linux installer menu Choose Graphical install Select Language, Location, Keyboard Primary NIC used for installation eth0 Not using DHCP Continue Do not configure the network at this time Hostname kali Username kali Password kali (not recommended for production, this is for non-internet facing lab) Choose Time zone Partition disks Guided - use entire disk sda All files in one partition Finish partitioning and write changes to disk Write the changes to disks? Yes Software selection Desktop environment: Xfce Collection of tools: top10 and default Install the GRUB boot loader: Yes Device for boot loader location: /dev/sda Installation complete Continue VM reboots NIC Configuration​via Kali VM console in ProxmoxLogin Username/Password : kali/kali In upper right corner of desktop, right-click on Network Settings and Edit Connections Double Click on Wired connection 1 Configure Wired connection 1 Ethernet / eth0 IPv4 Settings/Manual/Address/Netmask/Gateway/DNS/Search domains Click Save Click on &#43; Choose a Connection Type Ethernet and Click on Create Configure Wired connection 2 Ethernet / eth1 IPv4 Settings/Manual/Address/Netmask (Leave Gateway Blank) Click Save In upper right corner of desktop, right-click on Network Settings and see the following Configure RDP​RDP to OOBUpdate package list: sudo apt update &amp;&amp; sudo apt upgrade -yInstall XRDP: sudo apt install -y xrdpEnable XRDP service: sudo systemctl enable xrdpStart the service sudo systemctl start xrdpCheck the service status to verify it is running: sudo systemctl status xrdpLogout and RDP to Kali VM (10.100.55.88) IMPORTANT:You must be logged out of the xfce desktop to successfully RDP to Kali Complete">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Kali :: SE How-To Build Lab">
-    <meta itemprop="description" content="IMPORTANT:This page is a work in progress Download Kali ISOKali Pre-Built VMs - QEMU Download and unzip Import the Kali qcow2 file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;qcow2 file name&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedConfigure Kali NICs​via console tab in ProxmoxLogin - Default Username/Password : kali/kali">
-    <meta itemprop="wordCount" content="190">
+    <meta itemprop="description" content="AssumptionsTCGUI is built and running Kali Lab Topology Location The installation steps below, creates a Kali VM in the following location in the lab NIC VNET IP Address eth0 OFFNET 10.100.66.88 eth1 FTNTMGMT 10.100.55.88 Download and Import ISOKali Installer Image - ISO Import the Kali ISO file Create Kali VMIf you get the error No route to host with any of the following steps, use the Troubleshoot Ansible steps ​RDP to OOBfrom Terminal in OOB cd /home/fortinet/automation/ansible/ubuntu./create_kali.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali &lt;ISO file name (no extension..just file name)&gt;./start_stop_remove_vm.sh ../vars/all-hosts.yml &lt;PVE server name&gt; kali startedKali Installer​via Kali VM console in ProxmoxKali Linux installer menu Choose Graphical install Select Language, Location, Keyboard Primary NIC used for installation eth0 Not using DHCP Continue Do not configure the network at this time Hostname kali Username kali Password kali (not recommended for production, this is for non-internet facing lab) Choose Time zone Partition disks Guided - use entire disk sda All files in one partition Finish partitioning and write changes to disk Write the changes to disks? Yes Software selection Desktop environment: Xfce Collection of tools: top10 and default Install the GRUB boot loader: Yes Device for boot loader location: /dev/sda Installation complete Continue VM reboots NIC Configuration​via Kali VM console in ProxmoxLogin Username/Password : kali/kali In upper right corner of desktop, right-click on Network Settings and Edit Connections Double Click on Wired connection 1 Configure Wired connection 1 Ethernet / eth0 IPv4 Settings/Manual/Address/Netmask/Gateway/DNS/Search domains Click Save Click on &#43; Choose a Connection Type Ethernet and Click on Create Configure Wired connection 2 Ethernet / eth1 IPv4 Settings/Manual/Address/Netmask (Leave Gateway Blank) Click Save In upper right corner of desktop, right-click on Network Settings and see the following Configure RDP​RDP to OOBUpdate package list: sudo apt update &amp;&amp; sudo apt upgrade -yInstall XRDP: sudo apt install -y xrdpEnable XRDP service: sudo systemctl enable xrdpStart the service sudo systemctl start xrdpCheck the service status to verify it is running: sudo systemctl status xrdpLogout and RDP to Kali VM (10.100.55.88) IMPORTANT:You must be logged out of the xfce desktop to successfully RDP to Kali Complete">
+    <meta itemprop="wordCount" content="370">
     <title>Kali :: SE How-To Build Lab</title>
     <link href="/Field-SE-Lab-Guide/extras/kali/index.xml" rel="alternate" type="application/rss+xml" title="Kali :: SE How-To Build Lab">
-    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1785896073" rel="stylesheet">
-    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/search.js?1785896073" defer></script>
+    <link href="/Field-SE-Lab-Guide/css/auto-complete/auto-complete.min.css?1786681133" rel="stylesheet">
+    <script src="/Field-SE-Lab-Guide/js/auto-complete/auto-complete.min.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search-lunr.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/search.js?1786681133" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1785896073";
+      window.relearn.index_js_url="/Field-SE-Lab-Guide/searchindex.en.js?1786681133";
     </script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.min.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.stemmer.support.min.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.multi.min.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/lunr/lunr.en.min.js?1786681133" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785896073" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1785896073" rel="stylesheet"></noscript>
-    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1785896073" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/theme.css?1785896073" rel="stylesheet">
-    <link href="/Field-SE-Lab-Guide/css/format-html.css?1785896073" rel="stylesheet" id="R-format-style">
+    <link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1786681133" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Field-SE-Lab-Guide/fonts/fontawesome/css/fontawesome-all.min.css?1786681133" rel="stylesheet"></noscript>
+    <link href="/Field-SE-Lab-Guide/css/perfect-scrollbar/perfect-scrollbar.min.css?1786681133" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/theme.css?1786681133" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/format-html.css?1786681133" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -93,7 +93,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/Field-SE-Lab-Guide/css/custom.css?1785896073" rel="stylesheet">
+    <link href="/Field-SE-Lab-Guide/css/custom.css?1786681133" rel="stylesheet">
 <style>
 :root {
     --MAIN-WIDTH-MAX: 1000rem;
@@ -118,10 +118,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#download-kali-iso"><strong>Download Kali ISO</strong></a></li>
+        <li><a href="#assumptions"><strong>Assumptions</strong></a></li>
+        <li><a href="#download-and-import-iso"><strong>Download and Import ISO</strong></a></li>
         <li><a href="#create-kali-vm"><strong>Create Kali VM</strong></a></li>
-        <li><a href="#configure-kali-nics"><strong>Configure Kali NICs</strong></a></li>
-        <li><a href="#configure-kali-rdp"><strong>Configure Kali RDP</strong></a></li>
+        <li><a href="#kali-installer"><strong>Kali Installer</strong></a></li>
+        <li><a href="#nic-configuration"><strong>NIC Configuration</strong></a></li>
+        <li><a href="#configure-rdp"><strong>Configure RDP</strong></a></li>
+        <li><a href="#complete"><strong>Complete</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -160,36 +163,64 @@
 
 <h1 id="kali">Kali</h1>
 
+<h3 id="assumptions"><strong>Assumptions</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li><span class="badge cstyle red badge-with-title"><span class="badge-title">IMPORTANT:</span><span class="badge-content">This page is a work in progress</span></span></li>
+<li><a href="/Field-SE-Lab-Guide/steps/tcgui/index.html">TCGUI</a> is built and running</li>
+<li>Kali Lab Topology Location
+<ul>
+<li>The installation steps below, creates a Kali VM in the following location in the lab</li>
 </ul>
-<h3 id="download-kali-iso"><strong>Download Kali ISO</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">NIC</th>
+          <th style="text-align: center">VNET</th>
+          <th style="text-align: center">IP Address</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">eth0</td>
+          <td style="text-align: center">OFFNET</td>
+          <td style="text-align: center">10.100.66.88</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">eth1</td>
+          <td style="text-align: center">FTNTMGMT</td>
+          <td style="text-align: center">10.100.55.88</td>
+      </tr>
+  </tbody>
+</table>
+<p><a href="#R-image-c90222661c6b4b7e8615588f8cbe520a" class="lightbox-link"><img alt="Lab_Topology_Kali" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Lab_Topology_Kali.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c90222661c6b4b7e8615588f8cbe520a"><img alt="Lab_Topology_Kali" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Lab_Topology_Kali.png"></a></p>
+<h3 id="download-and-import-iso"><strong>Download and Import ISO</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
-<li>Kali Pre-Built VMs - <a href="https://www.kali.org/get-kali/#kali-virtual-machines" rel="external" target="_blank">QEMU</a></li>
-<li>Download and unzip</li>
-<li>Import the Kali qcow2 file
-<a href="#R-image-faa9f984da0a815f4a7d9abdb1de4b71" class="lightbox-link"><img alt="pic-import_qcow2" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_qcow2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-faa9f984da0a815f4a7d9abdb1de4b71"><img alt="pic-import_qcow2" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_qcow2.png"></a></li>
+<li>Kali Installer Image - <a href="https://www.kali.org/get-kali/#kali-installer-images" rel="external" target="_blank">ISO</a></li>
+<li>Import the Kali ISO file
+<a href="#R-image-25e8e06a17e8adbe632e3d835d7f0c96" class="lightbox-link"><img alt="pic-import_ISO" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_ISO.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-25e8e06a17e8adbe632e3d835d7f0c96"><img alt="pic-import_ISO" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/pic-import_ISO.png"></a></li>
 </ul>
 <h3 id="create-kali-vm"><strong>Create Kali VM</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <ul>
 <li>If you get the error <span class="badge cstyle default"><span class="badge-content">No route to host</span></span> with any of the following steps, use the <strong><a href="/Field-SE-Lab-Guide/extras/troubleshoot_ansible/index.html">Troubleshoot Ansible</a></strong> steps</li>
 </ul>
-<div class="tab-panel" data-tab-group="R-tabs-6ca85f877cae71b48da38bf5593326f4">
+<div class="tab-panel" data-tab-group="R-tabs-ed4f7e87874e57a929dd0d9e307a5ec0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-75ff14e2d1f47a165806ebdc3966a40c" aria-expanded="true"
+      aria-controls="R-tab-id-df00d92f19f7b6566f63cfe3b81a535c" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-6ca85f877cae71b48da38bf5593326f4','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-ed4f7e87874e57a929dd0d9e307a5ec0','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-75ff14e2d1f47a165806ebdc3966a40c"
+      id="R-tab-id-df00d92f19f7b6566f63cfe3b81a535c"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -197,52 +228,62 @@
 <li>from Terminal in OOB</li>
 </ul>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/fortinet/automation/ansible/ubuntu</span></span></code></pre></div>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./create_kali.sh      ../vars/all-hosts.yml  &lt;PVE server name&gt;  kali  &lt;qcow2 file name&gt;</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./create_kali.sh      ../vars/all-hosts.yml  &lt;PVE server name&gt;  kali  &lt;ISO file name <span style="color:#f92672">(</span>no extension..just file name<span style="color:#f92672">)</span>&gt;</span></span></code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./start_stop_remove_vm.sh  ../vars/all-hosts.yml  &lt;PVE server name&gt;  kali started</span></span></code></pre></div>
       </div>
     </div>
   </div>
 </div>
-<h3 id="configure-kali-nics"><strong>Configure Kali NICs</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-cf58c98954792f85c9a9b3f8e9e3b986">
+<h3 id="kali-installer"><strong>Kali Installer</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-a5654c7c18b8b4a0cb3afb885516bef8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-41257d5118edd46425805e7e1e051f88" aria-expanded="true"
-      data-tab-item="R-tab-d0ff9d5abd333a14625f26a74640551f"
+      aria-controls="R-tab-id-2121d09e613cc3a4599161f080476d38" aria-expanded="true"
+      data-tab-item="R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-cf58c98954792f85c9a9b3f8e9e3b986','R-tab-d0ff9d5abd333a14625f26a74640551f')"
+      onclick="switchTab('R-tabs-a5654c7c18b8b4a0cb3afb885516bef8','R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef')"
     >
-      <span class="tab-nav-text">via console tab in Proxmox</span>
+      <span class="tab-nav-text">via Kali VM console in Proxmox</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-41257d5118edd46425805e7e1e051f88"
-      data-tab-item="R-tab-d0ff9d5abd333a14625f26a74640551f"
+      id="R-tab-id-2121d09e613cc3a4599161f080476d38"
+      data-tab-item="R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
-<p>Login
-- Default Username/Password : kali/kali</p>
 <ul>
-<li>In upper right corner of desktop, right-click on Network Settings and Edit Connections
-<a href="#R-image-4923dc7c109c106b9929025b5d6592e3" class="lightbox-link"><img alt="Edit_Network01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4923dc7c109c106b9929025b5d6592e3"><img alt="Edit_Network01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png"></a></li>
-<li>Double Click into each Wired connection
-<a href="#R-image-ecb89ccb2a0a03702246da9f21787209" class="lightbox-link"><img alt="Edit_Network02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecb89ccb2a0a03702246da9f21787209"><img alt="Edit_Network02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png"></a></li>
-<li>Configure Wired connection 1
+<li>Kali Linux installer menu
 <ul>
-<li>IPv4/Manual/Address/Netmask/Gateway/DNS/Domain
-<a href="#R-image-97891b46fc4c362069836518117e774a" class="lightbox-link"><img alt="Edit_Network03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-97891b46fc4c362069836518117e774a"><img alt="Edit_Network03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png"></a></li>
+<li>Choose <strong>Graphical install</strong></li>
+<li>Select <strong>Language, Location, Keyboard</strong></li>
+<li>Primary NIC used for installation <strong>eth0</strong></li>
+<li>Not using DHCP <strong>Continue</strong></li>
+<li><strong>Do not configure</strong> the network at this time</li>
+<li>Hostname <strong>kali</strong></li>
+<li>Username <strong>kali</strong></li>
+<li>Password <strong>kali</strong> (not recommended for production, this is for non-internet facing lab)</li>
+<li>Choose <strong>Time zone</strong></li>
+<li>Partition disks
+<ul>
+<li><strong>Guided - use entire disk</strong></li>
+<li><strong>sda</strong></li>
+<li><strong>All files in one partition</strong></li>
+<li><strong>Finish partitioning and write changes to disk</strong></li>
+<li>Write the changes to disks? <strong>Yes</strong></li>
 </ul>
 </li>
-<li>Configure Wired connection 2
+<li>Software selection
 <ul>
-<li>IPv4/Manual/Address/Netmask
-<a href="#R-image-5d3db3b25fbb3f4a5b9bfcae457cf65d" class="lightbox-link"><img alt="Edit_Network04" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d3db3b25fbb3f4a5b9bfcae457cf65d"><img alt="Edit_Network04" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png"></a></li>
+<li>Desktop environment: <strong>Xfce</strong></li>
+<li>Collection of tools: <strong>top10</strong> and <strong>default</strong></li>
+</ul>
+</li>
+<li>Install the GRUB boot loader: <strong>Yes</strong></li>
+<li>Device for boot loader location: <strong>/dev/sda</strong></li>
+<li>Installation complete <strong>Continue</strong></li>
+<li>VM reboots</li>
 </ul>
 </li>
 </ul>
@@ -250,22 +291,89 @@
     </div>
   </div>
 </div>
-<h3 id="configure-kali-rdp"><strong>Configure Kali RDP</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="tab-panel" data-tab-group="R-tabs-fb82d1f0a33b886033f257ff97e22584">
+<h3 id="nic-configuration"><strong>NIC Configuration</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-e68b94cc53fbd8e8515af880653121d4">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      aria-controls="R-tab-id-5434ec2cc264a615f76a15511199dc6e" aria-expanded="true"
+      aria-controls="R-tab-id-0dba1036c4521bc438bb950c085e7d82" aria-expanded="true"
+      data-tab-item="R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-e68b94cc53fbd8e8515af880653121d4','R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef')"
+    >
+      <span class="tab-nav-text">via Kali VM console in Proxmox</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-0dba1036c4521bc438bb950c085e7d82"
+      data-tab-item="R-tab-c7e4fc2b342fc21e58bd9ca1f87995ef"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ul>
+<li>Login
+<ul>
+<li>Username/Password : <strong>kali/kali</strong></li>
+</ul>
+</li>
+<li>In upper right corner of desktop, right-click on Network Settings and Edit Connections
+<a href="#R-image-bc7e96a13f276d1d91c8df1bd7e06c4c" class="lightbox-link"><img alt="Edit_Network01" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc7e96a13f276d1d91c8df1bd7e06c4c"><img alt="Edit_Network01" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network01.png"></a></li>
+<li>Double Click on <strong>Wired connection 1</strong>
+<a href="#R-image-b965b33cdb211ecd3e9a93552d45a7fd" class="lightbox-link"><img alt="Edit_Network02" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b965b33cdb211ecd3e9a93552d45a7fd"><img alt="Edit_Network02" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network02.png"></a></li>
+<li>Configure <strong>Wired connection 1</strong>
+<ul>
+<li>Ethernet / eth0
+<a href="#R-image-de9133787a158c695605825f40ad799f" class="lightbox-link"><img alt="Edit_Network03" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-de9133787a158c695605825f40ad799f"><img alt="Edit_Network03" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network03.png"></a></li>
+<li>IPv4 Settings/Manual/Address/Netmask/Gateway/DNS/Search domains</li>
+<li>Click <strong>Save</strong>
+<a href="#R-image-b8c8d30be1451b5e91a929716d4d9a3a" class="lightbox-link"><img alt="Edit_Network04" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8c8d30be1451b5e91a929716d4d9a3a"><img alt="Edit_Network04" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network04.png"></a></li>
+</ul>
+</li>
+<li>Click on <strong>+</strong>
+<a href="#R-image-93b0254dde3b19915d3a1b281dd96bfe" class="lightbox-link"><img alt="Edit_Network05" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network05.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-93b0254dde3b19915d3a1b281dd96bfe"><img alt="Edit_Network05" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network05.png"></a></li>
+<li>Choose a Connection Type <strong>Ethernet</strong> and Click on <strong>Create</strong>
+<a href="#R-image-38cf6947fbc00a757a1bf58918b7a4eb" class="lightbox-link"><img alt="Edit_Network06" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network06.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-38cf6947fbc00a757a1bf58918b7a4eb"><img alt="Edit_Network06" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network06.png"></a></li>
+<li>Configure <strong>Wired connection 2</strong>
+<ul>
+<li>Ethernet / eth1
+<a href="#R-image-5a8a086eca1f4e9f83472b0039dc252c" class="lightbox-link"><img alt="Edit_Network07" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network07.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a8a086eca1f4e9f83472b0039dc252c"><img alt="Edit_Network07" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network07.png"></a></li>
+<li>IPv4 Settings/Manual/Address/Netmask (Leave Gateway Blank)</li>
+<li>Click <strong>Save</strong>
+<a href="#R-image-bc8165c4b2f25e4b0b189faa5f83f726" class="lightbox-link"><img alt="Edit_Network08" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network08.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc8165c4b2f25e4b0b189faa5f83f726"><img alt="Edit_Network08" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network08.png"></a></li>
+</ul>
+</li>
+<li>In upper right corner of desktop, right-click on Network Settings and see the following
+<a href="#R-image-cc4a8987e78dad10c89bb5acbd0cb45e" class="lightbox-link"><img alt="Edit_Network09" class="lazy lightbox figure-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network09.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cc4a8987e78dad10c89bb5acbd0cb45e"><img alt="Edit_Network09" class="lazy lightbox lightbox-image" loading="lazy" src="/Field-SE-Lab-Guide/extras/kali/Edit_Network09.png"></a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="configure-rdp"><strong>Configure RDP</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="tab-panel" data-tab-group="R-tabs-2175fb7eb654bf0bb00a429ceca77a08">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-562205c15f640844b989beb754fbfc53" aria-expanded="true"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('R-tabs-fb82d1f0a33b886033f257ff97e22584','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
+      onclick="switchTab('R-tabs-2175fb7eb654bf0bb00a429ceca77a08','R-tab-bed85a8fafbb466b3e58f12c401f160f')"
     >
       <span class="tab-nav-text">RDP to OOB</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      id="R-tab-id-5434ec2cc264a615f76a15511199dc6e"
+      id="R-tab-id-562205c15f640844b989beb754fbfc53"
       data-tab-item="R-tab-bed85a8fafbb466b3e58f12c401f160f"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
@@ -274,30 +382,33 @@
 </ul>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y</span></span></code></pre></div>
 <ul>
-<li>Install Xfce and XRDP:</li>
+<li>Install XRDP:</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install -y xfce4 xfce4-goodies xrdp</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install -y xrdp</span></span></code></pre></div>
 <ul>
-<li>Set Xfce as your default session:</li>
+<li>Enable XRDP service:</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo xfce4-session &gt; ~/.xsession</span></span></code></pre></div>
-<p>Service configuration</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable xrdp</span></span></code></pre></div>
 <ul>
-<li>Enable and start the XRDP service:</li>
+<li>Start the service</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable --now xrdp</span></span></code></pre></div>
-<ul>
-<li>Restart the service to apply changes:</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart xrdp</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start xrdp</span></span></code></pre></div>
 <ul>
 <li>Check the service status to verify it is running:</li>
 </ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status xrdp</span></span></code></pre></div>
+<ul>
+<li>Logout and RDP to Kali VM (10.100.55.88)
+<ul>
+<li><span class="badge cstyle red badge-with-title"><span class="badge-title">IMPORTANT:</span><span class="badge-content">You must be logged out of the xfce desktop to successfully RDP to Kali</span></span></li>
+</ul>
+</li>
+</ul>
       </div>
     </div>
   </div>
 </div>
+<h3 id="complete"><strong>Complete</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 
   <footer class="footline">
   </footer>
@@ -372,8 +483,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1785896073" defer></script>
-    <script src="/Field-SE-Lab-Guide/js/theme.js?1785896073" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/perfect-scrollbar/perfect-scrollbar.min.js?1786681133" defer></script>
+    <script src="/Field-SE-Lab-Guide/js/theme.js?1786681133" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
