@@ -13,7 +13,7 @@ weight =10
 || 3 | **[DIN Rails](https://www.amazon.com/dp/B0CDPSG9GY)** ||
 || Red, Black, Green | **[Terminal Blocks](https://www.amazon.com/dp/B01F5Y5NO8/)** ||
 || Based on Terminal Blocks | **[Terminal Block Jumper](https://www.amazon.com/dp/B00R1WTS9O/)** ||
-|| 1 | **[Hookup Wire - 6 Colors](https://www.amazon.com/dp/B0BVDQBBB2)** ||
+|| 1 | **[Hookup Wire - 6 Colors - 16 awg / 600V](https://www.amazon.com/dp/B0BVDQBBB2)** ||
 || 1 | **[C14 Power Plug](https://www.amazon.com/dp/B07DCXKNXQ/)** ||
 || 1 | **[Universal AC Power Cable (C13)](https://www.amazon.com/Universal-PC-Power-Cord-Replacement/dp/B0CWS4ZBH4/ref=sr_1_65_sspa)** ||
 || 1 | **[Heat Shrink Tubing](https://www.amazon.com/Ginsco-580-pcs-Assorted-Sleeving/dp/B01MFA3OFA/ref=sr_1_3)** ||
