@@ -1,4 +1,3 @@
-
 config system automation-trigger
     edit "BUTTON_PRESSED"
         set event-type event-log
@@ -34,12 +33,26 @@ config system automation-action
     edit "SYSTEMS_RED"
         set description "Emergency Stop"
         set action-type cli-script
-        set script "execute digital-io set-output default"
+        set script "execute digital-io set-output opposite
+config firewall policy
+edit 8
+set status enable
+next
+edit 4
+set status disable
+end"
         set accprofile "super_admin"
     next
     edit "SYSTEMS_GREEN"
         set action-type cli-script
-        set script "execute digital-io set-output opposite"
+        set script "execute digital-io set-output default
+config firewall policy
+edit 4
+set status enable
+next
+edit 8
+set status disable
+end"
         set accprofile "super_admin"
     next
 end
@@ -49,7 +62,7 @@ config system automation-stitch
         set trigger "BUTTON_PRESSED"
         config actions
             edit 1
-                set action "SYSTEMS_GREEN"
+                set action "SYSTEMS_RED"
                 set required enable
             next
         end
@@ -58,7 +71,7 @@ config system automation-stitch
         set trigger "BUTTON_RELEASED"
         config actions
             edit 1
-                set action "SYSTEMS_RED"
+                set action "SYSTEMS_GREEN"
                 set required enable
             next
         end
