@@ -35,10 +35,10 @@ config system automation-action
         set action-type cli-script
         set script "execute digital-io set-output opposite
 config firewall policy
-edit 8
+edit 2
 set status enable
 next
-edit 4
+edit 1
 set status disable
 end"
         set accprofile "super_admin"
@@ -47,10 +47,10 @@ end"
         set action-type cli-script
         set script "execute digital-io set-output default
 config firewall policy
-edit 4
+edit 1
 set status enable
 next
-edit 8
+edit 2
 set status disable
 end"
         set accprofile "super_admin"
