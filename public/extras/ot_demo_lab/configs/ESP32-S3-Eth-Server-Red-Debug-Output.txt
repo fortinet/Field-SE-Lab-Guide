@@ -1,0 +1,14 @@
+--- Booting Waveshare ESP32-S3-ETH (Server Mode) ---
+W5500 controller detected successfully.
+Static IP configuration stored in memory.
+Modbus Server active. Listening on IP: 192.168.1.110
+Awaiting physical link connection (Check RJ45 cable/LEDs)...
+Awaiting physical link connection (Check RJ45 cable/LEDs)...
+Modbus RX -> Coil 0x00 changed to ON.  GPIO 1 set to 1
+Modbus RX -> Coil 0x00 changed to OFF. GPIO 1 set to 0
+Modbus RX -> Coil 0x01 changed to ON.  GPIO 2 set to 1
+Modbus RX -> Coil 0x01 changed to OFF. GPIO 2 set to 0
+Modbus RX -> Coil 0x02 changed to ON.  GPIO 3 set to 1
+Modbus RX -> Coil 0x02 changed to OFF. GPIO 3 set to 0
+Modbus RX -> Coil 0x00 changed to ON.  GPIO 1 set to 1
+Modbus RX -> Coil 0x00 changed to OFF. GPIO 1 set to 0

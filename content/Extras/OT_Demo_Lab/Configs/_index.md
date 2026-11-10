@@ -23,10 +23,11 @@ weight =20
 
 **Arduino Modbus Sketches:**
 
-- Server (with LED)
-    - {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/Ethernet_Modbus_TCP_Server_LED.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Server_LED.ino{{% /button %}} 
- - Client (without LED)
-    - {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/Ethernet_Modbus_TCP_Client_Toggle.ino" style="tip" icon="angle-down" %}}Ethernet_Modbus_TCP_Client_Toggle.ino{{% /button %}}  
+- Download the following {{% button href="https://github.com/fortinet/Field-SE-Lab-Guide/raw/refs/heads/main/content/Extras/OT_Demo_Lab/Configs/UNO-WiFi-Rev2-PLC-Server-and-Client.zip" style="tip" icon="angle-down" %}}UNO-WiFi-Rev2-PLC-Server-and-Client.zip{{% /button %}}
+- Unzip the file
+    - It contains two directories: Server and Client
+- Do not open and compile from "inside" the Zip file.  
+    - The two directories and respective contents must reside on your PC unzipped
 
 ---
 
